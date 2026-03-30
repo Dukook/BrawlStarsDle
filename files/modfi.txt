@@ -1,0 +1,7 @@
+plus que 3 changements : 
+
+* les flèches dans le fond des cases dans le premier jeu sont trop fine, essaye de les élargir ci possible
+
+* dans la ligne 395 actuel, j'ai remarqué que tu as recopié l'ensemble du dictionnaire, cependant je ne peux pas le modifier efficacement dans ce contexte, pourquoi ne pas utiliser le fichier json se trouvant dans le dossier directement (chemin d'accès depuis le fichier .html : "Dic.json"). → Utlise MON dictionnaire au lieu d'en avoir une copie peu pratique.
+
+* essaye de cacher les noms de fichier (ex : 'ollie.png') lorsqu'on inspecte avec f12, cela donne la solution sans chercher, pas de triche !

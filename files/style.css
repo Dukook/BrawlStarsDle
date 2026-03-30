@@ -1,243 +1,364 @@
-/* latin-ext */
-@font-face {
-  font-family: 'Lilita One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lilitaone/v17/i7dPIFZ9Zz-WBtRtedDbYE98RWq7.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+/* ── Brawldle style.css ─────────────────────────────────────────────────────
+   Place this file in the same folder as brawldle.html
+   Fonts: put LilitaOne.ttf and Nunito.ttf in a subfolder called fonts/
+   Background: put bs.png in the same folder as this file
+──────────────────────────────────────────────────────────────────────────── */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@font-face{font-family:'Lilita One';src:url('LilitaOne.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Nunito';src:url('Nunito.ttf') format('truetype');font-weight:100 900;font-display:swap}
+
+:root{
+  --bg:#0b1622;--bg2:#12202f;--bg3:#1a2d40;--bg4:#223550;
+  --accent:#ffd000;--text:#e8edf4;--text2:#6e8fa8;
+  --green:#27ae60;--red:#c0392b;--orange:#d68910;
+  --border:#1e3248;--radius:14px;--shadow:0 6px 28px rgba(0,0,0,.55);
 }
-/* latin */
-@font-face {
-  font-family: 'Lilita One';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lilitaone/v17/i7dPIFZ9Zz-WBtRtedDbYEF8RQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+html{scroll-behavior:smooth}
+body{
+  font-family:'Nunito',sans-serif;font-size:15px;color:var(--text);
+  min-height:100vh;overflow-x:hidden;
 }
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTk3j77e.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+
+/* Background */
+.bg-overlay{
+  position:fixed;inset:0;z-index:-1;
+  background:url('bs.png') center/cover no-repeat;
+  filter:brightness(.2) blur(2px) saturate(1.4);
 }
-/* cyrillic */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTA3j77e.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+.bg-solid{position:fixed;inset:0;z-index:-1;background:rgba(11,22,34,.72)}
+
+/* Header */
+.header{
+  background:linear-gradient(180deg,rgba(6,12,22,.97) 0%,rgba(12,24,38,.93) 100%);
+  border-bottom:2px solid rgba(255,208,0,.2);
+  padding:26px 20px 18px;text-align:center;
 }
-/* vietnamese */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTs3j77e.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+.header-logo{
+  font-family:'Lilita One',cursive;
+  font-size:clamp(2.4rem,7vw,3.8rem);
+  color:var(--accent);letter-spacing:6px;
+  text-shadow:0 0 40px rgba(255,208,0,.4),0 3px 0 #6a4a00;
+  line-height:1;
 }
-/* latin-ext */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTo3j77e.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+.header-sub{color:var(--text2);font-size:.82rem;margin-top:6px;font-weight:700;letter-spacing:1px}
+
+/* Tabs */
+.tabs{
+  display:flex;justify-content:center;flex-wrap:wrap;
+  gap:10px;padding:16px;
+  background:rgba(12,24,38,.92);border-bottom:1px solid var(--border);
+  backdrop-filter:blur(8px);
 }
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3jw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+.tab{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  padding:13px 18px;min-width:92px;cursor:pointer;
+  border-radius:16px;border:2px solid var(--border);
+  background:var(--bg3);transition:all .2s;position:relative;
+  user-select:none;
 }
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmdTk3j77e.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+.tab:hover{border-color:rgba(255,208,0,.5);transform:translateY(-1px)}
+.tab.active{border-color:var(--accent);background:rgba(255,208,0,.07);box-shadow:0 0 18px rgba(255,208,0,.12)}
+.tab.done{border-color:var(--green);background:rgba(39,174,96,.07)}
+.tab-shine{
+  position:absolute;top:5px;right:5px;width:7px;height:7px;
+  border-radius:50%;background:var(--accent);
+  box-shadow:0 0 8px var(--accent);
+  opacity:0;
 }
-/* cyrillic */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmdTA3j77e.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+.tab.active .tab-shine{opacity:1;animation:pulse 1.4s ease-in-out infinite}
+.tab-emoji{font-size:1.6rem;line-height:1}
+.tab-label{font-size:.7rem;font-weight:900;color:var(--text2);letter-spacing:.5px;text-transform:uppercase}
+.tab.active .tab-label{color:var(--accent)}
+.tab.done .tab-label{color:var(--green)}
+.tab-streak{font-size:.72rem;font-weight:800;color:var(--text2)}
+.tab.active .tab-streak{color:var(--accent)}
+
+/* Game area */
+.game-area{max-width:980px;margin:0 auto;padding:22px 14px 60px}
+
+/* Mode header */
+.mode-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:14px;flex-wrap:wrap;gap:8px;
 }
-/* vietnamese */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmdTs3j77e.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+.mode-title{font-family:'Lilita One',cursive;font-size:1.4rem;color:var(--accent)}
+.wrong-badge{
+  display:inline-flex;align-items:center;gap:4px;
+  background:rgba(192,57,43,.18);color:var(--red);
+  padding:4px 12px;border-radius:20px;font-size:.82rem;font-weight:800;
 }
-/* latin-ext */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmdTo3j77e.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+
+/* Rotation info */
+.rotation-info{
+  background:rgba(18,32,47,.8);border:1px solid var(--border);
+  border-left:3px solid var(--accent);border-radius:8px;
+  padding:9px 14px;margin-bottom:14px;
+  font-size:.78rem;color:var(--text2);font-weight:700;
 }
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDGUmdTQ3jw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+.rotation-info b{color:var(--accent)}
+
+/* Search */
+.search-wrap{position:relative;margin-bottom:12px}
+.search-input{
+  width:100%;padding:13px 18px;
+  background:rgba(18,32,47,.9);border:2px solid var(--border);
+  border-radius:var(--radius);color:var(--text);
+  font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;
+  outline:none;transition:border-color .2s,box-shadow .2s;
 }
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDFwmdTk3j77e.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+.search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,208,0,.1)}
+.search-input::placeholder{color:var(--text2);font-weight:600}
+.search-input:disabled{opacity:.45;cursor:not-allowed}
+.ac-list{
+  position:absolute;top:calc(100% + 5px);left:0;right:0;
+  background:var(--bg2);border:2px solid var(--accent);
+  border-radius:var(--radius);max-height:220px;overflow-y:auto;
+  z-index:200;display:none;box-shadow:var(--shadow);
 }
-/* cyrillic */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDFwmdTA3j77e.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+.ac-list.open{display:block}
+.ac-item{padding:10px 18px;cursor:pointer;font-weight:700;transition:background .1s}
+.ac-item:hover,.ac-item.hi{background:var(--bg4);color:var(--accent)}
+
+/* Banners */
+.banner{border-radius:var(--radius);padding:20px 22px;margin-bottom:16px;text-align:center}
+.banner-win{background:rgba(39,174,96,.12);border:2px solid rgba(39,174,96,.3)}
+.banner-lose{background:rgba(192,57,43,.1);border:2px solid rgba(192,57,43,.25)}
+.banner h2{font-family:'Lilita One',cursive;font-size:1.7rem}
+.banner-win h2{color:var(--green)}
+.banner-lose h2{color:var(--red)}
+.banner p{color:var(--text2);margin-top:5px;font-weight:700;font-size:.88rem}
+.banner p strong{color:var(--text)}
+.next-btn{
+  display:block;width:100%;margin-top:12px;
+  padding:14px 20px;border-radius:var(--radius);
+  background:linear-gradient(135deg,rgba(255,208,0,.15),rgba(255,153,0,.12));
+  border:2px solid rgba(255,208,0,.35);
+  color:var(--accent);font-family:'Nunito',sans-serif;
+  font-size:1rem;font-weight:900;cursor:pointer;transition:all .2s;
 }
-/* vietnamese */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDFwmdTs3j77e.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+.next-btn:hover{background:linear-gradient(135deg,rgba(255,208,0,.25),rgba(255,153,0,.2));transform:translateY(-1px)}
+
+/* Hints toggle */
+.hints-bar{display:flex;justify-content:flex-end;margin-bottom:10px}
+.hints-toggle{
+  padding:6px 16px;border-radius:20px;cursor:pointer;
+  font-family:'Nunito',sans-serif;font-size:.78rem;font-weight:800;
+  transition:all .2s;border:1px solid var(--border);background:var(--bg3);color:var(--text2);
 }
-/* latin-ext */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDFwmdTo3j77e.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+.hints-toggle.on{background:rgba(255,208,0,.1);color:var(--accent);border-color:rgba(255,208,0,.3)}
+
+/* ── Table ── */
+.table-outer{
+  position:relative;border-radius:var(--radius);
+  border:1px solid var(--border);box-shadow:var(--shadow);
+  background:rgba(12,24,38,.7);overflow:visible;
+  margin:0 36px; /* space for arrows outside */
 }
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDFwmdTQ3jw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+.table-wrap{
+  overflow-x:auto;border-radius:var(--radius);
+  scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg3);
+  scrollbar-gutter:stable;
 }
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDDsmdTk3j77e.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+.table-wrap::-webkit-scrollbar{height:6px}
+.table-wrap::-webkit-scrollbar-track{background:var(--bg3)}
+.table-wrap::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
+
+/* Scroll arrows — permanently visible outside the table */
+.scroll-btn{
+  position:absolute;top:50%;transform:translateY(-50%);
+  z-index:20;width:32px;height:52px;
+  background:rgba(18,32,47,.75);border:1px solid var(--border);
+  color:var(--text2);cursor:pointer;font-size:1.4rem;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:8px;transition:all .2s;
+  opacity:1;pointer-events:auto;
 }
-/* cyrillic */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDDsmdTA3j77e.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+.scroll-btn.sl{left:-36px}
+.scroll-btn.sr{right:-36px}
+.scroll-btn:hover{background:var(--accent);color:#000;border-color:var(--accent)}
+
+.stats-table{width:100%;border-collapse:separate;border-spacing:0;min-width:720px}
+.stats-table thead th{
+  background:rgba(26,45,64,.95);padding:10px 10px;
+  font-size:.68rem;text-transform:uppercase;letter-spacing:.6px;
+  color:var(--text2);white-space:nowrap;text-align:center;
+  font-weight:900;border-bottom:1px solid var(--border);
 }
-/* vietnamese */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDDsmdTs3j77e.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+.stats-table thead th:first-child{text-align:left;padding-left:13px;min-width:130px}
+.stats-table tbody td{
+  padding:9px 10px;text-align:center;font-size:.82rem;font-weight:800;
+  border-bottom:1px solid rgba(30,50,72,.6);
 }
-/* latin-ext */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDDsmdTo3j77e.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+.stats-table tbody td:first-child{
+  text-align:left;padding-left:13px;font-size:.85rem;white-space:nowrap;
+  color:var(--text);max-width:150px;overflow:hidden;text-overflow:ellipsis;
 }
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDDsmdTQ3jw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+.stats-table tbody tr:last-child td{border-bottom:none}
+.cell-correct{background:rgba(39,174,96,.28)!important;color:#5fffa3}
+.cell-wrong{background:rgba(192,57,43,.25)!important;color:#ffaaaa}
+.cell-partial{background:rgba(214,137,16,.25)!important;color:#ffd580}
+.cell-arrow{font-size:.85em;margin-left:3px}
+.cell-hidden{background:var(--bg3)!important;color:transparent!important;transition:background .3s,color .3s}
+
+/* Cell reveal animation */
+@keyframes cellReveal{
+  0%{opacity:0;transform:rotateX(90deg) scale(.85)}
+  55%{transform:rotateX(-6deg)}
+  100%{opacity:1;transform:rotateX(0deg) scale(1)}
 }
-/* cyrillic-ext */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDBImdTk3j77e.woff2) format('woff2');
-  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+.cell-anim{animation:cellReveal .55s cubic-bezier(.34,1.56,.64,1) forwards;opacity:0}
+
+/* Info btn */
+.info-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:13px;height:13px;background:var(--accent);color:#000;
+  border-radius:50%;font-size:.58rem;font-weight:900;cursor:default;
+  margin-left:4px;vertical-align:middle;flex-shrink:0;user-select:none;
 }
-/* cyrillic */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDBImdTA3j77e.woff2) format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+
+/* Tooltip */
+#tooltip{
+  position:fixed;background:var(--bg4);border:1px solid var(--border);
+  border-radius:8px;padding:10px 14px;font-size:.78rem;max-width:280px;
+  z-index:9999;color:var(--text);box-shadow:var(--shadow);
+  display:none;line-height:1.5;font-weight:600;pointer-events:none;
 }
-/* vietnamese */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDBImdTs3j77e.woff2) format('woff2');
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+
+/* Fact */
+.fact-card{
+  background:rgba(18,32,47,.85);border:1px solid var(--border);
+  border-radius:var(--radius);padding:24px;margin-bottom:16px;
+  box-shadow:var(--shadow);
 }
-/* latin-ext */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDBImdTo3j77e.woff2) format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+.fact-text{font-size:1.1rem;font-weight:700;line-height:1.7}
+.fact-unknown{color:var(--accent);background:rgba(255,208,0,.1);padding:1px 7px;border-radius:4px}
+.fact-revealed{color:var(--green);background:rgba(39,174,96,.12);padding:1px 7px;border-radius:4px;font-weight:900}
+.hints-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.hint-pill{
+  padding:5px 13px;border-radius:20px;font-size:.76rem;font-weight:800;
+  background:var(--bg3);color:var(--text2);border:1px solid var(--border);transition:all .3s;
 }
-/* latin */
-@font-face {
-  font-family: 'Nunito';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/nunito/v32/XRXI3I6Li01BKofiOc5wtlZ2di8HDBImdTQ3jw.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+.hint-pill.shown{background:rgba(255,208,0,.1);color:var(--accent);border-color:rgba(255,208,0,.25)}
+
+/* Voiceline */
+.vl-card{
+  background:rgba(18,32,47,.85);border-left:4px solid var(--accent);
+  border-radius:var(--radius);padding:26px;margin-bottom:16px;box-shadow:var(--shadow);
+}
+.vl-label{color:var(--text2);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.vl-text{font-family:'Lilita One',cursive;font-size:clamp(1.2rem,3vw,1.55rem);line-height:1.45;color:var(--text)}
+.audio-note{color:var(--text2);font-size:.76rem;font-weight:700;margin-top:10px}
+.audio-wrap{margin-top:14px}
+.audio-wrap audio{width:100%;border-radius:8px}
+
+/* Emoji */
+.emoji-card{
+  background:rgba(18,32,47,.85);border:1px solid var(--border);
+  border-radius:var(--radius);padding:28px;margin-bottom:16px;text-align:center;box-shadow:var(--shadow);
+}
+.emoji-display{font-size:clamp(2rem,6vw,3rem);letter-spacing:10px;line-height:1.5}
+.emoji-sub{color:var(--text2);font-size:.76rem;font-weight:700;margin-top:10px}
+
+/* Image */
+.img-card{
+  background:rgba(18,32,47,.85);border:1px solid var(--border);
+  border-radius:var(--radius);padding:18px;margin-bottom:16px;box-shadow:var(--shadow);
+}
+.img-grid{display:grid;gap:14px}
+.img-grid.one{grid-template-columns:1fr;max-width:400px;margin:0 auto}
+.img-grid.two{grid-template-columns:1fr 1fr}
+.img-slot{
+  background:var(--bg3);border-radius:10px;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;aspect-ratio:2010/1250;
+}
+.img-slot img{width:100%;height:100%;object-fit:contain}
+.img-placeholder{color:var(--text2);font-size:.82rem;font-weight:700;text-align:center;padding:12px}
+.img-locked{
+  display:flex;align-items:center;justify-content:center;flex-direction:column;
+  gap:8px;background:var(--bg3);border-radius:10px;aspect-ratio:2010/1250;
+  color:var(--text2);font-size:.8rem;font-weight:700;text-align:center;padding:12px;
+}
+.img-label{text-align:center;color:var(--text2);font-size:.68rem;font-weight:900;text-transform:uppercase;margin-top:5px;letter-spacing:.5px}
+
+/* Guess list */
+.guess-list{display:flex;flex-direction:column;gap:7px;margin-top:8px}
+.guess-item{
+  display:flex;align-items:center;gap:10px;
+  padding:9px 15px;border-radius:9px;font-weight:800;font-size:.9rem;
+  animation:fadeUp .2s ease;
+}
+.guess-item.ok{background:rgba(39,174,96,.12);border:1px solid rgba(39,174,96,.25);color:var(--green)}
+.guess-item.fail{background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.18);color:var(--red)}
+
+/* ── Victory effects ── */
+#victory-overlay{
+  position:fixed;inset:0;z-index:9990;pointer-events:none;overflow:hidden;
+}
+@keyframes gentleSpin{
+  0%  {transform:rotate(0deg) scale(1)}
+  15% {transform:rotate(-2.5deg) scale(1.012)}
+  35% {transform:rotate(2deg) scale(1.018)}
+  55% {transform:rotate(-1.5deg) scale(1.012)}
+  75% {transform:rotate(1deg) scale(1.006)}
+  90% {transform:rotate(-.4deg) scale(1.002)}
+  100%{transform:rotate(0deg) scale(1)}
+}
+@keyframes flashWin{
+  0%{opacity:.55}
+  100%{opacity:0}
+}
+.flash-win{
+  position:fixed;inset:0;z-index:9989;pointer-events:none;
+  background:radial-gradient(circle at center,rgba(255,208,0,.18) 0%,rgba(39,174,96,.1) 55%,rgba(0,0,0,.45) 100%);
+  animation:flashWin .85s ease forwards;
+}
+@keyframes confettiFall{
+  0%{transform:translateY(-20px) rotate(0deg);opacity:1}
+  100%{transform:translateY(110vh) rotate(720deg);opacity:0}
+}
+.confetti{
+  position:absolute;width:10px;height:10px;
+  animation:confettiFall linear forwards;
+  border-radius:2px;
+}
+@keyframes bounce-in{
+  0%{transform:scale(.3);opacity:0}
+  60%{transform:scale(1.1)}
+  80%{transform:scale(.95)}
+  100%{transform:scale(1);opacity:1}
+}
+
+/* Report button */
+.report-btn{
+  position:fixed;bottom:14px;right:16px;z-index:500;
+  background:rgba(18,32,47,.6);border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;width:26px;height:26px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.85rem;cursor:default;color:rgba(255,255,255,.25);
+  transition:color .2s,border-color .2s;
+}
+.report-btn:hover{color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.2)}
+.report-tip{
+  position:fixed;bottom:46px;right:16px;z-index:501;
+  background:var(--bg4);border:1px solid var(--border);border-radius:8px;
+  padding:10px 14px;font-size:.76rem;max-width:240px;color:var(--text2);
+  font-weight:700;line-height:1.5;display:none;pointer-events:none;
+  box-shadow:var(--shadow);text-align:left;
+}
+.report-btn:hover + .report-tip{display:block}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 6px var(--accent)}50%{box-shadow:0 0 14px var(--accent)}}
+
+@media(max-width:540px){
+  .tab{min-width:72px;padding:11px 12px}
+  .tab-emoji{font-size:1.3rem}
+  .fact-text{font-size:.95rem}
+  .table-outer{margin:0 28px}
+  .scroll-btn.sl{left:-28px}
+  .scroll-btn.sr{right:-28px}
 }
