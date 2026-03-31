@@ -1,5 +1,6 @@
 {
     "Shelly": {
+        "Icon": "shelly/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 7800,
@@ -61,6 +62,7 @@
         ]
     },
     "Nita": {
+        "Icon": "nita/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 8400,
@@ -106,6 +108,7 @@
         ]
     },
     "Colt": {
+        "Icon": "colt/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6200,
@@ -170,6 +173,7 @@
         ]
     },
     "Bull": {
+        "Icon": "bull/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 10600,
@@ -232,6 +236,7 @@
         ]
     },
     "Brock": {
+        "Icon": "brock/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6000,
@@ -297,6 +302,7 @@
         ]
     },
     "El Primo": {
+        "Icon": "primo/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 13000,
@@ -363,6 +369,7 @@
         ]
     },
     "Barley": {
+        "Icon": "barley/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 5400,
@@ -427,6 +434,7 @@
         ]
     },
     "Poco": {
+        "Icon": "poco/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 8000,
@@ -493,6 +501,7 @@
         ]
     },
     "Rosa": {
+        "Icon": "rosa/pin.png",
         "Stats": {
             "gender": "Female",
             "hp": 10800,
@@ -558,6 +567,7 @@
         ]
     },
     "Jessie": {
+        "Icon": "jessie/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 6600,
@@ -624,6 +634,7 @@
         ]
     },
     "Dynamike": {
+        "Icon": "dynamike/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6000,
@@ -690,6 +701,7 @@
         ]
     },
     "Tick": {
+        "Icon": "tick/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 4800,
@@ -735,6 +747,7 @@
         ]
     },
     "8-Bit": {
+        "Icon": "bit/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 10400,
@@ -793,6 +806,7 @@
         ]
     },
     "Rico": {
+        "Icon": "rico/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6000,
@@ -859,6 +873,7 @@
         ]
     },
     "Darryl": {
+        "Icon": "darryl/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 11000,
@@ -924,6 +939,7 @@
         ]
     },
     "Penny": {
+        "Icon": "penny/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 7000,
@@ -977,6 +993,7 @@
         ]
     },
     "Carl": {
+        "Icon": "carl/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 8400,
@@ -1039,6 +1056,7 @@
         ]
     },
     "Jacky": {
+        "Icon": "jacky/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 10000,
@@ -1101,6 +1119,7 @@
         ]
     },
     "Gus": {
+        "Icon": "gus/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6600,
@@ -1167,6 +1186,7 @@
         ]
     },
     "Bo": {
+        "Icon": "bo/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7600,
@@ -1232,6 +1252,7 @@
         ]
     },
     "Emz": {
+        "Icon": "emz/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 7800,
@@ -1298,6 +1319,7 @@
         ]
     },
     "Stu": {
+        "Icon": "stu/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7000,
@@ -1363,6 +1385,7 @@
         ]
     },
     "Piper": {
+        "Icon": "piper/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 5000,
@@ -1429,6 +1452,7 @@
         ]
     },
     "Pam": {
+        "Icon": "pam/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 10000,
@@ -1494,6 +1518,7 @@
         ]
     },
     "Frank": {
+        "Icon": "frank/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 13600,
@@ -1539,6 +1564,7 @@
         ]
     },
     "Bibi": {
+        "Icon": "bibi/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 10000,
@@ -1565,7 +1591,7 @@
             "nb_skins": 13
         },
         "Fact": [
-            "*Brawler*'s hypercharge is one of the fastest in the game with only 6 hit needed to fully charge it.",
+            "*Brawler*'s hypercharge was the fastest in the game with only 6 hit needed to fully charge it.",
             "*Brawler*'s skins are mostly pay to win because it hide if the brawler's bar is full or not.",
             "*Brawler*'s super can hit twice if you are good at timing you attack."
         ],
@@ -1604,6 +1630,7 @@
         ]
     },
     "Bea": {
+        "Icon": "bea/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 5600,
@@ -1669,6 +1696,7 @@
         ]
     },
     "Gale": {
+        "Icon": "gale/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 8000,
@@ -1734,6 +1762,7 @@
         ]
     },
     "Nani": {
+        "Icon": "nani/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 5000,
@@ -1795,6 +1824,7 @@
         ]
     },
     "Colette": {
+        "Icon": "colette/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 7200,
@@ -1861,6 +1891,7 @@
         ]
     },
     "Edgar": {
+        "Icon": "edgar/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7400,
@@ -1925,6 +1956,7 @@
         ]
     },
     "Belle": {
+        "Icon": "belle/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 5800,
@@ -1991,6 +2023,7 @@
         ]
     },
     "Griff": {
+        "Icon": "griff/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7400,
@@ -2056,6 +2089,7 @@
         ]
     },
     "Ash": {
+        "Icon": "ash/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 11800,
@@ -2121,6 +2155,7 @@
         ]
     },
     "Lola": {
+        "Icon": "lola/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 8000,
@@ -2187,6 +2222,7 @@
         ]
     },
     "Grom": {
+        "Icon": "grom/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6000,
@@ -2252,6 +2288,7 @@
         ]
     },
     "Bonnie": {
+        "Icon": "bonnie/small/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 6000,
@@ -2317,6 +2354,7 @@
         ]
     },
     "Clyde": {
+        "Icon": "bonnie/clyde/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 10000,
@@ -2348,6 +2386,7 @@
         }
     },
     "Sam": {
+        "Icon": "sam/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 11400,
@@ -2413,6 +2452,7 @@
         ]
     },
     "Mandy": {
+        "Icon": "mandy/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 6000,
@@ -2478,6 +2518,7 @@
         ]
     },
     "Maisie": {
+        "Icon": "maisie/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 8000,
@@ -2543,6 +2584,7 @@
         ]
     },
     "Hank": {
+        "Icon": "hank/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 10400,
@@ -2607,6 +2649,7 @@
         ]
     },
     "Pearl": {
+        "Icon": "pearl/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 8600,
@@ -2672,6 +2715,7 @@
         ]
     },
     "Larry & Lawrie": {
+        "Icon": "larry/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6000,
@@ -2738,6 +2782,7 @@
         ]
     },
     "Angelo": {
+        "Icon": "angelo/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6200,
@@ -2803,6 +2848,7 @@
         ]
     },
     "Berry": {
+        "Icon": "berry/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 5200,
@@ -2869,6 +2915,7 @@
         ]
     },
     "Shade": {
+        "Icon": "shade/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7400,
@@ -2914,6 +2961,7 @@
         ]
     },
     "Meeple": {
+        "Icon": "meeple/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6600,
@@ -2979,6 +3027,7 @@
         ]
     },
     "Trunk": {
+        "Icon": "trunk/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 10400,
@@ -3044,6 +3093,7 @@
         ]
     },
     "Mortis": {
+        "Icon": "mortis/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 8000,
@@ -3109,6 +3159,7 @@
         ]
     },
     "Tara": {
+        "Icon": "tara/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 6600,
@@ -3153,6 +3204,7 @@
         ]
     },
     "Gene": {
+        "Icon": "gene/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7600,
@@ -3198,6 +3250,7 @@
         ]
     },
     "Max": {
+        "Icon": "max/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 7000,
@@ -3264,6 +3317,7 @@
         ]
     },
     "Mr. P": {
+        "Icon": "mr/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7400,
@@ -3308,6 +3362,7 @@
         ]
     },
     "Sprout": {
+        "Icon": "sprout/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6400,
@@ -3373,6 +3428,7 @@
         ]
     },
     "Lou": {
+        "Icon": "lou/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7000,
@@ -3439,6 +3495,7 @@
         ]
     },
     "Byron": {
+        "Icon": "byron/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 5200,
@@ -3504,6 +3561,7 @@
         ]
     },
     "Ruffs": {
+        "Icon": "ruffs/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6000,
@@ -3569,6 +3627,7 @@
         ]
     },
     "Squeak": {
+        "Icon": "squeak/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7600,
@@ -3613,6 +3672,7 @@
         ]
     },
     "Buzz": {
+        "Icon": "buzz/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 10000,
@@ -3678,6 +3738,7 @@
         ]
     },
     "Fang": {
+        "Icon": "fang/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 9000,
@@ -3743,6 +3804,7 @@
         ]
     },
     "Eve": {
+        "Icon": "eve/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 6200,
@@ -3809,6 +3871,7 @@
         ]
     },
     "Janet": {
+        "Icon": "janet/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 6800,
@@ -3875,6 +3938,7 @@
         ]
     },
     "Otis": {
+        "Icon": "otis/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7200,
@@ -3920,6 +3984,7 @@
         ]
     },
     "Buster": {
+        "Icon": "buster/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 10000,
@@ -3986,6 +4051,7 @@
         ]
     },
     "Gray": {
+        "Icon": "gray/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6800,
@@ -4030,6 +4096,7 @@
         ]
     },
     "R-T": {
+        "Icon": "rt/base/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 8200,
@@ -4096,6 +4163,7 @@
         ]
     },
     "R-T (split form)": {
+        "Icon": "rt/split/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 8200,
@@ -4127,6 +4195,7 @@
         }
     },
     "Willow": {
+        "Icon": "willow/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 6600,
@@ -4192,6 +4261,7 @@
         ]
     },
     "Doug": {
+        "Icon": "doug/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 10400,
@@ -4258,6 +4328,7 @@
         ]
     },
     "Chuck": {
+        "Icon": "chuck/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 9400,
@@ -4324,6 +4395,7 @@
         ]
     },
     "Charlie": {
+        "Icon": "charlie/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 7400,
@@ -4389,6 +4461,7 @@
         ]
     },
     "Mico": {
+        "Icon": "mico/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7000,
@@ -4455,6 +4528,7 @@
         ]
     },
     "Melodie": {
+        "Icon": "melodie/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 7600,
@@ -4521,6 +4595,7 @@
         ]
     },
     "Lily": {
+        "Icon": "lily/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 8400,
@@ -4566,6 +4641,7 @@
         ]
     },
     "Clancy": {
+        "Icon": "clancy/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 0,
@@ -4632,6 +4708,7 @@
         ]
     },
     "Moe": {
+        "Icon": "moe/base/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7200,
@@ -4698,6 +4775,7 @@
         ]
     },
     "Moe (driller form)": {
+        "Icon": "moe/drill/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7200,
@@ -4729,6 +4807,7 @@
         }
     },
     "Juju": {
+        "Icon": "juju/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 6200,
@@ -4795,6 +4874,7 @@
         ]
     },
     "Ollie": {
+        "Icon": "ollie/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 10800,
@@ -4860,6 +4940,7 @@
         ]
     },
     "Finx": {
+        "Icon": "finx/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7400,
@@ -4926,6 +5007,7 @@
         ]
     },
     "Lumi": {
+        "Icon": "lumi/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 6200,
@@ -4992,6 +5074,7 @@
         ]
     },
     "Jae-Yong": {
+        "Icon": "jae/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7400,
@@ -5058,6 +5141,7 @@
         ]
     },
     "Alli": {
+        "Icon": "alli/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 7800,
@@ -5123,6 +5207,7 @@
         ]
     },
     "Mina": {
+        "Icon": "mina/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 7200,
@@ -5188,6 +5273,7 @@
         ]
     },
     "Ziggy": {
+        "Icon": "ziggy/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6400,
@@ -5253,6 +5339,7 @@
         ]
     },
     "Gigi": {
+        "Icon": "gigi/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 8200,
@@ -5318,6 +5405,7 @@
         ]
     },
     "Glowy": {
+        "Icon": "glowy/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7800,
@@ -5384,6 +5472,7 @@
         ]
     },
     "Crow": {
+        "Icon": "crow/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6000,
@@ -5449,6 +5538,7 @@
         ]
     },
     "Spike": {
+        "Icon": "spike/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6000,
@@ -5494,6 +5584,7 @@
         ]
     },
     "Leon": {
+        "Icon": "leon/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7200,
@@ -5558,6 +5649,7 @@
         ]
     },
     "Sandy": {
+        "Icon": "sandy/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 8200,
@@ -5624,6 +5716,7 @@
         ]
     },
     "Surge": {
+        "Icon": "surge/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6600,
@@ -5690,6 +5783,7 @@
         ]
     },
     "Amber": {
+        "Icon": "amber/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 6800,
@@ -5755,6 +5849,7 @@
         ]
     },
     "Meg (mecha form)": {
+        "Icon": "meg/mecha/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 7400,
@@ -5821,6 +5916,7 @@
         ]
     },
     "Meg (small form)": {
+        "Icon": "meg/small/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 4800,
@@ -5852,6 +5948,7 @@
         }
     },
     "Chester": {
+        "Icon": "chester/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7600,
@@ -5914,6 +6011,7 @@
         ]
     },
     "Cordelius": {
+        "Icon": "cordelius/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7000,
@@ -5980,6 +6078,7 @@
         ]
     },
     "Kit": {
+        "Icon": "kit/base/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6200,
@@ -6045,6 +6144,7 @@
         ]
     },
     "Kit (attached form)": {
+        "Icon": "kit/att/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6200,
@@ -6076,6 +6176,7 @@
         }
     },
     "Draco": {
+        "Icon": "draco/base/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 11200,
@@ -6141,6 +6242,7 @@
         ]
     },
     "Draco (mounted form)": {
+        "Icon": "draco/mount/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 11200,
@@ -6172,6 +6274,7 @@
         }
     },
     "Kenji": {
+        "Icon": "kenji/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 8000,
@@ -6237,6 +6340,7 @@
         ]
     },
     "Pierce": {
+        "Icon": "pierce/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 6000,
@@ -6281,6 +6385,7 @@
         ]
     },
     "Kaze (geisha)": {
+        "Icon": "kaze/geisha/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 8200,
@@ -6347,6 +6452,7 @@
         ]
     },
     "Kaze (ninja)": {
+        "Icon": "kaze/ninja/pin.png",
         "Stats": {
             "gender": "female",
             "hp": 8200,
@@ -6400,6 +6506,7 @@
         }
     },
     "Sirius": {
+        "Icon": "sirius/pin.png",
         "Stats": {
             "gender": "male",
             "hp": 7400,

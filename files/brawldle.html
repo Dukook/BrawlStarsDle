@@ -889,7 +889,7 @@ function buildImage(){
   const slot=(key)=>{
     const src=imgSrc(imgs[key]);
     if(!src)return`<div class="img-placeholder">No image</div>`;
-    return pmImg(src,"ans-img","onerror=\"this.style.display='none';this.nextSibling&&(this.nextSibling.style.display='flex')\"") + `<div class="img-placeholder" style="display:none">🖼️ Not found<br><small>${esc(src)}</small></div>`;
+    return pmImg(src,"ans-img","onerror=\"this.style.display='none';this.nextSibling&&(this.nextSibling.style.display='flex')\"") + `<div class="img-placeholder" style="display:none">🖼️ Not found<br><small></small></div>`;
   };
   let html=`<div class="mode-header">
     <div class="mode-title">🖼️ Image</div>
