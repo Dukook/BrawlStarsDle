@@ -176,7 +176,7 @@
         "Icon": "bull/pin.png",
         "Stats": {
             "gender": "male",
-            "hp": 10600,
+            "hp": 10000,
             "hitbox": 145,
             "passive_ability": true,
             "projectiles": 5,
@@ -190,7 +190,7 @@
                 "2": 14
             },
             "ult_charge": 2,
-            "hc_multiplier": 35,
+            "hc_multiplier": 30,
             "class": "tank",
             "rarity": "rare",
             "world": "retropolis",
@@ -813,7 +813,7 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 5,
-            "damage_per_projectile": 640,
+            "damage_per_projectile": 600,
             "full_damage": 3200,
             "ammo": 3,
             "damage_type": "spread",
@@ -1266,7 +1266,7 @@
             "mvt": 720,
             "gadget_cd": {
                 "1": 19,
-                "2": 12
+                "2": 16
             },
             "ult_charge": 3.33,
             "hc_multiplier": 40,
@@ -1577,11 +1577,11 @@
             "damage_type": "splash",
             "mvt": 820,
             "gadget_cd": {
-                "1": 15,
+                "1": 20,
                 "2": 10
             },
-            "ult_charge": 3,
-            "hc_multiplier": 50,
+            "ult_charge": 4,
+            "hc_multiplier": 40,
             "class": "tank",
             "rarity": "epic",
             "world": "retropolis",
@@ -2353,7 +2353,7 @@
             "⭐"
         ]
     },
-    "Clyde": {
+    "Bonnie (Clyde)": {
         "Icon": "bonnie/clyde/pin.png",
         "Stats": {
             "gender": "female",
@@ -4644,7 +4644,7 @@
         "Icon": "clancy/pin.png",
         "Stats": {
             "gender": "male",
-            "hp": 0,
+            "hp": 7600,
             "hitbox": 120,
             "passive_ability": true,
             "projectiles": 1,
@@ -4652,17 +4652,17 @@
             "full_damage": 1400,
             "ammo": 3,
             "damage_type": "single",
-            "mvt": 820,
+            "mvt": 720,
             "gadget_cd": {
-                "1": 15,
-                "2": 16
+                "1": 12,
+                "2": 13
             },
             "ult_charge": 9,
             "hc_multiplier": 30,
             "class": "damage_dealer",
             "rarity": "mythic",
             "world": "water_land",
-            "range": 7.67,
+            "range": 8.33,
             "reload_speed": 2,
             "release": 2024,
             "nb_skins": 2
@@ -5353,7 +5353,7 @@
             "mvt": 820,
             "gadget_cd": {
                 "1": 18,
-                "2": 18
+                "2": 15
             },
             "ult_charge": 1.8,
             "hc_multiplier": 35,
@@ -5426,7 +5426,7 @@
             "class": "support",
             "rarity": "mythic",
             "world": "water_land",
-            "range": 8,
+            "range": 6.67,
             "reload_speed": 1.7,
             "release": 2025,
             "nb_skins": 0
@@ -5485,7 +5485,7 @@
             "damage_type": "spread",
             "mvt": 820,
             "gadget_cd": {
-                "1": 15,
+                "1": 20,
                 "2": 17
             },
             "ult_charge": 4.33,
@@ -5545,7 +5545,7 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 6,
-            "damage_per_projectile": 1080,
+            "damage_per_projectile": 980,
             "full_damage": 3240,
             "ammo": 3,
             "damage_type": "spread",

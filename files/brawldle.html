@@ -128,7 +128,9 @@ body{
   z-index:200;display:none;box-shadow:var(--shadow);
 }
 .ac-list.open{display:block}
-.ac-item{padding:10px 18px;cursor:pointer;font-weight:700;transition:background .1s}
+.ac-item{padding:8px 14px;cursor:pointer;font-weight:700;transition:background .1s;display:flex;align-items:center;gap:10px}
+.ac-icon{width:32px;height:32px;object-fit:contain;flex-shrink:0;border-radius:50%;background:rgba(255,255,255,.06)}
+.guess-icon{width:28px;height:28px;object-fit:contain;flex-shrink:0;border-radius:50%;background:rgba(255,255,255,.06)}
 .ac-item:hover,.ac-item.hi{background:var(--bg4);color:var(--accent)}
 
 /* Banners */
@@ -202,9 +204,12 @@ body{
   position:relative;height:58px;
 }
 .stats-table tbody td:first-child{
-  text-align:left;padding:0 10px 0 13px;font-size:.85rem;white-space:nowrap;
-  color:var(--text);max-width:150px;overflow:hidden;text-overflow:ellipsis;
+  text-align:left;padding:0 10px 0 8px;font-size:.85rem;white-space:nowrap;
+  color:var(--text);max-width:165px;
 }
+.name-cell{display:flex;align-items:center;gap:7px;overflow:hidden;}
+.name-cell span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.tbl-icon{width:30px;height:30px;object-fit:contain;flex-shrink:0;border-radius:50%;background:rgba(255,255,255,.06)}
 .cell-inner{
   position:relative;display:flex;align-items:center;justify-content:center;
   height:100%;padding:8px 10px;overflow:hidden;
@@ -581,6 +586,7 @@ function cmpStat(stat,gv,tv){
 /* ── Path helpers ── */
 // Strip "images/" prefix → file is at brawlername/atk.png etc.
 function imgSrc(p){return p?p.replace(/^images\//,''):null}
+function brawlerIcon(name){const b=BRAWLERS[name];return b&&b.Icon?b.Icon:'';}
 // Strip "audio/" prefix → file is at brawlername/sound.ogg etc.
 function audioSrc(p){return p?p.replace(/^audio\//,''):null}
 
@@ -590,35 +596,57 @@ function audioSrc(p){return p?p.replace(/^audio\//,''):null}
 let classicAnimState = {idx:-1, done:true};
 
 /* ── Victory effect ── */
-function fireVictory(){
-  // Remove existing overlay if any
-  const old=document.getElementById('victory-overlay');
-  if(old)old.remove();
+/* ── Per-mode continuous confetti ── */
+const _confettiIntervals={};
+const _confettiColors=['#ffd000','#ff6b35','#27ae60','#3498db','#9b59b6','#e74c3c','#f1c40f','#00d2ff'];
+
+function _spawnConfettiBatch(overlay){
+  const frag=document.createDocumentFragment();
+  for(let i=0;i<18;i++){
+    const p=document.createElement('div');
+    p.className='confetti';
+    const dur=1.8+Math.random()*2;
+    p.style.cssText=
+      'left:'+Math.random()*100+'%;'+
+      'background:'+_confettiColors[Math.floor(Math.random()*_confettiColors.length)]+';'+
+      'width:'+(6+Math.random()*10)+'px;height:'+(6+Math.random()*10)+'px;'+
+      'border-radius:'+(Math.random()>.5?'50%':'2px')+';'+
+      'animation-duration:'+dur+'s;'+
+      'animation-delay:'+Math.random()*0.4+'s;';
+    frag.appendChild(p);
+    setTimeout(()=>p.remove(), (dur+0.4)*1000+200);
+  }
+  overlay.appendChild(frag);
+}
+
+function startConfetti(mode){
+  stopConfetti(mode);
+  let overlay=document.getElementById('confetti-'+mode);
+  if(!overlay){
+    overlay=document.createElement('div');
+    overlay.id='confetti-'+mode;
+    overlay.style.cssText='position:fixed;inset:0;pointer-events:none;z-index:9988;';
+    document.body.appendChild(overlay);
+  }
+  _spawnConfettiBatch(overlay);
+  _confettiIntervals[mode]=setInterval(()=>_spawnConfettiBatch(overlay),700);
+}
+
+function stopConfetti(mode){
+  if(_confettiIntervals[mode]){clearInterval(_confettiIntervals[mode]);delete _confettiIntervals[mode];}
+  const old=document.getElementById('confetti-'+mode);if(old)old.remove();
+}
+
+function stopAllConfetti(){
+  Object.keys(_confettiIntervals).forEach(stopConfetti);
+}
+
+function fireVictory(mode){
   const fl=document.createElement('div');fl.className='flash-win';document.body.appendChild(fl);
   setTimeout(()=>fl.remove(),1000);
-
-  // Gentle spin on body
   document.body.style.animation='gentleSpin 1.1s ease-in-out';
   setTimeout(()=>{document.body.style.animation=''},800);
-
-  // Confetti
-  const overlay=document.createElement('div');
-  overlay.id='victory-overlay';document.body.appendChild(overlay);
-  const colors=['#ffd000','#ff6b35','#27ae60','#3498db','#9b59b6','#e74c3c','#f1c40f','#00d2ff'];
-  for(let i=0;i<90;i++){
-    const c=document.createElement('div');
-    c.className='confetti';
-    c.style.cssText=`
-      left:${Math.random()*100}%;
-      background:${colors[Math.floor(Math.random()*colors.length)]};
-      width:${6+Math.random()*10}px;height:${6+Math.random()*10}px;
-      border-radius:${Math.random()>.5?'50%':'2px'};
-      animation-duration:${1.5+Math.random()*2.5}s;
-      animation-delay:${Math.random()*0.8}s;
-    `;
-    overlay.appendChild(c);
-  }
-  setTimeout(()=>overlay.remove(),5000);
+  startConfetti(mode);
 }
 
 /* ── State ── */
@@ -680,13 +708,13 @@ function guess(mode,name){
     const dur=(cols.length+1)*500+400;
     setTimeout(()=>{
       classicAnimState.done=true;
-      if(correct)fireVictory();
+      if(correct)fireVictory(mode);
       render();
     }, dur);
   } else {
     ms.guesses.push({name,correct});
     if(!correct)ms.wrong++;
-    if(correct)setTimeout(fireVictory,120);
+    if(correct)setTimeout(()=>fireVictory(mode),120);
   }
 
   if(correct){
@@ -698,7 +726,12 @@ function guess(mode,name){
 }
 
 function toggleHints(mode){S.modes[mode].hintsOn=!S.modes[mode].hintsOn;saveState();render()}
-function switchMode(mode){S.activeMode=mode;render()}
+function switchMode(mode){
+  stopAllConfetti();
+  S.activeMode=mode;
+  render();
+  if(S.modes[mode]&&S.modes[mode].won) startConfetti(mode);
+}
 
 /* ── HTML helpers ── */
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
@@ -715,7 +748,7 @@ function searchBox(mode){
 function guessList(mode){
   const ms=S.modes[mode];if(!ms.guesses.length)return'';
   return`<div class="guess-list">${ms.guesses.map(g=>
-    `<div class="guess-item ${g.correct?'ok':'fail'}">${g.correct?'✅':'❌'} ${esc(g.name)}</div>`
+    `<div class="guess-item ${g.correct?'ok':'fail'}"><img class="guess-icon" src="${brawlerIcon(g.name)}" alt="">${g.correct?'✅':'❌'} ${esc(g.name)}</div>`
   ).join('')}</div>`;
 }
 function winBanner(mode){
@@ -889,7 +922,8 @@ function buildImage(){
   const slot=(key)=>{
     const src=imgSrc(imgs[key]);
     if(!src)return`<div class="img-placeholder">No image</div>`;
-    return pmImg(src,"ans-img","onerror=\"this.style.display='none';this.nextSibling&&(this.nextSibling.style.display='flex')\"") + `<div class="img-placeholder" style="display:none">🖼️ Not found<br><small></small></div>`;
+    return pmImg(src,"ans-img","onerror=\"this.style.display='none';this.nextSibling&&(this.nextSibling.style.display='flex')\"") +
+      `<div class="img-placeholder" style="display:none">🖼️ Not found</div>`;
   };
   let html=`<div class="mode-header">
     <div class="mode-title">🖼️ Image</div>
@@ -955,7 +989,7 @@ function acFilter(mode){
   if(!q){drop.classList.remove('open');drop.innerHTML='';return}
   const matches=pool.filter(b=>b.toLowerCase().includes(q)).slice(0,10);
   if(!matches.length){drop.classList.remove('open');return}
-  drop.innerHTML=matches.map(b=>`<div class="ac-item" data-name="${esc(b)}" onmousedown="pick('${mode}',this)">${esc(b)}</div>`).join('');
+  drop.innerHTML=matches.map(b=>`<div class="ac-item" data-name="${esc(b)}" onmousedown="pick('${mode}',this)"><img class="ac-icon" src="${brawlerIcon(b)}" alt="">${esc(b)}</div>`).join('');
   drop.classList.add('open');
 }
 function acKey(e,mode){
@@ -984,8 +1018,13 @@ function pmAudio(src){
 }
 function resolveMedia(){
   document.querySelectorAll('[data-pmid]').forEach(el=>{
-    el.src=_PM[el.dataset.pmid]||'';
+    const src=_PM[el.dataset.pmid]||'';
     el.removeAttribute('data-pmid');
+    if((el.tagName==='AUDIO'||el.tagName==='IMG')&&src){
+      fetch(src).then(r=>r.blob()).then(b=>{el.src=URL.createObjectURL(b);}).catch(()=>{el.src=src;});
+    } else {
+      el.src=src;
+    }
   });
 }
 function scrollTbl(d){const w=document.getElementById('ctw');if(w)w.scrollBy({left:d,behavior:'smooth'})}
