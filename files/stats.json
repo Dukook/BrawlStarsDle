@@ -26,6 +26,13 @@
             "release": 2017,
             "nb_skins": 16
         },
+        "Gears" : {
+            "1": "shelly/gd1.png",
+            "2": "shelly/gd2.png",
+            "3": "shelly/sp1.png",
+            "4": "shelly/sp2.png",
+            "5": "shelly/hc.png"
+        },
         "Fact": [
             "One of *Brawler*'s skins can generate infinite shoes (only visible from who play this skin).",
             "*Brawler* can reproduce the super sound with main attack, but only with a specific skin.",
@@ -88,6 +95,13 @@
             "release": 2017,
             "nb_skins": 15
         },
+        "Gears" : {
+            "1": "nita/gd1.png",
+            "2": "nita/gd2.png",
+            "3": "nita/sp1.png",
+            "4": "nita/sp2.png",
+            "5": "nita/hc.png"
+        },
         "Fact": [
             "*Brawler*'s pet is named Bruce.",
             "*Brawler*'s first gadget used to stun instantly instead of delayed.",
@@ -133,6 +147,13 @@
             "reload_speed": 1.3,
             "release": 2017,
             "nb_skins": 25
+        },
+        "Gears" : {
+            "1": "colt/gd1.png",
+            "2": "colt/gd2.png",
+            "3": "colt/sp1.png",
+            "4": "colt/sp2.png",
+            "5": "colt/hc.png"
         },
         "Fact": [
             "*Brawler*'s buffies twerk in the lobby and victory animation.",
@@ -199,6 +220,13 @@
             "release": 2017,
             "nb_skins": 14
         },
+        "Gears" : {
+            "1": "bull/gd1.png",
+            "2": "bull/gd2.png",
+            "3": "bull/sp1.png",
+            "4": "bull/sp2.png",
+            "5": "bull/hc.png"
+        },
         "Fact": [
             "*Brawler*'s gadget was once included directly in the kit.",
             "*Brawler* used to be able to damage allies thanks to a bug.",
@@ -261,6 +289,13 @@
             "reload_speed": 2.1,
             "release": 2017,
             "nb_skins": 19
+        },
+        "Gears" : {
+            "1": "brock/gd1.png",
+            "2": "brock/gd2.png",
+            "3": "brock/sp1.png",
+            "4": "brock/sp2.png",
+            "5": "brock/hc.png"
         },
         "Fact": [
             "Like Chester, one of *Brawler*'s star powers became a passive ability.",
@@ -327,6 +362,13 @@
             "reload_speed": 0.8,
             "release": 2017,
             "nb_skins": 17
+        },
+        "Gears" : {
+            "1": "primo/gd1.png",
+            "2": "primo/gd2.png",
+            "3": "primo/sp1.png",
+            "4": "primo/sp2.png",
+            "5": "primo/hc.png"
         },
         "Fact": [
             "*Brawler* has the second highest HP in the game.",
@@ -395,6 +437,13 @@
             "release": 2017,
             "nb_skins": 9
         },
+        "Gears" : {
+            "1": "barley/gd1.png",
+            "2": "barley/gd2.png",
+            "3": "barley/sp1.png",
+            "4": "barley/sp2.png",
+            "5": "barley/hc.png"
+        },
         "Fact": [
             "*Brawler* has a free skin available since account creation.",
             "*Brawler*'s hypercharge reduces the number of projectiles by 2.",
@@ -460,9 +509,16 @@
             "release": 2017,
             "nb_skins": 12
         },
+        "Gears" : {
+            "1": "poco/gd1.png",
+            "2": "poco/gd2.png",
+            "3": "poco/sp1.png",
+            "4": "poco/sp2.png",
+            "5": "poco/hc.png"
+        },
         "Fact": [
             "*Brawler* is the first brawler able to heal allies.",
-            "*Brawler* range is higher on the side of the attack than in the middle.",
+            "Like Frank and Sandy, *Brawler* range is higher on the side of the attack than in the middle.",
             "*Brawler*'s old star power used to heal on death, but it was changed because it was too bad."
         ],
         "Voicelines": [
@@ -526,6 +582,13 @@
             "reload_speed": 1,
             "release": 2019,
             "nb_skins": 7
+        },
+        "Gears" : {
+            "1": "rosa/gd1.png",
+            "2": "rosa/gd2.png",
+            "3": "rosa/sp1.png",
+            "4": "rosa/sp2.png",
+            "5": "rosa/hc.png"
         },
         "Fact": [
             "*Brawler* was the most broken brawler on release.",
@@ -592,6 +655,13 @@
             "reload_speed": 1.8,
             "release": 2017,
             "nb_skins": 14
+        },
+        "Gears" : {
+            "1": "jessie/gd1.png",
+            "2": "jessie/gd2.png",
+            "3": "jessie/sp1.png",
+            "4": "jessie/sp2.png",
+            "5": "jessie/hc.png"
         },
         "Fact": [
             "*Brawler* become annoying when plyaing with bad randoms.",
@@ -660,6 +730,13 @@
             "release": 2017,
             "nb_skins": 23
         },
+        "Gears" : {
+            "1": "dynamike/gd1.png",
+            "2": "dynamike/gd2.png",
+            "3": "dynamike/sp1.png",
+            "4": "dynamike/sp2.png",
+            "5": "dynamike/hc.png"
+        },
         "Fact": [
             "*Brawler* players love to sit in a bush and wait ennemies with a gadget.",
             "*Brawler* can escape many dangers without wasting precious abilities.",
@@ -727,6 +804,13 @@
             "release": 2019,
             "nb_skins": 10
         },
+        "Gears" : {
+            "1": "tick/gd1.png",
+            "2": "tick/gd2.png",
+            "3": "tick/sp1.png",
+            "4": "tick/sp2.png",
+            "5": "tick/hc.png"
+        },
         "Fact": [
             "*Brawler* is the most annoying brawler in the game.",
             "*Brawler* once had a gadget to become invicible, but it was nerfed.",
@@ -772,6 +856,13 @@
             "reload_speed": 1.5,
             "release": 2019,
             "nb_skins": 8
+        },
+        "Gears" : {
+        "1": "bit/gd1.png",
+        "2": "bit/gd2.png",
+        "3": "bit/sp1.png",
+        "4": "bit/sp2.png",
+        "5": "bit/hc.png"
         },
         "Fact": [
             "*Brawler* is the slowest and the fastest brawler in the game at the same time.",
@@ -831,6 +922,13 @@
             "reload_speed": 1.2,
             "release": 2017,
             "nb_skins": 17
+        },
+        "Gears" : {
+        "1": "rico/gd1.png",
+        "2": "rico/gd2.png",
+        "3": "rico/sp1.png",
+        "4": "rico/sp2.png",
+        "5": "rico/hc.png"
         },
         "Fact": [
             "*Brawler* was the most broken brawler during the godzilla event.",
@@ -899,6 +997,13 @@
             "release": 2017,
             "nb_skins": 10
         },
+        "Gears" : {
+        "1": "darryl/gd1.png",
+        "2": "darryl/gd2.png",
+        "3": "darryl/sp1.png",
+        "4": "darryl/sp2.png",
+        "5": "darryl/hc.png"
+        },
         "Fact": [
             "*Brawler* is the first brawler to have a passive ability.",
             "*Brawler* had two free skin that are now exclusives.",
@@ -965,6 +1070,13 @@
             "release": 2018,
             "nb_skins": 10
         },
+        "Gears" : {
+        "1": "penny/gd1.png",
+        "2": "penny/gd2.png",
+        "3": "penny/sp1.png",
+        "4": "penny/sp2.png",
+        "5": "penny/hc.png"
+        },
         "Fact": [
             "*Brawler* can one shot a kaze if she gadget when hit.",
             "*Brawler* once got a massive rework on the gadgets, star powers and look, changing completely the brawler.",
@@ -1018,6 +1130,13 @@
             "reload_speed": 2.2,
             "release": 2019,
             "nb_skins": 11
+        },
+        "Gears" : {
+        "1": "carl/gd1.png",
+        "2": "carl/gd2.png",
+        "3": "carl/sp1.png",
+        "4": "carl/sp2.png",
+        "5": "carl/hc.png"
         },
         "Fact": [
             "*Brawler* is the first brawler to have a different mechanic on his ammunitions.",
@@ -1082,6 +1201,13 @@
             "release": 2020,
             "nb_skins": 8
         },
+        "Gears" : {
+        "1": "jacky/gd1.png",
+        "2": "jacky/gd2.png",
+        "3": "jacky/sp1.png",
+        "4": "jacky/sp2.png",
+        "5": "jacky/hc.png"
+        },
         "Fact": [
             "*Brawler* once could create a bug that made wall invisible for the opponent.",
             "*Brawler* is mostly used in 'free rank 50 strategy' where you protect yourself in a wall or simply capture ennemies in a wall.",
@@ -1144,6 +1270,13 @@
             "reload_speed": 1.5,
             "release": 2022,
             "nb_skins": 6
+        },
+        "Gears" : {
+        "1": "gus/gd1.png",
+        "2": "gus/gd2.png",
+        "3": "gus/sp1.png",
+        "4": "gus/sp2.png",
+        "5": "gus/hc.png"
         },
         "Fact": [
             "*Brawler* once had a bump on the gadget, then it was moved on the super to balance the kit of the brawler.",
@@ -1212,6 +1345,13 @@
             "release": 2017,
             "nb_skins": 14
         },
+        "Gears" : {
+        "1": "bo/gd1.png",
+        "2": "bo/gd2.png",
+        "3": "bo/sp1.png",
+        "4": "bo/sp2.png",
+        "5": "bo/hc.png"
+        },
         "Fact": [
             "*Brawler* during godzilla event was the only one who could drop infinite super on the field.",
             "*Brawler*'s main attack can be use in 2 different way depending on the movement of the brawler.",
@@ -1277,6 +1417,13 @@
             "reload_speed": 2,
             "release": 2019,
             "nb_skins": 11
+        },
+        "Gears" : {
+            "1": "emz/gd1.png",
+            "2": "emz/gd2.png",
+            "3": "emz/sp1.png",
+            "4": "emz/sp2.png",
+            "5": "emz/hc.png"
         },
         "Fact": [
             "*Brawler*'s main attack can be buff by an opponent's phinx super, making it 4 times stronger",
@@ -1345,6 +1492,13 @@
             "release": 2021,
             "nb_skins": 10
         },
+        "Gears" : {
+        "1": "stu/gd1.png",
+        "2": "stu/gd2.png",
+        "3": "stu/sp1.png",
+        "4": "stu/sp2.png",
+        "5": "stu/hc.png"
+        },
         "Fact": [
             "*Brawler* is the only assassin that have a normal movement speed, excepting Melodie",
             "*Brawler*'s super is the fastest to charge in the game",
@@ -1410,6 +1564,13 @@
             "reload_speed": 2.3,
             "release": 2017,
             "nb_skins": 14
+        },
+        "Gears" : {
+            "1": "piper/gd1.png",
+            "2": "piper/gd2.png",
+            "3": "piper/sp1.png",
+            "4": "piper/sp2.png",
+            "5": "piper/hc.png"
         },
         "Fact": [
             "*Brawler*'s super is dodgable if you stand still in the perfect middle of the ultimate.",
@@ -1478,6 +1639,13 @@
             "release": 2017,
             "nb_skins": 5
         },
+        "Gears" : {
+        "1": "pam/gd1.png",
+        "2": "pam/gd2.png",
+        "3": "pam/sp1.png",
+        "4": "pam/sp2.png",
+        "5": "pam/hc.png"
+        },
         "Fact": [
             "*Brawler*'s gadget can be very useful to counter angelo and hank main attack.",
             "*Brawler* is the only one who get the hypercharge remove from the game after some players get it earlier than supercell wanted.",
@@ -1544,6 +1712,13 @@
             "release": 2018,
             "nb_skins": 11
         },
+        "Gears" : {
+        "1": "frank/gd1.png",
+        "2": "frank/gd2.png",
+        "3": "frank/sp1.png",
+        "4": "frank/sp2.png",
+        "5": "frank/hc.png"
+        },
         "Fact": [
             "*Brawler* once got a rework on his main attack mechanic, causing sometimes to be canceled for no reason.",
             "*Brawler*'s hypergarge can be dodge even if you are inside the super, making it weaker in certain situations.",
@@ -1589,6 +1764,13 @@
             "reload_speed": 0.8,
             "release": 2019,
             "nb_skins": 13
+        },
+        "Gears" : {
+            "1": "bibi/gd1.png",
+            "2": "bibi/gd2.png",
+            "3": "bibi/sp1.png",
+            "4": "bibi/sp2.png",
+            "5": "bibi/hc.png"
         },
         "Fact": [
             "*Brawler*'s hypercharge was the fastest in the game with only 6 hit needed to fully charge it.",
@@ -1656,6 +1838,13 @@
             "release": 2019,
             "nb_skins": 7
         },
+        "Gears" : {
+        "1": "bea/gd1.png",
+        "2": "bea/gd2.png",
+        "3": "bea/sp1.png",
+        "4": "bea/sp2.png",
+        "5": "bea/hc.png"
+        },
         "Fact": [
             "*Brawler*'s gadget change depending on the side of the team(red or blue) you are on.",
             "*Brawler*'s hypercharge could pass through a buster shield, but shouldn't.",
@@ -1721,6 +1910,13 @@
             "reload_speed": 1.2,
             "release": 2020,
             "nb_skins": 8
+        },
+        "Gears" : {
+        "1": "gale/gd1.png",
+        "2": "gale/gd2.png",
+        "3": "gale/sp1.png",
+        "4": "gale/sp2.png",
+        "5": "gale/hc.png"
         },
         "Fact": [
             "*Brawler* once could multiply damage of the ult by about 4 times if aimed correctly.",
@@ -1788,6 +1984,13 @@
             "release": 2020,
             "nb_skins": 6
         },
+        "Gears" : {
+        "1": "nani/gd1.png",
+        "2": "nani/gd2.png",
+        "3": "nani/sp1.png",
+        "4": "nani/sp2.png",
+        "5": "nani/hc.png"
+        },
         "Fact": [
             "*Brawler*'s main attack is more likely to hit if you aim not directly at the target.",
             "*Brawler* once had a bug where the super doesn't accelerate like it would normally.",
@@ -1849,6 +2052,13 @@
             "reload_speed": 1.6,
             "release": 2020,
             "nb_skins": 11
+        },
+        "Gears" : {
+        "1": "colette/gd1.png",
+        "2": "colette/gd2.png",
+        "3": "colette/sp1.png",
+        "4": "colette/sp2.png",
+        "5": "colette/hc.png"
         },
         "Fact": [
             "*Brawler* once could one shot any ennemy at high power cubes or in 5v5 knockout.",
@@ -1917,6 +2127,13 @@
             "release": 2020,
             "nb_skins": 15
         },
+        "Gears" : {
+        "1": "edgar/gd1.png",
+        "2": "edgar/gd2.png",
+        "3": "edgar/sp1.png",
+        "4": "edgar/sp2.png",
+        "5": "edgar/hc.png"
+        },
         "Fact": [
             "*Brawler* is known for being the most toxic and no-skill brawler, mostly because of the userate in low trophy matches, and *Brawler* is unlockable very early in the game.",
             "*Brawler* is the first brawler that introduce the decaying shield mechanic.",
@@ -1981,6 +2198,13 @@
             "reload_speed": 1.4,
             "release": 2021,
             "nb_skins": 6
+        },
+        "Gears" : {
+        "1": "belle/gd1.png",
+        "2": "belle/gd2.png",
+        "3": "belle/sp1.png",
+        "4": "belle/sp2.png",
+        "5": "belle/hc.png"
         },
         "Fact": [
             "*Brawler* once could theorically do infinite damage with only one attack.",
@@ -2049,6 +2273,13 @@
             "release": 2021,
             "nb_skins": 5
         },
+        "Gears" : {
+        "1": "griff/gd1.png",
+        "2": "griff/gd2.png",
+        "3": "griff/sp1.png",
+        "4": "griff/sp2.png",
+        "5": "griff/hc.png"
+        },
         "Fact": [
             "*Brawler* doesn't seem poor at all despite being actually not that rich.",
             "*Brawler*'s super deals more damage the farther the target is, however, if the opponent is very close to the brawler, he receives massive damage.",
@@ -2115,6 +2346,13 @@
             "release": 2021,
             "nb_skins": 8
         },
+        "Gears" : {
+        "1": "ash/gd1.png",
+        "2": "ash/gd2.png",
+        "3": "ash/sp1.png",
+        "4": "ash/sp2.png",
+        "5": "ash/hc.png"
+        },
         "Fact": [
             "*Brawler* can kill himself with his gadget and win stars in bounty, however you need to face a R-T.",
             "*Brawler*'s hypercharge is broken against single target brawler, but totally useless against spalsh damages.",
@@ -2180,6 +2418,13 @@
             "reload_speed": 1.7,
             "release": 2021,
             "nb_skins": 8
+        },
+        "Gears" : {
+        "1": "lola/gd1.png",
+        "2": "lola/gd2.png",
+        "3": "lola/sp1.png",
+        "4": "lola/sp2.png",
+        "5": "lola/hc.png"
         },
         "Fact": [
             "*Brawler*'s voicelines are mainly to humiliate other brawler by repeating their own voicelines.",
@@ -2248,6 +2493,13 @@
             "release": 2021,
             "nb_skins": 5
         },
+        "Gears" : {
+        "1": "grom/gd1.png",
+        "2": "grom/gd2.png",
+        "3": "grom/sp1.png",
+        "4": "grom/sp2.png",
+        "5": "grom/hc.png"
+        },
         "Fact": [
             "*Brawler* is the only thrower that cannot attack through Mina's sheld.",
             "*Brawler* once was able to land attack faster the nearer the target was, but now, the travel is the same no matter the distance.",
@@ -2313,6 +2565,13 @@
             "reload_speed": 2,
             "release": 2022,
             "nb_skins": 6
+        },
+        "Gears" : {
+        "1": "bonnie/small/gd1.png",
+        "2": "bonnie/small/gd2.png",
+        "3": "bonnie/small/sp1.png",
+        "4": "bonnie/small/sp2.png",
+        "5": "bonnie/small/hc.png"
         },
         "Fact": [
             "*Brawler* once could have the projectile from the main attack disappearing when ulting.",
@@ -2412,6 +2671,13 @@
             "release": 2022,
             "nb_skins": 6
         },
+        "Gears" : {
+        "1": "sam/gd1.png",
+        "2": "sam/gd2.png",
+        "3": "sam/sp1.png",
+        "4": "sam/sp2.png",
+        "5": "sam/hc.png"
+        },
         "Fact": [
             "*Brawler* once could lost the main gimmic of the brawler by throwing the super in the water.",
             "*Brawler*'s second gadget is on cooldown direcly after pressing the button, not using it.",
@@ -2477,6 +2743,13 @@
             "reload_speed": 1.5,
             "release": 2023,
             "nb_skins": 9
+        },
+        "Gears" : {
+        "1": "mandy/gd1.png",
+        "2": "mandy/gd2.png",
+        "3": "mandy/sp1.png",
+        "4": "mandy/sp2.png",
+        "5": "mandy/hc.png"
         },
         "Fact": [
             "*Brawler* has the longest-range main attack in the game, excluding gadgets.",
@@ -2544,6 +2817,13 @@
             "release": 2023,
             "nb_skins": 6
         },
+        "Gears" : {
+            "1": "maisie/gd1.png",
+            "2": "maisie/gd2.png",
+            "3": "maisie/sp1.png",
+            "4": "maisie/sp2.png",
+            "5": "maisie/hc.png"
+        },
         "Fact": [
             "*Brawler*'s gadget once was a dash that goes backward.",
             "*Brawler*'s second gadget once could kill bosses that was missing 77% health or more with one attack.",
@@ -2610,6 +2890,13 @@
             "release": 2023,
             "nb_skins": 4
         },
+        "Gears" : {
+        "1": "hank/gd1.png",
+        "2": "hank/gd2.png",
+        "3": "hank/sp1.png",
+        "4": "hank/sp2.png",
+        "5": "hank/hc.png"
+        },
         "Fact": [
             "*Brawler*'s attack has a slightely longer range with the auto-aim.",
             "*Brawler*'s hypercharge on release was so broken that it was the best on open map despite being a tank.",
@@ -2674,6 +2961,13 @@
             "reload_speed": 1.5,
             "release": 2023,
             "nb_skins": 4
+        },
+        "Gears" : {
+        "1": "pearl/gd1.png",
+        "2": "pearl/gd2.png",
+        "3": "pearl/sp1.png",
+        "4": "pearl/sp2.png",
+        "5": "pearl/hc.png"
         },
         "Fact": [
             "*Brawler*'s hypercharge once stoped working if you died.",
@@ -2740,6 +3034,13 @@
             "reload_speed": 2.2,
             "release": 2024,
             "nb_skins": 5
+        },
+        "Gears" : {
+            "1": "larry/gd1.png",
+            "2": "larry/gd2.png",
+            "3": "larry/sp1.png",
+            "4": "larry/sp2.png",
+            "5": "larry/hc.png"
         },
         "Fact": [
             "*Brawler* once had a bug in duel with Ash to gain free trophies, to patch it, they remove Ash temporarily from the game.",
@@ -2808,6 +3109,13 @@
             "release": 2024,
             "nb_skins": 6
         },
+        "Gears" : {
+        "1": "angelo/gd1.png",
+        "2": "angelo/gd2.png",
+        "3": "angelo/sp1.png",
+        "4": "angelo/sp2.png",
+        "5": "angelo/hc.png"
+        },
         "Fact": [
             "During godzilla event, *Brawler* could deal up to 26400 in one hit, without the mutation : 8800.",
             "*Brawler* has the fastest reload speed in the game with 0.1s, excluding Lumi.",
@@ -2873,6 +3181,13 @@
             "reload_speed": 2.4,
             "release": 2024,
             "nb_skins": 4
+        },
+        "Gears" : {
+        "1": "berry/gd1.png",
+        "2": "berry/gd2.png",
+        "3": "berry/sp1.png",
+        "4": "berry/sp2.png",
+        "5": "berry/hc.png"
         },
         "Fact": [
             "Brawler's description states that the super deals 200 damage, but it actually deals 3040.",
@@ -2941,6 +3256,13 @@
             "release": 2024,
             "nb_skins": 3
         },
+        "Gears" : {
+        "1": "shade/gd1.png",
+        "2": "shade/gd2.png",
+        "3": "shade/sp1.png",
+        "4": "shade/sp2.png",
+        "5": "shade/hc.png"
+        },
         "Fact": [
             "*Brawler*'s gadget is intended to be use once, however, it's possible to use it three times or more in one cooldown.",
             "*Brawler* once could stack infinite movement spreed with the super.",
@@ -2986,6 +3308,13 @@
             "reload_speed": 1.7,
             "release": 2025,
             "nb_skins": 2
+        },
+        "Gears" : {
+        "1": "meeple/gd1.png",
+        "2": "meeple/gd2.png",
+        "3": "meeple/sp1.png",
+        "4": "meeple/sp2.png",
+        "5": "meeple/hc.png"
         },
         "Fact": [
             "*Brawler*'s gadget once could stop everythings in the game, including brawlball's ball, cart from gemgrab and brawler in mid air like Piper.",
@@ -3053,6 +3382,13 @@
             "release": 2025,
             "nb_skins": 1
         },
+        "Gears" : {
+        "1": "trunk/gd1.png",
+        "2": "trunk/gd2.png",
+        "3": "trunk/sp1.png",
+        "4": "trunk/sp2.png",
+        "5": "trunk/hc.png"
+        },
         "Fact": [
             "*Brawler*'s gadget ahs the shortest cooldown in the game.",
             "*Brawler* exist because of Doug.",
@@ -3118,6 +3454,13 @@
             "reload_speed": 2.4,
             "release": 2017,
             "nb_skins": 18
+        },
+        "Gears" : {
+            "1": "mortis/gd1.png",
+            "2": "mortis/gd2.png",
+            "3": "mortis/sp1.png",
+            "4": "mortis/sp2.png",
+            "5": "mortis/hc.png"
         },
         "Fact": [
             "In the early states of the game, *Brawler* could go through walls, but shouldn't.",
@@ -3185,6 +3528,13 @@
             "release": 2017,
             "nb_skins": 7
         },
+        "Gears" : {
+            "1": "tara/gd1.png",
+            "2": "tara/gd2.png",
+            "3": "tara/sp1.png",
+            "4": "tara/sp2.png",
+            "5": "tara/hc.png"
+        },
         "Fact": [
             "*Brawler* is the first brawler able to pull ennemies.",
             "*Brawler*'s gadget is the only one that alert all ennemies when using it.",
@@ -3229,6 +3579,13 @@
             "reload_speed": 0,
             "release": 2019,
             "nb_skins": 6
+        },
+        "Gears" : {
+        "1": "gene/gd1.png",
+        "2": "gene/gd2.png",
+        "3": "gene/sp1.png",
+        "4": "gene/sp2.png",
+        "5": "gene/hc.png"
         },
         "Fact": [
             "*Brawler*'s super once could crash the game if used.",
@@ -3275,6 +3632,13 @@
             "reload_speed": 1.3,
             "release": 2019,
             "nb_skins": 8
+        },
+        "Gears" : {
+        "1": "max/gd1.png",
+        "2": "max/gd2.png",
+        "3": "max/sp1.png",
+        "4": "max/sp2.png",
+        "5": "max/hc.png"
         },
         "Fact": [
             "*Brawler* is the embodiment of speed in the game.",
@@ -3343,6 +3707,13 @@
             "release": 2020,
             "nb_skins": 6
         },
+        "Gears" : {
+        "1": "mr/gd1.png",
+        "2": "mr/gd2.png",
+        "3": "mr/sp1.png",
+        "4": "mr/sp2.png",
+        "5": "mr/hc.png"
+        },
         "Fact": [
             "*Brawler* in 5v5 knockout is broken because the super scale abnormally.",
             "*Brawler*'s hypercharge can deal a whopping 1 damage if place on the ennemie.",
@@ -3387,6 +3758,13 @@
             "reload_speed": 1.7,
             "release": 2020,
             "nb_skins": 7
+        },
+        "Gears" : {
+        "1": "sprout/gd1.png",
+        "2": "sprout/gd2.png",
+        "3": "sprout/sp1.png",
+        "4": "sprout/sp2.png",
+        "5": "sprout/hc.png"
         },
         "Fact": [
             "*Brawler* can extend main attack's range by throwing the attack inside the super, the timing is quite hard.",
@@ -3453,6 +3831,13 @@
             "reload_speed": 1.1,
             "release": 2020,
             "nb_skins": 6
+        },
+        "Gears" : {
+        "1": "lou/gd1.png",
+        "2": "lou/gd2.png",
+        "3": "lou/sp1.png",
+        "4": "lou/sp2.png",
+        "5": "lou/hc.png"
         },
         "Fact": [
             "*Brawler*'s mythic skin cannot spin in showdown. What a great one !",
@@ -3521,6 +3906,13 @@
             "release": 2020,
             "nb_skins": 6
         },
+        "Gears" : {
+        "1": "byron/gd1.png",
+        "2": "byron/gd2.png",
+        "3": "byron/sp1.png",
+        "4": "byron/sp2.png",
+        "5": "byron/hc.png"
+        },
         "Fact": [
             "Despite being a healer, *Brawler* is one of the stronger marksman on open maps due to the main attack's range.",
             "*Brawler* is the only support that have the same amount of damage and heal.",
@@ -3586,6 +3978,13 @@
             "reload_speed": 1.4,
             "release": 2021,
             "nb_skins": 7
+        },
+        "Gears" : {
+        "1": "ruffs/gd1.png",
+        "2": "ruffs/gd2.png",
+        "3": "ruffs/sp1.png",
+        "4": "ruffs/sp2.png",
+        "5": "ruffs/hc.png"
         },
         "Fact": [
             "*Brawler*'s attack is the secon to be able to bounce off the walls.",
@@ -3653,6 +4052,13 @@
             "release": 2021,
             "nb_skins": 8
         },
+        "Gears" : {
+        "1": "squeak/gd1.png",
+        "2": "squeak/gd2.png",
+        "3": "squeak/sp1.png",
+        "4": "squeak/sp2.png",
+        "5": "squeak/hc.png"
+        },
         "Fact": [
             "*Brawler*'s hypercharge does damage if you go under it after it bounce.",
             "*Brawler*'s super once had a delay between landing and explosing, now, it exploses instantly but it takes the same time regardless of the distance thrown.",
@@ -3697,6 +4103,13 @@
             "reload_speed": 1,
             "release": 2021,
             "nb_skins": 14
+        },
+        "Gears" : {
+        "1": "buzz/gd1.png",
+        "2": "buzz/gd2.png",
+        "3": "buzz/sp1.png",
+        "4": "buzz/sp2.png",
+        "5": "buzz/hc.png"
         },
         "Fact": [
             "In mirror matchup with *Brawler*, you need to super after the ennemie in order to stun and win.",
@@ -3764,6 +4177,13 @@
             "release": 2021,
             "nb_skins": 10
         },
+        "Gears" : {
+        "1": "fang/gd1.png",
+        "2": "fang/gd2.png",
+        "3": "fang/sp1.png",
+        "4": "fang/sp2.png",
+        "5": "fang/hc.png"
+        },
         "Fact": [
             "*Brawler*'s first star power once could charge the hypercharge in one kill with the super, despite being one of the slowest in the game.",
             "*Brawler* is the strongest melee brawler in 5v5 because the super can chain up to 4 ennemies and teamwipe easily.",
@@ -3829,6 +4249,13 @@
             "reload_speed": 1.6,
             "release": 2022,
             "nb_skins": 5
+        },
+        "Gears" : {
+            "1": "eve/gd1.png",
+            "2": "eve/gd2.png",
+            "3": "eve/sp1.png",
+            "4": "eve/sp2.png",
+            "5": "eve/hc.png"
         },
         "Fact": [
             "*Brawler* is the first brawler that can go over water.",
@@ -3897,6 +4324,13 @@
             "release": 2022,
             "nb_skins": 8
         },
+        "Gears" : {
+        "1": "janet/gd1.png",
+        "2": "janet/gd2.png",
+        "3": "janet/sp1.png",
+        "4": "janet/sp2.png",
+        "5": "janet/hc.png"
+        },
         "Fact": [
             "*Brawler*'s super once could have the hypercharge effect until death even if the hypercharge was ended.",
             "*Brawler*'s attack is the only one that shift when aiming while having 3 ammo.",
@@ -3964,6 +4398,13 @@
             "release": 2022,
             "nb_skins": 5
         },
+        "Gears" : {
+        "1": "otis/gd1.png",
+        "2": "otis/gd2.png",
+        "3": "otis/sp1.png",
+        "4": "otis/sp2.png",
+        "5": "otis/hc.png"
+        },
         "Fact": [
             "*Brawler* is the first brawler to introduce the mute ability.",
             "*Brawler* have a pet names 'Cil'",
@@ -4009,6 +4450,13 @@
             "reload_speed": 1.8,
             "release": 2022,
             "nb_skins": 5
+        },
+        "Gears" : {
+        "1": "buster/gd1.png",
+        "2": "buster/gd2.png",
+        "3": "buster/sp1.png",
+        "4": "buster/sp2.png",
+        "5": "buster/hc.png"
         },
         "Fact": [
             "*Brawler*'s super lasted twice as long on release as it does today.",
@@ -4077,6 +4525,13 @@
             "release": 2022,
             "nb_skins": 5
         },
+        "Gears" : {
+        "1": "gray/gd1.png",
+        "2": "gray/gd2.png",
+        "3": "gray/sp1.png",
+        "4": "gray/sp2.png",
+        "5": "gray/hc.png"
+        },
         "Fact": [
             "*Brawler* can do 'super pull' if you time the gadget and the super properly.",
             "*Brawler*'s super is especially strong in hot zone as it makes death less impactful.",
@@ -4121,6 +4576,13 @@
             "reload_speed": 1.5,
             "release": 2023,
             "nb_skins": 4
+        },
+        "Gears" : {
+        "1": "rt/base/gd1.png",
+        "2": "rt/base/gd2.png",
+        "3": "rt/base/sp1.png",
+        "4": "rt/base/sp2.png",
+        "5": "rt/base/hc.png"
         },
         "Fact": [
             "*Brawler*'s brawl pass skin once was pay to win as it lands two differents attack at the same time.",
@@ -4221,6 +4683,13 @@
             "release": 2023,
             "nb_skins": 4
         },
+        "Gears" : {
+        "1": "willow/gd1.png",
+        "2": "willow/gd2.png",
+        "3": "willow/sp1.png",
+        "4": "willow/sp2.png",
+        "5": "willow/hc.png"
+        },
         "Fact": [
             "*Brawler* is the only brawler that can stop a score in brawl ball that should enter the goal without touching the ball.",
             "*Brawler*'s second dtar power is supposed to slow reload speed but actually doesn't work.",
@@ -4286,6 +4755,13 @@
             "reload_speed": 1.5,
             "release": 2023,
             "nb_skins": 3
+        },
+        "Gears" : {
+        "1": "doug/gd1.png",
+        "2": "doug/gd2.png",
+        "3": "doug/sp1.png",
+        "4": "doug/sp2.png",
+        "5": "doug/hc.png"
         },
         "Fact": [
             "Despite being a support, *Brawler* is one of the stronger brawler in melee range.",
@@ -4354,6 +4830,13 @@
             "release": 2023,
             "nb_skins": 3
         },
+        "Gears" : {
+            "1": "chuck/gd1.png",
+            "2": "chuck/gd2.png",
+            "3": "chuck/sp1.png",
+            "4": "chuck/sp2.png",
+            "5": "chuck/hc.png"
+        },
         "Fact": [
             "*Brawler* is the stronger brawler in heist but one of the worst in other game modes.",
             "Like Kaze, *Brawler* can steal ammo with the super.",
@@ -4421,6 +4904,13 @@
             "release": 2023,
             "nb_skins": 0
         },
+        "Gears" : {
+        "1": "charlie/gd1.png",
+        "2": "charlie/gd2.png",
+        "3": "charlie/sp1.png",
+        "4": "charlie/sp2.png",
+        "5": "charlie/hc.png"
+        },
         "Fact": [
             "*Brawler*'s super can cancel out any other supers, and giving a numerical advantage.",
             "*Brawler*'s hypercharge is often missed intentionnaly because how bad it is designed.",
@@ -4486,6 +4976,13 @@
             "reload_speed": 2.4,
             "release": 2023,
             "nb_skins": 4
+        },
+        "Gears" : {
+            "1": "mico/gd1.png",
+            "2": "mico/gd2.png",
+            "3": "mico/sp1.png",
+            "4": "mico/sp2.png",
+            "5": "mico/hc.png"
         },
         "Fact": [
             "Before, *Brawler*'s damages were scaling too much with power cubes, now, only the super charge rate by the super's hit scale, both are bugs.",
@@ -4554,6 +5051,13 @@
             "release": 2024,
             "nb_skins": 6
         },
+        "Gears" : {
+        "1": "melodie/gd1.png",
+        "2": "melodie/gd2.png",
+        "3": "melodie/sp1.png",
+        "4": "melodie/sp2.png",
+        "5": "melodie/hc.png"
+        },
         "Fact": [
             "*Brawler* will never get small again.",
             "*Brawler* can have up to 14 differents values of movements speed.",
@@ -4621,6 +5125,13 @@
             "release": 2024,
             "nb_skins": 3
         },
+        "Gears" : {
+        "1": "lily/gd1.png",
+        "2": "lily/gd2.png",
+        "3": "lily/sp1.png",
+        "4": "lily/sp2.png",
+        "5": "lily/hc.png"
+        },
         "Fact": [
             "Before the gadget cooldown rework, *Brawler* could be invincible for about 12 seconds, it was very strong in shodown's ending.",
             "*Brawler* double the number of ammo slot in one balance changes.",
@@ -4666,6 +5177,13 @@
             "reload_speed": 2,
             "release": 2024,
             "nb_skins": 2
+        },
+        "Gears" : {
+            "1": "clancy/gd1.png",
+            "2": "clancy/gd2.png",
+            "3": "clancy/sp1.png",
+            "4": "clancy/sp2.png",
+            "5": "clancy/hc.png"
         },
         "Fact": [
             "*Brawler* is one of the best brawler in late game but the worst in early game.",
@@ -4733,6 +5251,13 @@
             "reload_speed": 1.5,
             "release": 2024,
             "nb_skins": 2
+        },
+        "Gears" : {
+        "1": "moe/base/gd1.png",
+        "2": "moe/base/gd2.png",
+        "3": "moe/base/sp1.png",
+        "4": "moe/base/sp2.png",
+        "5": "moe/base/hc.png"
         },
         "Fact": [
             "*Brawler*'s super once needed auto aim to hit closes ennemies, because you couldn't aim the distance, like Ollie.",
@@ -4833,6 +5358,13 @@
             "release": 2024,
             "nb_skins": 2
         },
+        "Gears" : {
+        "1": "juju/gd1.png",
+        "2": "juju/gd2.png",
+        "3": "juju/sp1.png",
+        "4": "juju/sp2.png",
+        "5": "juju/hc.png"
+        },
         "Fact": [
             "*Brawler* reload speed is slower if the first gadget is active, like Meeple.",
             "*Brawler*'s pet is named 'Gris-Grris'.",
@@ -4900,6 +5432,13 @@
             "release": 2025,
             "nb_skins": 3
         },
+        "Gears" : {
+        "1": "ollie/gd1.png",
+        "2": "ollie/gd2.png",
+        "3": "ollie/sp1.png",
+        "4": "ollie/sp2.png",
+        "5": "ollie/hc.png"
+        },
         "Fact": [
             "*Brawler* is the first to brawler to introduce other type of stuns.",
             "*Brawler* once was the only brawler able to self-mute.",
@@ -4965,6 +5504,13 @@
             "reload_speed": 1.3,
             "release": 2025,
             "nb_skins": 4
+        },
+        "Gears" : {
+        "1": "finx/gd1.png",
+        "2": "finx/gd2.png",
+        "3": "finx/sp1.png",
+        "4": "finx/sp2.png",
+        "5": "finx/hc.png"
         },
         "Fact": [
             "If there is a wall close behind you with *Brawler*, most projectiles of your attack will disappear despite not aiming at the wall.",
@@ -5033,6 +5579,13 @@
             "release": 2025,
             "nb_skins": 5
         },
+        "Gears" : {
+        "1": "lumi/gd1.png",
+        "2": "lumi/gd2.png",
+        "3": "lumi/sp1.png",
+        "4": "lumi/sp2.png",
+        "5": "lumi/hc.png"
+        },
         "Fact": [
             "*Brawler* once could have no ammo untill death as this brawler don't reload, you needed to use Pam's gadget for exemple.",
             "*Brawler* cannot have less than one ammo, and have an instant reload speed.",
@@ -5099,6 +5652,13 @@
             "reload_speed": 1.5,
             "release": 2025,
             "nb_skins": 1
+        },
+        "Gears" : {
+        "1": "jae/gd1.png",
+        "2": "jae/gd2.png",
+        "3": "jae/sp1.png",
+        "4": "jae/sp2.png",
+        "5": "jae/hc.png"
         },
         "Fact": [
             "*Brawler*'s gadget is the only one without buffie that can be use to reset the unload speed, meaning you can shot two attack in a fraction of second.",
@@ -5167,6 +5727,13 @@
             "release": 2025,
             "nb_skins": 3
         },
+        "Gears" : {
+        "1": "alli/gd1.png",
+        "2": "alli/gd2.png",
+        "3": "alli/sp1.png",
+        "4": "alli/sp2.png",
+        "5": "alli/hc.png"
+        },
         "Fact": [
             "*Brawler*'s reload speed is slower if you are in bushes than if you are on ground, with 0.7 secconds of difference.",
             "*Brawler*'s attack is the only one scaling with the movement speed.",
@@ -5232,6 +5799,13 @@
             "reload_speed": 1.4,
             "release": 2025,
             "nb_skins": 4
+        },
+        "Gears" : {
+        "1": "mina/gd1.png",
+        "2": "mina/gd2.png",
+        "3": "mina/sp1.png",
+        "4": "mina/sp2.png",
+        "5": "mina/hc.png"
         },
         "Fact": [
             "*Brawler* is the first brawler to have a personal gatcha box.",
@@ -5299,6 +5873,13 @@
             "release": 2025,
             "nb_skins": 3
         },
+        "Gears" : {
+            "1": "ziggy/gd1.png",
+            "2": "ziggy/gd2.png",
+            "3": "ziggy/sp1.png",
+            "4": "ziggy/sp2.png",
+            "5": "ziggy/hc.png"
+        },
         "Fact": [
             "Before *Brawler* even came out, the main attack would 100% hit the ennemie with the auto aim, it was nerfed on release day.",
             "*Brawler*'s super is sometimes very bad because it slows down near ennemies, letting them escaping the attack.",
@@ -5365,6 +5946,13 @@
             "release": 2025,
             "nb_skins": 3
         },
+        "Gears" : {
+        "1": "gigi/gd1.png",
+        "2": "gigi/gd2.png",
+        "3": "gigi/sp1.png",
+        "4": "gigi/sp2.png",
+        "5": "gigi/hc.png"
+        },
         "Fact": [
             "*Brawler*'s unload speed change while attacking.",
             "Unlike Nani, *Brawler* is much stronger against ennemies with a lot of small projectiles.",
@@ -5430,6 +6018,13 @@
             "reload_speed": 1.7,
             "release": 2025,
             "nb_skins": 0
+        },
+        "Gears" : {
+        "1": "glowy/gd1.png",
+        "2": "glowy/gd2.png",
+        "3": "glowy/sp1.png",
+        "4": "glowy/sp2.png",
+        "5": "glowy/hc.png"
         },
         "Fact": [
             "*Brawler* is the best brawler to attack and regenerate health at the same time.",
@@ -5498,6 +6093,13 @@
             "release": 2017,
             "nb_skins": 12
         },
+        "Gears" : {
+        "1": "crow/gd1.png",
+        "2": "crow/gd2.png",
+        "3": "crow/sp1.png",
+        "4": "crow/sp2.png",
+        "5": "crow/hc.png"
+        },
         "Fact": [
             "*Brawler* is the first brawler to apply anti-heal on ennemies.",
             "Now, *Brawler* can block health regeneration for more than 10 seconds.",
@@ -5564,6 +6166,13 @@
             "release": 2017,
             "nb_skins": 9
         },
+        "Gears" : {
+        "1": "spike/gd1.png",
+        "2": "spike/gd2.png",
+        "3": "spike/sp1.png",
+        "4": "spike/sp2.png",
+        "5": "spike/hc.png"
+        },
         "Fact": [
             "*Brawler* is the first brawler unable to speak.",
             "*Brawler* is the most popular brawler, being on nearly every loading screen.",
@@ -5609,6 +6218,13 @@
             "reload_speed": 1.9,
             "release": 2018,
             "nb_skins": 17
+        },
+        "Gears" : {
+        "1": "leon/gd1.png",
+        "2": "leon/gd2.png",
+        "3": "leon/sp1.png",
+        "4": "leon/sp2.png",
+        "5": "leon/hc.png"
         },
         "Fact": [
             "*Brawler* once could be invisible even near ennemies.",
@@ -5674,6 +6290,13 @@
             "reload_speed": 1.8,
             "release": 2019,
             "nb_skins": 9
+        },
+        "Gears" : {
+        "1": "sandy/gd1.png",
+        "2": "sandy/gd2.png",
+        "3": "sandy/sp1.png",
+        "4": "sandy/sp2.png",
+        "5": "sandy/hc.png"
         },
         "Fact": [
             "*Brawler*'s super once could deal 1 damage per second due to a bug with the mythic gear.",
@@ -5742,6 +6365,13 @@
             "release": 2020,
             "nb_skins": 12
         },
+        "Gears" : {
+        "1": "surge/gd1.png",
+        "2": "surge/gd2.png",
+        "3": "surge/sp1.png",
+        "4": "surge/sp2.png",
+        "5": "surge/hc.png"
+        },
         "Fact": [
             "Like Mina, *Brawler* have 3 different range values.",
             "*Brawler*'s first Gadget was once a teleport, but the kit was later reworked to make other Gadgets viable.",
@@ -5809,6 +6439,13 @@
             "release": 2020,
             "nb_skins": 5
         },
+        "Gears" : {
+        "1": "amber/gd1.png",
+        "2": "amber/gd2.png",
+        "3": "amber/sp1.png",
+        "4": "amber/sp2.png",
+        "5": "amber/hc.png"
+        },
         "Fact": [
             "*Brawler* was the first brawler to introduce a continuous attack mechanic.",
             "*Brawler* was nerfed from Very Fast to Normal movement speed in a single update.",
@@ -5874,6 +6511,13 @@
             "reload_speed": 1.1,
             "release": 2021,
             "nb_skins": 6
+        },
+        "Gears" : {
+        "1": "meg/mecha/gd1.png",
+        "2": "meg/mecha/gd2.png",
+        "3": "meg/mecha/sp1.png",
+        "4": "meg/mecha/sp2.png",
+        "5": "meg/mecha/hc.png"
         },
         "Fact": [
             "*Brawler* is very good for teaming because it's very hard to kill as the brawler has 2 lives.",
@@ -5974,6 +6618,13 @@
             "release": 2022,
             "nb_skins": 6
         },
+        "Gears" : {
+        "1": "chester/gd1.png",
+        "2": "chester/gd2.png",
+        "3": "chester/sp1.png",
+        "4": "chester/sp2.png",
+        "5": "chester/hc.png"
+        },
         "Fact": [
             "Like Brock, one of *Brawler*'s star powers became a passive ability.",
             "One of *Brawler*'s skin once was pay to win as it throw 2 super at once instead of only 1.",
@@ -6036,6 +6687,13 @@
             "reload_speed": 1.2,
             "release": 2023,
             "nb_skins": 5
+        },
+        "Gears" : {
+            "1": "cordelius/gd1.png",
+            "2": "cordelius/gd2.png",
+            "3": "cordelius/sp1.png",
+            "4": "cordelius/sp2.png",
+            "5": "cordelius/hc.png"
         },
         "Fact": [
             "In showdown, *Brawler* was the strongest brawler as you could be invincible with somebody the entire match by teaming.",
@@ -6103,6 +6761,13 @@
             "reload_speed": 0.8,
             "release": 2024,
             "nb_skins": 12
+        },
+        "Gears" : {
+        "1": "kit/base/gd1.png",
+        "2": "kit/base/gd2.png",
+        "3": "kit/base/sp1.png",
+        "4": "kit/base/sp2.png",
+        "5": "kit/base/hc.png"
         },
         "Fact": [
             "*Brawler*'s star power is the only one design only for showdown.",
@@ -6202,6 +6867,13 @@
             "release": 2024,
             "nb_skins": 3
         },
+        "Gears" : {
+        "1": "draco/base/gd1.png",
+        "2": "draco/base/gd2.png",
+        "3": "draco/base/sp1.png",
+        "4": "draco/base/sp2.png",
+        "5": "draco/base/hc.png"
+        },
         "Fact": [
             "*Brawler* uses Poco's walking animation.",
             "*Brawler* can trigger certain effects infinitely while the shield is active.",
@@ -6300,6 +6972,13 @@
             "release": 2024,
             "nb_skins": 8
         },
+        "Gears" : {
+        "1": "kenji/gd1.png",
+        "2": "kenji/gd2.png",
+        "3": "kenji/sp1.png",
+        "4": "kenji/sp2.png",
+        "5": "kenji/hc.png"
+        },
         "Fact": [
             "*Brawler*'s super cancel every bad effects like Lou's passive, Byron's poison.",
             "*Brawler*'s super once was able to block the ball outside of the map.",
@@ -6366,6 +7045,13 @@
             "release": 2025,
             "nb_skins": 3
         },
+        "Gears" : {
+        "1": "pierce/gd1.png",
+        "2": "pierce/gd2.png",
+        "3": "pierce/sp1.png",
+        "4": "pierce/sp2.png",
+        "5": "pierce/hc.png"
+        },
         "Fact": [
             "At 32 power cubes, *Brawler* can super continuously as the super recharge scale on damages.",
             "*Brawler* is the only marskamn with 2 differents projectiles width on the main attack.",
@@ -6410,6 +7096,13 @@
             "reload_speed": 1,
             "release": 2025,
             "nb_skins": 2
+        },
+        "Gears" : {
+        "1": "kaze/geisha/gd1.png",
+        "2": "kaze/geisha/gd2.png",
+        "3": "kaze/geisha/sp1.png",
+        "4": "kaze/geisha/sp2.png",
+        "5": "kaze/geisha/hc.png"
         },
         "Fact": [
             "*Brawler*'s invisibility stop when hit by an ennemie.",
@@ -6531,6 +7224,13 @@
             "reload_speed": 1.6,
             "release": 2026,
             "nb_skins": 0
+        },
+        "Gears" : {
+        "1": "sirius/gd1.png",
+        "2": "sirius/gd2.png",
+        "3": "sirius/sp1.png",
+        "4": "sirius/sp2.png",
+        "5": "sirius/hc.png"
         },
         "Fact": [
             "*Brawler* can reload ultimate every second, the fastest in the game excepting Bonnie.",

@@ -1,7 +1,3 @@
-plus que 3 changements : 
+dans le mode de jeu classique on ne voit toujours pas l'icone du brawler dans la ligne du tableau correspondant, sinon tout le reste marche parfaitement.
 
-* les flèches dans le fond des cases dans le premier jeu sont trop fine, essaye de les élargir ci possible
-
-* dans la ligne 395 actuel, j'ai remarqué que tu as recopié l'ensemble du dictionnaire, cependant je ne peux pas le modifier efficacement dans ce contexte, pourquoi ne pas utiliser le fichier json se trouvant dans le dossier directement (chemin d'accès depuis le fichier .html : "Dic.json"). → Utlise MON dictionnaire au lieu d'en avoir une copie peu pratique.
-
-* essaye de cacher les noms de fichier (ex : 'ollie.png') lorsqu'on inspecte avec f12, cela donne la solution sans chercher, pas de triche !
+De plus, ajoute un nouveau mode de jeu appelé "gear"(entre classique et fact) qui aléatoirement donnera soit un star power (sp), un gadget (gd) ou une hypercharge (hc) d'un brawler. Tu donnera les mêmes indices que pour les facts (c'est à dire, rareté, classe, genre, ect) si il échoue a plusieurs reprises. Tu devra suivre le chemin directe écrit dans le json sans ajouter de dossier intermédiaire (ex : shelly/gd2.png). Tu effectura le "blob:" pour ne pas voir le nom du fichier ici aussi.
