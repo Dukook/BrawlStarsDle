@@ -5545,8 +5545,8 @@
         },
         "Emojis": [
             "📦",
-            "😺",
             "⌛",
+            "😺",
             "🏜️",
             "👁️",
             "💎"
@@ -6524,28 +6524,6 @@
             "*Brawler* no longer starts in the same form as on release.",
             "*Brawler* once got a Mutation that was later integrated into the base kit."
         ],
-        "Voicelines": [
-            {
-                "text": "Hmm! There must be a glitch!",
-                "audio": "audio/meg/mecha/glitch.ogg"
-            },
-            {
-                "text": "Time to reboot.",
-                "audio": "audio/meg/mecha/reboot.ogg"
-            },
-            {
-                "text": "Robot rampage.",
-                "audio": "audio/meg/mecha/robot.ogg"
-            },
-            {
-                "text": "Tech support 2.0!",
-                "audio": "audio/meg/mecha/tech.ogg"
-            },
-            {
-                "text": "Numbers don't lie.",
-                "audio": "audio/meg/mecha/lie.ogg"
-            }
-        ],
         "Images": {
             "attack": "images/meg/mecha/atk.png",
             "ultimate": "images/meg/mecha/ult.png"
@@ -6586,6 +6564,28 @@
             "release": 2021,
             "nb_skins": 6
         },
+        "Voicelines": [
+            {
+                "text": "Hmm! There must be a glitch!",
+                "audio": "audio/meg/mecha/glitch.ogg"
+            },
+            {
+                "text": "Time to reboot.",
+                "audio": "audio/meg/mecha/reboot.ogg"
+            },
+            {
+                "text": "Robot rampage.",
+                "audio": "audio/meg/mecha/robot.ogg"
+            },
+            {
+                "text": "Tech support 2.0!",
+                "audio": "audio/meg/mecha/tech.ogg"
+            },
+            {
+                "text": "Numbers don't lie.",
+                "audio": "audio/meg/mecha/lie.ogg"
+            }
+        ],
         "Images": {
             "attack": "images/meg/small/atk.png",
             "ultimate": "images/meg/small/ult.png"

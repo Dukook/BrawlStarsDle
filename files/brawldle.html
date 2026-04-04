@@ -329,7 +329,7 @@ body{
 .guess-item.fail{background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.18);color:var(--red)}
 
 /* ── Victory effects ── */
-#victory-overlay{
+.confetti-overlay-dead{
   position:fixed;inset:0;z-index:9990;pointer-events:none;overflow:hidden;
 }
 @keyframes gentleSpin{
@@ -355,9 +355,9 @@ body{
   100%{transform:translateY(110vh) rotate(720deg);opacity:0}
 }
 .confetti{
-  position:absolute;width:10px;height:10px;
+  position:absolute;width:14px;height:14px;
   animation:confettiFall linear forwards;
-  border-radius:2px;
+  border-radius:3px;
 }
 @keyframes bounce-in{
   0%{transform:scale(.3);opacity:0}
@@ -367,6 +367,49 @@ body{
 }
 
 /* Report button */
+.brawler-panel-btn{
+  position:fixed;top:14px;left:14px;z-index:300;
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:8px;padding:7px 13px;font-size:.78rem;font-weight:800;
+  color:var(--text2);cursor:pointer;letter-spacing:.5px;
+  transition:color .15s,border-color .15s;user-select:none;
+}
+.brawler-panel-btn:hover{color:var(--accent);border-color:var(--accent);}
+.brawler-panel-overlay{
+  display:none;position:fixed;inset:0;z-index:400;
+  background:rgba(0,0,0,.7);backdrop-filter:blur(4px);
+  overflow-y:auto;padding:24px 16px 60px;
+}
+.brawler-panel-overlay.open{display:block;}
+.brawler-panel-box{
+  max-width:700px;margin:0 auto;
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:14px;padding:20px 18px;
+}
+.brawler-panel-title{
+  font-size:1.1rem;font-weight:900;color:var(--accent);
+  margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;
+}
+.brawler-panel-close{
+  cursor:pointer;font-size:1.3rem;color:var(--text2);
+  line-height:1;padding:2px 8px;border-radius:6px;
+  transition:color .15s;
+}
+.brawler-panel-close:hover{color:var(--accent);}
+.rarity-section{margin-bottom:18px;}
+.rarity-label{
+  font-size:.7rem;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--text2);margin-bottom:8px;padding-bottom:4px;
+  border-bottom:1px solid var(--border);
+}
+.brawler-grid{display:flex;flex-wrap:wrap;gap:6px;}
+.brawler-chip{
+  display:flex;align-items:center;gap:6px;
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:20px;padding:4px 10px 4px 5px;
+  font-size:.77rem;font-weight:700;color:var(--text);
+}
+.brawler-chip img{width:24px;height:24px;object-fit:contain;border-radius:50%;}
 .report-btn{
   position:fixed;bottom:14px;right:16px;z-index:500;
   background:rgba(18,32,47,.6);border:1px solid rgba(255,255,255,.08);
@@ -472,16 +515,16 @@ const COL_INFO = {
   rarity:'Rarity tier: Rare, Super Rare, Epic, Mythic, Legendary, Ultra Legendary…',
   world:'Thematic universe in Brawl Stars lore',
   hp:'Base health points at power level 11',
-  mvt:'Movement speed category derived from internal value',
+  mvt:'Movement speed category',
   damage_per_projectile:'Damage per projectile shown in-game (or per tick for Willow, Byron…)',
-  full_damage:'Max damage of one normal attack — normal hitbox, no movement, no buffs. Per second for continuous attackers (Amber, Moe…).',
-  projectiles:'Number of projectiles per attack, or per second for continuous attackers',
+  full_damage:'Max damage of one normal attack — normal hitbox, no movement, no buffs, no interactions. Per second for continuous attackers (Amber, Moe…).',
+  projectiles:'Number of independent projectiles per attack, or per second for continuous attackers',
   range:'Attack range category in tiles',
-  damage_type:'single: 1 target | pierce: goes through enemies | spread: multiple projectiles | splash: AoE (explosion, through Mina shield)',
-  reload_speed:'Reload speed category. Arrow ↑ = faster reload (lower time)',
-  ammo:'Number of ammo charges before reloading',
+  damage_type:'single: 1 target |  spread: multiple projectiles | pierce: goes through enemies |splash: AoE (explosion, through Mina shield)',
+  reload_speed:'Reload speed category.',
+  ammo:'Maximum ammo capacity',
   ult_charge:'Number of attacks needed to fully charge the super',
-  hc_multiplier:'Hypercharge speed multiplier in %',
+  hc_multiplier:'Hypercharge multiplier in %',
   hitbox:'Collision size (Normal = 120px, Large = 145px)',
   release:'Year the brawler was first released',
   nb_skins:'Total number of skins',
@@ -617,35 +660,53 @@ function audioSrc(p){return p?p.replace(/^audio\//,''):null}
 let classicAnimState = {idx:-1, done:true};
 
 /* ── Victory effect ── */
-function fireVictory(){
-  // Remove existing overlay if any
-  const old=document.getElementById('victory-overlay');
-  if(old)old.remove();
+/* ── Per-mode continuous confetti ── */
+const _confettiIntervals={};
+const _confettiColors=['#ffd000','#ff6b35','#27ae60','#3498db','#9b59b6','#e74c3c','#f1c40f','#00d2ff'];
+
+function _spawnBatch(overlay){
+  const frag=document.createDocumentFragment();
+  for(let i=0;i<20;i++){
+    const p=document.createElement('div');
+    p.className='confetti';
+    const dur=1.8+Math.random()*2.2;
+    const sz=10+Math.random()*16;
+    p.style.cssText=
+      'left:'+Math.round(Math.random()*100)+'%;'+
+      'background:'+_confettiColors[Math.floor(Math.random()*_confettiColors.length)]+';'+
+      'width:'+sz+'px;height:'+sz+'px;'+
+      'border-radius:'+(Math.random()>.5?'50%':'3px')+';'+
+      'animation-duration:'+dur+'s;'+
+      'animation-delay:'+Math.random()*0.5+'s;';
+    frag.appendChild(p);
+    setTimeout(()=>{if(p.parentNode)p.remove();},(dur+0.5)*1000);
+  }
+  overlay.appendChild(frag);
+}
+
+function startConfetti(mode){
+  stopConfetti(mode);
+  const overlay=document.createElement('div');
+  overlay.id='confetti-'+mode;
+  overlay.style.cssText='position:fixed;inset:0;pointer-events:none;z-index:9988;overflow:hidden;';
+  document.body.appendChild(overlay);
+  _spawnBatch(overlay);
+  _confettiIntervals[mode]=setInterval(()=>_spawnBatch(overlay),700);
+}
+
+function stopConfetti(mode){
+  if(_confettiIntervals[mode]){clearInterval(_confettiIntervals[mode]);delete _confettiIntervals[mode];}
+  const old=document.getElementById('confetti-'+mode);if(old)old.remove();
+}
+
+function stopAllConfetti(){Object.keys(_confettiIntervals).forEach(m=>stopConfetti(m));}
+
+function fireVictory(mode){
   const fl=document.createElement('div');fl.className='flash-win';document.body.appendChild(fl);
   setTimeout(()=>fl.remove(),1000);
-
-  // Gentle spin on body
   document.body.style.animation='gentleSpin 1.1s ease-in-out';
   setTimeout(()=>{document.body.style.animation=''},800);
-
-  // Confetti
-  const overlay=document.createElement('div');
-  overlay.id='victory-overlay';document.body.appendChild(overlay);
-  const colors=['#ffd000','#ff6b35','#27ae60','#3498db','#9b59b6','#e74c3c','#f1c40f','#00d2ff'];
-  for(let i=0;i<90;i++){
-    const c=document.createElement('div');
-    c.className='confetti';
-    c.style.cssText=`
-      left:${Math.random()*100}%;
-      background:${colors[Math.floor(Math.random()*colors.length)]};
-      width:${6+Math.random()*10}px;height:${6+Math.random()*10}px;
-      border-radius:${Math.random()>.5?'50%':'2px'};
-      animation-duration:${1.5+Math.random()*2.5}s;
-      animation-delay:${Math.random()*0.8}s;
-    `;
-    overlay.appendChild(c);
-  }
-  setTimeout(()=>overlay.remove(),5000);
+  startConfetti(mode);
 }
 
 /* ── State ── */
@@ -707,13 +768,13 @@ function guess(mode,name){
     const dur=(cols.length+1)*500+400;
     setTimeout(()=>{
       classicAnimState.done=true;
-      if(correct)fireVictory();
+      if(correct)fireVictory(mode);
       render();
     }, dur);
   } else {
     ms.guesses.push({name,correct});
     if(!correct)ms.wrong++;
-    if(correct)setTimeout(fireVictory,120);
+    if(correct)setTimeout(()=>fireVictory(mode),120);
   }
 
   if(correct){
@@ -725,7 +786,12 @@ function guess(mode,name){
 }
 
 function toggleHints(mode){S.modes[mode].hintsOn=!S.modes[mode].hintsOn;saveState();render()}
-function switchMode(mode){S.activeMode=mode;render()}
+function switchMode(mode){
+  stopAllConfetti();
+  S.activeMode=mode;
+  render();
+  if(S.modes[mode]&&S.modes[mode].won)startConfetti(mode);
+}
 
 /* ── HTML helpers ── */
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
@@ -997,6 +1063,7 @@ function render(){
     case'image':     content=buildImage();break;
   }
   document.getElementById('app').innerHTML=`
+    <button class="brawler-panel-btn" onclick="openBrawlerPanel()">🏅 Brawlers</button>
     <div class="header">
       <div class="header-logo">⚡ BRAWLDLE</div>
       <div class="header-sub">${esc(dateStr)}</div>
@@ -1004,20 +1071,41 @@ function render(){
     <div class="tabs">${tabs}</div>
     <div class="game-area">${content}</div>
     <div id="tooltip"></div>
+    <div class="brawler-panel-overlay" id="brawler-panel-overlay" onclick="if(event.target===this)closeBrawlerPanel()">
+      <div class="brawler-panel-box">
+        <div class="brawler-panel-title">
+          <span>🏅 All Brawlers</span>
+          <span class="brawler-panel-close" onclick="closeBrawlerPanel()">✕</span>
+        </div>
+        <div id="brawler-panel-content"></div>
+      </div>
+    </div>
     <div class="report-btn" onclick="copyEmail()" title="Click to copy email">⚠</div>
     <div class="report-tip">Found a bug or an issue? Contact me at:<br><b style="color:var(--text)">brawlstarsdle.dukook@gmail.com</b></div>`;
   resolveMedia();
 }
 
 /* ── Autocomplete ── */
+function validPool(mode){
+  const all=Object.keys(BRAWLERS);
+  if(mode==='fact')      return all.filter(b=>BRAWLERS[b].Fact&&BRAWLERS[b].Fact.length>0);
+  if(mode==='voiceline') return all.filter(b=>BRAWLERS[b].Voicelines&&BRAWLERS[b].Voicelines.length>0);
+  if(mode==='emoji')     return all.filter(b=>BRAWLERS[b].Emojis&&BRAWLERS[b].Emojis.length>0);
+  if(mode==='gear')      return all.filter(b=>BRAWLERS[b].Gears&&Object.keys(BRAWLERS[b].Gears).length>0);
+  if(mode==='image')     return all.filter(b=>BRAWLERS[b].Images);
+  return all.filter(b=>BRAWLERS[b].Stats); // classic + default
+}
 function acFilter(mode){
   const inp=document.getElementById('inp-'+mode),drop=document.getElementById('acdrop-'+mode);
   if(!inp||!drop)return;
   const q=inp.value.toLowerCase().trim();
   const used=new Set(S.modes[mode].guesses.map(g=>g.name));
-  const pool=Object.keys(BRAWLERS).filter(b=>!used.has(b));
+  const pool=validPool(mode).filter(b=>!used.has(b));
   if(!q){drop.classList.remove('open');drop.innerHTML='';return}
-  const matches=pool.filter(b=>b.toLowerCase().includes(q)).slice(0,10);
+  /* Starts-with first, then contains — no duplicates */
+  const sw=pool.filter(b=>b.toLowerCase().startsWith(q));
+  const rest=pool.filter(b=>!b.toLowerCase().startsWith(q)&&b.toLowerCase().includes(q));
+  const matches=[...sw,...rest].slice(0,10);
   if(!matches.length){drop.classList.remove('open');return}
   drop.innerHTML=matches.map(b=>`<div class="ac-item" data-name="${esc(b)}" onmousedown="pick('${mode}',this)"><img class="ac-icon" src="${brawlerIcon(b)}" alt="">${esc(b)}</div>`).join('');
   drop.classList.add('open');
@@ -1035,6 +1123,8 @@ function doGuess(mode,name){
   const inp=document.getElementById('inp-'+mode);if(inp)inp.value='';
   const drop=document.getElementById('acdrop-'+mode);if(drop){drop.classList.remove('open');drop.innerHTML=''}
   guess(mode,name);
+  /* Re-focus so next guess can be typed immediately */
+  setTimeout(()=>{const i=document.getElementById('inp-'+mode);if(i&&!i.disabled)i.focus();},50);
 }
 /* ── Protected Media: paths never appear in HTML, set via JS only ── */
 const _PM={};let _pmc=0;
@@ -1078,6 +1168,56 @@ function copyEmail(){
   });
 }
 
+/* ── Brawler Panel ── */
+const RARITY_ORDER=['starting_brawler','rare','super_rare','epic','mythic','legendary','ultra_legendary'];
+const RARITY_LABELS={
+  starting_brawler:'Starting Brawler',rare:'Rare',super_rare:'Super Rare',
+  epic:'Epic',mythic:'Mythic',legendary:'Legendary',ultra_legendary:'Ultra Legendary'
+};
+const RARITY_COLORS={
+  starting_brawler:'#aaa',rare:'#00e300',super_rare:'#14a4ff',
+  epic:'#b116ec',mythic:'#f04141',legendary:'#fdf01f',ultra_legendary:'#ff4fe8'
+};
+
+function openBrawlerPanel(){
+  const panel=document.getElementById('brawler-panel-overlay');
+  if(!panel)return;
+  /* Build content */
+  const all=Object.entries(BRAWLERS)
+    .filter(([n,v])=>v.Stats) /* only base forms */
+    .sort((a,b)=>{
+      const ri=RARITY_ORDER.indexOf(a[1].Stats.rarity)-RARITY_ORDER.indexOf(b[1].Stats.rarity);
+      if(ri!==0)return ri;
+      return a[0].localeCompare(b[0]);
+    });
+  const byRarity={};
+  all.forEach(([n,v])=>{
+    const r=v.Stats.rarity;
+    if(!byRarity[r])byRarity[r]=[];
+    byRarity[r].push(n);
+  });
+  let html='';
+  RARITY_ORDER.forEach(r=>{
+    if(!byRarity[r])return;
+    const col=RARITY_COLORS[r];
+    html+=`<div class="rarity-section">
+      <div class="rarity-label" style="color:${col}">${RARITY_LABELS[r]||r} (${byRarity[r].length})</div>
+      <div class="brawler-grid">
+        ${byRarity[r].map(n=>`<div class="brawler-chip">
+          <img src="${brawlerIcon(n)}" alt="">
+          <span>${esc(n)}</span>
+        </div>`).join('')}
+      </div>
+    </div>`;
+  });
+  document.getElementById('brawler-panel-content').innerHTML=html;
+  panel.classList.add('open');
+}
+function closeBrawlerPanel(){
+  const panel=document.getElementById('brawler-panel-overlay');
+  if(panel)panel.classList.remove('open');
+}
+
 /* ── Tooltip ── */
 function tip(e,stat){
   const t=document.getElementById('tooltip'),info=COL_INFO[stat];if(!t||!info)return;
@@ -1092,6 +1232,16 @@ document.addEventListener('click',e=>{
     const drop=document.getElementById('acdrop-'+m),inp=document.getElementById('inp-'+m);
     if(drop&&inp&&!drop.contains(e.target)&&e.target!==inp)drop.classList.remove('open');
   });
+});
+
+/* Auto-focus active input on any printable keypress */
+document.addEventListener('keydown',e=>{
+  if(e.ctrlKey||e.metaKey||e.altKey)return;
+  if(e.key.length!==1&&e.key!=='Backspace')return;
+  const inp=document.getElementById('inp-'+S.activeMode);
+  if(!inp||inp.disabled)return;
+  if(document.activeElement===inp)return;
+  inp.focus();
 });
 
 
