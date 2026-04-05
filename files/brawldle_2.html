@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>BSdle</title>
+<title>Brawldle</title>
 <link rel="icon" type="image/png" href="melodie.png">
 <style>
 
@@ -442,10 +442,9 @@ body{
   position:relative;
 }
 .map-img-zoom{
-  position:absolute;
   display:block;max-width:none;
-  transform:none;
-  transition:none;
+  transform-origin:50% 50%;
+  transform:scale(1);
 }
 .report-btn{
   position:fixed;bottom:14px;right:16px;z-index:500;
@@ -1061,9 +1060,7 @@ function buildImage(){
   const imgs=BRAWLERS[ANSWERS.image].Images||{};
   const w=ms.wrong;
   const showBoth=(w>=3||ms.won||ms.gaveUp)&&ms.hintsOn;
-  /* order:true → always attack first; order:false/undefined → day-based random */
-  const orderFixed=imgs.order===true;
-  const first=orderFixed?'attack':(dayIndex()%2===0?'attack':'ultimate');
+  const first=dayIndex()%2===0?'attack':'ultimate';
   const second=first==='attack'?'ultimate':'attack';
   const slot=(key)=>{
     const src=imgSrc(imgs[key]);
@@ -1093,8 +1090,7 @@ function buildImage(){
 function buildMap(){
   const ms=S.modes.map;
   const mapName=ANSWERS.map;
-  const mapData=MAPS["Triple Dribble"];
-  /* mapName */
+  const mapData=MAPS[mapName];
   if(!mapData)return'<p style="color:var(--text2)">Map data missing.</p>';
   const w=ms.wrong;
   const won=ms.won||ms.gaveUp;
@@ -1243,42 +1239,31 @@ function pmAudio(src){
   const id='pm'+(++_pmc);_PM[id]=src;
   return `<audio controls data-pmid="${id}"></audio>`;
 }
-function _mapLayout(imgW,imgH,vpW,vpH,ox,oy,sc){
-  /* Base: scale so the image "fits" (contain) at sc=1 */
-  const base=Math.min(vpW/imgW,vpH/imgH);
-  const dW=imgW*base*sc, dH=imgH*base*sc;
-  /* Try to center on focal point */
-  let left=vpW/2-ox*base*sc;
-  let top=vpH/2-oy*base*sc;
-  /* Clamp: image must cover the viewport — never show empty space */
-  if(dW>=vpW){ left=Math.min(0,Math.max(vpW-dW,left)); }
-  else{ left=(vpW-dW)/2; }   /* image smaller than viewport: center */
-  if(dH>=vpH){ top=Math.min(0,Math.max(vpH-dH,top)); }
-  else{ top=(vpH-dH)/2; }
-  return{dW,dH,left,top};
-}
-function _setMapLayout(el,layout,transition){
-  el.style.transition=transition||'none';
-  el.style.width=layout.dW+'px';
-  el.style.height=layout.dH+'px';
-  el.style.left=layout.left+'px';
-  el.style.top=layout.top+'px';
-}
 function _applyMapZoom(el){
-  const vp=el.parentElement;if(!vp)return;
-  const vpW=vp.offsetWidth,vpH=vp.offsetHeight;
-  const imgW=el.naturalWidth,imgH=el.naturalHeight;
+  /* Zoom-then-crop: place img at natural size, translate focal point to center, scale */
+  const vp=el.parentElement;
+  if(!vp)return;
+  const vpW=vp.offsetWidth, vpH=vp.offsetHeight;
+  const imgW=el.naturalWidth, imgH=el.naturalHeight;
   if(!imgW||!imgH)return;
-  const ox=parseFloat(el.dataset.ox),oy=parseFloat(el.dataset.oy);
+  const ox=parseFloat(el.dataset.ox), oy=parseFloat(el.dataset.oy);
   const sc=parseFloat(el.dataset.sc)||1;
-  /* Snap to current scale */
-  const lo=_mapLayout(imgW,imgH,vpW,vpH,ox,oy,sc);
-  _setMapLayout(el,lo,'none');
-  /* Slowly drift toward sc*0.95 over 60s */
-  const endSc=Math.max(1,sc*0.95);
-  const loEnd=_mapLayout(imgW,imgH,vpW,vpH,ox,oy,endSc);
-  const tr='width 60s linear,height 60s linear,left 60s linear,top 60s linear';
-  requestAnimationFrame(()=>requestAnimationFrame(()=>_setMapLayout(el,loEnd,tr)));
+  /* Set image to its natural size, positioned absolutely */
+  el.style.position='absolute';
+  el.style.width=imgW+'px';
+  el.style.height=imgH+'px';
+  el.style.objectFit='none';
+  /* translate so focal point lands at viewport center, then scale around that point */
+  const tx=vpW/2-ox;
+  const ty=vpH/2-oy;
+  el.style.transformOrigin=ox+'px '+oy+'px';
+  el.style.transition='none';
+  el.style.transform=`translate(${tx}px,${ty}px) scale(${sc})`;
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    const endScale=Math.max(1,sc*0.95);
+    el.style.transition='transform 60s linear';
+    el.style.transform=`translate(${tx}px,${ty}px) scale(${endScale})`;
+  }));
 }
 function resolveMedia(){
   document.querySelectorAll('[data-pmid]').forEach(el=>{

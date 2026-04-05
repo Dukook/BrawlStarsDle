@@ -58,7 +58,8 @@
         ],
         "Images": {
             "attack": "images/shelly/atk.png",
-            "ultimate": "images/shelly/ult.png"
+            "ultimate": "images/shelly/ult.png",
+            "order": false
         },
         "Emojis": [
             "🩹",
@@ -110,7 +111,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/nita/atk.png",
-            "ultimate": "images/nita/ult.png"
+            "ultimate": "images/nita/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐻",
@@ -184,7 +186,8 @@
         ],
         "Images": {
             "attack": "images/colt/atk.png",
-            "ultimate": "images/colt/ult.png"
+            "ultimate": "images/colt/ult.png",
+            "order": false
         },
         "Emojis": [
             "🤠",
@@ -252,7 +255,8 @@
         ],
         "Images": {
             "attack": "images/bull/atk.png",
-            "ultimate": "images/bull/ult.png"
+            "ultimate": "images/bull/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐂",
@@ -326,7 +330,8 @@
         ],
         "Images": {
             "attack": "images/brock/atk.png",
-            "ultimate": "images/brock/ult.png"
+            "ultimate": "images/brock/ult.png",
+            "order": false
         },
         "Emojis": [
             "🚀",
@@ -399,7 +404,8 @@
         ],
         "Images": {
             "attack": "images/primo/atk.png",
-            "ultimate": "images/primo/ult.png"
+            "ultimate": "images/primo/ult.png",
+            "order": false
         },
         "Emojis": [
             "👊",
@@ -473,7 +479,8 @@
         ],
         "Images": {
             "attack": "images/barley/atk.png",
-            "ultimate": "images/barley/ult.png"
+            "ultimate": "images/barley/ult.png",
+            "order": false
         },
         "Emojis": [
             "🍺",
@@ -545,7 +552,8 @@
         ],
         "Images": {
             "attack": "images/poco/atk.png",
-            "ultimate": "images/poco/ult.png"
+            "ultimate": "images/poco/ult.png",
+            "order": false
         },
         "Emojis": [
             "🎸",
@@ -619,7 +627,8 @@
         ],
         "Images": {
             "attack": "images/rosa/atk.png",
-            "ultimate": "images/rosa/ult.png"
+            "ultimate": "images/rosa/ult.png",
+            "order": true
         },
         "Emojis": [
             "🌿",
@@ -692,7 +701,8 @@
         ],
         "Images": {
             "attack": "images/jessie/atk.png",
-            "ultimate": "images/jessie/ult.png"
+            "ultimate": "images/jessie/ult.png",
+            "order": false
         },
         "Emojis": [
             "🎒",
@@ -766,7 +776,8 @@
         ],
         "Images": {
             "attack": "images/dynamike/atk.png",
-            "ultimate": "images/dynamike/ult.png"
+            "ultimate": "images/dynamike/ult.png",
+            "order": false
         },
         "Emojis": [
             "🧨",
@@ -819,7 +830,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/tick/atk.png",
-            "ultimate": "images/tick/ult.png"
+            "ultimate": "images/tick/ult.png",
+            "order": false
         },
         "Emojis": [
             "💣",
@@ -885,7 +897,8 @@
         ],
         "Images": {
             "attack": "images/bit/atk.png",
-            "ultimate": "images/bit/ult.png"
+            "ultimate": "images/bit/ult.png",
+            "order": false
         },
         "Emojis": [
             "🕹️",
@@ -960,7 +973,8 @@
         ],
         "Images": {
             "attack": "images/rico/atk.png",
-            "ultimate": "images/rico/ult.png"
+            "ultimate": "images/rico/ult.png",
+            "order": false
         },
         "Emojis": [
             "🔫",
@@ -1033,7 +1047,8 @@
         ],
         "Images": {
             "attack": "images/darryl/atk.png",
-            "ultimate": "images/darryl/ult.png"
+            "ultimate": "images/darryl/ult.png",
+            "order": false
         },
         "Emojis": [
             "🛢️",
@@ -1094,7 +1109,8 @@
         ],
         "Images": {
             "attack": "images/penny/atk.png",
-            "ultimate": "images/penny/ult.png"
+            "ultimate": "images/penny/ult.png",
+            "order": false
         },
         "Emojis": [
             "🏴‍☠️",
@@ -1163,7 +1179,8 @@
         ],
         "Images": {
             "attack": "images/carl/atk.png",
-            "ultimate": "images/carl/ult.png"
+            "ultimate": "images/carl/ult.png",
+            "order": true
         },
         "Emojis": [
             "⛏️",
@@ -1233,7 +1250,8 @@
         ],
         "Images": {
             "attack": "images/jacky/atk.png",
-            "ultimate": "images/jacky/ult.png"
+            "ultimate": "images/jacky/ult.png",
+            "order": false
         },
         "Emojis": [
             "👷🏻",
@@ -1307,7 +1325,8 @@
         ],
         "Images": {
             "attack": "images/gus/atk.png",
-            "ultimate": "images/gus/ult.png"
+            "ultimate": "images/gus/ult.png",
+            "order": false
         },
         "Emojis": [
             "🎈",
@@ -1354,7 +1373,7 @@
         },
         "Fact": [
             "*Brawler* during godzilla event was the only one who could drop infinite super on the field.",
-            "*Brawler*'s main attack can be use in 2 different way depending on the movement of the brawler.",
+            "Like Leon, *Brawler*'s main attack can be use in 2 different way depending on the movement of the brawler.",
             "*Brawler* once had a bug where if you chose the right star power, and then a gus ult you, the bump become a stun."
         ],
         "Voicelines": [
@@ -1381,7 +1400,8 @@
         ],
         "Images": {
             "attack": "images/bo/atk.png",
-            "ultimate": "images/bo/ult.png"
+            "ultimate": "images/bo/ult.png",
+            "order": false
         },
         "Emojis": [
             "🦅",
@@ -1454,7 +1474,8 @@
         ],
         "Images": {
             "attack": "images/emz/atk.png",
-            "ultimate": "images/emz/ult.png"
+            "ultimate": "images/emz/ult.png",
+            "order": false
         },
         "Emojis": [
             "💨",
@@ -1528,7 +1549,8 @@
         ],
         "Images": {
             "attack": "images/stu/atk.png",
-            "ultimate": "images/stu/ult.png"
+            "ultimate": "images/stu/ult.png",
+            "order": false
         },
         "Emojis": [
             "🛞",
@@ -1601,7 +1623,8 @@
         ],
         "Images": {
             "attack": "images/piper/atk.png",
-            "ultimate": "images/piper/ult.png"
+            "ultimate": "images/piper/ult.png",
+            "order": false
         },
         "Emojis": [
             "🌂",
@@ -1675,7 +1698,8 @@
         ],
         "Images": {
             "attack": "images/pam/atk.png",
-            "ultimate": "images/pam/ult.png"
+            "ultimate": "images/pam/ult.png",
+            "order": false
         },
         "Emojis": [
             "🔩",
@@ -1727,7 +1751,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/frank/atk.png",
-            "ultimate": "images/frank/ult.png"
+            "ultimate": "images/frank/ult.png",
+            "order": false
         },
         "Emojis": [
             "🔨",
@@ -1801,7 +1826,8 @@
         ],
         "Images": {
             "attack": "images/bibi/atk.png",
-            "ultimate": "images/bibi/ult.png"
+            "ultimate": "images/bibi/ult.png",
+            "order": false
         },
         "Emojis": [
             "⚾",
@@ -1874,7 +1900,8 @@
         ],
         "Images": {
             "attack": "images/bea/atk.png",
-            "ultimate": "images/bea/ult.png"
+            "ultimate": "images/bea/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐝",
@@ -1947,7 +1974,8 @@
         ],
         "Images": {
             "attack": "images/gale/atk.png",
-            "ultimate": "images/gale/ult.png"
+            "ultimate": "images/gale/ult.png",
+            "order": false
         },
         "Emojis": [
             "❄️",
@@ -2016,7 +2044,8 @@
         ],
         "Images": {
             "attack": "images/nani/atk.png",
-            "ultimate": "images/nani/ult.png"
+            "ultimate": "images/nani/ult.png",
+            "order": false
         },
         "Emojis": [
             "🎥",
@@ -2089,7 +2118,8 @@
         ],
         "Images": {
             "attack": "images/colette/atk.png",
-            "ultimate": "images/colette/ult.png"
+            "ultimate": "images/colette/ult.png",
+            "order": false
         },
         "Emojis": [
             "💘",
@@ -2163,7 +2193,8 @@
         ],
         "Images": {
             "attack": "images/edgar/atk.png",
-            "ultimate": "images/edgar/ult.png"
+            "ultimate": "images/edgar/ult.png",
+            "order": false
         },
         "Emojis": [
             "🧣",
@@ -2235,7 +2266,8 @@
         ],
         "Images": {
             "attack": "images/belle/atk.png",
-            "ultimate": "images/belle/ult.png"
+            "ultimate": "images/belle/ult.png",
+            "order": false
         },
         "Emojis": [
             "⚡",
@@ -2309,7 +2341,8 @@
         ],
         "Images": {
             "attack": "images/griff/atk.png",
-            "ultimate": "images/griff/ult.png"
+            "ultimate": "images/griff/ult.png",
+            "order": false
         },
         "Emojis": [
             "🪙",
@@ -2382,7 +2415,8 @@
         ],
         "Images": {
             "attack": "images/ash/atk.png",
-            "ultimate": "images/ash/ult.png"
+            "ultimate": "images/ash/ult.png",
+            "order": false
         },
         "Emojis": [
             "🗑️",
@@ -2455,7 +2489,8 @@
         ],
         "Images": {
             "attack": "images/lola/atk.png",
-            "ultimate": "images/lola/ult.png"
+            "ultimate": "images/lola/ult.png",
+            "order": false
         },
         "Emojis": [
             "💎",
@@ -2529,7 +2564,8 @@
         ],
         "Images": {
             "attack": "images/grom/atk.png",
-            "ultimate": "images/grom/ult.png"
+            "ultimate": "images/grom/ult.png",
+            "order": false
         },
         "Emojis": [
             "📻",
@@ -2602,7 +2638,8 @@
         ],
         "Images": {
             "attack": "images/bonnie/small/atk.png",
-            "ultimate": "images/bonnie/small/ult.png"
+            "ultimate": "images/bonnie/small/ult.png",
+            "order": true
         },
         "Emojis": [
             "🦷",
@@ -2641,7 +2678,8 @@
         },
         "Images": {
             "attack": "images/bonnie/clyde/atk.png",
-            "ultimate": "images/bonnie/clyde/ult.png"
+            "ultimate": "images/bonnie/clyde/ult.png",
+            "order": false
         }
     },
     "Sam": {
@@ -2707,7 +2745,8 @@
         ],
         "Images": {
             "attack": "images/sam/atk.png",
-            "ultimate": "images/sam/ult.png"
+            "ultimate": "images/sam/ult.png",
+            "order": false
         },
         "Emojis": [
             "👊🏻",
@@ -2780,7 +2819,8 @@
         ],
         "Images": {
             "attack": "images/mandy/atk.png",
-            "ultimate": "images/mandy/ult.png"
+            "ultimate": "images/mandy/ult.png",
+            "order": false
         },
         "Emojis": [
             "🍬",
@@ -2853,7 +2893,8 @@
         ],
         "Images": {
             "attack": "images/maisie/atk.png",
-            "ultimate": "images/maisie/ult.png"
+            "ultimate": "images/maisie/ult.png",
+            "order": false
         },
         "Emojis": [
             "🧯",
@@ -2926,7 +2967,8 @@
         ],
         "Images": {
             "attack": "images/hank/atk.png",
-            "ultimate": "images/hank/ult.png"
+            "ultimate": "images/hank/ult.png",
+            "order": false
         },
         "Emojis": [
             "🫧",
@@ -2998,7 +3040,8 @@
         ],
         "Images": {
             "attack": "images/pearl/atk.png",
-            "ultimate": "images/pearl/ult.png"
+            "ultimate": "images/pearl/ult.png",
+            "order": false
         },
         "Emojis": [
             "🍪",
@@ -3071,7 +3114,8 @@
         ],
         "Images": {
             "attack": "images/larry/atk.png",
-            "ultimate": "images/larry/ult.png"
+            "ultimate": "images/larry/ult.png",
+            "order": false
         },
         "Emojis": [
             "👮🏻‍♂️",
@@ -3145,7 +3189,8 @@
         ],
         "Images": {
             "attack": "images/angelo/atk.png",
-            "ultimate": "images/angelo/ult.png"
+            "ultimate": "images/angelo/ult.png",
+            "order": false
         },
         "Emojis": [
             "🦟",
@@ -3218,7 +3263,8 @@
         ],
         "Images": {
             "attack": "images/berry/atk.png",
-            "ultimate": "images/berry/ult.png"
+            "ultimate": "images/berry/ult.png",
+            "order": false
         },
         "Emojis": [
             "🦄",
@@ -3271,7 +3317,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/shade/atk.png",
-            "ultimate": "images/shade/ult.png"
+            "ultimate": "images/shade/ult.png",
+            "order": false
         },
         "Emojis": [
             "👻",
@@ -3345,7 +3392,8 @@
         ],
         "Images": {
             "attack": "images/meeple/atk.png",
-            "ultimate": "images/meeple/ult.png"
+            "ultimate": "images/meeple/ult.png",
+            "order": false
         },
         "Emojis": [
             "🎲",
@@ -3418,7 +3466,8 @@
         ],
         "Images": {
             "attack": "images/trunk/atk.png",
-            "ultimate": "images/trunk/ult.png"
+            "ultimate": "images/trunk/ult.png",
+            "order": false
         },
         "Emojis": [
             "🪵",
@@ -3491,7 +3540,8 @@
         ],
         "Images": {
             "attack": "images/mortis/atk.png",
-            "ultimate": "images/mortis/ult.png"
+            "ultimate": "images/mortis/ult.png",
+            "order": false
         },
         "Emojis": [
             "🦇",
@@ -3543,7 +3593,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/tara/atk.png",
-            "ultimate": "images/tara/ult.png"
+            "ultimate": "images/tara/ult.png",
+            "order": false
         },
         "Emojis": [
             "🃏",
@@ -3595,7 +3646,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/gene/atk.png",
-            "ultimate": "images/gene/ult.png"
+            "ultimate": "images/gene/ult.png",
+            "order": false
         },
         "Emojis": [
             "🧞",
@@ -3669,7 +3721,8 @@
         ],
         "Images": {
             "attack": "images/max/atk.png",
-            "ultimate": "images/max/ult.png"
+            "ultimate": "images/max/ult.png",
+            "order": false
         },
         "Emojis": [
             "👟",
@@ -3722,7 +3775,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/mr/atk.png",
-            "ultimate": "images/mr/ult.png"
+            "ultimate": "images/mr/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐧",
@@ -3795,7 +3849,8 @@
         ],
         "Images": {
             "attack": "images/sprout/atk.png",
-            "ultimate": "images/sprout/ult.png"
+            "ultimate": "images/sprout/ult.png",
+            "order": false
         },
         "Emojis": [
             "🌱",
@@ -3868,7 +3923,8 @@
         ],
         "Images": {
             "attack": "images/lou/atk.png",
-            "ultimate": "images/lou/ult.png"
+            "ultimate": "images/lou/ult.png",
+            "order": false
         },
         "Emojis": [
             "🍧",
@@ -3942,7 +3998,8 @@
         ],
         "Images": {
             "attack": "images/byron/atk.png",
-            "ultimate": "images/byron/ult.png"
+            "ultimate": "images/byron/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐍",
@@ -4015,7 +4072,8 @@
         ],
         "Images": {
             "attack": "images/ruffs/atk.png",
-            "ultimate": "images/ruffs/ult.png"
+            "ultimate": "images/ruffs/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐶",
@@ -4067,7 +4125,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/squeak/atk.png",
-            "ultimate": "images/squeak/ult.png"
+            "ultimate": "images/squeak/ult.png",
+            "order": false
         },
         "Emojis": [
             "💧",
@@ -4140,7 +4199,8 @@
         ],
         "Images": {
             "attack": "images/buzz/atk.png",
-            "ultimate": "images/buzz/ult.png"
+            "ultimate": "images/buzz/ult.png",
+            "order": false
         },
         "Emojis": [
             "🦖",
@@ -4213,7 +4273,8 @@
         ],
         "Images": {
             "attack": "images/fang/atk.png",
-            "ultimate": "images/fang/ult.png"
+            "ultimate": "images/fang/ult.png",
+            "order": false
         },
         "Emojis": [
             "👣",
@@ -4286,7 +4347,8 @@
         ],
         "Images": {
             "attack": "images/eve/atk.png",
-            "ultimate": "images/eve/ult.png"
+            "ultimate": "images/eve/ult.png",
+            "order": false
         },
         "Emojis": [
             "🛸",
@@ -4360,7 +4422,8 @@
         ],
         "Images": {
             "attack": "images/janet/atk.png",
-            "ultimate": "images/janet/ult.png"
+            "ultimate": "images/janet/ult.png",
+            "order": false
         },
         "Emojis": [
             "🎤",
@@ -4413,7 +4476,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/otis/atk.png",
-            "ultimate": "images/otis/ult.png"
+            "ultimate": "images/otis/ult.png",
+            "order": false
         },
         "Emojis": [
             "🎨",
@@ -4487,7 +4551,8 @@
         ],
         "Images": {
             "attack": "images/buster/atk.png",
-            "ultimate": "images/buster/ult.png"
+            "ultimate": "images/buster/ult.png",
+            "order": false
         },
         "Emojis": [
             "📽️",
@@ -4540,7 +4605,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/gray/atk.png",
-            "ultimate": "images/gray/ult.png"
+            "ultimate": "images/gray/ult.png",
+            "order": false
         },
         "Emojis": [
             "🎹",
@@ -4613,7 +4679,8 @@
         ],
         "Images": {
             "attack": "images/rt/base/atk.png",
-            "ultimate": "images/rt/base/ult.png"
+            "ultimate": "images/rt/base/ult.png",
+            "order": true
         },
         "Emojis": [
             "🖥️",
@@ -4653,7 +4720,8 @@
         },
         "Images": {
             "attack": "images/rt/split/atk.png",
-            "ultimate": "images/rt/split/ult.png"
+            "ultimate": "images/rt/split/ult.png",
+            "order": true
         }
     },
     "Willow": {
@@ -4719,7 +4787,8 @@
         ],
         "Images": {
             "attack": "images/willow/atk.png",
-            "ultimate": "images/willow/ult.png"
+            "ultimate": "images/willow/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐸",
@@ -4792,7 +4861,8 @@
         ],
         "Images": {
             "attack": "images/doug/atk.png",
-            "ultimate": "images/doug/ult.png"
+            "ultimate": "images/doug/ult.png",
+            "order": false
         },
         "Emojis": [
             "🌭",
@@ -4866,7 +4936,8 @@
         ],
         "Images": {
             "attack": "images/chuck/atk.png",
-            "ultimate": "images/chuck/ult.png"
+            "ultimate": "images/chuck/ult.png",
+            "order": false
         },
         "Emojis": [
             "🚂",
@@ -4940,7 +5011,8 @@
         ],
         "Images": {
             "attack": "images/charlie/atk.png",
-            "ultimate": "images/charlie/ult.png"
+            "ultimate": "images/charlie/ult.png",
+            "order": false
         },
         "Emojis": [
             "🪀",
@@ -5013,7 +5085,8 @@
         ],
         "Images": {
             "attack": "images/mico/atk.png",
-            "ultimate": "images/mico/ult.png"
+            "ultimate": "images/mico/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐒",
@@ -5087,7 +5160,8 @@
         ],
         "Images": {
             "attack": "images/melodie/atk.png",
-            "ultimate": "images/melodie/ult.png"
+            "ultimate": "images/melodie/ult.png",
+            "order": false
         },
         "Emojis": [
             "🎶",
@@ -5140,7 +5214,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/lily/atk.png",
-            "ultimate": "images/lily/ult.png"
+            "ultimate": "images/lily/ult.png",
+            "order": false
         },
         "Emojis": [
             "🪴",
@@ -5214,7 +5289,8 @@
         ],
         "Images": {
             "attack": "images/clancy/atk.png",
-            "ultimate": "images/clancy/ult.png"
+            "ultimate": "images/clancy/ult.png",
+            "order": false
         },
         "Emojis": [
             "🦞",
@@ -5288,7 +5364,8 @@
         ],
         "Images": {
             "attack": "images/moe/base/atk.png",
-            "ultimate": "images/moe/base/ult.png"
+            "ultimate": "images/moe/base/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐭",
@@ -5328,7 +5405,8 @@
         },
         "Images": {
             "attack": "images/moe/drill/atk.png",
-            "ultimate": "images/moe/drill/ult.png"
+            "ultimate": "images/moe/drill/ult.png",
+            "order": true
         }
     },
     "Juju": {
@@ -5394,7 +5472,8 @@
         ],
         "Images": {
             "attack": "images/juju/atk.png",
-            "ultimate": "images/juju/ult.png"
+            "ultimate": "images/juju/ult.png",
+            "order": false
         },
         "Emojis": [
             "🎎",
@@ -5468,7 +5547,8 @@
         ],
         "Images": {
             "attack": "images/ollie/atk.png",
-            "ultimate": "images/ollie/ult.png"
+            "ultimate": "images/ollie/ult.png",
+            "order": false
         },
         "Emojis": [
             "🛹",
@@ -5541,7 +5621,8 @@
         ],
         "Images": {
             "attack": "images/finx/atk.png",
-            "ultimate": "images/finx/ult.png"
+            "ultimate": "images/finx/ult.png",
+            "order": false
         },
         "Emojis": [
             "📦",
@@ -5615,7 +5696,8 @@
         ],
         "Images": {
             "attack": "images/lumi/atk.png",
-            "ultimate": "images/lumi/ult.png"
+            "ultimate": "images/lumi/ult.png",
+            "order": false
         },
         "Emojis": [
             "🥁",
@@ -5689,7 +5771,8 @@
         ],
         "Images": {
             "attack": "images/jae/atk.png",
-            "ultimate": "images/jae/ult.png"
+            "ultimate": "images/jae/ult.png",
+            "order": false
         },
         "Emojis": [
             "👔",
@@ -5763,7 +5846,8 @@
         ],
         "Images": {
             "attack": "images/alli/atk.png",
-            "ultimate": "images/alli/ult.png"
+            "ultimate": "images/alli/ult.png",
+            "order": true
         },
         "Emojis": [
             "🐊",
@@ -5836,7 +5920,8 @@
         ],
         "Images": {
             "attack": "images/mina/atk.png",
-            "ultimate": "images/mina/ult.png"
+            "ultimate": "images/mina/ult.png",
+            "order": false
         },
         "Emojis": [
             "🌪️",
@@ -5909,7 +5994,8 @@
         ],
         "Images": {
             "attack": "images/ziggy/atk.png",
-            "ultimate": "images/ziggy/ult.png"
+            "ultimate": "images/ziggy/ult.png",
+            "order": false
         },
         "Emojis": [
             "⚡",
@@ -5982,7 +6068,8 @@
         ],
         "Images": {
             "attack": "images/gigi/atk.png",
-            "ultimate": "images/gigi/ult.png"
+            "ultimate": "images/gigi/ult.png",
+            "order": false
         },
         "Emojis": [
             "🩰",
@@ -6055,7 +6142,8 @@
         ],
         "Images": {
             "attack": "images/glowy/atk.png",
-            "ultimate": "images/glowy/ult.png"
+            "ultimate": "images/glowy/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐟",
@@ -6129,7 +6217,8 @@
         ],
         "Images": {
             "attack": "images/crow/atk.png",
-            "ultimate": "images/crow/ult.png"
+            "ultimate": "images/crow/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐦‍⬛",
@@ -6181,7 +6270,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/spike/atk.png",
-            "ultimate": "images/spike/ult.png"
+            "ultimate": "images/spike/ult.png",
+            "order": false
         },
         "Emojis": [
             "🌵",
@@ -6255,7 +6345,8 @@
         ],
         "Images": {
             "attack": "images/leon/atk.png",
-            "ultimate": "images/leon/ult.png"
+            "ultimate": "images/leon/ult.png",
+            "order": true
         },
         "Emojis": [
             "🦎",
@@ -6327,7 +6418,8 @@
         ],
         "Images": {
             "attack": "images/sandy/atk.png",
-            "ultimate": "images/sandy/ult.png"
+            "ultimate": "images/sandy/ult.png",
+            "order": false
         },
         "Emojis": [
             "😴",
@@ -6401,7 +6493,8 @@
         ],
         "Images": {
             "attack": "images/surge/atk.png",
-            "ultimate": "images/surge/ult.png"
+            "ultimate": "images/surge/ult.png",
+            "order": false
         },
         "Emojis": [
             "🔝",
@@ -6475,7 +6568,8 @@
         ],
         "Images": {
             "attack": "images/amber/atk.png",
-            "ultimate": "images/amber/ult.png"
+            "ultimate": "images/amber/ult.png",
+            "order": false
         },
         "Emojis": [
             "🔥",
@@ -6526,7 +6620,8 @@
         ],
         "Images": {
             "attack": "images/meg/mecha/atk.png",
-            "ultimate": "images/meg/mecha/ult.png"
+            "ultimate": "images/meg/mecha/ult.png",
+            "order": false
         },
         "Emojis": [
             "🤖",
@@ -6588,7 +6683,8 @@
         ],
         "Images": {
             "attack": "images/meg/small/atk.png",
-            "ultimate": "images/meg/small/ult.png"
+            "ultimate": "images/meg/small/ult.png",
+            "order": true
         }
     },
     "Chester": {
@@ -6724,7 +6820,8 @@
         ],
         "Images": {
             "attack": "images/cordelius/atk.png",
-            "ultimate": "images/cordelius/ult.png"
+            "ultimate": "images/cordelius/ult.png",
+            "order": false
         },
         "Emojis": [
             "🍄",
@@ -6798,7 +6895,8 @@
         ],
         "Images": {
             "attack": "images/kit/base/atk.png",
-            "ultimate": "images/kit/base/ult.png"
+            "ultimate": "images/kit/base/ult.png",
+            "order": false
         },
         "Emojis": [
             "🐈‍⬛",
@@ -6837,7 +6935,8 @@
         },
         "Images": {
             "attack": "images/kit/att/atk.png",
-            "ultimate": "images/kit/att/ult.png"
+            "ultimate": "images/kit/att/ult.png",
+            "order": false
         }
     },
     "Draco": {
@@ -6903,7 +7002,8 @@
         ],
         "Images": {
             "attack": "images/draco/base/atk.png",
-            "ultimate": "images/draco/base/ult.png"
+            "ultimate": "images/draco/base/ult.png",
+            "order": true
         },
         "Emojis": [
             "🐲",
@@ -6942,7 +7042,8 @@
         },
         "Images": {
             "attack": "images/draco/mount/atk.png",
-            "ultimate": "images/draco/mount/ult.png"
+            "ultimate": "images/draco/mount/ult.png",
+            "order": true
         }
     },
     "Kenji": {
@@ -7008,7 +7109,8 @@
         ],
         "Images": {
             "attack": "images/kenji/atk.png",
-            "ultimate": "images/kenji/ult.png"
+            "ultimate": "images/kenji/ult.png",
+            "order": false
         },
         "Emojis": [
             "⚔️",
@@ -7060,7 +7162,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/pierce/atk.png",
-            "ultimate": "images/pierce/ult.png"
+            "ultimate": "images/pierce/ult.png",
+            "order": false
         },
         "Emojis": [
             "🏊",
@@ -7133,7 +7236,8 @@
         ],
         "Images": {
             "attack": "images/kaze/geisha/atk.png",
-            "ultimate": "images/kaze/geisha/ult.png"
+            "ultimate": "images/kaze/geisha/ult.png",
+            "order": false
         },
         "Emojis": [
             "🪭",
@@ -7195,7 +7299,8 @@
         ],
         "Images": {
             "attack": "images/kaze/ninja/atk.png",
-            "ultimate": "images/kaze/ninja/ult.png"
+            "ultimate": "images/kaze/ninja/ult.png",
+            "order": false
         }
     },
     "Sirius": {
@@ -7240,7 +7345,8 @@
         "Voicelines": [],
         "Images": {
             "attack": "images/sirius/atk.png",
-            "ultimate": "images/sirius/ult.png"
+            "ultimate": "images/sirius/ult.png",
+            "order": false
         },
         "Emojis": [
             "👤",

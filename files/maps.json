@@ -1,0 +1,187 @@
+{
+  "Acid Lakes": {
+    "mode": "Showdown",
+    "image": "_maps/acid_lakes.png",
+    "start": { "x": 189, "y": 608, "scale": 9.0 }
+  },
+  "Belle's Rock": {
+    "mode": "Knockout",
+    "image": "_maps/belles_rock.png",
+    "start": { "x": 399, "y": 560, "scale": 8.0 }
+  },
+  "Bridge Too Far": {
+    "mode": "Heist",
+    "image": "_maps/bridge_too_far.png",
+    "start": { "x": 398, "y": 511, "scale": 7.0 }
+  },
+  "Cavern Churn": {
+    "mode": "Showdown",
+    "image": "_maps/cavern_churn.png",
+    "start": { "x": 470, "y": 337, "scale": 15.0 }
+  },
+  "Center Stage": {
+    "mode": "Brawlball",
+    "image": "_maps/center_stage.png",
+    "start": { "x": 313, "y": 627, "scale": 6.7 }
+  },
+  "Crystal Arcade": {
+    "mode": "Gem Grab",
+    "image": "_maps/crystal_arcade.png",
+    "start": { "x": 398, "y": 588, "scale": 9.0 }
+  },
+  "Deathcap Trap": {
+    "mode": "Gem Grab",
+    "image": "_maps/deathcap_trap.png",
+    "start": { "x": 370, "y": 661, "scale": 6.0 }
+  },
+  "Deep End": {
+    "mode": "Knockout",
+    "image": "_maps/deep_end.png",
+    "start": { "x": 440, "y": 478, "scale": 9.0 }
+  },
+  "Double Swoosh": {
+    "mode": "Gem Grab",
+    "image": "_maps/double_swoosh.png",
+    "start": { "x": 335, "y": 603, "scale": 7.0 }
+  },
+  "Double Trouble": {
+    "mode": "Showdown",
+    "image": "_maps/double_trouble.png",
+    "start": { "x": 388, "y": 191, "scale": 11.0 }
+  },
+  "Dry Season": {
+    "mode": "Bounty",
+    "image": "_maps/dry_season.png",
+    "start": { "x": 540, "y": 468, "scale": 7.0 }
+  },
+  "Dueling Beetles": {
+    "mode": "Hot Zone",
+    "image": "_maps/dueling_beetles.png",
+    "start": { "x": 550, "y": 470, "scale": 7.0 }
+  },
+  "Flaring Phoenix": {
+    "mode": "Knockout",
+    "image": "_maps/flaring_phoenix.png",
+    "start": { "x": 473, "y": 600, "scale": 7.0 }
+  },
+  "Four Levels": {
+    "mode": "Knockout",
+    "image": "_maps/four_levels.png",
+    "start": { "x": 555, "y": 700, "scale": 8.0 }
+  },
+  "Gem Fort": {
+    "mode": "Gem Grab",
+    "image": "_maps/gem_fort.png",
+    "start": { "x": 412, "y": 578, "scale": 7.6 }
+  },
+  "Goldarm Gulch": {
+    "mode": "Knockout",
+    "image": "_maps/goldarm_gulch.png",
+    "start": { "x": 312, "y": 588, "scale": 9.0 }
+  },
+  "Hard Rock Mine": {
+    "mode": "Gem Grab",
+    "image": "_maps/hard_rock_mine.png",
+    "start": { "x": 482, "y": 405, "scale": 9.0 }
+  },
+  "Hideout": {
+    "mode": "Bounty",
+    "image": "_maps/hideout.png",
+    "start": { "x": 412, "y": 568, "scale": 8.5 }
+  },
+  "Hot Potato": {
+    "mode": "Heist",
+    "image": "_maps/hot_potato.png",
+    "start": { "x": 555, "y": 760, "scale": 8.0 }
+  },
+  "Kaboom Canyon": {
+    "mode": "Heist",
+    "image": "_maps/kaboom_canyon.png",
+    "start": { "x": 313, "y": 609, "scale": 9.5 }
+  },
+  "Layer Cake": {
+    "mode": "Bounty",
+    "image": "_maps/layer_cake.png",
+    "start": { "x": 119, "y": 883, "scale": 7.0 }
+  },
+  "New Horizons": {
+    "mode": "Knockout",
+    "image": "_maps/new_horizons.png",
+    "start": { "x": 487, "y": 527, "scale": 7.5 }
+  },
+  "Open Business": {
+    "mode": "Hot Zone",
+    "image": "_maps/open_business.png",
+    "start": { "x": 498, "y": 404, "scale": 7.5 }
+  },
+  "Out in the Open": {
+    "mode": "Knockout",
+    "image": "_maps/out_in_the_open.png",
+    "start": { "x": 80, "y": 832, "scale": 7.0 }
+  },
+  "Parallel Plays": {
+    "mode": "Hot Zone",
+    "image": "_maps/parallel_plays.png",
+    "start": { "x": 545, "y": 531, "scale": 7.0 }
+  },
+  "Pinball Dreams": {
+    "mode": "Brawlball",
+    "image": "_maps/pinball_dreams.png",
+    "start": { "x": 152, "y": 519, "scale": 7.0 }
+  },
+  "Pinhole Punt": {
+    "mode": "Brawlball",
+    "image": "_maps/pinhole_punt.png",
+    "start": { "x": 374, "y": 550, "scale": 10.0 }
+  },
+  "Pit Stop": {
+    "mode": "Heist",
+    "image": "_maps/pit_stop.png",
+    "start": { "x": 72, "y": 590, "scale": 8.0 }
+  },
+  "Ring of Fire": {
+    "mode": "Hot Zone",
+    "image": "_maps/ring_of_fire.png",
+    "start": { "x": 138, "y": 421, "scale": 8.0 }
+  },
+  "Safe Zone": {
+    "mode": "Heist",
+    "image": "_maps/safe_zone.png",
+    "start": { "x": 400, "y": 560, "scale": 9.0 }
+  },
+  "Safety Center": {
+    "mode": "Showdown",
+    "image": "_maps/safety_center.png",
+    "start": { "x": 387, "y": 458, "scale": 11.0 }
+  },
+  "Shooting Star": {
+    "mode": "Bounty",
+    "image": "_maps/shooting_star.png",
+    "start": { "x": 384, "y": 560, "scale": 8.0 }
+  },
+  "Skull Creek": {
+    "mode": "Showdown",
+    "image": "_maps/skull_creek.png",
+    "start": { "x": 350, "y": 669, "scale": 11.0 }
+  },
+  "Sneaky Fields": {
+    "mode": "Brawlball",
+    "image": "_maps/sneaky_fields.png",
+    "start": { "x": 560, "y": 474, "scale": 8.0 }
+  },
+  "Super Beach": {
+    "mode": "Brawlball",
+    "image": "_maps/super_beach.png",
+    "start": { "x": 160, "y": 548, "scale": 7.5 }
+  },
+  "Triple Dribble": {
+    "mode": "Brawlball",
+    "image": "_maps/triple_dribble.png",
+    "start": { "x": 544, "y": 775, "scale": 7.0 }
+  },
+  "Undermine": {
+    "mode": "Gem Grab",
+    "image": "_maps/undermine.png",
+    "start": { "x": 500, "y": 490, "scale": 6.5 }
+  }
+}
