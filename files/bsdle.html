@@ -13,7 +13,8 @@
 
 :root{
   --bg:#0b1622;--bg2:#12202f;--bg3:#1a2d40;--bg4:#223550;
-  --accent:#ffd000;--text:#e8edf4;--text2:#6e8fa8;
+  --accent:#ffd000;--text:#e8edf4;--text2:#6e8fa8; 
+  --accent2: #ff2dd1;--text:#e8edf4;--text2:#6e8fa8;
   --green:#27ae60;--red:#c0392b;--orange:#d68910;
   --border:#1e3248;--radius:14px;--shadow:0 6px 28px rgba(0,0,0,.55);
 }
@@ -21,6 +22,7 @@ html{scroll-behavior:smooth}
 body{
   font-family:'Nunito',sans-serif;font-size:15px;color:var(--text);
   min-height:100vh;overflow-x:hidden;
+  background:#0b1622;
 }
 
 .bg-overlay{
@@ -36,6 +38,7 @@ body{
   70% {transform:scale(1.07) translate(0.9%,0.4%)}
   100%{transform:scale(1.07) translate(0,0)}
 }
+.bg-base{position:fixed;inset:0;z-index:-3;background:#0b1622}
 .bg-solid{position:fixed;inset:0;z-index:-1;background:rgba(11,22,34,.72)}
 
 .header{
@@ -82,7 +85,7 @@ body{
 .tab-streak{font-size:.72rem;font-weight:800;color:var(--text2)}
 .tab.active .tab-streak{color:var(--accent)}
 
-.game-area{max-width:980px;margin:0 auto;padding:22px 14px 60px}
+.game-area{max-width:980px;margin:0 auto;padding:22px 14px 80px}
 
 .mode-header{
   display:flex;align-items:center;justify-content:space-between;
@@ -97,7 +100,7 @@ body{
 
 .rotation-info{
   background:rgba(18,32,47,.8);border:1px solid var(--border);
-  border-left:3px solid var(--accent);border-radius:8px;
+  border-left:3px solid var(--accent2);border-radius:8px;
   padding:9px 14px;margin-bottom:14px;
   font-size:.78rem;color:var(--text2);font-weight:700;
 }
@@ -121,7 +124,7 @@ body{
   z-index:200;display:none;box-shadow:var(--shadow);
 }
 .ac-list.open{display:block}
-.ac-item{padding:8px 14px;cursor:pointer;font-weight:700;transition:background .1s;display:flex;align-items:center;gap:10px}
+.ac-item{padding:8px 14px;cursor:pointer;font-weight:700;transition:background .1s;display:flex;align-items:center;gap:10px;width:100%;}
 .ac-icon{width:32px;height:32px;object-fit:contain;flex-shrink:0;border-radius:50%;background:rgba(255,255,255,.06)}
 .guess-icon{width:28px;height:28px;object-fit:contain;flex-shrink:0;border-radius:50%;background:rgba(255,255,255,.06)}
 .ac-item:hover,.ac-item.hi{background:var(--bg4);color:var(--accent)}
@@ -155,10 +158,9 @@ body{
 .table-outer{
   position:relative;border-radius:var(--radius);
   border:1px solid var(--border);box-shadow:var(--shadow);
-  background:rgba(12,24,38,.7);overflow:visible;
+  background:rgba(12,24,38,.7);
   margin:0;
 }
-.table-outer.needs-scroll{margin:0 36px;}
 .table-wrap{
   overflow-x:auto;border-radius:var(--radius);
   scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg3);
@@ -167,39 +169,35 @@ body{
 .table-wrap::-webkit-scrollbar-track{background:var(--bg3)}
 .table-wrap::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
 
-.scroll-btn{
-  position:absolute;top:50%;transform:translateY(-50%);
-  z-index:20;width:32px;height:62px;
-  background:rgba(18,32,47,.75);border:1px solid var(--border);
-  color:var(--text2);cursor:pointer;font-size:1.4rem;
-  display:none;align-items:center;justify-content:center;
-  border-radius:8px;transition:all .2s;
-}
-.scroll-btn.sl{left:-36px}
-.scroll-btn.sr{right:-36px}
-.scroll-btn:hover{background:var(--accent);color:#000;border-color:var(--accent)}
-.table-outer.needs-scroll .scroll-btn{display:flex;}
 
-.stats-table{width:100%;border-collapse:separate;border-spacing:0;min-width:720px}
+.stats-table{width:100%;border-collapse:separate;border-spacing:0;min-width:520px}
 .stats-table thead th{
   background:rgba(26,45,64,.95);padding:10px 10px;
   font-size:.68rem;text-transform:uppercase;letter-spacing:.6px;
   color:var(--text2);white-space:nowrap;text-align:center;
   font-weight:900;border-bottom:1px solid var(--border);
 }
-.stats-table thead th:first-child{text-align:left;padding-left:13px;min-width:130px}
+.stats-table thead th:first-child{text-align:center;padding:10px 6px;width:52px;min-width:52px;}
 .stats-table tbody td{
   padding:0;text-align:center;font-size:.82rem;font-weight:800;
   border-bottom:1px solid rgba(30,50,72,.6);
-  position:relative;height:58px;
+  position:relative;height:52px;
 }
 .stats-table tbody td:first-child{
-  text-align:left;padding:0 8px 0 8px;font-size:.85rem;
-  color:var(--text);max-width:165px;
+  text-align:center;padding:0 6px;width:52px;min-width:52px;max-width:52px;
 }
-.name-cell{display:flex;align-items:center;gap:7px;max-width:160px;}
-.name-cell span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.tbl-icon{width:30px;height:30px;object-fit:contain;flex-shrink:0;border-radius:50%;}
+.name-cell{position:relative;display:inline-flex;align-items:center;justify-content:center;cursor:default;}
+.name-cell-tooltip{
+  position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);
+  background:var(--bg4);border:1px solid var(--border);
+  border-radius:6px;padding:3px 8px;
+  font-size:.72rem;font-weight:800;color:var(--text);
+  white-space:nowrap;pointer-events:none;
+  opacity:0;transition:opacity .12s;z-index:50;
+}
+.name-cell:hover .name-cell-tooltip{opacity:1;}
+.tbl-icon{width:40px;height:40px;object-fit:contain;flex-shrink:0;border-radius:50%;transition:transform .15s;}
+.name-cell:hover .tbl-icon{transform:scale(1.12);}
 .cell-inner{
   position:relative;display:flex;align-items:center;justify-content:center;
   height:100%;padding:8px 10px;overflow:hidden;
@@ -242,7 +240,7 @@ body{
 }
 
 .fact-card{
-  background:rgba(18,32,47,.85);border:1px solid var(--border);
+  background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);
   border-radius:var(--radius);padding:24px;margin-bottom:16px;
   box-shadow:var(--shadow);
 }
@@ -251,13 +249,15 @@ body{
 .fact-revealed{color:var(--green);background:rgba(39,174,96,.12);padding:1px 7px;border-radius:4px;font-weight:900}
 .hints-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .hint-pill{
+  display:inline-flex;align-items:center;gap:6px;
   padding:5px 13px;border-radius:20px;font-size:.76rem;font-weight:800;
   background:var(--bg3);color:var(--text2);border:1px solid var(--border);transition:all .3s;
 }
 .hint-pill.shown{background:rgba(255,208,0,.1);color:var(--accent);border-color:rgba(255,208,0,.25)}
+.hint-pill img{width:18px;height:18px;object-fit:contain;flex-shrink:0;}
 
 .vl-card{
-  background:rgba(18,32,47,.85);border-left:4px solid var(--accent);
+  background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);
   border-radius:var(--radius);padding:26px;margin-bottom:16px;box-shadow:var(--shadow);
 }
 .vl-label{color:var(--text2);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
@@ -267,19 +267,17 @@ body{
 .audio-wrap audio{width:100%;border-radius:8px}
 
 .emoji-card{
-  background:rgba(18,32,47,.85);border:1px solid var(--border);
+  background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);
   border-radius:var(--radius);padding:28px;margin-bottom:16px;text-align:center;box-shadow:var(--shadow);
 }
 .emoji-display{font-size:clamp(2rem,6vw,3rem);letter-spacing:10px;line-height:1.5}
 .emoji-sub{color:var(--text2);font-size:.76rem;font-weight:700;margin-top:10px}
 
 .img-card{
-  background:rgba(18,32,47,.85);border:1px solid var(--border);
+  background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);
   border-radius:var(--radius);padding:18px;margin-bottom:16px;box-shadow:var(--shadow);
 }
-.img-grid{display:grid;gap:14px}
-.img-grid.one{grid-template-columns:1fr;max-width:400px;margin:0 auto}
-.img-grid.two{grid-template-columns:1fr 1fr}
+.img-grid{display:grid;gap:14px;grid-template-columns:1fr;max-width:400px;margin:0 auto}
 .img-slot{
   background:var(--bg3);border-radius:10px;overflow:hidden;
   display:flex;align-items:center;justify-content:center;aspect-ratio:2010/1250;
@@ -294,7 +292,7 @@ body{
 .img-label{text-align:center;color:var(--text2);font-size:.68rem;font-weight:900;text-transform:uppercase;margin-top:5px;letter-spacing:.5px}
 
 .guess-list{display:flex;flex-direction:column;gap:7px;margin-top:8px}
-.gear-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--radius);
+.gear-card{background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);border-radius:var(--radius);
   padding:22px 18px;text-align:center;max-width:380px;margin:0 auto 16px;}
 .gear-type-label{font-weight:900;font-size:1rem;letter-spacing:.5px;
   color:var(--accent);margin-bottom:14px;text-transform:uppercase;}
@@ -332,8 +330,12 @@ body{
   animation:flashWin .85s ease forwards;
 }
 @keyframes confettiFall{
-  0%{transform:translateY(-20px) rotate(0deg);opacity:1}
-  100%{transform:translateY(110vh) rotate(500deg);opacity:0.2}
+  0%{transform:translateY(0) rotate(0deg);opacity:1}
+  100%{transform:translateY(115vh) rotate(540deg);opacity:0}
+}
+@keyframes confettiFallR{
+  0%{transform:translateY(0) rotate(0deg);opacity:1}
+  100%{transform:translateY(115vh) rotate(-540deg);opacity:0}
 }
 .confetti{
   position:absolute;
@@ -342,6 +344,7 @@ body{
   overflow:hidden;
   pointer-events:none;
 }
+.confetti.rev{animation-name:confettiFallR;}
 .confetti img{
   width:100%;height:100%;
   object-fit:contain;
@@ -357,13 +360,20 @@ body{
 .brawler-panel-btn{
   position:fixed;top:14px;left:14px;z-index:300;
   background:var(--bg3);border:1px solid var(--border);
-  border-radius:8px;padding:7px 13px;font-size:.78rem;font-weight:800;
-  color:var(--text2);cursor:pointer;letter-spacing:.5px;
+  border-radius:8px;padding:7px 10px;font-size:.72rem;font-weight:800;
+  color:var(--text2);cursor:pointer;
   transition:color .15s,border-color .15s;user-select:none;
+  white-space:nowrap;overflow:hidden;
 }
 .brawler-panel-btn:hover{color:var(--accent);border-color:var(--accent);}
+@media(max-width:480px){
+  .brawler-panel-btn span.btn-label{display:none;}
+  .brawler-panel-btn{padding:7px 9px;}
+  .stats-btn span.btn-label{display:none;}
+  .stats-btn{padding:7px 9px;}
+}
 .brawler-panel-overlay{
-  display:none;position:fixed;inset:0;z-index:400;
+  display:none;position:fixed;inset:0;z-index:9995;
   background:rgba(0,0,0,.7);backdrop-filter:blur(4px);
   overflow-y:auto;padding:24px 16px 60px;
 }
@@ -416,7 +426,7 @@ body{
 }
 .brawler-chip:hover .brawler-chip-name{opacity:1;}
 .map-card{
-  background:rgba(18,32,47,.85);border:1px solid var(--border);
+  background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);
   border-radius:var(--radius);padding:18px;margin-bottom:16px;
   box-shadow:var(--shadow);
 }
@@ -430,6 +440,40 @@ body{
   border-radius:10px;
   -webkit-user-select:none;user-select:none;
 }
+.stats-btn{
+  position:fixed;top:14px;right:14px;z-index:300;
+  display:inline-flex;align-items:center;gap:5px;
+  padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-family:'Nunito',sans-serif;font-size:.78rem;font-weight:800;
+  background:var(--bg3);color:var(--text2);border:1px solid var(--border);
+  transition:color .15s,border-color .15s;user-select:none;
+}
+.stats-btn:hover{color:var(--accent);border-color:var(--accent);}
+.stats-overlay{
+  display:none;position:fixed;inset:0;z-index:9997;
+  background:rgba(0,0,0,.75);backdrop-filter:blur(4px);
+  overflow-y:auto;padding:24px 16px 60px;
+}
+.stats-overlay.open{display:block;}
+.stats-box{
+  max-width:560px;margin:0 auto;
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:14px;padding:22px 20px;
+}
+.stats-title{
+  font-family:'Lilita One',cursive;font-size:1.2rem;color:var(--accent);
+  margin-bottom:4px;display:flex;justify-content:space-between;align-items:center;
+}
+.stats-close{cursor:pointer;font-size:1.3rem;color:var(--text2);padding:2px 8px;transition:color .15s;}
+.stats-close:hover{color:var(--accent);}
+.stats-empty{color:var(--text2);font-size:.88rem;text-align:center;padding:28px 0;font-weight:700;}
+.stats-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:13px 4px;border-bottom:1px solid var(--border);
+}
+.stats-row:last-child{border-bottom:none;}
+.stats-label{font-size:.88rem;font-weight:700;color:var(--text2);}
+.stats-val{font-family:'Lilita One',cursive;font-size:1.4rem;color:var(--accent);}
 .report-btn{
   position:fixed;bottom:14px;right:16px;z-index:500;
   background:rgba(18,32,47,.6);border:1px solid rgba(255,255,255,.08);
@@ -457,14 +501,16 @@ body{
   .tab{min-width:72px;padding:11px 12px}
   .tab-emoji{font-size:1.3rem}
   .fact-text{font-size:.95rem}
-  .table-outer.needs-scroll{margin:0 28px}
-  .table-outer.needs-scroll .scroll-btn.sl{left:-28px}
-  .table-outer.needs-scroll .scroll-btn.sr{right:-28px}
+  .stats-table thead th{font-size:.58rem;padding:8px 6px;}
+  .stats-table tbody td{font-size:.72rem;height:44px;}
+  .cell-inner{padding:6px 6px;}
+  .tbl-icon{width:34px;height:34px;}
 }
 
 </style>
 </head>
 <body>
+<div class="bg-base"></div>
 <div class="bg-overlay"></div>
 <div class="bg-solid"></div>
 <div id="app"><div style="display:flex;align-items:center;justify-content:center;height:100vh;color:#ffd000;font-family:sans-serif;font-size:1.2rem">⚡ Loading BSdle…</div></div>
@@ -484,8 +530,8 @@ function _showLoadError(){
   document.getElementById('app').innerHTML =
     '<div style="color:#e74c3c;font-family:sans-serif;padding:30px;max-width:520px;margin:80px auto;' +
     'background:rgba(0,0,0,.6);border-radius:12px">' +
-    '<h2>⚠️ Impossible de charger les données</h2>' +
-    '<p>Utilise <b>VS Code + Live Server</b> pour ouvrir le jeu.</p></div>';
+    '<h2>Impossible to load data</h2>' +
+    '<p>Use <b>VS Code + Live Server</b> to open the game.</p></div>';
 }
 
 Promise.all([
@@ -505,7 +551,6 @@ const MODE_META = {
 };
 const SEEDS = {classic:1337,gear:5512,fact:4721,voiceline:9203,emoji:6614,image:2958,map:7731};
 const GEAR_LABELS = {'1':'Gadget 1','2':'Gadget 2','3':'Star Power 1','4':'Star Power 2','5':'Hypercharge'};
-const GEAR_EMOJI  = {'1':'🔧','2':'🔧','3':'⭐','4':'⭐','5':'⚡'};
 
 const COL_GROUPS = [
   ['gender'],
@@ -565,11 +610,17 @@ function dayIndex(){
   return Math.floor(Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),n.getUTCDate())/86400000);
 }
 
+function _dayHash(di,slot){
+  let h=((di^(di>>>4))*0x45d9f3b+slot*2654435761)>>>0;
+  h=((h^(h>>>15))*0x1b873593)>>>0;
+  h=(h^(h>>>13))>>>0;
+  return h/4294967296;
+}
 function getDailyCols(){
   const di=dayIndex();
   return COL_GROUPS.map((group,gi)=>{
-    const pick=group[Math.floor(lcg(di*7919+gi*31+13)()*group.length)];
-    if(pick==='gadget_cd')return lcg(di*7919+gi*31+77)()<0.5?'gadget_cd_min':'gadget_cd_max';
+    const pick=group[Math.floor(_dayHash(di,gi*7+1)*group.length)];
+    if(pick==='gadget_cd')return _dayHash(di,gi*7+2)<0.5?'gadget_cd_min':'gadget_cd_max';
     return pick;
   });
 }
@@ -609,22 +660,17 @@ function getDailyAnswers(){
     image:   all.filter(b=>BRAWLERS[b].Images),
     map:     Object.keys(MAPS),
   };
-  const hist=_loadHist();
+  /* Pure deterministic selection — same on every device for same date */
   const picked=new Set();const ans={};
   MODES.forEach(m=>{
-    const recent=_recentAnswers(hist,m,di);
     const sh=seededShuffle(pools[m],SEEDS[m]);
     let idx=di%sh.length,sf=0;
-    while((picked.has(sh[idx])||recent.has(sh[idx]))&&sf++<sh.length)
-      idx=(idx+1)%sh.length;
-    if(sf>=sh.length){
-      sf=0;idx=di%sh.length;
-      while(picked.has(sh[idx])&&sf++<sh.length)idx=(idx+1)%sh.length;
-    }
-    ans[m]=sh[idx];
-    picked.add(sh[idx]);
-    _recordAnswer(hist,m,di,sh[idx]);
+    while(picked.has(sh[idx])&&sf++<sh.length)idx=(idx+1)%sh.length;
+    ans[m]=sh[idx];picked.add(sh[idx]);
   });
+  /* Record history asynchronously — purely informational, never changes answers */
+  const hist=_loadHist();
+  MODES.forEach(m=>_recordAnswer(hist,m,di,ans[m]));
   _saveHist(hist);
   return ans;
 }
@@ -701,7 +747,9 @@ function brawlerIcon(name){const b=BRAWLERS[name];return b&&b.Icon?b.Icon:'';}
 // Strip "audio/" prefix → file is at brawlername/sound.ogg etc.
 function audioSrc(p){return p?p.replace(/^audio\//,''):null}
 
-let classicAnimState = {idx:-1, done:true};
+/* Map of rowIdx → {done, g, cols} for independent DOM animation */
+const _classicAnims = new Map();
+let _skipReapply=false;
 
 const _confettiIntervals={};
 const _confettiColors=['#ffd000','#ff6b35','#27ae60','#3498db','#9b59b6','#e74c3c','#f1c40f','#00d2ff'];
@@ -721,12 +769,15 @@ function _spawnBatch(overlay){
     const p=document.createElement('div');
     p.className='confetti';
     const dur=2+Math.random()*2.5;
-    const sz=52+Math.random()*40;
+    const vmin=Math.min(window.innerWidth,window.innerHeight);
+    const sz=Math.round((0.06+Math.random()*0.05)*vmin);
+    if(Math.random()>.5)p.classList.add('rev');
+    const topStart=-sz-Math.round(Math.random()*60);
     p.style.cssText=
       'left:'+Math.round(Math.random()*100)+'%;'+
+      'top:'+topStart+'px;'+
       'width:'+sz+'px;height:'+sz+'px;'+
-      'animation-duration:'+dur+'s;'+
-      'animation-delay:'+Math.random()*0.6+'s;';
+      'animation-duration:'+dur+'s;';
     if(icons&&icons.length){
       const icon=icons[Math.floor(Math.random()*icons.length)];
       const img=document.createElement('img');
@@ -737,7 +788,7 @@ function _spawnBatch(overlay){
       p.style.background=_confettiColors[Math.floor(Math.random()*_confettiColors.length)];
     }
     frag.appendChild(p);
-    setTimeout(()=>{if(p.parentNode)p.remove();},(dur+0.6)*1000);
+    setTimeout(()=>{if(p.parentNode)p.remove();},(dur+0.1)*1000);
   }
   overlay.appendChild(frag);
 }
@@ -792,6 +843,20 @@ function saveState(){
     localStorage.setItem('brawldle_streaks',JSON.stringify(S.streaks));
   }catch(e){}
 }
+const PERF_KEY='bsdle_perf_v1';
+function _loadPerf(){try{return JSON.parse(localStorage.getItem(PERF_KEY))||{};}catch(e){return{};}}
+function _savePerf(p){try{localStorage.setItem(PERF_KEY,JSON.stringify(p));}catch(e){}}
+function _recordPerf(mode,guesses,won){
+  const p=_loadPerf();
+  if(!p[mode])p[mode]=[];
+  const di=dayIndex();
+  /* Avoid duplicate for same day */
+  if(p[mode].some(e=>e.d===di))return;
+  p[mode].push({d:di,g:guesses,w:won?1:0});
+  /* Keep last 60 days */
+  p[mode]=p[mode].filter(e=>di-e.d<60).sort((a,b)=>a.d-b.d);
+  _savePerf(p);
+}
 
 function getNextMode(cur){
   const idx=MODES.indexOf(cur);
@@ -819,27 +884,115 @@ function guess(mode,name){
     });
     const newIdx=ms.guesses.length;
     ms.guesses.push({name,cmp});
-    classicAnimState={idx:newIdx, done:false};
+    /* Update guess counter immediately (before animation) */
+    const _gc=document.getElementById('classic-guess-count');
+    if(_gc){const _n=ms.guesses.length;_gc.textContent=_n+' guess'+(_n!==1?'es':'');}
+    /* Mark won immediately for state (prevent further guesses) */
+    if(correct){
+      ms.won=true;
+      S.streaks[mode].cur++;
+      if(S.streaks[mode].cur>S.streaks[mode].best)S.streaks[mode].best=S.streaks[mode].cur;
+    }
+    saveState();
+    _classicAnims.set(newIdx, {done:false, g:{name,cmp}, cols});
     const dur=(cols.length+1)*500+400;
     setTimeout(()=>{
-      classicAnimState.done=true;
-      if(correct)fireVictory(mode);
-      render();
+      const a=_classicAnims.get(newIdx);if(a)a.done=true;
+      /* Make the animated row permanent: remove its special attribute so it stays as-is */
+      const animTr=document.querySelector(`tr[data-classic-ri="${newIdx}"]`);
+      if(animTr){
+        animTr.removeAttribute('data-classic-ri');
+        /* Remove animation classes so cells are in their final visual state */
+        animTr.querySelectorAll('td').forEach(td=>{
+          td.classList.remove('cell-anim','cell-hidden');
+          td.style.animationDelay='';
+          td.style.opacity='1';
+        });
+      }
+
+      if(correct){
+        _recordPerf(mode,ms.guesses.length,true);
+        /* Disable search input directly */
+        const inp=document.getElementById('inp-classic');
+        if(inp)inp.disabled=true;
+        /* Show banner after a tiny extra delay (200ms) so it feels post-reveal */
+        setTimeout(()=>{
+          if(S.activeMode!==mode)return;
+          const banner=document.getElementById('classic-banner');
+          if(banner)banner.innerHTML=winBanner('classic');
+          fireVictory(mode);
+        },200);
+      }
     }, dur);
+    if(!document.querySelector('.stats-table')){
+      /* First guess: need to create the table structure. Suppress reapply since we do it manually. */
+      _skipReapply=true;
+      render();
+      _skipReapply=false;
+    }
+    _appendClassicRow(newIdx);
   } else {
     ms.guesses.push({name,correct});
     if(!correct)ms.wrong++;
-    if(correct)setTimeout(()=>fireVictory(mode),120);
+    if(correct){
+      ms.won=true;
+      S.streaks[mode].cur++;
+      if(S.streaks[mode].cur>S.streaks[mode].best)S.streaks[mode].best=S.streaks[mode].cur;
+    }
+    if(correct)_recordPerf(mode,ms.guesses.length,true);
+    saveState();render();
+    if(correct)setTimeout(()=>{
+      if(S.activeMode===mode)fireVictory(mode);
+    },120);
   }
-
-  if(correct){
-    ms.won=true;
-    S.streaks[mode].cur++;
-    if(S.streaks[mode].cur>S.streaks[mode].best)S.streaks[mode].best=S.streaks[mode].cur;
-  }
-  saveState();render();
 }
 
+function _buildCellInner(bv, s, c){
+  const disp=bv!==null&&bv!==undefined?fmt(s,bv):'—';
+  const arr=c?.arrow||'';
+  const bgArr=arr==='↑'?'▲':arr==='↓'?'▼':'';
+  return`<div class="cell-inner">${bgArr?`<span class="cell-bg-arr">${bgArr}</span>`:''}<span class="cell-txt">${esc(disp)}${arr?`<span class="cell-arrow">${arr}</span>`:''}</span></div>`;
+}
+function _appendClassicRow(ri){
+  const anim=_classicAnims.get(ri);
+  if(!anim||anim.done)return;
+  const tbody=document.querySelector('.stats-table tbody');
+  if(!tbody)return;
+  const {g,cols}=anim;
+  const tr=document.createElement('tr');
+  /* Name cell — starts hidden */
+  const nameTd=document.createElement('td');
+  nameTd.className='cell-hidden';
+  nameTd.innerHTML=`<div class="name-cell"><img class="tbl-icon" src="${brawlerIcon(g.name)}" alt=""><span class="name-cell-tooltip">${esc(g.name)}</span></div>`;
+  tr.appendChild(nameTd);
+  cols.forEach((s,ci)=>{
+    const cv=g.cmp[s];
+    const bv=getStatValue(BRAWLERS[g.name],s);
+    const td=document.createElement('td');
+    td.className=`cell-${cv?cv.cls:'wrong'} cell-hidden`;
+    td.innerHTML=_buildCellInner(bv,s,cv);
+    tr.appendChild(td);
+  });
+  /* Prepend: newest row at top */
+  tr.dataset.classicRi=ri;
+  tbody.insertBefore(tr,tbody.firstChild);
+  /* Trigger animation next frame so cell-hidden is painted first */
+  requestAnimationFrame(()=>{
+    const cells=Array.from(tr.querySelectorAll('td'));
+    cells.forEach((td,i)=>{
+      td.classList.remove('cell-hidden');
+      void td.offsetWidth; /* force reflow */
+      td.classList.add('cell-anim');
+      td.style.animationDelay=(i*0.45)+'s';
+    });
+  });
+}
+/* After any render() in classic, re-append still-animating rows */
+function _reapplyClassicAnims(){
+  for(const [ri,anim] of _classicAnims){
+    if(!anim.done)_appendClassicRow(ri);
+  }
+}
 function toggleHints(mode){S.modes[mode].hintsOn=!S.modes[mode].hintsOn;saveState();render()}
 function switchMode(mode){
   stopAllConfetti();
@@ -854,7 +1007,8 @@ function searchBox(mode){
   const disabled=S.modes[mode].won?'disabled':'';
   return`<div class="search-wrap">
     <input id="inp-${mode}" class="search-input" ${disabled}
-      type="text" autocomplete="off" placeholder="Search a brawler…"
+      type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off"
+      placeholder="Search a brawler…"
       oninput="acFilter('${mode}')" onkeydown="acKey(event,'${mode}')">
     <div id="acdrop-${mode}" class="ac-list"></div>
   </div>`;
@@ -880,7 +1034,7 @@ function guessList(mode){
 }
 function winBanner(mode){
   const ms=S.modes[mode];
-  if(mode==='classic'&&ms.won&&!classicAnimState.done)return'';
+  if(mode==='classic'&&ms.won&&[..._classicAnims.values()].some(a=>!a.done))return'';
   const a=ANSWERS[mode];
   const label=mode==='map'?'The map was':'The brawler was';
   if(ms.won){
@@ -896,6 +1050,7 @@ function hintsToggleBtn(mode){
   const on=ms.hintsOn;
   return`<div class="hints-bar"><button class="hints-toggle ${on?'on':''}" onclick="toggleHints('${mode}')">${on?'💡 Hints ON':'🙈 Hints OFF'}</button></div>`;
 }
+/* statsBtn is now a fixed button rendered in render() HTML */
 
 function buildClassic(){
   const ms=S.modes.classic;
@@ -904,10 +1059,10 @@ function buildClassic(){
 
   let h=`<div class="mode-header">
     <div class="mode-title">🔃 Classic</div>
-    <div style="color:var(--text2);font-size:.8rem;font-weight:700">${ms.guesses.length} guess${ms.guesses.length!==1?'es':''}</div>
+    <div id="classic-guess-count" style="color:var(--text2);font-size:.8rem;font-weight:700">${ms.guesses.length} guess${ms.guesses.length!==1?'es':''}</div>
   </div>
   <div class="rotation-info">📊 Today's stats: <b>${rotCols.join('</b> · <b>')}</b></div>`;
-  h+=winBanner('classic');
+  h+=`<div id="classic-banner">${winBanner('classic')}</div>`;
   h+=searchBox('classic');
 
   if(ms.guesses.length){
@@ -916,39 +1071,38 @@ function buildClassic(){
       return`<th>${COL_LABELS[s]||s}${info}</th>`;
     });
 
-    const rows=ms.guesses.map((g,ri)=>{
-      const doAnim=!classicAnimState.done&&classicAnimState.idx===ri;
-      const tds=cols.map((s,ci)=>{
-        const c=g.cmp[s];
+    /* Only render completed rows — animating rows are handled by _appendClassicRow */
+    const rows=[...ms.guesses].reverse().filter((_,i)=>{
+      const ri=ms.guesses.length-1-i;
+      const anim=_classicAnims.get(ri);
+      return !anim||anim.done; /* show if no anim entry or anim finished */
+    }).map((g,_)=>{
+      const tds=cols.map(s=>{
+        const cv=g.cmp[s];
         const bv=getStatValue(BRAWLERS[g.name],s);
-        const disp=bv!==null&&bv!==undefined?fmt(s,bv):'—';
-        const arr=c?.arrow||'';
-        const bgArr=arr==='↑'?'▲':arr==='↓'?'▼':'';
-        const inner=`<div class="cell-inner">${bgArr?`<span class="cell-bg-arr">${bgArr}</span>`:''}<span class="cell-txt">${esc(disp)}${arr?`<span class="cell-arrow">${arr}</span>`:''}</span></div>`;
-        if(doAnim){
-          const delay=(ci+1)*0.45;
-          return`<td class="cell-anim cell-${c?c.cls:'wrong'}" style="animation-delay:${delay}s">${inner}</td>`;
-        }
-        return`<td class="cell-${c?c.cls:'wrong'}">${inner}</td>`;
+        return`<td class="cell-${cv?cv.cls:'wrong'}">${_buildCellInner(bv,s,cv)}</td>`;
       });
-      const nameCls=doAnim?`class="cell-anim" style="animation-delay:0s"`:'';
-      return`<tr><td ${nameCls}><div class="name-cell"><img class="tbl-icon" src="${brawlerIcon(g.name)}" alt=""><span>${esc(g.name)}</span></div></td>${tds.join("")}</tr>`;
+      return`<tr><td><div class="name-cell"><img class="tbl-icon" src="${brawlerIcon(g.name)}" alt=""><span class="name-cell-tooltip">${esc(g.name)}</span></div></td>${tds.join('')}</tr>`;
     });
 
-    h+=`<div class="table-outer">
-      <button class="scroll-btn sl" onclick="scrollTbl(-240)">‹</button>
-      <div class="table-wrap" id="ctw">
-        <table class="stats-table">
-          <thead><tr><th>Brawler</th>${thCells.join('')}</tr></thead>
-          <tbody>${rows.join('')}</tbody>
-        </table>
-      </div>
-      <button class="scroll-btn sr" onclick="scrollTbl(240)">›</button>
-    </div>`;
+    h+=`<div class="table-outer"><div class="table-wrap" id="ctw"><table class="stats-table"><thead><tr><th>Brawler</th>${thCells.join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div></div>`;
   }
   return h;
 }
 
+function _hintIcon(label,val){
+  const key=val.toLowerCase().replace(/ /g,'_');
+  if(label==='Rarity')  return`<img src="_rarity/${key}.png" alt="">`;
+  if(label==='Class')   return`<img src="_class/${key}.png" alt="">`;
+  if(label==='Gender')  return`<img src="_gender/${key}.png" alt="">`;
+  if(label==='World')   return`<img src="_world/${key}.png" alt="">`;
+  return'';
+}
+function _hintPill(label,val,revealed){
+  if(!revealed) return`<span class="hint-pill">${label}: ???</span>`;
+  const icon=_hintIcon(label,val);
+  return`<span class="hint-pill shown">${label}: ${icon}${esc(val)}</span>`;
+}
 function buildGear(){
   const ms=S.modes.gear;
   const a=ANSWERS.gear;
@@ -956,7 +1110,6 @@ function buildGear(){
   const gearKey=getDailyGearKey();
   const gearPath=brawler&&brawler.Gears?brawler.Gears[gearKey]:'';
   const label=GEAR_LABELS[gearKey]||'Gear';
-  const emoji=GEAR_EMOJI[gearKey]||'⚙️';
   const stats=brawler?brawler.Stats:{};
   const w=ms.wrong;
 
@@ -964,7 +1117,8 @@ function buildGear(){
     {label:'Rarity',val:(stats.rarity||'').replace(/_/g,' '),at:2},
     {label:'Class', val:(stats.class||'').replace(/_/g,' '), at:4},
     {label:'Gender',val:stats.gender||'',                    at:6},
-  ].map(h=>`<span class="hint-pill ${w>=h.at?'shown':''}">${h.label}: ${w>=h.at?esc(h.val):'???'}</span>`).join(''):'';
+    {label:'World', val:(stats.world||'').replace(/_/g,' '),  at:8},
+  ].map(h=>_hintPill(h.label,h.val,w>=h.at)).join(''):'';
 
   let html=`<div class="mode-header">
     <div class="mode-title">⚙️ Gear</div>
@@ -995,8 +1149,9 @@ function buildFact(){
   const hints=ms.hintsOn?[
     {label:'Rarity',val:(brawler.Stats.rarity||'').replace(/_/g,' '),at:2},
     {label:'Class', val:(brawler.Stats.class||'').replace(/_/g,' '), at:4},
-    {label:'Gender',val:brawler.Stats.gender||'',                     at:6},
-  ].map(h=>`<span class="hint-pill ${w>=h.at?'shown':''}">${h.label}: ${w>=h.at?esc(h.val):'???'}</span>`).join(''):'';
+    {label:'Gender',val:brawler.Stats.gender||'',                    at:6},
+    {label:'World', val:(brawler.Stats.world||'').replace(/_/g,' '), at:8},
+  ].map(h=>_hintPill(h.label,h.val,w>=h.at)).join(''):'';
 
   let html=`<div class="mode-header">
     <div class="mode-title">📖 Fact</div>
@@ -1026,6 +1181,12 @@ function buildVoiceline(){
     ${w>0?`<div class="wrong-badge">❌ ${w} wrong</div>`:''}
   </div>`;
   html+=winBanner('voiceline');
+  const voiceHints=ms.hintsOn?[
+    {label:'Rarity',val:(BRAWLERS[a].Stats?.rarity||'').replace(/_/g,' '),at:2},
+    {label:'Class', val:(BRAWLERS[a].Stats?.class||'').replace(/_/g,' '), at:4},
+    {label:'Gender',val:BRAWLERS[a].Stats?.gender||'',                    at:6},
+    {label:'World', val:(BRAWLERS[a].Stats?.world||'').replace(/_/g,' '), at:8},
+  ].map(h=>_hintPill(h.label,h.val,w>=h.at)).join(''):''
   html+=`<div class="vl-card">
     <div class="vl-label">🔊 Voiceline</div>
     <div class="vl-text">"${esc(vl.text||'')}"</div>
@@ -1033,6 +1194,7 @@ function buildVoiceline(){
       ?`<div class="audio-wrap">${pmAudio(src)}</div>`
       :ms.hintsOn&&!ms.won
         ?`<div class="audio-note">🔒 Audio unlocks after 3 wrong guesses (${Math.max(0,3-w)} remaining)</div>`:''}
+    ${voiceHints?`<div class="hints-row" style="margin-top:14px">${voiceHints}</div>`:''}
   </div>`;
   html+=hintsToggleBtn('voiceline');
   html+=searchBox('voiceline');
@@ -1044,7 +1206,7 @@ function buildEmoji(){
   const ms=S.modes.emoji;
   const emojis=BRAWLERS[ANSWERS.emoji].Emojis||[];
   const w=ms.wrong;
-  const count=ms.hintsOn?Math.min(w+1,emojis.length):1;
+  const count=Math.min(w+1,emojis.length);
   let html=`<div class="mode-header">
     <div class="mode-title">🧐 Emoji</div>
     ${w>0?`<div class="wrong-badge">❌ ${w} wrong</div>`:''}
@@ -1052,9 +1214,8 @@ function buildEmoji(){
   html+=winBanner('emoji');
   html+=`<div class="emoji-card">
     <div class="emoji-display">${emojis.slice(0,count).join(' ')}</div>
-    <div class="emoji-sub">${count} / ${emojis.length} emojis revealed${ms.hintsOn?' — new emoji on each wrong guess':' (hints off)'}</div>
+    <div class="emoji-sub">${count} / ${emojis.length} emojis revealed — new emoji on each wrong guess</div>
   </div>`;
-  html+=hintsToggleBtn('emoji');
   html+=searchBox('emoji');
   html+=guessList('emoji');
   return html;
@@ -1064,7 +1225,7 @@ function buildImage(){
   const ms=S.modes.image;
   const imgs=BRAWLERS[ANSWERS.image].Images||{};
   const w=ms.wrong;
-  const showBoth=(w>=3||ms.won)&&ms.hintsOn;
+  const showBoth=w>=3||ms.won;
     const orderFixed=imgs.order===true;
   const first=orderFixed?'attack':(dayIndex()%2===0?'attack':'ultimate');
   const second=first==='attack'?'ultimate':'attack';
@@ -1079,14 +1240,13 @@ function buildImage(){
     ${w>0?`<div class="wrong-badge">❌ ${w} wrong</div>`:''}
   </div>`;
   html+=winBanner('image');
-  html+=`<div class="img-card"><div class="img-grid ${showBoth?'two':'one'}">
+  html+=`<div class="img-card"><div class="img-grid">
     <div><div class="img-slot">${slot(first)}</div><div class="img-label">${first}</div></div>
     ${showBoth
       ?`<div><div class="img-slot">${slot(second)}</div><div class="img-label">${second}</div></div>`
-      :ms.hintsOn&&!ms.won
+      :!ms.won
         ?`<div class="img-locked">🔒<br>${Math.max(0,3-w)} wrong to reveal 2nd image</div>`:''}
   </div></div>`;
-  html+=hintsToggleBtn('image');
   html+=searchBox('image');
   html+=guessList('image');
   return html;
@@ -1133,7 +1293,9 @@ function buildMap(){
 }
 
 function render(){
-  const dateStr=new Date().toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+  /* UTC date to match the game reset (UTC midnight = 2h summer / 1h winter CET) */
+  const _utcNow=new Date(dayIndex()*86400000);
+  const dateStr=_utcNow.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
   const tabs=MODES.map(m=>{
     const done=S.modes[m].won;
     const active=S.activeMode===m;
@@ -1156,8 +1318,14 @@ function render(){
     case'image':     content=buildImage();break;
     case'map':       content=buildMap();break;
   }
+  const _panelWasOpen=document.getElementById('brawler-panel-overlay')?.classList.contains('open');
+  const _statsWasOpen=document.getElementById('stats-overlay')?.classList.contains('open');
+  const _statsWasMode=_statsWasOpen?document.getElementById('stats-title-text')?.textContent?.match(/📊 (\w+)/)?.[1]?.toLowerCase():null;
+  /* Preserve search input value so a mid-type render doesn't wipe what the user wrote */
+  const _savedInpVal=document.getElementById('inp-'+S.activeMode)?.value||'';
   document.getElementById('app').innerHTML=`
-    <button class="brawler-panel-btn" onclick="openBrawlerPanel()">🏅 Brawlers</button>
+    <button class="brawler-panel-btn" onclick="openBrawlerPanel()">${S.activeMode==='map'?'🗺️':'🏅'}<span class="btn-label"> ${S.activeMode==='map'?'Maps':'Brawlers'}</span></button>
+    <button class="stats-btn" onclick="openStats(S.activeMode)">📊<span class="btn-label"> Stats</span></button>
     <div class="header">
       <div class="header-logo"><img src="minions.png" alt="Brawldle" style="height:clamp(2.4rem,7vw,3.8rem);width:auto;vertical-align:middle;filter:drop-shadow(0 0 12px rgba(255,208,0,.5));"> BSdle</div>
       <div class="header-sub">${esc(dateStr)}</div>
@@ -1168,7 +1336,7 @@ function render(){
     <div class="brawler-panel-overlay" id="brawler-panel-overlay" onclick="if(event.target===this)closeBrawlerPanel()">
       <div class="brawler-panel-box">
         <div class="brawler-panel-title">
-          <span>🏅 All Brawlers</span>
+          <span id="panel-title">🏅 All Brawlers</span>
           <span class="brawler-panel-close" onclick="closeBrawlerPanel()">✕</span>
         </div>
         <div class="sort-toggle">
@@ -1179,21 +1347,57 @@ function render(){
         <div id="brawler-panel-content"></div>
       </div>
     </div>
+    <div id="stats-overlay" class="stats-overlay" onclick="if(event.target===this)closeStats()">
+      <div class="stats-box">
+        <div class="stats-title"><span id="stats-title-text">📊 Stats</span><span class="stats-close" onclick="closeStats()">✕</span></div>
+        <div id="stats-content"></div>
+      </div>
+    </div>
     <div class="report-btn" onclick="copyEmail()" title="Click to copy email">⚠</div>
     <div class="report-tip">Found a bug or an issue? Contact me at:<br><b style="color:var(--text)">brawlstarsdle.dukook@gmail.com</b></div>`;
   resolveMedia();
-  requestAnimationFrame(updateTableScroll);
+  if(S.activeMode==='classic'&&!_skipReapply)_reapplyClassicAnims();
+  /* Restore input value if user was mid-typing when animation triggered render() */
+  if(_savedInpVal){
+    const _inp=document.getElementById('inp-'+S.activeMode);
+    if(_inp&&!_inp.disabled){
+      _inp.value=_savedInpVal;
+      acFilter(S.activeMode); /* Re-open dropdown with restored text */
+    }
+  }
+  if(_statsWasOpen){
+    /* Re-extract mode from title */
+    const titleText=document.getElementById('stats-title-text')?.textContent||'';
+    const modeKey=MODES.find(m=>MODE_META[m]?.label&&titleText.includes(MODE_META[m].label));
+    if(modeKey)openStats(modeKey);
+  }
+  if(_panelWasOpen){
+    const panel=document.getElementById('brawler-panel-overlay');
+    if(panel){
+      panel.classList.add('open');
+      if(S.activeMode==='map'){
+        document.getElementById('brawler-panel-content').innerHTML=_buildMapPanelHTML();
+      } else {
+        const pool=validPool(S.activeMode);
+        document.getElementById('brawler-panel-content').innerHTML=_buildPanelHTML(_panelSort,pool);
+      }
+    }
+  }
 }
 
 function validPool(mode){
   const all=Object.keys(BRAWLERS);
   if(mode==='fact')      return all.filter(b=>BRAWLERS[b].Fact&&BRAWLERS[b].Fact.length>0);
-  if(mode==='voiceline') return all.filter(b=>BRAWLERS[b].Voicelines&&BRAWLERS[b].Voicelines.length>0);
+  if(mode==='voiceline') return all.filter(b=>'Voicelines' in (BRAWLERS[b]||{})); /* include empty arrays, exclude missing key */
   if(mode==='emoji')     return all.filter(b=>BRAWLERS[b].Emojis&&BRAWLERS[b].Emojis.length>0);
   if(mode==='gear')      return all.filter(b=>BRAWLERS[b].Gears&&Object.keys(BRAWLERS[b].Gears).length>0);
   if(mode==='image')     return all.filter(b=>BRAWLERS[b].Images);
   if(mode==='map')       return Object.keys(MAPS);
   return all.filter(b=>BRAWLERS[b].Stats); // classic + default
+}
+function _matchedAlias(name, q){
+  const aliases=BRAWLERS[name]?.Aliases||[];
+  return aliases.find(a=>a.toLowerCase().startsWith(q))||null;
 }
 function acFilter(mode){
   const inp=document.getElementById('inp-'+mode),drop=document.getElementById('acdrop-'+mode);
@@ -1202,9 +1406,24 @@ function acFilter(mode){
   const used=new Set(S.modes[mode].guesses.map(g=>g.name));
   const pool=validPool(mode).filter(b=>!used.has(b));
   if(!q){drop.classList.remove('open');drop.innerHTML='';return}
-  const matches=pool.filter(b=>b.toLowerCase().startsWith(q)).slice(0,10);
-  if(!matches.length){drop.classList.remove('open');return}
-  drop.innerHTML=matches.map(b=>{
+
+  /* Build match list: {name, alias} — name-match has alias=null, alias-match has alias=string */
+  const seen=new Set();
+  const results=[];
+  /* 1. Names starting with q */
+  pool.forEach(b=>{if(b.toLowerCase().startsWith(q)&&!seen.has(b)){seen.add(b);results.push({name:b,alias:null});}});
+  /* 2. Aliases starting with q (brawlers not already matched by name) */
+  if(mode!=='map'){
+    pool.forEach(b=>{
+      if(seen.has(b))return;
+      const a=_matchedAlias(b,q);
+      if(a){seen.add(b);results.push({name:b,alias:a});}
+    });
+  }
+  const top=results.slice(0,10);
+  if(!top.length){drop.classList.remove('open');return}
+
+  drop.innerHTML=top.map(({name:b,alias})=>{
     let icoHtml='';
     if(mode==='map'){
       const mapMode=MAPS[b]?MAPS[b].mode:'';
@@ -1222,15 +1441,31 @@ function acKey(e,mode){
   const items=drop.querySelectorAll('.ac-item'),hi=drop.querySelector('.hi');
   if(e.key==='ArrowDown'){e.preventDefault();if(!hi)items[0]?.classList.add('hi');else{hi.classList.remove('hi');(hi.nextElementSibling||items[0]).classList.add('hi')}}
   else if(e.key==='ArrowUp'){e.preventDefault();if(!hi)items[items.length-1]?.classList.add('hi');else{hi.classList.remove('hi');(hi.previousElementSibling||items[items.length-1]).classList.add('hi')}}
-  else if(e.key==='Enter'){e.preventDefault();const c=hi||(items.length===1?items[0]:null);if(c)doGuess(mode,c.dataset.name)}
+  else if(e.key==='Enter'){
+    e.preventDefault();
+    const q=(document.getElementById('inp-'+mode)||{}).value||'';
+    const ql=q.toLowerCase();
+    const pool=validPool(mode);
+    /* 1. Exact name match */
+    const exactName=pool.find(b=>b.toLowerCase()===ql);
+    if(exactName){doGuess(mode,exactName);return;}
+    /* 2. Exact alias match (typed alias == one of the brawler's aliases exactly) */
+    if(mode!=='map'){
+      const exactAlias=pool.find(b=>(BRAWLERS[b]?.Aliases||[]).some(a=>a.toLowerCase()===ql));
+      if(exactAlias){doGuess(mode,exactAlias);return;}
+    }
+    /* 3. Fallback: highlighted item or single result */
+    const chosen=hi||(items.length===1?items[0]:null);
+    if(chosen)doGuess(mode,chosen.dataset.name);
+  }
   else if(e.key==='Escape')drop.classList.remove('open');
 }
 function pick(mode,el){doGuess(mode,el.dataset.name)}
 function doGuess(mode,name){
-  const inp=document.getElementById('inp-'+mode);if(inp)inp.value='';
   const drop=document.getElementById('acdrop-'+mode);if(drop){drop.classList.remove('open');drop.innerHTML=''}
+  const inp=document.getElementById('inp-'+mode);if(inp)inp.value='';
   guess(mode,name);
-  setTimeout(()=>{const i=document.getElementById('inp-'+mode);if(i&&!i.disabled)i.focus();},50);
+  /* Do NOT refocus — let the user decide when to reopen the keyboard */
 }
 const _PM={};let _pmc=0;
 function pmImg(src,cls='',style=''){
@@ -1321,35 +1556,59 @@ function resolveMedia(){
     }
   });
 }
-function scrollTbl(d){const w=document.getElementById('ctw');if(w)w.scrollBy({left:d*1.6,behavior:'smooth'})}
-function updateTableScroll(){
-  const outer=document.querySelector('.table-outer');
-  const wrap=document.getElementById('ctw');
-  if(!outer||!wrap)return;
-  const tableW=wrap.querySelector('.stats-table')?.offsetWidth||0;
-  const gameAreaW=document.querySelector('.game-area')?.offsetWidth||9999;
-  if(tableW>wrap.offsetWidth||gameAreaW<500){
-    outer.classList.add('needs-scroll');
-  } else {
-    outer.classList.remove('needs-scroll');
-  }
-}
 
+function openStats(mode){
+  const overlay=document.getElementById('stats-overlay');
+  if(!overlay)return;
+  const perf=_loadPerf()[mode]||[];
+  const titleEl=document.getElementById('stats-title-text');
+  const contentEl=document.getElementById('stats-content');
+  const label=MODE_META[mode]?.label||mode;
+  titleEl.textContent='📊 '+label;
+
+  const allPlayed=perf.filter(e=>e.w);
+  const avgGuesses=allPlayed.length
+    ?+(allPlayed.reduce((s,e)=>s+e.g,0)/allPlayed.length).toFixed(1):0;
+  const best=S.streaks[mode]?.best||0;
+
+  if(!allPlayed.length){
+    contentEl.innerHTML=`<div class="stats-empty">No games recorded yet.</div>`;
+  } else {
+    contentEl.innerHTML=`
+      <div class="stats-row"><span class="stats-label">🎮 Games played</span><span class="stats-val">${allPlayed.length}</span></div>
+      <div class="stats-row"><span class="stats-label">🎯 Average guesses</span><span class="stats-val">${avgGuesses}</span></div>
+      <div class="stats-row"><span class="stats-label">🔥 Best streak</span><span class="stats-val">${best}</span></div>`;
+  }
+  overlay.classList.add('open');
+}
+function closeStats(){
+  const o=document.getElementById('stats-overlay');
+  if(o)o.classList.remove('open');
+}
 function copyEmail(){
   const email='brawlstarsdle.dukook@gmail.com';
-  navigator.clipboard.writeText(email).then(()=>{
+  const _done=()=>{
     const btn=document.querySelector('.report-btn');
     if(!btn)return;
     btn.textContent='✓';btn.style.color='var(--green)';btn.style.borderColor='var(--green)';
-    setTimeout(()=>{btn.textContent='⚠';btn.style.color='';btn.style.borderColor='';},1800);
-  }).catch(()=>{
-    const ta=document.createElement('textarea');
-    ta.value=email;ta.style.position='fixed';ta.style.opacity='0';
-    document.body.appendChild(ta);ta.select();document.execCommand('copy');
-    document.body.removeChild(ta);
-    const btn=document.querySelector('.report-btn');
-    if(btn){btn.textContent='✓';btn.style.color='var(--green)';setTimeout(()=>{btn.textContent='⚠';btn.style.color='';},1800);}
-  });
+    setTimeout(()=>{btn.textContent='⚠';btn.style.color='';btn.style.borderColor='';},2000);
+  };
+  /* Modern clipboard API (works on most mobile browsers if page is HTTPS) */
+  if(navigator.clipboard&&window.isSecureContext){
+    navigator.clipboard.writeText(email).then(_done).catch(()=>_copyFallback(email,_done));
+  } else {
+    _copyFallback(email,_done);
+  }
+}
+function _copyFallback(text,cb){
+  /* Create a temporary input, select it, copy — works on mobile */
+  const inp=document.createElement('input');
+  inp.value=text;
+  inp.style.cssText='position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.01;font-size:16px;border:0;';
+  document.body.appendChild(inp);
+  inp.focus();inp.select();
+  try{document.execCommand('copy');cb();}catch(e){}
+  document.body.removeChild(inp);
 }
 
 const RARITY_ORDER=['starting_brawler','rare','super_rare','epic','mythic','legendary','ultra_legendary'];
@@ -1374,8 +1633,30 @@ function _panelChip(n){
   return`<div class="brawler-chip"><img src="${brawlerIcon(n)}" alt=""><span class="brawler-chip-name">${esc(n)}</span></div>`;
 }
 
-function _buildPanelHTML(sort){
-  const all=Object.entries(BRAWLERS).filter(([n,v])=>v.Stats);
+function _buildMapPanelHTML(){
+  const modeGroups={};
+  Object.entries(MAPS).forEach(([name,data])=>{
+    const m=data.mode||'Unknown';
+    if(!modeGroups[m])modeGroups[m]=[];
+    modeGroups[m].push(name);
+  });
+  Object.keys(modeGroups).forEach(m=>modeGroups[m].sort());
+  const sortedModes=Object.keys(modeGroups).sort();
+  return sortedModes.map(m=>{
+    const modePath='_mods/'+m.toLowerCase().replace(/ /g,'_')+'.png';
+    const chips=modeGroups[m].map(name=>`<div class="brawler-chip" style="width:auto;border-radius:10px;padding:5px 10px;gap:7px;font-size:.78rem">
+      <img src="${modePath}" style="width:20px;height:20px;object-fit:contain;border-radius:0;flex-shrink:0;" alt="">
+      <span style="color:var(--text)">${esc(name)}</span>
+    </div>`).join('');
+    return`<div class="rarity-section">
+      <div class="rarity-label"><img src="${modePath}" alt="" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:6px;">${m} (${modeGroups[m].length})</div>
+      <div class="brawler-grid">${chips}</div>
+    </div>`;
+  }).join('');
+}
+function _buildPanelHTML(sort,filterPool){
+  const poolSet=filterPool?new Set(filterPool):null;
+  const all=Object.entries(BRAWLERS).filter(([n,v])=>v.Stats&&(!poolSet||poolSet.has(n)));
   if(sort==='class'){
     const byClass={};
     all.forEach(([n,v])=>{const cl=v.Stats.class;if(!byClass[cl])byClass[cl]=[];byClass[cl].push(n);});
@@ -1426,9 +1707,19 @@ function _buildPanelHTML(sort){
 function openBrawlerPanel(){
   const panel=document.getElementById('brawler-panel-overlay');
   if(!panel)return;
-  document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('sort-'+_panelSort)?.classList.add('active');
-  document.getElementById('brawler-panel-content').innerHTML=_buildPanelHTML(_panelSort);
+  const isMap=S.activeMode==='map';
+  const titleEl=document.getElementById('panel-title');
+  if(titleEl)titleEl.textContent=isMap?'🗺️ All Maps':'🏅 All Brawlers';
+  const sortToggle=panel.querySelector('.sort-toggle');
+  if(sortToggle)sortToggle.style.display=isMap?'none':'';
+  if(isMap){
+    document.getElementById('brawler-panel-content').innerHTML=_buildMapPanelHTML();
+  } else {
+    document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('active'));
+    document.getElementById('sort-'+_panelSort)?.classList.add('active');
+    const pool=validPool(S.activeMode);
+    document.getElementById('brawler-panel-content').innerHTML=_buildPanelHTML(_panelSort,pool);
+  }
   panel.classList.add('open');
 }
 
@@ -1441,7 +1732,8 @@ function setPanelSort(sort){
   cont.style.transition='opacity .18s';
   cont.style.opacity='0';
   setTimeout(()=>{
-    cont.innerHTML=_buildPanelHTML(sort);
+    const pool=validPool(S.activeMode);
+    cont.innerHTML=_buildPanelHTML(sort,pool);
     cont.style.opacity='1';
   },180);
 }
@@ -1472,7 +1764,8 @@ document.addEventListener('keydown',e=>{
   const inp=document.getElementById('inp-'+S.activeMode);
   if(!inp||inp.disabled)return;
   if(document.activeElement===inp)return;
-  inp.focus();
+  /* Only auto-focus on non-touch devices (physical keyboard) */
+  if(!window.matchMedia('(pointer:coarse)').matches)inp.focus();
 });
 
 

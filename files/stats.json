@@ -342,6 +342,7 @@
         ]
     },
     "El Primo": {
+        "Aliases": ["Primo"],
         "Icon": "primo/pin.png",
         "Stats": {
             "gender": "male",
@@ -1838,6 +1839,7 @@
         ]
     },
     "Bea": {
+        "Aliases": ["Abeilles de merde"],
         "Icon": "bea/pin.png",
         "Stats": {
             "gender": "female",
@@ -2131,6 +2133,7 @@
         ]
     },
     "Edgar": {
+        "Aliases": ["Edgay"],
         "Icon": "edgar/pin.png",
         "Stats": {
             "gender": "male",
@@ -2279,6 +2282,7 @@
         ]
     },
     "Griff": {
+        "Aliases": ["BrawlReflex"],
         "Icon": "griff/pin.png",
         "Stats": {
             "gender": "male",
@@ -2353,6 +2357,7 @@
         ]
     },
     "Ash": {
+        "Aliases": ["Poubelle"],
         "Icon": "ash/pin.png",
         "Stats": {
             "gender": "male",
@@ -2978,6 +2983,7 @@
         ]
     },
     "Pearl": {
+        "Aliases": ["Cookie"],
         "Icon": "pearl/pin.png",
         "Stats": {
             "gender": "female",
@@ -3052,6 +3058,7 @@
         ]
     },
     "Larry & Lawrie": {
+        "Aliases": ["L&L"],
         "Icon": "larry/pin.png",
         "Stats": {
             "gender": "male",
@@ -3127,6 +3134,7 @@
         ]
     },
     "Angelo": {
+        "Aliases": ["Moustique"],
         "Icon": "angelo/pin.png",
         "Stats": {
             "gender": "male",
@@ -3201,6 +3209,7 @@
         ]
     },
     "Berry": {
+        "Aliases": ["Poney"],
         "Icon": "berry/pin.png",
         "Stats": {
             "gender": "male",
@@ -3478,6 +3487,7 @@
         ]
     },
     "Mortis": {
+        "Aliases": ["Morris"],
         "Icon": "mortis/pin.png",
         "Stats": {
             "gender": "male",
@@ -3734,6 +3744,7 @@
         ]
     },
     "Mr. P": {
+        "Aliases": ["5v5 Knockout"],
         "Icon": "mr/pin.png",
         "Stats": {
             "gender": "male",
@@ -4002,10 +4013,10 @@
             "order": false
         },
         "Emojis": [
-            "🐍",
             "🧪",
             "⚗️",
             "➕",
+            "🐍",
             "🫙"
         ]
     },
@@ -4435,6 +4446,7 @@
         ]
     },
     "Otis": {
+        "Aliases": ["blablabla bliblibli bloubloublou", "Autiste"],
         "Icon": "otis/pin.png",
         "Stats": {
             "gender": "male",
@@ -4617,6 +4629,7 @@
         ]
     },
     "R-T": {
+        "Aliases": ["Rt"],
         "Icon": "rt/base/pin.png",
         "Stats": {
             "gender": "male",
@@ -4692,6 +4705,7 @@
         ]
     },
     "R-T (split form)": {
+        "Aliases": ["Rt (split form)"],
         "Icon": "rt/split/pin.png",
         "Stats": {
             "gender": "male",
@@ -4799,6 +4813,7 @@
         ]
     },
     "Doug": {
+        "Aliases": ["Saucisse"],
         "Icon": "doug/pin.png",
         "Stats": {
             "gender": "male",
@@ -5098,6 +5113,7 @@
         ]
     },
     "Melodie": {
+        "Aliases": ["♥"],
         "Icon": "melodie/pin.png",
         "Stats": {
             "gender": "female",
@@ -5227,6 +5243,7 @@
         ]
     },
     "Clancy": {
+        "Aliases": ["Crousty Crabe"],
         "Icon": "clancy/pin.png",
         "Stats": {
             "gender": "male",
@@ -5410,6 +5427,7 @@
         }
     },
     "Juju": {
+        "Aliases": ["pute"],
         "Icon": "juju/pin.png",
         "Stats": {
             "gender": "female",
@@ -5784,6 +5802,7 @@
         ]
     },
     "Alli": {
+        "Aliases": ["Baddie-gator"],
         "Icon": "alli/pin.png",
         "Stats": {
             "gender": "female",
@@ -6006,6 +6025,7 @@
         ]
     },
     "Gigi": {
+        "Aliases": ["Panzani"],
         "Icon": "gigi/pin.png",
         "Stats": {
             "gender": "female",
@@ -6155,6 +6175,7 @@
         ]
     },
     "Crow": {
+        "Aliases": ["Caw Caw"],
         "Icon": "crow/pin.png",
         "Stats": {
             "gender": "male",
@@ -6237,7 +6258,7 @@
             "passive_ability": false,
             "projectiles": 6,
             "damage_per_projectile": 980,
-            "full_damage": 3240,
+            "full_damage": 2940,
             "ammo": 3,
             "damage_type": "spread",
             "mvt": 720,
@@ -6431,6 +6452,7 @@
         ]
     },
     "Surge": {
+        "Aliases": ["SnakeThug"],
         "Icon": "surge/pin.png",
         "Stats": {
             "gender": "male",
@@ -6662,23 +6684,23 @@
         "Voicelines": [
             {
                 "text": "Hmm! There must be a glitch!",
-                "audio": "audio/meg/mecha/glitch.ogg"
+                "audio": "audio/meg/small/glitch.ogg"
             },
             {
                 "text": "Time to reboot.",
-                "audio": "audio/meg/mecha/reboot.ogg"
+                "audio": "audio/meg/small/reboot.ogg"
             },
             {
                 "text": "Robot rampage.",
-                "audio": "audio/meg/mecha/robot.ogg"
+                "audio": "audio/meg/small/robot.ogg"
             },
             {
                 "text": "Tech support 2.0!",
-                "audio": "audio/meg/mecha/tech.ogg"
+                "audio": "audio/meg/small/tech.ogg"
             },
             {
                 "text": "Numbers don't lie.",
-                "audio": "audio/meg/mecha/lie.ogg"
+                "audio": "audio/meg/small/lie.ogg"
             }
         ],
         "Images": {
@@ -6833,6 +6855,7 @@
         ]
     },
     "Kit": {
+        "Aliases": ["Chat de merde"],
         "Icon": "kit/base/pin.png",
         "Stats": {
             "gender": "male",
@@ -7242,10 +7265,10 @@
         "Emojis": [
             "🪭",
             "👘",
-            "🥷",
-            "🗡️",
             "🌸",
-            "2️⃣"
+            "2️⃣",
+            "💢",
+            "🎴"
         ]
     },
     "Kaze (ninja)": {
@@ -7301,7 +7324,15 @@
             "attack": "images/kaze/ninja/atk.png",
             "ultimate": "images/kaze/ninja/ult.png",
             "order": false
-        }
+        },
+        "Emojis": [
+            "🥷",
+            "👘",
+            "🌸",
+            "🗡️",
+            "🫥",
+            "2️⃣"
+        ]
     },
     "Sirius": {
         "Icon": "sirius/pin.png",

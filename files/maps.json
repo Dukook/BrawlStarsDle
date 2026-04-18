@@ -2,7 +2,7 @@
   "Acid Lakes": {
     "mode": "Showdown",
     "image": "_maps/acid_lakes.png",
-    "start": { "x": 189, "y": 608, "scale": 9.0 }
+    "start": { "x": 189, "y": 608, "scale": 13.0 }
   },
   "Belle's Rock": {
     "mode": "Knockout",
