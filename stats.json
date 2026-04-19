@@ -568,7 +568,7 @@
     "Rosa": {
         "Icon": "rosa/pin.png",
         "Stats": {
-            "gender": "Female",
+            "gender": "female",
             "hp": 10800,
             "hitbox": 145,
             "passive_ability": true,
