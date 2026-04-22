@@ -2024,7 +2024,7 @@
         "Fact": [
             "*Brawler*'s main attack is more likely to hit if you aim not directly at the target.",
             "*Brawler* once had a bug where the super doesn't accelerate like it would normally.",
-            "*Brawler* has the longest-range instant mobility ability in the game without buffies, tied with R-T."
+            "*Brawler* has the second longest-range instant mobility ability in the game without outside help, behind R-T."
         ],
         "Voicelines": [
             {
@@ -2514,8 +2514,8 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 1,
-            "damage_per_projectile": 2280,
-            "full_damage": 2280,
+            "damage_per_projectile": 2080,
+            "full_damage": 2080,
             "ammo": 3,
             "damage_type": "pierce",
             "mvt": 720,
@@ -2796,7 +2796,7 @@
         "5": "mandy/hc.png"
         },
         "Fact": [
-            "*Brawler* has the longest-range main attack in the game, excluding gadgets.",
+            "Before the 100th brawler, *Brawler* had the longest-range main attack in the game, excluding gadgets.",
             "*Brawler*'s first star power once worked also for the super, making it faster.",
             "*Brawler* during Strangers Things event could have a constant 73% damage reduction shield."
         ],
@@ -4225,7 +4225,7 @@
         "Icon": "fang/pin.png",
         "Stats": {
             "gender": "male",
-            "hp": 9000,
+            "hp": 9600,
             "hitbox": 145,
             "passive_ability": false,
             "projectiles": 1,
@@ -5265,7 +5265,7 @@
             "class": "damage_dealer",
             "rarity": "mythic",
             "world": "water_land",
-            "range": 8.33,
+            "range": 7.67,
             "reload_speed": 2,
             "release": 2024,
             "nb_skins": 2
@@ -5655,7 +5655,7 @@
         "Icon": "lumi/pin.png",
         "Stats": {
             "gender": "female",
-            "hp": 6200,
+            "hp": 7000,
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 1,
@@ -5741,7 +5741,7 @@
             "mvt": 770,
             "gadget_cd": {
                 "1": 15,
-                "2": 15
+                "2": 12
             },
             "ult_charge": 500,
             "hc_multiplier": 3000,
@@ -5964,10 +5964,10 @@
             "damage_type": "splash",
             "mvt": 770,
             "gadget_cd": {
-                "1": 13,
+                "1": 17,
                 "2": 13
             },
-            "ult_charge": 5,
+            "ult_charge": 6,
             "hc_multiplier": 35,
             "class": "controller",
             "rarity": "mythic",
@@ -6034,8 +6034,8 @@
             "passive_ability": true,
             "projectiles": 1,
             "damage_per_projectile": 1200,
-            "full_damage": 6000,
-            "ammo": 8,
+            "full_damage": 1200,
+            "ammo": 10,
             "damage_type": "splash",
             "mvt": 820,
             "gadget_cd": {
@@ -6121,7 +6121,7 @@
             "class": "support",
             "rarity": "mythic",
             "world": "water_land",
-            "range": 6.67,
+            "range": 7.33,
             "reload_speed": 1.7,
             "release": 2025,
             "nb_skins": 0
@@ -6172,6 +6172,80 @@
             "💧",
             "🔋",
             "➕"
+        ]
+    },
+    "Najia": {
+        "Icon": "najia/pin.png",
+        "Stats": {
+            "gender": "female",
+            "hp": 6800,
+            "hitbox": 120,
+            "passive_ability": false,
+            "projectiles": 1,
+            "damage_per_projectile": 600,
+            "full_damage": 3200,
+            "ammo": 1,
+            "damage_type": "single",
+            "mvt": 770,
+            "gadget_cd": {
+                "1": 17,
+                "2": 20
+            },
+            "ult_charge": 12,
+            "hc_multiplier": 40,
+            "class": "damage_dealer",
+            "rarity": "mythic",
+            "world": "chronotrap",
+            "range": 12.67,
+            "reload_speed": 0.8,
+            "release": 2026,
+            "nb_skins": 0
+        },
+        "Gears" : {
+        "1": "najia/gd1.png",
+        "2": "najia/gd2.png",
+        "3": "najia/sp1.png",
+        "4": "najia/sp2.png",
+        "5": "najia/hc.png"
+        },
+        "Fact": [
+            "*Brawler* Once could hit brawler hidding in bushes without the vision.",
+            "*Brawler*'s has the longest-range main attack in the game, excluding gadgets.",
+            "*Brawler* is the only brawler able to improve the super with the main attack."
+        ],
+        "Voicelines": [
+            {
+                "text": "Cats are afraid of snakes. Right, Finx?",
+                "audio": "audio/najia/afraid.ogg"
+            },
+            {
+                "text": "♫Ain't no puzzle hard enough!",
+                "audio": "audio/najia/puzzle.ogg"
+            },
+            {
+                "text": "Someone's getting mummified.",
+                "audio": "audio/najia/mummified.ogg"
+            },
+            {
+                "text": "Yes, yes, very scary. Can we focus?",
+                "audio": "audio/najia/focus.ogg"
+            },
+            {
+                "text": "And yes, they bite.",
+                "audio": "audio/najia/bite.ogg"
+            }
+        ],
+        "Images": {
+            "attack": "images/najia/atk.png",
+            "ultimate": "images/najia/ult.png",
+            "order": false
+        },
+        "Emojis": [
+            "🐍",
+            "⏳",
+            "🏺",
+            "📦",
+            "🟪"
         ]
     },
     "Crow": {
@@ -6307,7 +6381,7 @@
         "Icon": "leon/pin.png",
         "Stats": {
             "gender": "male",
-            "hp": 7200,
+            "hp": 6600,
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 4,
@@ -7182,7 +7256,28 @@
             "*Brawler* is the only marskamn with 2 differents projectiles width on the main attack.",
             "To release *Brawler*, Supercell introduce an investigation with the new brawler in the 'news' tab."
         ],
-        "Voicelines": [],
+        "Voicelines": [
+            {
+                "text": "I smell sunscreen and bad choices.",
+                "audio": "audio/pierce/choices.ogg"
+            },
+            {
+                "text": "Crime doesn't float on my watch.",
+                "audio": "audio/pierce/watch.ogg"
+            },
+            {
+                "text": "Ha ha. Welcome to splash country, population zero.",
+                "audio": "audio/pierce/country.ogg"
+            },
+            {
+                "text": "Hooked, booked, and totally cooked!",
+                "audio": "audio/pierce/cooked.ogg"
+            },
+            {
+                "text": "Get out my way, punk.",
+                "audio": "audio/pierce/punk.ogg"
+            }
+        ],
         "Images": {
             "attack": "images/pierce/atk.png",
             "ultimate": "images/pierce/ult.png",
@@ -7373,7 +7468,28 @@
             "*Brawler* can blink by clicking the super very fast.",
             "*Brawler* is the most waited brawler of all time."
         ],
-        "Voicelines": [],
+        "Voicelines": [
+            {
+                "text": "The difference between us is night and day.",
+                "audio": "audio/sirius/diff.ogg"
+            },
+            {
+                "text": "Now, starring: your worst nightmare!",
+                "audio": "audio/sirius/nightmare.ogg"
+            },
+            {
+                "text": "Such audacity from a mere clown!",
+                "audio": "audio/sirius/clown.ogg"
+            },
+            {
+                "text": "Time to steal the spotlight, ha, and some souls.",
+                "audio": "audio/sirius/souls.ogg"
+            },
+            {
+                "text": "Clones, chaos, carnage, and... confetti.",
+                "audio": "audio/sirius/confetti.ogg"
+            }
+        ],
         "Images": {
             "attack": "images/sirius/atk.png",
             "ultimate": "images/sirius/ult.png",
