@@ -67,7 +67,8 @@
             "🐈‍⬛",
             "🤠",
             "🔫"
-        ]
+        ],
+        "Model": {} 
     },
     "Nita": {
         "Icon": "nita/pin.png",
@@ -121,7 +122,8 @@
             "🐾",
             "📢",
             "🌲"
-        ]
+        ],
+        "Model": {} 
     },
     "Colt": {
         "Icon": "colt/pin.png",
@@ -159,7 +161,7 @@
         },
         "Fact": [
             "*Brawler*'s buffies twerk in the lobby and victory animation.",
-            "*Brawler*'s profile picture was reworked twice.",
+            "*Brawler* was the first brawler to have a pro pass skin.",
             "*Brawler* once had a bug allowing projectile stacking during the Angels vs Demons event."
         ],
         "Voicelines": [
@@ -194,7 +196,8 @@
             "🔫",
             "🔫",
             "🟥"
-        ]
+        ],
+        "Model": {} 
     },
     "Bull": {
         "Icon": "bull/pin.png",
@@ -265,7 +268,8 @@
             "⬛",
             "🔫",
             "🛡️"
-        ]
+        ],
+        "Model": {} 
     },
     "Brock": {
         "Icon": "brock/pin.png",
@@ -339,7 +343,8 @@
             "🔥",
             "🧱",
             "📻"
-        ]
+        ],
+        "Model": {} 
     },
     "El Primo": {
         "Aliases": ["Primo"],
@@ -415,7 +420,8 @@
             "🎭",
             "🥊",
             "🌟"
-        ]
+        ],
+        "Model": {} 
     },
     "Barley": {
         "Icon": "barley/pin.png",
@@ -488,7 +494,8 @@
             "🤖",
             "☠️",
             "🍾"
-        ]
+        ],
+        "Model": {} 
     },
     "Poco": {
         "Icon": "poco/pin.png",
@@ -563,7 +570,8 @@
             "💀",
             "🟡",
             "🔉"
-        ]
+        ],
+        "Model": {} 
     },
     "Rosa": {
         "Icon": "rosa/pin.png",
@@ -637,7 +645,8 @@
             "🛡️",
             "👓",
             "🟣"
-        ]
+        ],
+        "Model": {} 
     },
     "Jessie": {
         "Icon": "jessie/pin.png",
@@ -712,7 +721,8 @@
             "🤖",
             "⚡",
             "🔵"
-        ]
+        ],
+        "Model": {} 
     },
     "Dynamike": {
         "Icon": "dynamike/pin.png",
@@ -787,7 +797,8 @@
             "🐥",
             "💥",
             "💫"
-        ]
+        ],
+        "Model": {}
     },
     "Tick": {
         "Icon": "tick/pin.png",
@@ -841,7 +852,8 @@
             "💣",
             "🤖",
             "🕰️"
-        ]
+        ],
+        "Model": {} 
     },
     "8-Bit": {
         "Icon": "bit/pin.png",
@@ -908,7 +920,13 @@
             "🐢",
             "📺",
             "🟦"
-        ]
+        ],
+        "Model": {
+            "0": "bit/0.glb",
+            "1": "bit/1.glb",
+            "2": "bit/2.glb",
+            "3": "bit/3.glb" 
+         } 
     },
     "Rico": {
         "Icon": "rico/pin.png",
@@ -1836,7 +1854,13 @@
             "🍬",
             "🏃🏻‍♀️",
             "🎱"
-        ]
+        ],
+        "Model": {
+            "0": "bibi/0.glb",
+            "1": "bibi/1.glb",
+            "2": "bibi/2.glb",
+            "3": "bibi/3.glb" 
+         } 
     },
     "Bea": {
         "Aliases": ["Abeilles de merde"],
@@ -1911,7 +1935,13 @@
             "👩🏻‍🦰",
             "🪴",
             "🌀"
-        ]
+        ],
+        "Model": {
+            "0": "bea/0.glb",
+            "1": "bea/1.glb",
+            "2": "bea/2.glb",
+            "3": "bea/3.glb" 
+         } 
     },
     "Gale": {
         "Icon": "gale/pin.png",
@@ -2094,7 +2124,7 @@
         "Fact": [
             "*Brawler* once could one shot any ennemy at high power cubes or in 5v5 knockout.",
             "*Brawler* can kill most part of brawlerd with only 2 attack and one super.",
-            "*Brawler* is one of the few brawler that can be invicible, thanks to the second star power."
+            "Befare receiving buffies, *Brawler* was one of the few brawler that can be invicible, thanks to the second star power."
         ],
         "Voicelines": [
             {
@@ -2204,7 +2234,13 @@
             "🖤",
             "😒",
             "➕"
-        ]
+        ],
+        "Model": {
+            "0": "edgar/0.glb",
+            "1": "edgar/1.glb",
+            "2": "edgar/2.glb",
+            "3": "edgar/3.glb" 
+         } 
     },
     "Belle": {
         "Icon": "belle/pin.png",
@@ -2429,7 +2465,13 @@
             "🏰",
             "🐀",
             "💢"
-        ]
+        ],
+        "Model": {
+            "0": "ash/0.glb",
+            "1": "ash/1.glb",
+            "2": "ash/2.glb",
+            "3": "ash/3.glb" 
+         } 
     },
     "Lola": {
         "Icon": "lola/pin.png",
@@ -2578,7 +2620,13 @@
             "🚸",
             "🟥",
             "🔗"
-        ]
+        ],
+        "Model": {
+            "0": "grom/0.glb",
+            "1": "grom/1.glb",
+            "2": "grom/2.glb",
+            "3": "grom/3.glb" 
+         } 
     },
     "Bonnie": {
         "Icon": "bonnie/small/pin.png",
@@ -2655,6 +2703,7 @@
         ]
     },
     "Bonnie (Clyde)": {
+        "Aliases": ["Clyde"],
         "Icon": "bonnie/clyde/pin.png",
         "Stats": {
             "gender": "female",
@@ -3206,7 +3255,13 @@
             "♒",
             "💘",
             "🟩"
-        ]
+        ],
+        "Model": {
+            "0": "angelo/0.glb",
+            "1": "angelo/1.glb",
+            "2": "angelo/2.glb",
+            "3": "angelo/3.glb" 
+         } 
     },
     "Berry": {
         "Aliases": ["Poney"],
@@ -3484,7 +3539,13 @@
             "🥊",
             "🟤",
             "🍃"
-        ]
+        ],
+        "Model": {
+            "0": "trunk/0.glb",
+            "1": "trunk/1.glb",
+            "2": "trunk/2.glb",
+            "3": "trunk/3.glb" 
+         } 
     },
     "Mortis": {
         "Aliases": ["Morris"],
@@ -4055,7 +4116,7 @@
         "5": "ruffs/hc.png"
         },
         "Fact": [
-            "*Brawler*'s attack is the secon to be able to bounce off the walls.",
+            "*Brawler*'s attack is the second one to be able to bounce off the walls.",
             "*Brawler* is the only brawler that can boost allies until death.",
             "Before, *Brawler* was the brwaler with the fastest unload speed in the game, with only 50ms between shots."
         ],
@@ -4092,7 +4153,13 @@
             "🔭",
             "🔫",
             "〽️"
-        ]
+        ],
+        "Model": {
+            "0": "ruffs/0.glb",
+            "1": "ruffs/1.glb",
+            "2": "ruffs/2.glb",
+            "3": "ruffs/3.glb" 
+         } 
     },
     "Squeak": {
         "Icon": "squeak/pin.png",
@@ -5110,7 +5177,13 @@
             "🎞️",
             "📢",
             "💰"
-        ]
+        ],
+        "Model": {
+            "0": "mico/0.glb",
+            "1": "mico/1.glb",
+            "2": "mico/2.glb",
+            "3": "mico/3.glb" 
+         } 
     },
     "Melodie": {
         "Aliases": ["♥"],
@@ -5240,7 +5313,13 @@
             "🟪",
             "🏮",
             "🌿"
-        ]
+        ],
+        "Model": {
+            "0": "lily/0.glb",
+            "1": "lily/1.glb",
+            "2": "lily/2.glb",
+            "3": "lily/3.glb" 
+         } 
     },
     "Clancy": {
         "Aliases": ["Crousty Crabe"],
@@ -5649,7 +5728,13 @@
             "🏜️",
             "👁️",
             "💎"
-        ]
+        ],
+        "Model": {
+            "0": "finx/0.glb",
+            "1": "finx/1.glb",
+            "2": "finx/2.glb",
+            "3": "finx/3.glb" 
+         } 
     },
     "Lumi": {
         "Icon": "lumi/pin.png",
@@ -5724,7 +5809,13 @@
             "🧊",
             "⛓️",
             "2️⃣"
-        ]
+        ],
+        "Model": {
+            "0": "lumi/0.glb",
+            "1": "lumi/1.glb",
+            "2": "lumi/2.glb",
+            "3": "lumi/3.glb" 
+         } 
     },
     "Jae-Yong": {
         "Icon": "jae/pin.png",
@@ -5874,7 +5965,13 @@
             "🍃",
             "🤿",
             "💚"
-        ]
+        ],
+        "Model": {
+            "0": "alli/0.glb",
+            "1": "alli/1.glb",
+            "2": "alli/2.glb",
+            "3": "alli/3.glb" 
+         } 
     },
     "Mina": {
         "Icon": "mina/pin.png",
@@ -5948,7 +6045,13 @@
             "🎵",
             "🩴",
             "👑"
-        ]
+        ],
+        "Model": {
+            "0": "mina/0.glb",
+            "1": "mina/1.glb",
+            "2": "mina/2.glb",
+            "3": "mina/3.glb" 
+         } 
     },
     "Ziggy": {
         "Icon": "ziggy/pin.png",
@@ -6017,12 +6120,18 @@
             "order": false
         },
         "Emojis": [
-            "⚡",
             "🔮",
+            "⚡",
             "🪄",
             "🎭",
             "🟪"
-        ]
+        ],
+        "Model": {
+            "0": "ziggy/0.glb",
+            "1": "ziggy/1.glb",
+            "2": "ziggy/2.glb",
+            "3": "ziggy/3.glb" 
+         } 
     },
     "Gigi": {
         "Aliases": ["Panzani"],
@@ -6097,7 +6206,13 @@
             "🎎",
             "🪡",
             "💣"
-        ]
+        ],
+        "Model": {
+            "0": "gigi/0.glb",
+            "1": "gigi/1.glb",
+            "2": "gigi/2.glb",
+            "3": "gigi/3.glb" 
+         } 
     },
     "Glowy": {
         "Icon": "glowy/pin.png",
@@ -6172,7 +6287,13 @@
             "💧",
             "🔋",
             "➕"
-        ]
+        ],
+        "Model": {
+            "0": "glowy/0.glb",
+            "1": "glowy/1.glb",
+            "2": "glowy/2.glb",
+            "3": "glowy/3.glb" 
+         } 
     },
     "Najia": {
         "Icon": "najia/pin.png",
@@ -6183,7 +6304,7 @@
             "passive_ability": false,
             "projectiles": 1,
             "damage_per_projectile": 600,
-            "full_damage": 3200,
+            "full_damage": 2600,
             "ammo": 1,
             "damage_type": "single",
             "mvt": 770,
@@ -6191,8 +6312,8 @@
                 "1": 17,
                 "2": 20
             },
-            "ult_charge": 12,
-            "hc_multiplier": 40,
+            "ult_charge": 6,
+            "hc_multiplier": 35,
             "class": "damage_dealer",
             "rarity": "mythic",
             "world": "chronotrap",
@@ -6246,7 +6367,13 @@
             "🏺",
             "📦",
             "🟪"
-        ]
+        ],
+        "Model": {
+            "0": "najia/0.glb",
+            "1": "najia/1.glb",
+            "2": "najia/2.glb",
+            "3": "najia/3.glb" 
+         } 
     },
     "Crow": {
         "Aliases": ["Caw Caw"],
@@ -6523,7 +6650,13 @@
             "⭐",
             "🫥",
             "🟪"
-        ]
+        ],
+        "Model": {
+            "0": "pierce/0.glb",
+            "1": "pierce/1.glb",
+            "2": "pierce/2.glb",
+            "3": "pierce/3.glb" 
+         } 
     },
     "Surge": {
         "Aliases": ["SnakeThug"],
@@ -6800,7 +6933,7 @@
                 "1": 12,
                 "2": 15
             },
-            "ult_charge": 1.5,
+            "ult_charge": 1.75,
             "hc_multiplier": 25,
             "class": "damage_dealer",
             "rarity": "legendary",
@@ -7292,6 +7425,7 @@
         ]
     },
     "Kaze (geisha)": {
+        "Aliases": ["Geisha"],
         "Icon": "kaze/geisha/pin.png",
         "Stats": {
             "gender": "female",
@@ -7364,9 +7498,16 @@
             "2️⃣",
             "💢",
             "🎴"
-        ]
+        ],
+        "Model": {
+            "0": "kaze/geisha/0.glb",
+            "1": "kaze/geisha/1.glb",
+            "2": "kaze/geisha/2.glb",
+            "3": "kaze/geisha/3.glb" 
+         } 
     },
     "Kaze (ninja)": {
+        "Aliases": ["Ninja"],
         "Icon": "kaze/ninja/pin.png",
         "Stats": {
             "gender": "female",
@@ -7433,7 +7574,7 @@
         "Icon": "sirius/pin.png",
         "Stats": {
             "gender": "male",
-            "hp": 7400,
+            "hp": 6800,
             "hitbox": 120,
             "passive_ability": true,
             "projectiles": 2,

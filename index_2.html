@@ -812,12 +812,10 @@ function buildMap(){
   if(!mapData)return'<p style="color:var(--text2)">Map data missing.</p>';
   const w=ms.wrong;
   const won=ms.won;
-  /* Support both single {x,y,scale} and array of starts — pick by dayIndex */
-  const _starts=Array.isArray(mapData.start)?mapData.start:[mapData.start];
-  const _start=_starts[dayIndex()%_starts.length];
-  const s0=_start.scale;
+  const s0=mapData.start.scale;
   const curScale=won?1.0:Math.max(1.0,s0*Math.pow(0.85,w));
   const modeRevealed=(w>=2)||won;
+  /* Mode icon path */
   const modePath=mapData.mode?'_mods/'+mapData.mode.toLowerCase().replace(/ /g,'_')+'.png':'';
   const modeIcon=modePath?`<img src="${modePath}" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin-right:5px;" alt="">`:'';
   const modeText=modeRevealed?modeIcon+esc(mapData.mode):'???';
@@ -835,10 +833,9 @@ function buildMap(){
   html+=`<div class="map-card">
     <canvas class="map-viewport map-canvas" id="${canvasId}"
             data-pmid="${pmId}"
-            data-ox="${_start.x}"
-            data-oy="${_start.y}"
+            data-ox="${mapData.start.x}"
+            data-oy="${mapData.start.y}"
             data-sc="${curScale}"
-            data-wrong="${w}"
             oncontextmenu="return false"></canvas>
     ${hints?`<div class="hints-row" style="justify-content:center;margin-top:12px">${hints}</div>`:''}
   </div>`;
@@ -1004,8 +1001,8 @@ function acKey(e,mode){
     e.preventDefault();
     const q=(document.getElementById('inp-'+mode)||{}).value||'';
     const ql=q.toLowerCase();
-    if(S.modes[mode].won&&!ql){const next=getNextMode(mode);if(next)switchMode(next);return;}
     const pool=validPool(mode);
+    /* 1. Exact name match */
 const used=new Set(S.modes[mode].guesses.map(g=>g.name));
     /* 1. Exact name match — only if not already guessed */
     const exactName=pool.find(b=>b.toLowerCase()===ql&&!used.has(b));
@@ -1039,7 +1036,7 @@ function pmAudio(src){
 }
 const _mapAnimations={};
 
-const MAP_ZOOM_CORRECTION=1.528;
+const MAP_ZOOM_CORRECTION=1.52;
 
 function _drawMapFrame(canvas,img,sc){
   const vpW=canvas.width,vpH=canvas.height;
@@ -1091,9 +1088,10 @@ function _applyMapCanvas(canvas){
   const img=canvas._mapImg;
   if(!img)return;
   const sc=parseFloat(canvas.dataset.sc)||1;
+  const minDim=Math.min(img.naturalWidth,img.naturalHeight);
+  const endSc=Math.max(MAP_ZOOM_CORRECTION,sc*0.88);
   _drawMapFrame(canvas,img,sc);
-  const _wrg=parseInt(canvas.dataset.wrong||'0');
-  if(_wrg>0){const endSc=Math.max(MAP_ZOOM_CORRECTION,sc*0.88);_startMapCanvas(canvas,img,sc,endSc,60000);}
+  _startMapCanvas(canvas,img,sc,endSc,60000);
 }
 function resolveMedia(){
   document.querySelectorAll('[data-pmid]').forEach(el=>{
@@ -1462,13 +1460,6 @@ document.addEventListener('click',e=>{
 
 document.addEventListener('keydown',e=>{
   if(e.ctrlKey||e.metaKey||e.altKey)return;
-  /* Enter when mode is won → next mode (works even with disabled input) */
-  if(e.key==='Enter'&&S.modes[S.activeMode]?.won){
-    e.preventDefault();
-    const next=getNextMode(S.activeMode);
-    if(next)switchMode(next);
-    return;
-  }
   if(e.key.length!==1&&e.key!=='Backspace')return;
   const inp=document.getElementById('inp-'+S.activeMode);
   if(!inp||inp.disabled)return;
