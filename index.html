@@ -22,6 +22,7 @@ function _initGame([stats, maps]){
   MAPS = maps;
   ANSWERS = getDailyAnswers();
   loadState();
+  MODES.forEach(m=>{ _uiWon[m]=m!=='classic'&&!!(S.modes[m]?.won); });
   render();
 }
 
@@ -331,6 +332,13 @@ function stopConfetti(mode){
 function stopAllConfetti(){Object.keys(_confettiIntervals).forEach(m=>stopConfetti(m));}
 
 function fireVictory(mode){
+  _uiWon[mode]=true;
+  if(mode==='classic'){
+    document.querySelectorAll('.tab').forEach(t=>{
+      if(t.querySelector('.tab-label')?.textContent===MODE_META.classic.label)
+        t.classList.add('done');
+    });
+  }
   const fl=document.createElement('div');fl.className='flash-win';document.body.appendChild(fl);
   setTimeout(()=>fl.remove(),1000);
   document.body.style.animation='gentleSpin 1.1s ease-in-out';
@@ -432,16 +440,18 @@ function guess(mode,name){
 
       if(correct){
         _recordPerf(mode,ms.guesses.length,true);
-        /* Disable search input directly */
         const inp=document.getElementById('inp-classic');
         if(inp)inp.disabled=true;
-        /* Show banner after a tiny extra delay (200ms) so it feels post-reveal */
-        setTimeout(()=>{
+        /* Poll until ALL concurrent animations are done, then show victory */
+        const _waitAllDone=()=>{
+          const allDone=[..._classicAnims.values()].every(a=>a.done);
+          if(!allDone){setTimeout(_waitAllDone,50);return;}
           if(S.activeMode!==mode)return;
           const banner=document.getElementById('classic-banner');
           if(banner)banner.innerHTML=winBanner('classic');
-          fireVictory(mode);
-        },200);
+          fireVictory(mode); /* sets _uiWon[mode]=true */
+        };
+        setTimeout(_waitAllDone,200);
       }
     }, dur);
     if(!document.querySelector('.stats-table')){
@@ -518,7 +528,18 @@ function switchMode(mode){
   stopAllConfetti();
   S.activeMode=mode;
   render();
-  if(S.modes[mode]&&S.modes[mode].won)startConfetti(mode);
+  if(S.modes[mode]?.won){
+    if(mode==='classic'){
+      const allDone=[..._classicAnims.values()].every(a=>a.done);
+      _uiWon[mode]=allDone;
+      if(allDone)startConfetti(mode);
+    } else {
+      _uiWon[mode]=true;
+      startConfetti(mode);
+    }
+  } else {
+    _uiWon[mode]=false;
+  }
 }
 
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
@@ -853,7 +874,7 @@ function render(){
   const _utcNow=new Date(dayIndex()*86400000);
   const dateStr=_utcNow.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
   const tabs=MODES.map(m=>{
-    const done=S.modes[m].won;
+    const done=m==='classic'?!!_uiWon.classic:S.modes[m].won;
     const active=S.activeMode===m;
     const sk=S.streaks[m];
     return`<div class="tab${active?' active':''}${done?' done':''}" onclick="switchMode('${m}')">
@@ -1004,7 +1025,6 @@ function acKey(e,mode){
     e.preventDefault();
     const q=(document.getElementById('inp-'+mode)||{}).value||'';
     const ql=q.toLowerCase();
-    if(S.modes[mode].won&&!ql){const next=getNextMode(mode);if(next)switchMode(next);return;}
     const pool=validPool(mode);
 const used=new Set(S.modes[mode].guesses.map(g=>g.name));
     /* 1. Exact name match — only if not already guessed */
@@ -1460,17 +1480,10 @@ document.addEventListener('click',e=>{
   });
 });
 
-/* Capture phase: snapshot won-state BEFORE element onkeydown fires */
-let _wonAtKeydown=false;
-document.addEventListener('keydown',e=>{
-  _wonAtKeydown=!!(S.modes[S.activeMode]?.won);
-},true);
-
-/* Bubble phase: runs AFTER acKey/doGuess have had their chance */
+const _uiWon={};
 document.addEventListener('keydown',e=>{
   if(e.ctrlKey||e.metaKey||e.altKey)return;
-  /* Enter: if mode was ALREADY won when the key was pressed → next mode */
-  if(e.key==='Enter'&&_wonAtKeydown){
+  if(e.key==='Enter'&&_uiWon[S.activeMode]){
     e.preventDefault();
     const next=getNextMode(S.activeMode);
     if(next)switchMode(next);
@@ -1480,7 +1493,6 @@ document.addEventListener('keydown',e=>{
   const inp=document.getElementById('inp-'+S.activeMode);
   if(!inp||inp.disabled)return;
   if(document.activeElement===inp)return;
-  /* Only auto-focus on non-touch devices (physical keyboard) */
   if(!window.matchMedia('(pointer:coarse)').matches)inp.focus();
 });
 
