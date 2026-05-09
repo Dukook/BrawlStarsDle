@@ -1460,10 +1460,17 @@ document.addEventListener('click',e=>{
   });
 });
 
+/* Capture phase: snapshot won-state BEFORE element onkeydown fires */
+let _wonAtKeydown=false;
+document.addEventListener('keydown',e=>{
+  _wonAtKeydown=!!(S.modes[S.activeMode]?.won);
+},true);
+
+/* Bubble phase: runs AFTER acKey/doGuess have had their chance */
 document.addEventListener('keydown',e=>{
   if(e.ctrlKey||e.metaKey||e.altKey)return;
-  /* Enter when mode is won → next mode (works even with disabled input) */
-  if(e.key==='Enter'&&S.modes[S.activeMode]?.won){
+  /* Enter: if mode was ALREADY won when the key was pressed → next mode */
+  if(e.key==='Enter'&&_wonAtKeydown){
     e.preventDefault();
     const next=getNextMode(S.activeMode);
     if(next)switchMode(next);
