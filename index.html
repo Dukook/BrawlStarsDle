@@ -5,7 +5,535 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BSdle</title>
 <link rel="icon" type="image/png" href="melodie.png">
-<link rel="stylesheet" href="style.css">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  @font-face{font-family:'Nougat';src:url('Nougat.ttf') format('truetype');font-weight:400;font-display:swap}
+  @font-face{font-family:'Nunito';src:url('Nunito.ttf') format('truetype');font-weight:100 900;font-display:swap}
+
+  :root{
+    --bg:#0b1622;--bg2:#12202f;--bg3:#1a2d40;--bg4:#223550;
+    --accent:#ffd000;--text:#e8edf4;--text2:#6e8fa8; 
+    --accent2: #ff2dd1;--text:#e8edf4;--text2:#6e8fa8;
+    --green:#27ae60;--red:#c0392b;--orange:#d68910;
+    --border:#1e3248;--radius:14px;--shadow:0 6px 28px rgba(0,0,0,.55);
+  }
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Nunito',sans-serif;font-size:15px;color:var(--text);
+    min-height:100vh;overflow-x:hidden;
+    background:#0b1622;
+  }
+
+  .bg-overlay{
+    position:fixed;inset:0;z-index:-1;
+    background:url('hb.jpg') center/cover no-repeat;
+    filter:brightness(.3) blur(2px) saturate(1.4);
+    animation:bgDrift 22s ease-in-out infinite;
+  }
+  @keyframes bgDrift{
+    0%  {transform:scale(1.07) translate(0,0)}
+    20% {transform:scale(1.07) translate(-0.9%,-0.5%)}
+    45% {transform:scale(1.07) translate(0.6%,-0.9%)}
+    70% {transform:scale(1.07) translate(0.9%,0.4%)}
+    100%{transform:scale(1.07) translate(0,0)}
+  }
+  .bg-base{position:fixed;inset:0;z-index:-3;background:#0b1622}
+  .bg-solid{position:fixed;inset:0;z-index:-1;background:rgba(11,22,34,.72)}
+
+  .header{
+    background:linear-gradient(180deg,rgba(6,12,22,.97) 0%,rgba(12,24,38,.93) 100%);
+    border-bottom:2px solid rgba(255,208,0,.2);
+    padding:26px 20px 18px;text-align:center;
+  }
+  .header-logo{
+    font-family:'Nougat',cursive;
+    font-size:clamp(2.4rem,7vw,3.8rem);
+    color:var(--accent);letter-spacing:6px;
+    text-shadow:0 0 40px rgba(255,208,0,.4),0 3px 0 #6a4a00;
+    line-height:1;
+  }
+  .header-sub{color:var(--text2);font-size:.82rem;margin-top:6px;font-weight:700;letter-spacing:1px}
+
+  .tabs{
+    display:flex;justify-content:center;flex-wrap:wrap;
+    gap:10px;padding:16px;
+    background:rgba(12,24,38,.92);border-bottom:1px solid var(--border);
+    backdrop-filter:blur(8px);
+  }
+  .tab{
+    display:flex;flex-direction:column;align-items:center;gap:4px;
+    padding:13px 18px;min-width:92px;cursor:pointer;
+    border-radius:16px;border:2px solid var(--border);
+    background:var(--bg3);transition:all .2s;position:relative;
+    user-select:none;
+  }
+  .tab:hover{border-color:rgba(255,208,0,.5);transform:translateY(-1px)}
+  .tab.active{border-color:var(--accent);background:rgba(255,208,0,.07);box-shadow:0 0 18px rgba(255,208,0,.12)}
+  .tab.done{border-color:var(--green);background:rgba(39,174,96,.07)}
+  .tab-shine{
+    position:absolute;top:5px;right:5px;width:7px;height:7px;
+    border-radius:50%;background:var(--accent);
+    box-shadow:0 0 8px var(--accent);
+    opacity:0;
+  }
+  .tab.active .tab-shine{opacity:1;animation:pulse 1.4s ease-in-out infinite}
+  .tab-emoji{font-size:1.6rem;line-height:1}
+  .tab-label{font-size:.7rem;font-weight:900;color:var(--text2);letter-spacing:.5px;text-transform:uppercase}
+  .tab.active .tab-label{color:var(--accent)}
+  .tab.done .tab-label{color:var(--green)}
+  .tab-streak{font-size:.72rem;font-weight:800;color:var(--text2)}
+  .tab.active .tab-streak{color:var(--accent)}
+
+  .game-area{max-width:980px;margin:0 auto;padding:22px 14px 80px}
+
+  .mode-header{
+    display:flex;align-items:center;justify-content:space-between;
+    margin-bottom:14px;flex-wrap:wrap;gap:8px;
+  }
+  .mode-title{font-family:'Nougat',cursive;font-size:1.4rem;color:var(--accent)}
+  .wrong-badge{
+    display:inline-flex;align-items:center;gap:4px;
+    background:rgba(192,57,43,.18);color:var(--red);
+    padding:4px 12px;border-radius:20px;font-size:.82rem;font-weight:800;
+  }
+
+  .rotation-info{
+    background:rgba(18,32,47,.8);border:1px solid var(--border);
+    border-left:3px solid var(--accent2);border-radius:8px;
+    padding:9px 14px;margin-bottom:14px;
+    font-size:.78rem;color:var(--text2);font-weight:700;
+  }
+  .rotation-info b{color:var(--accent)}
+
+  .search-wrap{position:relative;margin-bottom:12px}
+  .search-input{
+    width:100%;padding:13px 18px;
+    background:rgba(18,32,47,.9);border:2px solid var(--border);
+    border-radius:var(--radius);color:var(--text);
+    font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;
+    outline:none;transition:border-color .2s,box-shadow .2s;
+  }
+  .search-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,208,0,.1)}
+  .search-input::placeholder{color:var(--text2);font-weight:600}
+  .search-input:disabled{opacity:.45;cursor:not-allowed}
+  .ac-list{
+    position:absolute;top:calc(100% + 5px);left:0;right:0;
+    background:var(--bg2);border:2px solid var(--accent);
+    border-radius:var(--radius);max-height:220px;overflow-y:auto;
+    z-index:200;display:none;box-shadow:var(--shadow);
+  }
+  .ac-list.open{display:block}
+  .ac-item{padding:8px 14px;cursor:pointer;font-weight:700;transition:background .1s;display:flex;align-items:center;gap:10px;width:100%;}
+  .ac-icon{width:32px;height:32px;object-fit:contain;flex-shrink:0;border-radius:50%;background:rgba(255,255,255,.06)}
+  .guess-icon{width:28px;height:28px;object-fit:contain;flex-shrink:0;border-radius:50%;background:rgba(255,255,255,.06)}
+  .ac-item:hover,.ac-item.hi{background:var(--bg4);color:var(--accent)}
+
+  .banner{border-radius:var(--radius);padding:20px 22px;margin-bottom:16px;text-align:center}
+  .banner-win{background:rgba(39,174,96,.12);border:2px solid rgba(39,174,96,.3)}
+  .banner-lose{background:rgba(192,57,43,.1);border:2px solid rgba(192,57,43,.25)}
+  .banner h2{font-family:'Nougat',cursive;font-size:1.7rem}
+  .banner-win h2{color:var(--green)}
+  .banner-lose h2{color:var(--red)}
+  .banner p{color:var(--text2);margin-top:5px;font-weight:700;font-size:.88rem}
+  .banner p strong{color:var(--text)}
+  .next-btn{
+    display:block;width:100%;margin-top:12px;
+    padding:14px 20px;border-radius:var(--radius);
+    background:linear-gradient(135deg,rgba(255,208,0,.15),rgba(255,153,0,.12));
+    border:2px solid rgba(255,208,0,.35);
+    color:var(--accent);font-family:'Nunito',sans-serif;
+    font-size:1rem;font-weight:900;cursor:pointer;transition:all .2s;
+  }
+  .next-btn:hover{background:linear-gradient(135deg,rgba(255,208,0,.25),rgba(255,153,0,.2));transform:translateY(-1px)}
+
+  .hints-bar{display:flex;justify-content:flex-end;margin-bottom:10px}
+  .hints-toggle{
+    padding:6px 16px;border-radius:20px;cursor:pointer;
+    font-family:'Nunito',sans-serif;font-size:.78rem;font-weight:800;
+    transition:all .2s;border:1px solid var(--border);background:var(--bg3);color:var(--text2);
+  }
+  .hints-toggle.on{background:rgba(255,208,0,.1);color:var(--accent);border-color:rgba(255,208,0,.3)}
+
+  .table-outer{
+    position:relative;border-radius:var(--radius);
+    border:1px solid var(--border);box-shadow:var(--shadow);
+    background:rgba(12,24,38,.7);
+    margin:0;
+  }
+  .table-wrap{
+    overflow-x:auto;border-radius:var(--radius);
+    scrollbar-width:thin;scrollbar-color:var(--accent) var(--bg3);
+  }
+  .table-wrap::-webkit-scrollbar{height:6px}
+  .table-wrap::-webkit-scrollbar-track{background:var(--bg3)}
+  .table-wrap::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
+
+
+  .stats-table{width:100%;border-collapse:separate;border-spacing:0;min-width:520px}
+  .stats-table thead th{
+    background:rgba(26,45,64,.95);padding:10px 10px;
+    font-size:.68rem;text-transform:uppercase;letter-spacing:.6px;
+    color:var(--text2);white-space:nowrap;text-align:center;
+    font-weight:900;border-bottom:1px solid var(--border);
+  }
+  .stats-table thead th:first-child{text-align:center;padding:10px 6px;width:52px;min-width:52px;}
+  .stats-table tbody td{
+    padding:0;text-align:center;font-size:.82rem;font-weight:800;
+    border-bottom:1px solid rgba(30,50,72,.6);
+    position:relative;height:52px;
+  }
+  .stats-table tbody td:first-child{
+    text-align:center;padding:0 6px;width:52px;min-width:52px;max-width:52px;
+  }
+  .name-cell{position:relative;display:inline-flex;align-items:center;justify-content:center;cursor:default;}
+  .name-cell-tooltip{
+    position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);
+    background:var(--bg4);border:1px solid var(--border);
+    border-radius:6px;padding:3px 8px;
+    font-size:.72rem;font-weight:800;color:var(--text);
+    white-space:nowrap;pointer-events:none;
+    opacity:0;transition:opacity .12s;z-index:50;
+  }
+  .name-cell:hover .name-cell-tooltip{opacity:1;}
+  .tbl-icon{width:40px;height:40px;object-fit:contain;flex-shrink:0;border-radius:50%;transition:transform .15s;}
+  .name-cell:hover .tbl-icon{transform:scale(1.12);}
+  .cell-inner{
+    position:relative;display:flex;align-items:center;justify-content:center;
+    height:100%;padding:8px 10px;overflow:hidden;
+  }
+  .cell-bg-arr{
+    position:absolute;font-size:5.5rem;opacity:.22;
+    top:50%;left:50%;transform:translate(-50%,-50%);
+    line-height:1;pointer-events:none;user-select:none;
+    font-style:normal;font-weight:900;
+    -webkit-text-stroke:2px currentColor;
+  }
+  .cell-txt{position:relative;z-index:1;font-weight:900;font-size:.82rem}
+
+  .stats-table tbody tr:last-child td{border-bottom:none}
+  .cell-correct{background:rgba(39,174,96,.28)!important;color:#5fffa3}
+  .cell-wrong{background:rgba(192,57,43,.25)!important;color:#ffaaaa}
+  .cell-partial{background:rgba(214,137,16,.25)!important;color:#ffd580}
+  .cell-arrow{font-size:.85em;margin-left:3px}
+  .cell-hidden{background:var(--bg3)!important;color:transparent!important;transition:background .3s,color .3s}
+
+  @keyframes cellReveal{
+    0%{opacity:0;transform:rotateX(90deg) scale(.85)}
+    55%{transform:rotateX(-6deg)}
+    100%{opacity:1;transform:rotateX(0deg) scale(1)}
+  }
+  .cell-anim{animation:cellReveal .55s cubic-bezier(.34,1.56,.64,1) forwards;opacity:0}
+
+  .info-btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:13px;height:13px;background:var(--accent);color:#000;
+    border-radius:50%;font-size:.58rem;font-weight:900;cursor:default;
+    margin-left:4px;vertical-align:middle;flex-shrink:0;user-select:none;
+  }
+
+  #tooltip{
+    position:fixed;background:var(--bg4);border:1px solid var(--border);
+    border-radius:8px;padding:10px 14px;font-size:.78rem;max-width:280px;
+    z-index:9999;color:var(--text);box-shadow:var(--shadow);
+    display:none;line-height:1.5;font-weight:600;pointer-events:none;
+  }
+
+  .fact-card{
+    background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);
+    border-radius:var(--radius);padding:24px;margin-bottom:16px;
+    box-shadow:var(--shadow);
+  }
+  .fact-text{font-size:1.1rem;font-weight:700;line-height:1.7}
+  .fact-unknown{color:var(--accent);background:rgba(255,208,0,.1);padding:1px 7px;border-radius:4px}
+  .fact-revealed{color:var(--green);background:rgba(39,174,96,.12);padding:1px 7px;border-radius:4px;font-weight:900}
+  .hints-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .hint-pill{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:5px 13px;border-radius:20px;font-size:.76rem;font-weight:800;
+    background:var(--bg3);color:var(--text2);border:1px solid var(--border);transition:all .3s;
+  }
+  .hint-pill.shown{background:rgba(255,208,0,.1);color:var(--accent);border-color:rgba(255,208,0,.25)}
+  .hint-pill img{width:18px;height:18px;object-fit:contain;flex-shrink:0;}
+
+  .vl-card{
+    background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);
+    border-radius:var(--radius);padding:26px;margin-bottom:16px;box-shadow:var(--shadow);
+  }
+  .vl-label{color:var(--text2);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+  .vl-text{font-family:'Nougat',cursive;font-size:clamp(1.2rem,3vw,1.55rem);line-height:1.45;color:var(--text)}
+  .audio-note{color:var(--text2);font-size:.76rem;font-weight:700;margin-top:10px}
+  .audio-wrap{margin-top:14px}
+  .audio-wrap audio{width:100%;border-radius:8px}
+
+  .emoji-card{
+    background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);
+    border-radius:var(--radius);padding:28px;margin-bottom:16px;text-align:center;box-shadow:var(--shadow);
+  }
+  .emoji-display{font-size:clamp(2rem,6vw,3rem);letter-spacing:10px;line-height:1.5}
+  .emoji-sub{color:var(--text2);font-size:.76rem;font-weight:700;margin-top:10px}
+
+  .img-card{
+    background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);
+    border-radius:var(--radius);padding:18px;margin-bottom:16px;box-shadow:var(--shadow);
+  }
+  .img-grid{display:grid;gap:14px;grid-template-columns:1fr;max-width:500px;margin:0 auto}
+  .img-slot{
+    background:var(--bg3);border-radius:25px;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;aspect-ratio:2010/1250;
+  }
+  .img-slot img{width:100%;height:100%;object-fit:contain}
+  .img-placeholder{color:var(--text2);font-size:.82rem;font-weight:700;text-align:center;padding:12px}
+  .img-locked{
+    display:flex;align-items:center;justify-content:center;flex-direction:column;
+    gap:8px;background:var(--bg3);border-radius:25px;aspect-ratio:2010/1250;
+    color:var(--text2);font-size:.8rem;font-weight:700;text-align:center;padding:12px;
+  }
+  .img-label{text-align:center;color:var(--text2);font-size:.68rem;font-weight:900;text-transform:uppercase;margin-top:5px;letter-spacing:.5px}
+
+  .guess-list{display:flex;flex-direction:column;gap:7px;margin-top:8px}
+  .correct-guesses-section{background:rgba(39,174,96,.08);border:1px solid rgba(39,174,96,.25);border-radius:var(--radius);padding:14px 16px;margin-top:16px}
+  .correct-guesses-header{font-weight:900;font-size:.9rem;color:var(--green);margin-bottom:10px;text-align:center;letter-spacing:.5px}
+  .gear-card{background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);border-radius:var(--radius);
+    padding:22px 18px;text-align:center;max-width:380px;margin:0 auto 16px;}
+  .gear-type-label{font-weight:900;font-size:1rem;letter-spacing:.5px;
+    color:var(--accent);margin-bottom:14px;text-transform:uppercase;}
+  .gear-img-wrap{display:flex;justify-content:center;align-items:center;
+    min-height:130px;margin-bottom:12px;}
+  .gear-img{width:190px;height:190px;object-fit:contain;}
+  .gear-sub{color:var(--text2);font-size:.8rem;margin-top:8px;}
+  .guess-item{
+    display:flex;align-items:center;gap:10px;
+    padding:9px 15px;border-radius:9px;font-weight:800;font-size:.9rem;
+    animation:fadeUp .2s ease;
+  }
+  .guess-item.ok{background:rgba(39,174,96,.12);border:1px solid rgba(39,174,96,.25);color:var(--green)}
+  .guess-item.fail{background:rgba(192,57,43,.08);border:1px solid rgba(192,57,43,.18);color:var(--red)}
+
+  .confetti-overlay-dead{
+    position:fixed;inset:0;z-index:9990;pointer-events:none;overflow:hidden;
+  }
+  @keyframes gentleSpin{
+    0%  {transform:rotate(0deg) scale(1)}
+    20% {transform:rotate(-1.8deg) scale(1.025)}
+    45% {transform:rotate(1.5deg) scale(1.04)}
+    65% {transform:rotate(-1deg) scale(1.028)}
+    82% {transform:rotate(.5deg) scale(1.012)}
+    93% {transform:rotate(-.2deg) scale(1.004)}
+    100%{transform:rotate(0deg) scale(1)}
+  }
+  @keyframes flashWin{
+    0%{opacity:.55}
+    100%{opacity:0}
+  }
+  .flash-win{
+    position:fixed;inset:0;z-index:9989;pointer-events:none;
+    background:radial-gradient(circle at center,rgba(255,208,0,.18) 0%,rgba(39,174,96,.1) 55%,rgba(0,0,0,.45) 100%);
+    animation:flashWin .85s ease forwards;
+  }
+  @keyframes confettiFall{
+    0%{transform:translateY(0) rotate(0deg);opacity:1}
+    100%{transform:translateY(115vh) rotate(540deg);opacity:0}
+  }
+  @keyframes confettiFallR{
+    0%{transform:translateY(0) rotate(0deg);opacity:1}
+    100%{transform:translateY(115vh) rotate(-540deg);opacity:0}
+  }
+  .confetti{
+    position:absolute;
+    animation:confettiFall linear forwards;
+    border-radius:50%;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  .confetti.rev{animation-name:confettiFallR;}
+  .confetti img{
+    width:100%;height:100%;
+    object-fit:contain;
+    display:block;
+  }
+  @keyframes bounce-in{
+    0%{transform:scale(.3);opacity:0}
+    60%{transform:scale(1.1)}
+    80%{transform:scale(.95)}
+    100%{transform:scale(1);opacity:1}
+  }
+
+  .brawler-panel-btn{
+    position:fixed;top:14px;left:14px;z-index:300;
+    background:var(--bg3);border:1px solid var(--border);
+    border-radius:8px;padding:7px 10px;font-size:.72rem;font-weight:800;
+    color:var(--text2);cursor:pointer;
+    transition:color .15s,border-color .15s;user-select:none;
+    white-space:nowrap;overflow:hidden;
+  }
+  .brawler-panel-btn:hover{color:var(--accent);border-color:var(--accent);}
+  @media(max-width:480px){
+    .brawler-panel-btn span.btn-label{display:none;}
+    .brawler-panel-btn{padding:7px 9px;}
+    .stats-btn span.btn-label{display:none;}
+    .stats-btn{padding:7px 9px;}
+  }
+  .brawler-panel-overlay{
+    display:none;position:fixed;inset:0;z-index:9995;
+    background:rgba(0,0,0,.7);backdrop-filter:blur(4px);
+    overflow-y:auto;padding:24px 16px 60px;
+  }
+  .brawler-panel-overlay.open{display:block;}
+  .brawler-panel-box{
+    max-width:760px;margin:0 auto;
+    background:var(--bg2);border:1px solid var(--border);
+    border-radius:14px;padding:20px 18px;
+  }
+  .brawler-panel-title{
+    font-size:1.1rem;font-weight:900;color:var(--accent);
+    margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;
+  }
+  .brawler-panel-close{
+    cursor:pointer;font-size:1.3rem;color:var(--text2);
+    line-height:1;padding:2px 8px;border-radius:6px;transition:color .15s;
+  }
+  .brawler-panel-close:hover{color:var(--accent);}
+  .sort-toggle{
+    display:flex;gap:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:16px;
+  }
+  .sort-btn{
+    flex:1;padding:7px 0;font-size:.75rem;font-weight:800;cursor:pointer;
+    background:var(--bg3);color:var(--text2);border:none;transition:all .2s;
+    letter-spacing:.5px;text-transform:uppercase;
+  }
+  .sort-btn.active{background:rgba(255,208,0,.12);color:var(--accent);}
+  .brawler-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+  .rarity-section{margin-bottom:22px;}
+  .rarity-label{
+    font-size:.7rem;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;
+    color:var(--text2);margin-bottom:8px;padding-bottom:4px;
+    border-bottom:1px solid var(--border);
+  }
+  .brawler-chip{
+    position:relative;width:56px;height:56px;cursor:default;
+    display:flex;align-items:center;justify-content:center;
+    border-radius:12px;background:var(--bg3);border:1px solid var(--border);
+    transition:border-color .15s,transform .15s;
+  }
+  .brawler-chip:hover{border-color:var(--accent);transform:scale(1.08);}
+  .brawler-chip img{width:44px;height:44px;object-fit:contain;border-radius:50%;}
+  .brawler-chip-name{
+    position:absolute;bottom:calc(100% + 5px);left:50%;transform:translateX(-50%);
+    background:var(--bg4);border:1px solid var(--border);
+    border-radius:6px;padding:3px 8px;
+    font-size:.72rem;font-weight:800;color:var(--text);
+    white-space:nowrap;pointer-events:none;
+    opacity:0;transition:opacity .12s;z-index:10;
+  }
+  .brawler-chip:hover .brawler-chip-name{opacity:1;}
+  .map-card{
+    background:rgba(18,32,47,.85);border:1px solid var(--border);border-left:4px solid var(--accent2);
+    border-radius:var(--radius);padding:18px;margin-bottom:16px;
+    box-shadow:var(--shadow);
+  }
+  .map-viewport{
+    width:100%;max-width:420px;aspect-ratio:1/1;
+    border-radius:10px;background:var(--bg3);
+    margin:0 auto;display:block;
+  }
+  .map-canvas{
+    display:block;width:100%;height:100%;
+    border-radius:10px;
+    -webkit-user-select:none;user-select:none;
+  }
+  .stats-btn{
+    position:fixed;top:14px;right:14px;z-index:300;
+    display:inline-flex;align-items:center;gap:5px;
+    padding:7px 13px;border-radius:8px;cursor:pointer;
+    font-family:'Nunito',sans-serif;font-size:.78rem;font-weight:800;
+    background:var(--bg3);color:var(--text2);border:1px solid var(--border);
+    transition:color .15s,border-color .15s;user-select:none;
+  }
+  .stats-btn:hover{color:var(--accent);border-color:var(--accent);}
+  .stats-overlay{
+    display:none;position:fixed;inset:0;z-index:9997;
+    background:rgba(0,0,0,.75);backdrop-filter:blur(4px);
+    overflow-y:auto;padding:24px 16px 60px;
+  }
+  .stats-overlay.open{display:block;}
+  .stats-box{
+    max-width:560px;margin:0 auto;
+    background:var(--bg2);border:1px solid var(--border);
+    border-radius:14px;padding:22px 20px;
+  }
+  .stats-title{
+    font-family:'Lilita One',cursive;font-size:1.2rem;color:var(--accent);
+    margin-bottom:4px;display:flex;justify-content:space-between;align-items:center;
+  }
+  .stats-close{cursor:pointer;font-size:1.3rem;color:var(--text2);padding:2px 8px;transition:color .15s;}
+  .stats-close:hover{color:var(--accent);}
+  .stats-empty{color:var(--text2);font-size:.88rem;text-align:center;padding:28px 0;font-weight:700;}
+  .stats-row{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:13px 4px;border-bottom:1px solid var(--border);
+  }
+  .stats-row:last-child{border-bottom:none;}
+  .stats-label{font-size:.88rem;font-weight:700;color:var(--text2);}
+  .stats-val{font-family:'Lilita One',cursive;font-size:1.4rem;color:var(--accent);}
+  .report-btn{
+    position:fixed;bottom:14px;right:16px;z-index:500;
+    background:rgba(18,32,47,.6);border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;width:26px;height:26px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:.85rem;cursor:pointer;color:rgba(255,255,255,.25);
+    transition:color .2s,border-color .2s;
+  }
+  .report-btn:hover{color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.2)}
+  .report-tip{
+    position:fixed;bottom:46px;right:16px;z-index:501;
+    background:var(--bg4);border:1px solid var(--border);border-radius:8px;
+    padding:10px 14px;font-size:.76rem;max-width:240px;color:var(--text2);
+    font-weight:700;line-height:1.5;display:none;pointer-events:none;
+    box-shadow:var(--shadow);text-align:left;
+  }
+  .report-btn:hover + .report-tip{display:block}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes pulse{0%,100%{box-shadow:0 0 6px var(--accent)}50%{box-shadow:0 0 14px var(--accent)}}
+
+  @media(max-width:540px){
+    .tab{min-width:72px;padding:11px 12px}
+    .tab-emoji{font-size:1.3rem}
+    .fact-text{font-size:.95rem}
+    .stats-table thead th{font-size:.58rem;padding:8px 6px;}
+    .stats-table tbody td{font-size:.72rem;height:44px;}
+    .cell-inner{padding:6px 6px;}
+    .tbl-icon{width:34px;height:34px;}
+  }
+  .model-card{max-width:600px;margin:0 auto 16px;}
+  .model-viewport{
+    display:block;
+    width:100%;aspect-ratio:1/1;
+    max-width:420px;margin:0 auto;
+    border-radius:10px;background:#0d1f32;
+    cursor:grab;touch-action:none;
+  }
+  .model-viewport:active{cursor:grabbing;}
+  .model-stage-label{
+    text-align:center;font-size:.78rem;font-weight:800;
+    color:var(--text2,#6e8fa8);margin-bottom:10px;letter-spacing:.5px;text-transform:uppercase;
+  }
+  .model-hint{color:var(--text2,#6e8fa8);font-size:.72rem;text-align:center;margin-top:8px;font-weight:700;}
+
+
+  .hint-pill-locked{position:relative;cursor:default;}
+  .hint-pill-locked::after{
+    content:attr(data-tip);
+    position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);
+    background:#223550;border:1px solid #1e3248;border-radius:6px;
+    padding:3px 9px;font-size:.72rem;font-weight:700;color:#e8edf4;
+    white-space:nowrap;pointer-events:none;
+    opacity:0;transition:opacity .15s;z-index:200;
+  }
+  .hint-pill-locked:hover::after{opacity:1;}
+</style>
 </head>
 <body>
 <div class="bg-base"></div>
@@ -14,6 +542,17 @@
 <div id="app"><div style="display:flex;align-items:center;justify-content:center;height:100vh;color:#ffd000;font-family:sans-serif;font-size:1.2rem">⚡ Loading BSdle…</div></div>
 <script>
 let BRAWLERS = {};
+(()=>{const s=document.createElement('style');s.textContent=`
+  body.inf{--accent:#e74c3c;--accent2:#ff6b6b;}
+  body.inf .header-logo-img{display:none!important;}
+  body.inf .header-logo-wasabi{display:inline!important;vertical-align:middle;height:clamp(2.4rem,7vw,3.8rem);width:auto;filter:drop-shadow(0 0 12px rgba(255,208,0,.5));}
+  .header-logo-wasabi{display:none;}
+  .inf-entry-btn{display:block;width:100%;padding:14px;margin-top:12px;background:linear-gradient(135deg,#c0392b,#e74c3c);border:none;border-radius:var(--radius);cursor:pointer;font-family:'Lilita One',cursive;font-size:1rem;color:#fff;box-shadow:0 4px 18px rgba(192,57,43,.4);transition:opacity .2s;}
+  .inf-entry-btn:hover{opacity:.85;}
+  .inf-progress{text-align:center;font-size:.82rem;font-weight:800;color:var(--text2);margin-bottom:10px;}
+  .inf-progress span{color:var(--accent);}
+  body.inf .bg-solid{background:rgba(34,11,11,.72)!important;}
+`;document.head.appendChild(s);})();
 
 let MAPS = {};
 
@@ -22,7 +561,11 @@ function _initGame([stats, maps]){
   MAPS = maps;
   ANSWERS = getDailyAnswers();
   loadState();
-  MODES.forEach(m=>{ _uiWon[m]=m!=='classic'&&!!(S.modes[m]?.won); });
+  if(S.state==='infinite'){
+    document.body.classList.add('inf');
+    /* Note: infinite pools are rebuilt as-needed by _getIM() based on dayIndex */
+  }
+  MODES.forEach(m=>{ _uiWon[m]=!!(S.modes[m]?.won); });
   render();
 }
 
@@ -84,7 +627,7 @@ const COL_INFO = {
   full_damage:'Max damage of one normal attack — normal hitbox, no movement, no buffs. Per second for continuous attackers (Amber, Moe…).',
   projectiles:'Number of projectiles per attack, or per second for continuous attackers',
   range:'Attack range category in tiles',
-  damage_type:'single: 1 target | spread: multiple projectiles | pierce: goes through enemies | splash: AoE (explosion, through Mina shield)',
+  damage_type:'single: 1 target | spread: multiple projectiles | pierce: goes through enemies | splash: AoE (explosion, through walls)',
   reload_speed:'Reload speed category. Arrow ↑ = faster reload (lower time)',
   ammo:'Max ammo capacity',
   ult_charge:'Number of attacks needed to fully charge the super',
@@ -206,7 +749,7 @@ function getDailyGearKey(){
 
 function speedLabel(v){
   if(v>=820)return'Very Fast';if(v===770)return'Fast';
-  if(v===720)return'Normal';if(v===650||v===620)return'Slow';return'Very Slow';
+  if(v===720||v===680)return'Normal';if(v===650||v===620)return'Slow';return'Very Slow';
 }
 function rangeLabel(v){if(v>9)return'Very Long';if(v>=7)return'Long';if(v>=4)return'Normal';return'Short'}
 function reloadLabel(v){
@@ -322,6 +865,12 @@ function startConfetti(mode){
   document.body.appendChild(overlay);
   _spawnBatch(overlay);
   _confettiIntervals[mode]=setInterval(()=>_spawnBatch(overlay),700);
+  /* In infinite mode: stop generating new confetti after 1s if not all found */
+  if(S.state==='infinite'){const im=_getIM(mode);if(im.idx<im.pool.length)setTimeout(()=>{
+    if(_confettiIntervals[mode]){clearInterval(_confettiIntervals[mode]);delete _confettiIntervals[mode];}
+    /* Let existing confetti animations finish (~4.5s max) before removing overlay */
+    setTimeout(()=>{const old=document.getElementById('confetti-'+mode);if(old)old.remove();},4500);
+  },1000);}
 }
 
 function stopConfetti(mode){
@@ -353,22 +902,37 @@ function loadState(){
   let raw=null;
   try{raw=JSON.parse(localStorage.getItem('brawldle_v3'))}catch(e){}
   if(!raw||raw.date!==TODAY){
-    S={date:TODAY,activeMode:'classic',
+    S={date:TODAY,activeMode:'classic',state:'normal',infinite:{},
       modes:Object.fromEntries(MODES.map(m=>[m,{guesses:[],won:false,wrong:0,hintsOn:true}]))};
   }else{
     S=raw;
+    if(!S.state)S.state='normal';
+    if(!S.infinite)S.infinite={};
     MODES.forEach(m=>{if(S.modes[m].hintsOn===undefined)S.modes[m].hintsOn=true});
   }
   let sr=null;
   try{sr=JSON.parse(localStorage.getItem('brawldle_streaks'))}catch(e){}
   S.streaks=sr||Object.fromEntries(MODES.map(m=>[m,{cur:0,best:0}]));
   MODES.forEach(m=>{if(!S.streaks[m])S.streaks[m]={cur:0,best:0}});
+  
+  /* Check for streak reset (2+ days without playing) */
+  let lastPlayDate=null;
+  try{lastPlayDate=localStorage.getItem('brawldle_lastPlayDate')}catch(e){}
+  if(lastPlayDate){
+    const lastDi=Math.floor(new Date(lastPlayDate).getTime()/86400000);
+    const currentDi=dayIndex();
+    if(currentDi-lastDi>=2){
+      /* 2+ days passed: reset all streaks */
+      MODES.forEach(m=>{S.streaks[m].cur=0});
+    }
+  }
 }
 function saveState(){
   const{streaks,...save}=S;
   try{
     localStorage.setItem('brawldle_v3',JSON.stringify(save));
     localStorage.setItem('brawldle_streaks',JSON.stringify(S.streaks));
+    localStorage.setItem('brawldle_lastPlayDate',TODAY);
   }catch(e){}
 }
 const PERF_KEY='bsdle_perf_v1';
@@ -386,23 +950,156 @@ function _recordPerf(mode,guesses,won){
   _savePerf(p);
 }
 
+function allNormalWon(){return MODES.every(m=>S.modes[m]?.won);}
+function enterInfinite(){S.state='infinite';document.body.classList.add('inf');saveState();render();}
+function exitInfinite(){S.state='normal';document.body.classList.remove('inf');saveState();render();}
+function toggleInfinite(){if(S.state==='infinite')exitInfinite();else if(allNormalWon())enterInfinite();}
+function _infPool(mode){
+  const all=Object.keys(BRAWLERS);let pool=[];
+  if(mode==='classic')pool=all.filter(b=>BRAWLERS[b].Stats);
+  else if(mode==='gear')pool=all.filter(b=>BRAWLERS[b].Gears&&Object.keys(BRAWLERS[b].Gears).length>0);
+  else if(mode==='fact')pool=all.filter(b=>BRAWLERS[b].Fact?.length>0);
+  else if(mode==='voiceline')pool=all.filter(b=>BRAWLERS[b].Voicelines?.length>0);
+  else if(mode==='emoji')pool=all.filter(b=>BRAWLERS[b].Emojis?.length>0);
+  else if(mode==='image')pool=all.filter(b=>BRAWLERS[b].Images);
+  else if(mode==='model')pool=all.filter(b=>BRAWLERS[b].Model&&Object.keys(BRAWLERS[b].Model).length>0);
+  else if(mode==='map')pool=Object.keys(MAPS);
+  return seededShuffle([...pool],dayIndex()*31337^(MODES.indexOf(mode)*0x9e3779b9>>>0));
+}
+function _getIM(mode){
+  if(!S.infinite)S.infinite={};const di=dayIndex();
+  /* Only (re)build pool if BRAWLERS/MAPS are loaded */
+  const poolReady=Object.keys(BRAWLERS).length>0;
+  if((!S.infinite[mode]||S.infinite[mode]._di!==di)&&poolReady)
+    S.infinite[mode]={_di:di,pool:_infPool(mode),idx:0,guesses:[],wrong:0,totalWrong:0,hintsOn:true,resetGuessesNext:false};
+  if(!S.infinite[mode])S.infinite[mode]={_di:di,pool:[],idx:0,guesses:[],wrong:0,totalWrong:0,hintsOn:true,resetGuessesNext:false};
+  return S.infinite[mode];
+}
+function getModeSt(mode){
+  if(S.state==='infinite'){const im=_getIM(mode);
+    return{guesses:im.guesses,wrong:im.wrong,won:im.idx>=im.pool.length&&im.pool.length>0,hintsOn:im.hintsOn};}
+  return S.modes[mode];
+}
+function getAnswer(mode){
+  if(S.state==='infinite'){const im=_getIM(mode);return im.pool[im.idx]||null;}
+  return ANSWERS[mode];
+}
 function getNextMode(cur){
-  const idx=MODES.indexOf(cur);
-  for(let i=1;i<=MODES.length;i++){
-    const m=MODES[(idx+i)%MODES.length];
-    if(!S.modes[m].won)return m;
+  if(S.state==='infinite'){
+    const idx=MODES.indexOf(cur);
+    for(let i=1;i<MODES.length;i++){const m=MODES[idx+i];if(!m)break;const im=_getIM(m);if(im.pool.length>0)return m;}
+    return null;
   }
+  const idx=MODES.indexOf(cur);
+  for(let i=1;i<MODES.length;i++){const m=MODES[idx+i];if(!m)return null;if(!S.modes[m].won)return m;}
   return null;
 }
 
+function _guessInfinite(mode,name){
+  const im=_getIM(mode);if(im.idx>=im.pool.length)return;
+  /* Reset guesses for new round if we moved to next */
+  if(im.resetGuessesNext){im.guesses=[];im.wrong=0;im.resetGuessesNext=false;}
+  const answer=im.pool[im.idx];
+  if(!answer||im.guesses.some(g=>g.name===name))return;
+  const correct=name===answer;
+  
+  /* For classic mode: compute comparisons like normal mode */
+  if(mode==='classic'){
+    const gb=BRAWLERS[name];
+    const tb=BRAWLERS[answer];
+    if(!gb||!tb){console.error('Classic infinite: Invalid brawler',{name,gb,answer,tb});return;}
+    const cols=getDailyCols();
+    const cmp={};
+    cols.forEach(s=>{
+      const gv=getStatValue(gb,s),tv=getStatValue(tb,s);
+      cmp[s]=(gv!==null&&gv!==undefined&&tv!==null&&tv!==undefined)
+        ?cmpStat(s,gv,tv):{cls:'wrong',arrow:''};
+    });
+    im.guesses.push({name,cmp});
+    const newIdx=im.guesses.length-1;
+    
+    /* Update state based on correctness */
+    if(!correct){
+      im.wrong++;
+    } else {
+      /* Accumulate errors and move to next */
+      im.totalWrong += im.wrong;
+      im.idx++;
+      im.wrong=0;
+      im.guesses=[];  /* Clear immediately for table reset */
+      im.hintsOn=true;
+      im.resetGuessesNext=false;  /* Already cleared guesses */
+    }
+    saveState();  /* Save before creating UI */
+    
+    _classicAnims.set(newIdx, {done:false, g:{name,cmp}, cols});
+    const dur=(cols.length+1)*500+400;
+    
+    /* Create table if needed */
+    if(!document.querySelector('.stats-table')){
+      _skipReapply=true;
+      render();
+      _skipReapply=false;
+    }
+    
+    /* Cleanup animation after duration */
+    setTimeout(()=>{
+      const a=_classicAnims.get(newIdx);if(a)a.done=true;
+      const animTr=document.querySelector(`tr[data-classic-ri="${newIdx}"]`);
+      if(animTr){
+        animTr.removeAttribute('data-classic-ri');
+        animTr.querySelectorAll('td').forEach(td=>{
+          td.classList.remove('cell-anim','cell-hidden');
+          td.style.animationDelay='';
+          td.style.opacity='1';
+        });
+      }
+      /* If correct, wait for all animations and show victory */
+      if(correct){
+        const _waitAllDone=()=>{
+          const allDone=[..._classicAnims.values()].every(a=>a.done);
+          if(!allDone){setTimeout(_waitAllDone,50);return;}
+          if(S.activeMode!==mode)return;
+          /* Clear animations for fresh table on next round */
+          _classicAnims.clear();
+          const banner=document.getElementById('classic-banner');
+          if(banner)banner.innerHTML=winBanner('classic');
+          _recordPerf(mode,1,true);  /* Record as single-answer game */
+          fireVictory(mode);  /* Handles animations, confetti, _uiWon */
+          render();
+        };
+        setTimeout(_waitAllDone,200);
+      }
+    }, dur);
+    
+    _appendClassicRow(newIdx);
+  } else {
+    /* Other modes: simple structure */
+    im.guesses.push({name,correct});
+    if(!correct){im.wrong++;saveState();render();return;}
+    /* Correct guess: move to next */
+    im.idx++;im.guesses=[];im.wrong=0;im.hintsOn=true;saveState();
+    /* Victory feedback */
+    const fl=document.createElement('div');fl.className='flash-win';document.body.appendChild(fl);
+    setTimeout(()=>fl.remove(),1000);
+    document.body.style.animation='gentleSpin 1.1s ease-in-out';
+    setTimeout(()=>{document.body.style.animation=''},800);
+    startConfetti(mode);
+    render();
+  }
+}
 function guess(mode,name){
+  if(S.state==='infinite')return _guessInfinite(mode,name);
   const ms=S.modes[mode];
   if(ms.won)return;
   if(ms.guesses.some(g=>g.name===name))return;
-  const correct=name===ANSWERS[mode];
+  const correct=name===getAnswer(mode);
 
   if(mode==='classic'){
-    const gb=BRAWLERS[name],tb=BRAWLERS[ANSWERS[mode]];
+    const gb=BRAWLERS[name];
+    const ta=getAnswer('classic');
+    const tb=BRAWLERS[ta];
+    if(!gb||!tb){console.error('Classic: Invalid brawler',{name,gb,answer:ta,tb});return;}
     const cols=getDailyCols();
     const cmp={};
     cols.forEach(s=>{
@@ -523,29 +1220,30 @@ function _reapplyClassicAnims(){
     if(!anim.done)_appendClassicRow(ri);
   }
 }
-function toggleHints(mode){S.modes[mode].hintsOn=!S.modes[mode].hintsOn;saveState();render()}
+function toggleHints(mode){
+  if(S.state==='infinite'){const im=_getIM(mode);im.hintsOn=!im.hintsOn;}
+  else S.modes[mode].hintsOn=!S.modes[mode].hintsOn;
+  saveState();render();
+}
 function switchMode(mode){
   stopAllConfetti();
-  S.activeMode=mode;
+  S.activeMode=mode;saveState();
   render();
-  if(S.modes[mode]?.won){
-    if(mode==='classic'){
-      const allDone=[..._classicAnims.values()].every(a=>a.done);
-      _uiWon[mode]=allDone;
-      if(allDone)startConfetti(mode);
-    } else {
-      _uiWon[mode]=true;
-      startConfetti(mode);
-    }
-  } else {
-    _uiWon[mode]=false;
-  }
+  if(S.state==='infinite'){const im=_getIM(mode);if(im.idx>=im.pool.length&&im.pool.length>0)startConfetti(mode);}
+  else if(S.modes[mode]?.won){
+    if(mode==='classic'){const allDone=[..._classicAnims.values()].every(a=>a.done);_uiWon[mode]=allDone;if(allDone)startConfetti(mode);}
+    else{_uiWon[mode]=true;startConfetti(mode);}
+  }else{_uiWon[mode]=false;}
 }
 
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
 
 function searchBox(mode){
-  const disabled=S.modes[mode].won?'disabled':'';
+  const ms=getModeSt(mode);
+  const modeWon=ms.won;
+  /* In infinite, also disable if all brawlers found */
+  const allFound=S.state==='infinite'&&(()=>{const im=_getIM(mode);return im.idx>=im.pool.length&&im.pool.length>0;})();
+  const disabled=modeWon||allFound?'disabled':'';
   return`<div class="search-wrap">
     <input id="inp-${mode}" class="search-input" ${disabled}
       type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off"
@@ -560,7 +1258,9 @@ function mapModeIcon(mapName){
   return m?'_mods/'+m.toLowerCase().replace(/ /g,'_')+'.png':'';
 }
 function guessList(mode){
-  const ms=S.modes[mode];if(!ms.guesses.length)return'';
+  const ms=getModeSt(mode);if(!ms.guesses.length)return'';
+  /* Classic mode shows guesses in table, not in guessList */
+  if(mode==='classic')return'';
   return`<div class="guess-list">${[...ms.guesses].reverse().map(g=>{
     let icoHtml='';
     if(mode==='map'){
@@ -573,38 +1273,108 @@ function guessList(mode){
     return`<div class="guess-item ${g.correct?'ok':'fail'}">${icoHtml}${g.correct?'✅':'❌'} ${esc(g.name)}</div>`;
   }).join('')}</div>`;
 }
+function correctGuessList(mode){
+  const im=_getIM(mode);
+  if(S.state!=='infinite'||im.idx===0)return'';
+  const correctCount=im.idx;
+  const totalPool=im.pool.length;
+  const correctBrawlers=im.pool.slice(0,im.idx);
+  return`<div class="correct-guesses-section">
+    <div class="correct-guesses-header">🏆 Found: <strong>${correctCount}/${totalPool}</strong></div>
+    <div class="guess-list">${correctBrawlers.map(name=>{
+      let icoHtml='';
+      if(mode==='map'){
+        const p=mapModeIcon(name);
+        icoHtml=p?`<img class="guess-icon" src="${p}" alt="">`:'';
+      } else {
+        const ic=brawlerIcon(name);
+        icoHtml=ic?`<img class="guess-icon" src="${ic}" alt="">`:'';
+      }
+      return`<div class="guess-item ok">${icoHtml}${esc(name)}</div>`;
+    }).join('')}</div>
+  </div>`;
+}
 function winBanner(mode){
+  if(S.state==='infinite'){
+    const im=_getIM(mode);
+    if(im.idx>=im.pool.length&&im.pool.length>0){
+      const lastBrawler=im.pool[im.pool.length-1];
+      let lastInfo='';
+      /* Show last found brawler info based on mode */
+      if(mode==='classic'){
+        const gb=BRAWLERS[lastBrawler];
+        if(gb){
+          const cols=getDailyCols();
+          const stats=cols.map(s=>{
+            const v=getStatValue(gb,s);
+            return`<div style="font-size:.75rem;color:var(--text2)">${COL_LABELS[s]||s}: <strong>${fmt(s,v)}</strong></div>`;
+          }).join('');
+          lastInfo=`<div style="margin-top:12px;padding:8px;background:rgba(0,0,0,.2);border-radius:6px;max-height:120px;overflow-y:auto;font-size:.8rem">${stats}</div>`;
+        }
+      } else if(mode==='gear'){
+        const gb=BRAWLERS[lastBrawler];
+        if(gb&&gb.Gears){
+          const gearKey=getDailyGearKey();
+          const gearPath=gb.Gears[gearKey];
+          lastInfo=`<div style="margin-top:8px">${gearPath?pmImg(gearPath,'','max-width:100px;max-height:100px'):'(No gear image)'}</div>`;
+        }
+      } else if(mode==='fact'){
+        const gb=BRAWLERS[lastBrawler];
+        if(gb&&gb.Fact){
+          const facts=gb.Fact||[];
+          const raw=facts[dayIndex()%facts.length]||'';
+          const text=raw.replace(/\*Brawler\*/g,`<strong>${esc(lastBrawler)}</strong>`);
+          lastInfo=`<div style="margin-top:8px;font-size:.85rem;color:var(--text2);font-style:italic">"${text}"</div>`;
+        }
+      } else if(mode==='emoji'){
+        const gb=BRAWLERS[lastBrawler];
+        if(gb&&gb.Emojis){
+          const emojis=gb.Emojis||[];
+          lastInfo=`<div style="margin-top:8px;font-size:2rem">${emojis.join(' ')}</div>`;
+        }
+      }
+      const next=getNextMode(mode);
+      const nextBtn=next?`<button class="next-btn" onclick="switchMode('${next}')">Continue → ${MODE_META[next].emoji} ${MODE_META[next].label}</button>`:'<p style="color:var(--text2);font-size:.82rem;text-align:center;margin-top:8px">All modes complete!</p>';
+      return`<div class="banner banner-win"><h2>🎉 All ${im.pool.length} found!</h2><p style="color:var(--text2);margin-top:8px;font-size:.9rem">Great job! Last brawler: <strong>${esc(lastBrawler)}</strong>${lastInfo}</p>${nextBtn}</div>`;
+    }
+    return'';
+  }
   const ms=S.modes[mode];
   if(mode==='classic'&&ms.won&&[..._classicAnims.values()].some(a=>!a.done))return'';
-  const a=ANSWERS[mode];
+  const a=getAnswer(mode);
   const label=mode==='map'?'The map was':'The brawler was';
   if(ms.won){
     const next=getNextMode(mode);
-    const btn=next?`<button class="next-btn" onclick="switchMode('${next}')">Next Game → ${MODE_META[next].emoji} ${MODE_META[next].label}</button>`:'';
+    const allWon=allNormalWon();
+    const infBtn=allWon&&!next?`<button class="inf-entry-btn" onclick="enterInfinite()">Want more? Eat wasabi 🌶️</button>`:'';
+    const btn=next?`<button class="next-btn" onclick="switchMode('${next}')">Next Game → ${MODE_META[next].emoji} ${MODE_META[next].label}</button>`:infBtn;
     return`<div class="banner banner-win"><h2>🎉 Correct!</h2>
       <p>${label} <strong>${esc(a)}</strong> — found in ${ms.guesses.length} guess${ms.guesses.length>1?'es':''}!</p>${btn}</div>`;
   }
   return'';
 }
 function hintsToggleBtn(mode){
-  const ms=S.modes[mode];if(ms.won)return'';
+  const ms=getModeSt(mode);if(ms.won)return'';
   const on=ms.hintsOn;
   return`<div class="hints-bar"><button class="hints-toggle ${on?'on':''}" onclick="toggleHints('${mode}')">${on?'💡 Hints ON':'🙈 Hints OFF'}</button></div>`;
 }
 /* statsBtn is now a fixed button rendered in render() HTML */
 
 function buildClassic(){
-  const ms=S.modes.classic;
+  const ms=getModeSt('classic');
   const cols=getDailyCols();
   const rotCols=['Gender',...cols.slice(1).map(c=>COL_LABELS[c]||c)];
 
   let h=`<div class="mode-header">
     <div class="mode-title">🔃 Classic</div>
-    <div id="classic-guess-count" style="color:var(--text2);font-size:.8rem;font-weight:700">${ms.guesses.length} guess${ms.guesses.length!==1?'es':''}</div>
+    <div id="classic-guess-count" style="color:var(--text2);font-size:.8rem;font-weight:700">${ms.guesses.length} guess${ms.guesses.length!==1?'es':''}`;
+  if(S.state==='infinite'){const _im=_getIM('classic');h+=` · ❌ ${_im.totalWrong||0}`;}  /* Show total errors accumulated */
+  h+=`</div>
   </div>
   <div class="rotation-info">📊 Today's stats: <b>${rotCols.join('</b> · <b>')}</b></div>`;
   h+=`<div id="classic-banner">${winBanner('classic')}</div>`;
   h+=searchBox('classic');
+  
 
   if(ms.guesses.length){
     const thCells=cols.map(s=>{
@@ -628,6 +1398,9 @@ function buildClassic(){
 
     h+=`<div class="table-outer"><div class="table-wrap" id="ctw"><table class="stats-table"><thead><tr><th>Brawler</th>${thCells.join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div></div>`;
   }
+  if(S.state==='infinite'){const _im=_getIM('classic');if(_im.idx<_im.pool.length&&_im.pool.length>0)h+=`<div class="inf-progress">🌶️ <span>${_im.idx}</span>/${_im.pool.length}</div>`;}
+
+  if(S.state==='infinite')h+=correctGuessList('classic');
   return h;
 }
 
@@ -648,8 +1421,10 @@ function _hintPill(label,val,revealed,at,w){
   return`<span class="hint-pill shown">${label}: ${icon}${esc(val)}</span>`;
 }
 function buildGear(){
-  const ms=S.modes.gear;
-  const a=ANSWERS.gear;
+  const ms=getModeSt('gear');
+  let a=getAnswer('gear');
+  /* In infinite mode, if all found, show last brawler */
+  if(!a&&S.state==='infinite'){const im=_getIM('gear');if(im.idx>=im.pool.length&&im.pool.length>0)a=im.pool[im.pool.length-1];}
   const brawler=BRAWLERS[a];
   const gearKey=getDailyGearKey();
   const gearPath=brawler&&brawler.Gears?brawler.Gears[gearKey]:'';
@@ -669,6 +1444,7 @@ function buildGear(){
     ${w>0?`<div class="wrong-badge">❌ ${w} wrong</div>`:''}
   </div>`;
   html+=winBanner('gear');
+  if(S.state==='infinite'){const _im=_getIM('gear');if(_im.idx<_im.pool.length&&_im.pool.length>0)html+=`<div class="inf-progress">🌶️ <span>${_im.idx}</span>/${_im.pool.length}</div>`;}
   html+=`<div class="gear-card">
     <div class="gear-type-label">${esc(label)}</div>
     <div class="gear-img-wrap">${gearPath?pmImg(gearPath,'gear-img',''):'<div class="img-placeholder">No image</div>'}</div>
@@ -677,12 +1453,15 @@ function buildGear(){
   html+=hintsToggleBtn('gear');
   html+=searchBox('gear');
   html+=guessList('gear');
+  if(S.state==='infinite')html+=correctGuessList('gear');
   return html;
 }
 
 function buildFact(){
-  const ms=S.modes.fact;
-  const a=ANSWERS.fact;
+  const ms=getModeSt('fact');
+  let a=getAnswer('fact');
+  /* In infinite mode, if all found, show last brawler */
+  if(!a&&S.state==='infinite'){const im=_getIM('fact');if(im.idx>=im.pool.length&&im.pool.length>0)a=im.pool[im.pool.length-1];}
   const brawler=BRAWLERS[a];
   const facts=brawler.Fact||[];
   const raw=facts[dayIndex()%facts.length]||'';
@@ -702,19 +1481,23 @@ function buildFact(){
     ${w>0?`<div class="wrong-badge">❌ ${w} wrong</div>`:''}
   </div>`;
   html+=winBanner('fact');
+  if(S.state==='infinite'){const _im=_getIM('fact');if(_im.idx<_im.pool.length&&_im.pool.length>0)html+=`<div class="inf-progress">🌶️ <span>${_im.idx}</span>/${_im.pool.length}</div>`;}
   html+=`<div class="fact-card"><div class="fact-text">${text}</div>
     ${hints?`<div class="hints-row">${hints}</div>`:''}
   </div>`;
   html+=hintsToggleBtn('fact');
   html+=searchBox('fact');
   html+=guessList('fact');
+  if(S.state==='infinite')html+=correctGuessList('fact');
   return html;
 }
 
 function buildVoiceline(){
-  const ms=S.modes.voiceline;
-  const a=ANSWERS.voiceline;
-  const vls=BRAWLERS[a].Voicelines||[];
+  const ms=getModeSt('voiceline');
+  let a=getAnswer('voiceline');
+  /* In infinite mode, if all found, show last brawler */
+  if(!a&&S.state==='infinite'){const im=_getIM('voiceline');if(im.idx>=im.pool.length&&im.pool.length>0)a=im.pool[im.pool.length-1];}
+  const vls=BRAWLERS[a]?.Voicelines||[];
   const vl=vls[dayIndex()%vls.length]||{};
   const w=ms.wrong;
   const audioUnlocked=w>=3||ms.won;
@@ -725,6 +1508,7 @@ function buildVoiceline(){
     ${w>0?`<div class="wrong-badge">❌ ${w} wrong</div>`:''}
   </div>`;
   html+=winBanner('voiceline');
+  if(S.state==='infinite'){const _im=_getIM('voiceline');if(_im.idx<_im.pool.length&&_im.pool.length>0)html+=`<div class="inf-progress">🌶️ <span>${_im.idx}</span>/${_im.pool.length}</div>`;}
   html+=`<div class="vl-card">
     <div class="vl-label">🔊 Voiceline</div>
     <div class="vl-text">"${esc(vl.text||'')}"</div>
@@ -735,12 +1519,16 @@ function buildVoiceline(){
   </div>`;
   html+=searchBox('voiceline');
   html+=guessList('voiceline');
+  if(S.state==='infinite')html+=correctGuessList('voiceline');
   return html;
 }
 
 function buildEmoji(){
-  const ms=S.modes.emoji;
-  const emojis=BRAWLERS[ANSWERS.emoji].Emojis||[];
+  const ms=getModeSt('emoji');
+  let a=getAnswer('emoji');
+  /* In infinite mode, if all found, show last brawler */
+  if(!a&&S.state==='infinite'){const im=_getIM('emoji');if(im.idx>=im.pool.length&&im.pool.length>0)a=im.pool[im.pool.length-1];}
+  const emojis=BRAWLERS[a]?.Emojis||[];
   const w=ms.wrong;
   const count=Math.min(w+1,emojis.length);
   let html=`<div class="mode-header">
@@ -748,18 +1536,23 @@ function buildEmoji(){
     ${w>0?`<div class="wrong-badge">❌ ${w} wrong</div>`:''}
   </div>`;
   html+=winBanner('emoji');
+  if(S.state==='infinite'){const _im=_getIM('emoji');if(_im.idx<_im.pool.length&&_im.pool.length>0)html+=`<div class="inf-progress">🌶️ <span>${_im.idx}</span>/${_im.pool.length}</div>`;}
   html+=`<div class="emoji-card">
     <div class="emoji-display">${emojis.slice(0,count).join(' ')}</div>
     <div class="emoji-sub">${count} / ${emojis.length} emojis revealed — new emoji on each wrong guess</div>
   </div>`;
   html+=searchBox('emoji');
   html+=guessList('emoji');
+  if(S.state==='infinite')html+=correctGuessList('emoji');
   return html;
 }
 
 function buildImage(){
-  const ms=S.modes.image;
-  const imgs=BRAWLERS[ANSWERS.image].Images||{};
+  const ms=getModeSt('image');
+  let a=getAnswer('image');
+  /* In infinite mode, if all found, show last brawler */
+  if(!a&&S.state==='infinite'){const im=_getIM('image');if(im.idx>=im.pool.length&&im.pool.length>0)a=im.pool[im.pool.length-1];}
+  const imgs=BRAWLERS[a]?.Images||{};
   const w=ms.wrong;
   const showBoth=w>=3||ms.won;
     const orderFixed=imgs.order===true;
@@ -776,6 +1569,7 @@ function buildImage(){
     ${w>0?`<div class="wrong-badge">❌ ${w} wrong</div>`:''}
   </div>`;
   html+=winBanner('image');
+  if(S.state==='infinite'){const _im=_getIM('image');if(_im.idx<_im.pool.length&&_im.pool.length>0)html+=`<div class="inf-progress">🌶️ <span>${_im.idx}</span>/${_im.pool.length}</div>`;}
   html+=`<div class="img-card"><div class="img-grid">
     <div><div class="img-slot">${slot(first)}</div><div class="img-label">${first}</div></div>
     ${showBoth
@@ -785,6 +1579,7 @@ function buildImage(){
   </div></div>`;
   html+=searchBox('image');
   html+=guessList('image');
+  if(S.state==='infinite')html+=correctGuessList('image');
   return html;
 }
 
@@ -795,8 +1590,10 @@ function _getModelStage(w,won){
   return'1';           /* 0-2 wrong: extreme low poly */
 }
 function buildModel(){
-  const ms=S.modes.model;
-  const a=ANSWERS.model;
+  const ms=getModeSt('model');
+  let a=getAnswer('model');
+  /* In infinite mode, if all found, show last brawler */
+  if(!a&&S.state==='infinite'){const im=_getIM('model');if(im.idx>=im.pool.length&&im.pool.length>0)a=im.pool[im.pool.length-1];}
   const brawler=BRAWLERS[a];
   const w=ms.wrong;
   const won=ms.won;
@@ -810,6 +1607,7 @@ function buildModel(){
     ${w>0?`<div class="wrong-badge">❌ ${w} wrong</div>`:''}
   </div>`;
   html+=winBanner('model');
+  if(S.state==='infinite'){const _im=_getIM('model');if(_im.idx<_im.pool.length&&_im.pool.length>0)html+=`<div class="inf-progress">🌶️ <span>${_im.idx}</span>/${_im.pool.length}</div>`;}
   const canvasId='model-canvas-'+Date.now();
   /* Always include canvas even for stage 1 (w=0) so viewer initialises immediately */
   html+=`<div class="model-card">
@@ -824,11 +1622,14 @@ function buildModel(){
   </div>`;
   html+=searchBox('model');
   html+=guessList('model');
+  if(S.state==='infinite')html+=correctGuessList('model');
   return html;
 }
 function buildMap(){
-  const ms=S.modes.map;
-  const mapName=ANSWERS.map;
+  const ms=getModeSt('map');
+  let mapName=getAnswer('map');
+  /* In infinite mode, if all found, show last map */
+  if(!mapName&&S.state==='infinite'){const im=_getIM('map');if(im.idx>=im.pool.length&&im.pool.length>0)mapName=im.pool[im.pool.length-1];}
   const mapData=MAPS[mapName];
   if(!mapData)return'<p style="color:var(--text2)">Map data missing.</p>';
   const w=ms.wrong;
@@ -852,6 +1653,7 @@ function buildMap(){
     ${w>0?`<div class="wrong-badge">❌ ${w} wrong</div>`:''}
   </div>`;
   html+=winBanner('map');
+  if(S.state==='infinite'){const _im=_getIM('map');if(_im.idx<_im.pool.length&&_im.pool.length>0)html+=`<div class="inf-progress">🌶️ <span>${_im.idx}</span>/${_im.pool.length}</div>`;}
   const canvasId='map-canvas-'+Date.now();
   html+=`<div class="map-card">
     <canvas class="map-viewport map-canvas" id="${canvasId}"
@@ -866,15 +1668,19 @@ function buildMap(){
   html+=hintsToggleBtn('map');
   html+=searchBox('map');
   html+=guessList('map');
+  if(S.state==='infinite')html+=correctGuessList('map');
   return html;
 }
 
 function render(){
+  document.body.classList.toggle('inf',S.state==='infinite');
   /* UTC date to match the game reset (UTC midnight = 2h summer / 1h winter CET) */
   const _utcNow=new Date(dayIndex()*86400000);
   const dateStr=_utcNow.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric',timeZone:'UTC'});
   const tabs=MODES.map(m=>{
-    const done=m==='classic'?!!_uiWon.classic:S.modes[m].won;
+    const done=S.state==='infinite'
+      ?(()=>{const im=_getIM(m);return im.idx>=im.pool.length&&im.pool.length>0;})()
+      :(m==='classic'?!!_uiWon.classic:S.modes[m].won);
     const active=S.activeMode===m;
     const sk=S.streaks[m];
     return`<div class="tab${active?' active':''}${done?' done':''}" onclick="switchMode('${m}')">
@@ -905,7 +1711,7 @@ function render(){
     <button class="brawler-panel-btn" onclick="openBrawlerPanel()">${S.activeMode==='map'?'🗺️':'🏅'}<span class="btn-label"> ${S.activeMode==='map'?'Maps':'Brawlers'}</span></button>
     <button class="stats-btn" onclick="openStats(S.activeMode)">📊<span class="btn-label"> Stats</span></button>
     <div class="header">
-      <div class="header-logo"><img src="minions.png" alt="Brawldle" style="height:clamp(2.4rem,7vw,3.8rem);width:auto;vertical-align:middle;filter:drop-shadow(0 0 12px rgba(255,208,0,.5));"> BSdle</div>
+      <div class="header-logo" onclick="if(allNormalWon())toggleInfinite()" style="cursor:pointer;user-select:none" title="Toggle infinite mode"><img class="header-logo-img" src="minions.png" alt="Brawldle" style="height:clamp(2.4rem,7vw,3.8rem);width:auto;vertical-align:middle;filter:drop-shadow(0 0 12px rgba(255,208,0,.5));"><img class="header-logo-wasabi" src="wasabi.png" alt=""> BSdle</div>
       <div class="header-sub">${esc(dateStr)}</div>
     </div>
     <div class="tabs">${tabs}</div>
@@ -983,7 +1789,7 @@ function acFilter(mode){
   const inp=document.getElementById('inp-'+mode),drop=document.getElementById('acdrop-'+mode);
   if(!inp||!drop)return;
   const q=inp.value.toLowerCase().trim();
-  const used=new Set(S.modes[mode].guesses.map(g=>g.name));
+  const used=new Set((S.state==='infinite'?_getIM(mode).guesses:S.modes[mode].guesses).map(g=>g.name));
   const pool=validPool(mode).filter(b=>!used.has(b));
   if(!q){drop.classList.remove('open');drop.innerHTML='';return}
 
@@ -1026,7 +1832,7 @@ function acKey(e,mode){
     const q=(document.getElementById('inp-'+mode)||{}).value||'';
     const ql=q.toLowerCase();
     const pool=validPool(mode);
-const used=new Set(S.modes[mode].guesses.map(g=>g.name));
+    const used=new Set(getModeSt(mode).guesses.map(g=>g.name));
     /* 1. Exact name match — only if not already guessed */
     const exactName=pool.find(b=>b.toLowerCase()===ql&&!used.has(b));
     if(exactName){doGuess(mode,exactName);return;}
@@ -1483,11 +2289,11 @@ document.addEventListener('click',e=>{
 const _uiWon={};
 document.addEventListener('keydown',e=>{
   if(e.ctrlKey||e.metaKey||e.altKey)return;
-  if(e.key==='Enter'&&_uiWon[S.activeMode]){
-    e.preventDefault();
-    const next=getNextMode(S.activeMode);
-    if(next)switchMode(next);
-    return;
+  if(e.key==='Enter'){
+    const _ready=S.state==='infinite'
+      ?(()=>{const im=_getIM(S.activeMode);return im.idx>=im.pool.length&&im.pool.length>0;})()
+      :!!_uiWon[S.activeMode];
+    if(_ready){e.preventDefault();const next=getNextMode(S.activeMode);if(next)switchMode(next);return;}
   }
   if(e.key.length!==1&&e.key!=='Backspace')return;
   const inp=document.getElementById('inp-'+S.activeMode);

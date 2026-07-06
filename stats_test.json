@@ -13,7 +13,7 @@
             "damage_type": "spread",
             "mvt": 770,
             "gadget_cd": {
-                "1": 16,
+                "1": 20,
                 "2": 18
             },
             "ult_charge": 2,
@@ -41,24 +41,24 @@
         "Voicelines": [
             {
                 "text": "Bling bling",
-                "audio": "shelly/bling.ogg"
+                "audio": "audio/shelly/bling.ogg"
             },
             {
                 "text": "Fantastico!",
-                "audio": "shelly/fantastico.ogg"
+                "audio": "audio/shelly/fantastico.ogg"
             },
             {
                 "text": "Winning!",
-                "audio": "shelly/winning.ogg"
+                "audio": "audio/shelly/winning.ogg"
             },
             {
                 "text": "Let's go get 'em.",
-                "audio": "shelly/lets_go.ogg"
+                "audio": "audio/shelly/lets_go.ogg"
             }
         ],
         "Images": {
-            "attack": "shelly/atk.png",
-            "ultimate": "shelly/ult.png",
+            "attack": "images/shelly/atk.png",
+            "ultimate": "images/shelly/ult.png",
             "order": false
         },
         "Emojis": [
@@ -67,13 +67,7 @@
             "🐈‍⬛",
             "🤠",
             "🔫"
-        ],
-        "Model": {
-            "0": "shelly/0.glb",
-            "1": "shelly/1.glb",
-            "2": "shelly/2.glb",
-            "3": "shelly/3.glb"  
-        } 
+        ]
     },
     "Nita": {
         "Icon": "nita/pin.png",
@@ -116,8 +110,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "nita/atk.png",
-            "ultimate": "nita/ult.png",
+            "attack": "images/nita/atk.png",
+            "ultimate": "images/nita/ult.png",
             "order": false
         },
         "Emojis": [
@@ -127,13 +121,7 @@
             "🐾",
             "📢",
             "🌲"
-        ],
-        "Model": {
-            "0": "nita/0.glb",
-            "1": "nita/1.glb",
-            "2": "nita/2.glb",
-            "3": "nita/3.glb" 
-         } 
+        ]
     },
     "Colt": {
         "Icon": "colt/pin.png",
@@ -177,28 +165,28 @@
         "Voicelines": [
             {
                 "text": "Pew pew pew!",
-                "audio": "colt/pew.ogg"
+                "audio": "audio/colt/pew.ogg"
             },
             {
                 "text": "Primetime, baby!",
-                "audio": "colt/primetime.ogg"
+                "audio": "audio/colt/primetime.ogg"
             },
             {
                 "text": "Too pretty for pain!",
-                "audio": "colt/pretty.ogg"
+                "audio": "audio/colt/pretty.ogg"
             },
             {
                 "text": "Check out my guns, ha ha ha!",
-                "audio": "colt/guns.ogg"
+                "audio": "audio/colt/guns.ogg"
             },
             {
                 "text": "I want my mommy!",
-                "audio": "colt/mommy.ogg"
+                "audio": "audio/colt/mommy.ogg"
             }
         ],
         "Images": {
-            "attack": "colt/atk.png",
-            "ultimate": "colt/ult.png",
+            "attack": "images/colt/atk.png",
+            "ultimate": "images/colt/ult.png",
             "order": false
         },
         "Emojis": [
@@ -206,8 +194,7 @@
             "🔫",
             "🔫",
             "🟥"
-        ],
-        "Model": {} 
+        ]
     },
     "Bull": {
         "Icon": "bull/pin.png",
@@ -223,8 +210,8 @@
             "damage_type": "spread",
             "mvt": 770,
             "gadget_cd": {
-                "1": 18,
-                "2": 20
+                "1": 12,
+                "2": 14
             },
             "ult_charge": 2,
             "hc_multiplier": 30,
@@ -251,24 +238,24 @@
         "Voicelines": [
             {
                 "text": "And stay down!",
-                "audio": "bull/stay_down.ogg"
+                "audio": "audio/bull/stay_down.ogg"
             },
             {
                 "text": "Yeah, that'll teach ya.",
-                "audio": "bull/teach_ya.ogg"
+                "audio": "audio/bull/teach_ya.ogg"
             },
             {
                 "text": "Charge!",
-                "audio": "bull/charge.ogg"
+                "audio": "audio/bull/charge.ogg"
             },
             {
                 "text": "Don't mess with me!",
-                "audio": "bull/dont_mess.ogg"
+                "audio": "audio/bull/dont_mess.ogg"
             }
         ],
         "Images": {
-            "attack": "bull/atk.png",
-            "ultimate": "bull/ult.png",
+            "attack": "images/bull/atk.png",
+            "ultimate": "images/bull/ult.png",
             "order": false
         },
         "Emojis": [
@@ -278,13 +265,7 @@
             "⬛",
             "🔫",
             "🛡️"
-        ],
-        "Model": {
-            "0": "bull/0.glb",
-            "1": "bull/1.glb",
-            "2": "bull/2.glb",
-            "3": "bull/3.glb" 
-         } 
+        ]
     },
     "Brock": {
         "Icon": "brock/pin.png",
@@ -300,8 +281,8 @@
             "damage_type": "splash",
             "mvt": 720,
             "gadget_cd": {
-                "1": 20,
-                "2": 22
+                "1": 15,
+                "2": 15
             },
             "ult_charge": 4,
             "hc_multiplier": 45,
@@ -328,28 +309,28 @@
         "Voicelines": [
             {
                 "text": "Whew! Take the L.",
-                "audio": "brock/whew.ogg"
+                "audio": "audio/brock/whew.ogg"
             },
             {
                 "text": "Ooh, I was laggin'.",
-                "audio": "brock/laggin.ogg"
+                "audio": "audio/brock/laggin.ogg"
             },
             {
                 "text": "Ooh, you got destroyed.",
-                "audio": "brock/destroyed.ogg"
+                "audio": "audio/brock/destroyed.ogg"
             },
             {
                 "text": "You got wrecked.",
-                "audio": "brock/wrecked.ogg"
+                "audio": "audio/brock/wrecked.ogg"
             },
             {
                 "text": "Okay, okay, you got skills.",
-                "audio": "brock/skills.ogg"
+                "audio": "audio/brock/skills.ogg"
             }
         ],
         "Images": {
-            "attack": "brock/atk.png",
-            "ultimate": "brock/ult.png",
+            "attack": "images/brock/atk.png",
+            "ultimate": "images/brock/ult.png",
             "order": false
         },
         "Emojis": [
@@ -358,8 +339,7 @@
             "🔥",
             "🧱",
             "📻"
-        ],
-        "Model": {} 
+        ]
     },
     "El Primo": {
         "Aliases": ["Primo"],
@@ -404,28 +384,28 @@
         "Voicelines": [
             {
                 "text": "Fists of fury!",
-                "audio": "primo/fists.ogg"
+                "audio": "audio/primo/fists.ogg"
             },
             {
                 "text": "Showtime.",
-                "audio": "primo/showtime.ogg"
+                "audio": "audio/primo/showtime.ogg"
             },
             {
                 "text": "Soy el mejor!",
-                "audio": "primo/mejor.ogg"
+                "audio": "audio/primo/mejor.ogg"
             },
             {
                 "text": "Puncho punch!",
-                "audio": "primo/punch.ogg"
+                "audio": "audio/primo/punch.ogg"
             },
             {
                 "text": "For pain and for glory!",
-                "audio": "primo/glory.ogg"
+                "audio": "audio/primo/glory.ogg"
             }
         ],
         "Images": {
-            "attack": "primo/atk.png",
-            "ultimate": "primo/ult.png",
+            "attack": "images/primo/atk.png",
+            "ultimate": "images/primo/ult.png",
             "order": false
         },
         "Emojis": [
@@ -435,13 +415,7 @@
             "🎭",
             "🥊",
             "🌟"
-        ],
-        "Model": {
-            "0": "primo/0.glb",
-            "1": "primo/1.glb",
-            "2": "primo/2.glb",
-            "3": "primo/3.glb"  
-        } 
+        ]
     },
     "Barley": {
         "Icon": "barley/pin.png",
@@ -485,28 +459,28 @@
         "Voicelines": [
             {
                 "text": "Bottoms up!",
-                "audio": "barley/bottoms_up.ogg"
+                "audio": "audio/barley/bottoms_up.ogg"
             },
             {
                 "text": "A little… strong?",
-                "audio": "barley/strong.ogg"
+                "audio": "audio/barley/strong.ogg"
             },
             {
                 "text": "You've been served.",
-                "audio": "barley/served.ogg"
+                "audio": "audio/barley/served.ogg"
             },
             {
                 "text": "New customers.",
-                "audio": "barley/customers.ogg"
+                "audio": "audio/barley/customers.ogg"
             },
             {
                 "text": "Ready for another?",
-                "audio": "barley/another.ogg"
+                "audio": "audio/barley/another.ogg"
             }
         ],
         "Images": {
-            "attack": "barley/atk.png",
-            "ultimate": "barley/ult.png",
+            "attack": "images/barley/atk.png",
+            "ultimate": "images/barley/ult.png",
             "order": false
         },
         "Emojis": [
@@ -514,8 +488,7 @@
             "🤖",
             "☠️",
             "🍾"
-        ],
-        "Model": {} 
+        ]
     },
     "Poco": {
         "Icon": "poco/pin.png",
@@ -559,28 +532,28 @@
         "Voicelines": [
             {
                 "text": "Feel the power of music!",
-                "audio": "poco/music.ogg"
+                "audio": "audio/poco/music.ogg"
             },
             {
                 "text": "Musical mayhem!",
-                "audio": "poco/mayhem.ogg"
+                "audio": "audio/poco/mayhem.ogg"
             },
             {
                 "text": "I'm turning it up to eleven!",
-                "audio": "poco/eleven.ogg"
+                "audio": "audio/poco/eleven.ogg"
             },
             {
                 "text": "Hey! You broke my guitar!",
-                "audio": "poco/guitar.ogg"
+                "audio": "audio/poco/guitar.ogg"
             },
             {
                 "text": "Still friends?",
-                "audio": "poco/friends.ogg"
+                "audio": "audio/poco/friends.ogg"
             }
         ],
         "Images": {
-            "attack": "poco/atk.png",
-            "ultimate": "poco/ult.png",
+            "attack": "images/poco/atk.png",
+            "ultimate": "images/poco/ult.png",
             "order": false
         },
         "Emojis": [
@@ -590,13 +563,7 @@
             "💀",
             "🟡",
             "🔉"
-        ],
-        "Model": {
-            "0": "poco/0.glb",
-            "1": "poco/1.glb",
-            "2": "poco/2.glb",
-            "3": "poco/3.glb"  
-        } 
+        ]
     },
     "Rosa": {
         "Icon": "rosa/pin.png",
@@ -640,28 +607,28 @@
         "Voicelines": [
             {
                 "text": "Haha! Beaten by a boxing botanist!",
-                "audio": "rosa/boxing.ogg"
+                "audio": "audio/rosa/boxing.ogg"
             },
             {
                 "text": "Flower power!",
-                "audio": "rosa/flower.ogg"
+                "audio": "audio/rosa/flower.ogg"
             },
             {
                 "text": "Time to take care of the weeds!",
-                "audio": "rosa/weeds.ogg"
+                "audio": "audio/rosa/weeds.ogg"
             },
             {
                 "text": "Weed 'em and reap!",
-                "audio": "rosa/reap.ogg"
+                "audio": "audio/rosa/reap.ogg"
             },
             {
                 "text": "Petals to the meadow!",
-                "audio": "rosa/meadow.ogg"
+                "audio": "audio/rosa/meadow.ogg"
             }
         ],
         "Images": {
-            "attack": "rosa/atk.png",
-            "ultimate": "rosa/ult.png",
+            "attack": "images/rosa/atk.png",
+            "ultimate": "images/rosa/ult.png",
             "order": true
         },
         "Emojis": [
@@ -670,8 +637,7 @@
             "🛡️",
             "👓",
             "🟣"
-        ],
-        "Model": {} 
+        ]
     },
     "Jessie": {
         "Icon": "jessie/pin.png",
@@ -715,28 +681,28 @@
         "Voicelines": [
             {
                 "text": "Say hello to my little friend.",
-                "audio": "jessie/friend.ogg"
+                "audio": "audio/jessie/friend.ogg"
             },
             {
                 "text": "Build and brawl!",
-                "audio": "jessie/brawl.ogg"
+                "audio": "audio/jessie/brawl.ogg"
             },
             {
                 "text": "Great spot.",
-                "audio": "jessie/spot.ogg"
+                "audio": "audio/jessie/spot.ogg"
             },
             {
                 "text": "Time to get constructive.",
-                "audio": "jessie/constructive.ogg"
+                "audio": "audio/jessie/constructive.ogg"
             },
             {
                 "text": "Broken beyond repair.",
-                "audio": "jessie/broken.ogg"
+                "audio": "audio/jessie/broken.ogg"
             }
         ],
         "Images": {
-            "attack": "jessie/atk.png",
-            "ultimate": "jessie/ult.png",
+            "attack": "images/jessie/atk.png",
+            "ultimate": "images/jessie/ult.png",
             "order": false
         },
         "Emojis": [
@@ -746,8 +712,7 @@
             "🤖",
             "⚡",
             "🔵"
-        ],
-        "Model": {} 
+        ]
     },
     "Dynamike": {
         "Icon": "dynamike/pin.png",
@@ -772,7 +737,7 @@
             "rarity": "super_rare",
             "world": "frontier_world",
             "range": 7.33,
-            "reload_speed": 1.4,
+            "reload_speed": 1.6,
             "release": 2017,
             "nb_skins": 23
         },
@@ -791,28 +756,28 @@
         "Voicelines": [
             {
                 "text": "I've got a short fuse.",
-                "audio": "dynamike/fuse.ogg"
+                "audio": "audio/dynamike/fuse.ogg"
             },
             {
                 "text": "Here, birdie birdie birdie.",
-                "audio": "dynamike/birdie.ogg"
+                "audio": "audio/dynamike/birdie.ogg"
             },
             {
                 "text": "Not bad for an old-timer.",
-                "audio": "dynamike/old_timer.ogg"
+                "audio": "audio/dynamike/old_timer.ogg"
             },
             {
                 "text": "Don't touch my canary.",
-                "audio": "dynamike/canary.ogg"
+                "audio": "audio/dynamike/canary.ogg"
             },
             {
                 "text": "Who wants some TNT?",
-                "audio": "dynamike/tnt.ogg"
+                "audio": "audio/dynamike/tnt.ogg"
             }
         ],
         "Images": {
-            "attack": "dynamike/atk.png",
-            "ultimate": "dynamike/ult.png",
+            "attack": "images/dynamike/atk.png",
+            "ultimate": "images/dynamike/ult.png",
             "order": false
         },
         "Emojis": [
@@ -822,8 +787,7 @@
             "🐥",
             "💥",
             "💫"
-        ],
-        "Model": {}
+        ]
     },
     "Tick": {
         "Icon": "tick/pin.png",
@@ -866,8 +830,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "tick/atk.png",
-            "ultimate": "tick/ult.png",
+            "attack": "images/tick/atk.png",
+            "ultimate": "images/tick/ult.png",
             "order": false
         },
         "Emojis": [
@@ -877,13 +841,7 @@
             "💣",
             "🤖",
             "🕰️"
-        ],
-        "Model": {
-            "0": "tick/0.glb",
-            "1": "tick/1.glb",
-            "2": "tick/2.glb",
-            "3": "tick/3.glb"  
-        } 
+        ]
     },
     "8-Bit": {
         "Icon": "bit/pin.png",
@@ -900,7 +858,7 @@
             "mvt": 580,
             "gadget_cd": {
                 "1": 18,
-                "2": 15
+                "2": 11
             },
             "ult_charge": 2,
             "hc_multiplier": 35,
@@ -927,20 +885,20 @@
         "Voicelines": [
             {
                 "text": "Player one, get ready!",
-                "audio": "bit/get_ready.ogg"
+                "audio": "audio/bit/get_ready.ogg"
             },
             {
                 "text": "Mission failed.",
-                "audio": "bit/failed.ogg"
+                "audio": "audio/bit/failed.ogg"
             },
             {
                 "text": "Game, not over.",
-                "audio": "bit/game.ogg"
+                "audio": "audio/bit/game.ogg"
             }
         ],
         "Images": {
-            "attack": "bit/atk.png",
-            "ultimate": "bit/ult.png",
+            "attack": "images/bit/atk.png",
+            "ultimate": "images/bit/ult.png",
             "order": false
         },
         "Emojis": [
@@ -950,13 +908,7 @@
             "🐢",
             "📺",
             "🟦"
-        ],
-        "Model": {
-            "0": "bit/0.glb",
-            "1": "bit/1.glb",
-            "2": "bit/2.glb",
-            "3": "bit/3.glb" 
-         } 
+        ]
     },
     "Rico": {
         "Icon": "rico/pin.png",
@@ -972,7 +924,7 @@
             "damage_type": "spread",
             "mvt": 720,
             "gadget_cd": {
-                "1": 19,
+                "1": 20,
                 "2": 17
             },
             "ult_charge": 3,
@@ -1001,28 +953,28 @@
         "Voicelines": [
             {
                 "text": "I do not come in peace.",
-                "audio": "rico/peace.ogg"
+                "audio": "audio/rico/peace.ogg"
             },
             {
                 "text": "Domination mode engaged.",
-                "audio": "rico/dominance.ogg"
+                "audio": "audio/rico/dominance.ogg"
             },
             {
                 "text": "Playtime is over.",
-                "audio": "rico/playtime.ogg"
+                "audio": "audio/rico/playtime.ogg"
             },
             {
                 "text": "Unleashing ultimate power.",
-                "audio": "rico/power.ogg"
+                "audio": "audio/rico/power.ogg"
             },
             {
                 "text": "You are a hacker.",
-                "audio": "rico/hacker.ogg"
+                "audio": "audio/rico/hacker.ogg"
             }
         ],
         "Images": {
-            "attack": "rico/atk.png",
-            "ultimate": "rico/ult.png",
+            "attack": "images/rico/atk.png",
+            "ultimate": "images/rico/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1031,13 +983,7 @@
             "〽️",
             "🏀",
             "🫨"
-        ],
-        "Model": {
-            "0": "rico/0.glb",
-            "1": "rico/1.glb",
-            "2": "rico/2.glb",
-            "3": "rico/3.glb"  
-        } 
+        ]
     },
     "Darryl": {
         "Icon": "darryl/pin.png",
@@ -1081,28 +1027,28 @@
         "Voicelines": [
             {
                 "text": "You got pwned by a pirate.",
-                "audio": "darryl/pwned.ogg"
+                "audio": "audio/darryl/pwned.ogg"
             },
             {
                 "text": "Abandon ship! Abandon ship!",
-                "audio": "darryl/abandon.ogg"
+                "audio": "audio/darryl/abandon.ogg"
             },
             {
                 "text": "You salty sea dog!",
-                "audio": "darryl/salty.ogg"
+                "audio": "audio/darryl/salty.ogg"
             },
             {
                 "text": "Totally legit pirate over here!",
-                "audio": "darryl/legit.ogg"
+                "audio": "audio/darryl/legit.ogg"
             },
             {
                 "text": "That's how I roll!",
-                "audio": "darryl/roll.ogg"
+                "audio": "audio/darryl/roll.ogg"
             }
         ],
         "Images": {
-            "attack": "darryl/atk.png",
-            "ultimate": "darryl/ult.png",
+            "attack": "images/darryl/atk.png",
+            "ultimate": "images/darryl/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1111,13 +1057,7 @@
             "🔫",
             "🏴‍☠️",
             "🔄️"
-        ],
-        "Model": {
-            "0": "darryl/0.glb",
-            "1": "darryl/1.glb",
-            "2": "darryl/2.glb",
-            "3": "darryl/3.glb" 
-         } 
+        ]
     },
     "Penny": {
         "Icon": "penny/pin.png",
@@ -1161,16 +1101,16 @@
         "Voicelines": [
             {
                 "text": "Number one!",
-                "audio": "penny/number_one.ogg"
+                "audio": "audio/penny/number_one.ogg"
             },
             {
                 "text": "I'm the best!",
-                "audio": "penny/best.ogg"
+                "audio": "audio/penny/best.ogg"
             }
         ],
         "Images": {
-            "attack": "penny/atk.png",
-            "ultimate": "penny/ult.png",
+            "attack": "images/penny/atk.png",
+            "ultimate": "images/penny/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1179,13 +1119,7 @@
             "💣",
             "☠️",
             "🧂"
-        ],
-        "Model": {
-            "0": "penny/0.glb",
-            "1": "penny/1.glb",
-            "2": "penny/2.glb",
-            "3": "penny/3.glb"  
-        } 
+        ]
     },
     "Carl": {
         "Icon": "carl/pin.png",
@@ -1195,8 +1129,8 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 1,
-            "damage_per_projectile": 1640,
-            "full_damage": 3280,
+            "damage_per_projectile": 1480,
+            "full_damage": 2960,
             "ammo": 1,
             "damage_type": "pierce",
             "mvt": 720,
@@ -1229,24 +1163,24 @@
         "Voicelines": [
             {
                 "text": "He he he he, my calculations are always correct!",
-                "audio": "carl/correct.ogg"
+                "audio": "audio/carl/correct.ogg"
             },
             {
                 "text": "Ha ha! Geology rocks.",
-                "audio": "carl/geology.ogg"
+                "audio": "audio/carl/geology.ogg"
             },
             {
                 "text": "The rocks speak to me.",
-                "audio": "carl/rocks.ogg"
+                "audio": "audio/carl/rocks.ogg"
             },
             {
                 "text": "Evolution, it must've passed you by.",
-                "audio": "carl/evolution.ogg"
+                "audio": "audio/carl/evolution.ogg"
             }
         ],
         "Images": {
-            "attack": "carl/atk.png",
-            "ultimate": "carl/ult.png",
+            "attack": "images/carl/atk.png",
+            "ultimate": "images/carl/ult.png",
             "order": true
         },
         "Emojis": [
@@ -1256,8 +1190,7 @@
             "🤖",
             "🪨",
             "🔄️"
-        ],
-        "Model": {} 
+        ]
     },
     "Jacky": {
         "Icon": "jacky/pin.png",
@@ -1301,24 +1234,24 @@
         "Voicelines": [
             {
                 "text": "Let's go kick some ...!",
-                "audio": "jacky/kick.ogg"
+                "audio": "audio/jacky/kick.ogg"
             },
             {
                 "text": "Drill skills? Yeah!",
-                "audio": "jacky/drill.ogg"
+                "audio": "audio/jacky/drill.ogg"
             },
             {
                 "text": "How do you like them apples?",
-                "audio": "jacky/apples.ogg"
+                "audio": "audio/jacky/apples.ogg"
             },
             {
                 "text": "Hey! Watch out chowderhead.",
-                "audio": "jacky/chowderhead.ogg"
+                "audio": "audio/jacky/chowderhead.ogg"
             }
         ],
         "Images": {
-            "attack": "jacky/atk.png",
-            "ultimate": "jacky/ult.png",
+            "attack": "images/jacky/atk.png",
+            "ultimate": "images/jacky/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1328,13 +1261,7 @@
             "⏬",
             "↪️",
             "🧱"
-        ],
-        "Model": {
-            "0": "jacky/0.glb",
-            "1": "jacky/1.glb",
-            "2": "jacky/2.glb",
-            "3": "jacky/3.glb"  
-        } 
+        ]
     },
     "Gus": {
         "Icon": "gus/pin.png",
@@ -1378,28 +1305,28 @@
         "Voicelines": [
             {
                 "text": "Maybe, I'll get to meet Spike!",
-                "audio": "gus/spike.ogg"
+                "audio": "audio/gus/spike.ogg"
             },
             {
                 "text": "I miss the ghost train.",
-                "audio": "gus/train.ogg"
+                "audio": "audio/gus/train.ogg"
             },
             {
                 "text": "Ugh, this place is scary.",
-                "audio": "gus/scary.ogg"
+                "audio": "audio/gus/scary.ogg"
             },
             {
                 "text": "We made it, Spooky!",
-                "audio": "gus/spooky.ogg"
+                "audio": "audio/gus/spooky.ogg"
             },
             {
                 "text": "You got bested by a child.",
-                "audio": "gus/child.ogg"
+                "audio": "audio/gus/child.ogg"
             }
         ],
         "Images": {
-            "attack": "gus/atk.png",
-            "ultimate": "gus/ult.png",
+            "attack": "images/gus/atk.png",
+            "ultimate": "images/gus/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1409,13 +1336,7 @@
             "🚸",
             "🚂",
             "👨🏻‍🦳"
-        ],
-        "Model": {
-            "0": "gus/0.glb",
-            "1": "gus/1.glb",
-            "2": "gus/2.glb",
-            "3": "gus/3.glb"  
-        } 
+        ]
     },
     "Bo": {
         "Icon": "bo/pin.png",
@@ -1431,7 +1352,7 @@
             "damage_type": "splash",
             "mvt": 720,
             "gadget_cd": {
-                "1": 19,
+                "1": 20,
                 "2": 8
             },
             "ult_charge": 3,
@@ -1459,28 +1380,28 @@
         "Voicelines": [
             {
                 "text": "Live strong, as the mountains.",
-                "audio": "bo/mountains.ogg"
+                "audio": "audio/bo/mountains.ogg"
             },
             {
                 "text": "The spirits are calling my name.",
-                "audio": "bo/spirits.ogg"
+                "audio": "audio/bo/spirits.ogg"
             },
             {
                 "text": "Fly, like an eagle!",
-                "audio": "bo/eagle.ogg"
+                "audio": "audio/bo/eagle.ogg"
             },
             {
                 "text": "There is no death, only a change of worlds.",
-                "audio": "bo/worlds.ogg"
+                "audio": "audio/bo/worlds.ogg"
             },
             {
                 "text": "We must fight for peace!",
-                "audio": "bo/peace.ogg"
+                "audio": "audio/bo/peace.ogg"
             }
         ],
         "Images": {
-            "attack": "bo/atk.png",
-            "ultimate": "bo/ult.png",
+            "attack": "images/bo/atk.png",
+            "ultimate": "images/bo/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1489,13 +1410,7 @@
             "💥",
             "👁️",
             "⚠️"
-        ],
-        "Model": {
-            "0": "bo/0.glb",
-            "1": "bo/1.glb",
-            "2": "bo/2.glb",
-            "3": "bo/3.glb"  
-        } 
+        ]
     },
     "Emz": {
         "Icon": "emz/pin.png",
@@ -1539,28 +1454,28 @@
         "Voicelines": [
             {
                 "text": "They say, 'she's too wrapped up in herself.' Ugh, hashtag haters.",
-                "audio": "emz/haters.ogg"
+                "audio": "audio/emz/haters.ogg"
             },
             {
                 "text": "Look at me! Ugh, not from that angle!",
-                "audio": "emz/angle.ogg"
+                "audio": "audio/emz/angle.ogg"
             },
             {
                 "text": "You are so bad. Oh my God!",
-                "audio": "emz/bad.ogg"
+                "audio": "audio/emz/bad.ogg"
             },
             {
                 "text": "I'm so overpowered, upvote this.",
-                "audio": "emz/upvote.ogg"
+                "audio": "audio/emz/upvote.ogg"
             },
             {
                 "text": "Ugh, did someone here unfollow me?",
-                "audio": "emz/unfollow.ogg"
+                "audio": "audio/emz/unfollow.ogg"
             }
         ],
         "Images": {
-            "attack": "emz/atk.png",
-            "ultimate": "emz/ult.png",
+            "attack": "images/emz/atk.png",
+            "ultimate": "images/emz/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1570,13 +1485,7 @@
             "🪦",
             "👜",
             "🟪"
-        ],
-        "Model": {
-            "0": "emz/0.glb",
-            "1": "emz/1.glb",
-            "2": "emz/2.glb",
-            "3": "emz/3.glb"  
-        } 
+        ]
     },
     "Stu": {
         "Icon": "stu/pin.png",
@@ -1620,28 +1529,28 @@
         "Voicelines": [
             {
                 "text": "Crash and burn, get fixed, return!",
-                "audio": "stu/crash.ogg"
+                "audio": "audio/stu/crash.ogg"
             },
             {
                 "text": "If only I could feel-feel-feel pain.",
-                "audio": "stu/pain.ogg"
+                "audio": "audio/stu/pain.ogg"
             },
             {
                 "text": "You failed the cra-a-ash test, ya dummy!",
-                "audio": "stu/dummy.ogg"
+                "audio": "audio/stu/dummy.ogg"
             },
             {
                 "text": "Time to wipe my tears and clean my gears!",
-                "audio": "stu/clean.ogg"
+                "audio": "audio/stu/clean.ogg"
             },
             {
                 "text": "Wow... Lo-o-ook at all those stars!",
-                "audio": "stu/stars.ogg"
+                "audio": "audio/stu/stars.ogg"
             }
         ],
         "Images": {
-            "attack": "stu/atk.png",
-            "ultimate": "stu/ult.png",
+            "attack": "images/stu/atk.png",
+            "ultimate": "images/stu/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1650,24 +1559,18 @@
             "🔥",
             "⏫",
             "🪖"
-        ],
-        "Model": {
-            "0": "stu/0.glb",
-            "1": "stu/1.glb",
-            "2": "stu/2.glb",
-            "3": "stu/3.glb"  
-        } 
+        ]
     },
     "Piper": {
         "Icon": "piper/pin.png",
         "Stats": {
             "gender": "female",
-            "hp": 5600,
+            "hp": 5000,
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 1,
-            "damage_per_projectile": 3600,
-            "full_damage": 3600,
+            "damage_per_projectile": 3400,
+            "full_damage": 3400,
             "ammo": 3,
             "damage_type": "single",
             "mvt": 720,
@@ -1700,28 +1603,28 @@
         "Voicelines": [
             {
                 "text": "I'm sugar and spice.",
-                "audio": "piper/sugar_spice.ogg"
+                "audio": "audio/piper/sugar_spice.ogg"
             },
             {
                 "text": "Mind your manners!",
-                "audio": "piper/manners.ogg"
+                "audio": "audio/piper/manners.ogg"
             },
             {
                 "text": "Aww, sweetie?",
-                "audio": "piper/sweetie.ogg"
+                "audio": "audio/piper/sweetie.ogg"
             },
             {
                 "text": "This ain't my first rodeo.",
-                "audio": "piper/first_rodeo.ogg"
+                "audio": "audio/piper/first_rodeo.ogg"
             },
             {
                 "text": "Gimme some sugar!",
-                "audio": "piper/sugar.ogg"
+                "audio": "audio/piper/sugar.ogg"
             }
         ],
         "Images": {
-            "attack": "piper/atk.png",
-            "ultimate": "piper/ult.png",
+            "attack": "images/piper/atk.png",
+            "ultimate": "images/piper/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1731,13 +1634,7 @@
             "👗",
             "🔫",
             "👱🏻‍♀️"
-        ],
-        "Model": {
-            "0": "piper/0.glb",
-            "1": "piper/1.glb",
-            "2": "piper/2.glb",
-            "3": "piper/3.glb"  
-        } 
+        ]
     },
     "Pam": {
         "Icon": "pam/pin.png",
@@ -1781,28 +1678,28 @@
         "Voicelines": [
             {
                 "text": "My tools ain't for fools!",
-                "audio": "pam/tools.ogg"
+                "audio": "audio/pam/tools.ogg"
             },
             {
                 "text": "This is my scrap yard.",
-                "audio": "pam/scrap.ogg"
+                "audio": "audio/pam/scrap.ogg"
             },
             {
                 "text": "Repair, reuse, recycle!",
-                "audio": "pam/recycle.ogg"
+                "audio": "audio/pam/recycle.ogg"
             },
             {
                 "text": "Nuts and bolts!",
-                "audio": "pam/nuts.ogg"
+                "audio": "audio/pam/nuts.ogg"
             },
             {
                 "text": "Ooh, mama's gotta rest.",
-                "audio": "pam/rest.ogg"
+                "audio": "audio/pam/rest.ogg"
             }
         ],
         "Images": {
-            "attack": "pam/atk.png",
-            "ultimate": "pam/ult.png",
+            "attack": "images/pam/atk.png",
+            "ultimate": "images/pam/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1811,8 +1708,7 @@
             "➕",
             "💪🏻",
             "👩🏻‍🍼"
-        ],
-        "Model": {} 
+        ]
     },
     "Frank": {
         "Icon": "frank/pin.png",
@@ -1855,8 +1751,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "frank/atk.png",
-            "ultimate": "frank/ult.png",
+            "attack": "images/frank/atk.png",
+            "ultimate": "images/frank/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1866,13 +1762,7 @@
             "🧟‍♂️",
             "🪡",
             "↩️"
-        ],
-        "Model": {
-            "0": "frank/0.glb",
-            "1": "frank/1.glb",
-            "2": "frank/2.glb",
-            "3": "frank/3.glb"  
-        } 
+        ]
     },
     "Bibi": {
         "Icon": "bibi/pin.png",
@@ -1885,11 +1775,11 @@
             "damage_per_projectile": 2800,
             "full_damage": 2800,
             "ammo": 3,
-            "damage_type": "pierce",
+            "damage_type": "splash",
             "mvt": 820,
             "gadget_cd": {
                 "1": 20,
-                "2": 21
+                "2": 10
             },
             "ult_charge": 4,
             "hc_multiplier": 40,
@@ -1916,28 +1806,28 @@
         "Voicelines": [
             {
                 "text": "Hey, show some respect.",
-                "audio": "bibi/respect.ogg"
+                "audio": "audio/bibi/respect.ogg"
             },
             {
                 "text": "Chew on this!",
-                "audio": "bibi/chew.ogg"
+                "audio": "audio/bibi/chew.ogg"
             },
             {
                 "text": "I'm a cool cat.",
-                "audio": "bibi/coolcat.ogg"
+                "audio": "audio/bibi/coolcat.ogg"
             },
             {
                 "text": "Watch it nerd!",
-                "audio": "bibi/nerd.ogg"
+                "audio": "audio/bibi/nerd.ogg"
             },
             {
                 "text": "Mr. Bat says hi!",
-                "audio": "bibi/bat.ogg"
+                "audio": "audio/bibi/bat.ogg"
             }
         ],
         "Images": {
-            "attack": "bibi/atk.png",
-            "ultimate": "bibi/ult.png",
+            "attack": "images/bibi/atk.png",
+            "ultimate": "images/bibi/ult.png",
             "order": false
         },
         "Emojis": [
@@ -1946,13 +1836,7 @@
             "🍬",
             "🏃🏻‍♀️",
             "🎱"
-        ],
-        "Model": {
-            "0": "bibi/0.glb",
-            "1": "bibi/1.glb",
-            "2": "bibi/2.glb",
-            "3": "bibi/3.glb" 
-         } 
+        ]
     },
     "Bea": {
         "Aliases": ["Abeilles de merde"],
@@ -1997,28 +1881,28 @@
         "Voicelines": [
             {
                 "text": "So many specimens to discover!",
-                "audio": "bea/specimens.ogg"
+                "audio": "audio/bea/specimens.ogg"
             },
             {
                 "text": "Think of the ecosystem!",
-                "audio": "bea/ecosystem.ogg"
+                "audio": "audio/bea/ecosystem.ogg"
             },
             {
                 "text": "Let's see what's buzzing!",
-                "audio": "bea/buzzing.ogg"
+                "audio": "audio/bea/buzzing.ogg"
             },
             {
                 "text": "Hive-five!",
-                "audio": "bea/hivefive.ogg"
+                "audio": "audio/bea/hivefive.ogg"
             },
             {
                 "text": "Don't call me honey.",
-                "audio": "bea/honey.ogg"
+                "audio": "audio/bea/honey.ogg"
             }
         ],
         "Images": {
-            "attack": "bea/atk.png",
-            "ultimate": "bea/ult.png",
+            "attack": "images/bea/atk.png",
+            "ultimate": "images/bea/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2027,13 +1911,7 @@
             "👩🏻‍🦰",
             "🪴",
             "🌀"
-        ],
-        "Model": {
-            "0": "bea/0.glb",
-            "1": "bea/1.glb",
-            "2": "bea/2.glb",
-            "3": "bea/3.glb" 
-         } 
+        ]
     },
     "Gale": {
         "Icon": "gale/pin.png",
@@ -2077,28 +1955,28 @@
         "Voicelines": [
             {
                 "text": "What does this button do?",
-                "audio": "gale/button.ogg"
+                "audio": "audio/gale/button.ogg"
             },
             {
                 "text": "Never too old to be a bit bold!",
-                "audio": "gale/bold.ogg"
+                "audio": "audio/gale/bold.ogg"
             },
             {
                 "text": "Slow and steady wins the race!",
-                "audio": "gale/race.ogg"
+                "audio": "audio/gale/race.ogg"
             },
             {
                 "text": "Don't blame me! I just work for Mr. P!",
-                "audio": "gale/mr_p.ogg"
+                "audio": "audio/gale/mr_p.ogg"
             },
             {
                 "text": "Well, blow me down.",
-                "audio": "gale/blow.ogg"
+                "audio": "audio/gale/blow.ogg"
             }
         ],
         "Images": {
-            "attack": "gale/atk.png",
-            "ultimate": "gale/ult.png",
+            "attack": "images/gale/atk.png",
+            "ultimate": "images/gale/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2107,8 +1985,7 @@
             "🌪️",
             "⬆️",
             "👴🏻"
-        ],
-        "Model": {} 
+        ]
     },
     "Nani": {
         "Icon": "nani/pin.png",
@@ -2152,24 +2029,24 @@
         "Voicelines": [
             {
                 "text": "Security alert.",
-                "audio": "nani/security.ogg"
+                "audio": "audio/nani/security.ogg"
             },
             {
                 "text": "Recording.",
-                "audio": "nani/recording.ogg"
+                "audio": "audio/nani/recording.ogg"
             },
             {
                 "text": "I'm so happy!",
-                "audio": "nani/happy.ogg"
+                "audio": "audio/nani/happy.ogg"
             },
             {
                 "text": "You okay?",
-                "audio": "nani/okay.ogg"
+                "audio": "audio/nani/okay.ogg"
             }
         ],
         "Images": {
-            "attack": "nani/atk.png",
-            "ultimate": "nani/ult.png",
+            "attack": "images/nani/atk.png",
+            "ultimate": "images/nani/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2178,11 +2055,9 @@
             "🤖",
             "🔆",
             "📱"
-        ],
-        "Model": {} 
+        ]
     },
     "Colette": {
-        "Aliases": ["Côtelette", "Cotelette"],
         "Icon": "colette/pin.png",
         "Stats": {
             "gender": "female",
@@ -2196,10 +2071,10 @@
             "damage_type": "single",
             "mvt": 720,
             "gadget_cd": {
-                "1": 22,
+                "1": 10,
                 "2": 17
             },
-            "ult_charge": 5,
+            "ult_charge": 4,
             "hc_multiplier": 27,
             "class": "damage_dealer",
             "rarity": "epic",
@@ -2224,28 +2099,28 @@
         "Voicelines": [
             {
                 "text": "Oh! One for the collection!",
-                "audio": "colette/collection.ogg"
+                "audio": "audio/colette/collection.ogg"
             },
             {
                 "text": "I'll find you — every time!",
-                "audio": "colette/find.ogg"
+                "audio": "audio/colette/find.ogg"
             },
             {
                 "text": "Don't touch my scrapbook!",
-                "audio": "colette/scrapbook.ogg"
+                "audio": "audio/colette/scrapbook.ogg"
             },
             {
                 "text": "I just want your autograph!",
-                "audio": "colette/autograph.ogg"
+                "audio": "audio/colette/autograph.ogg"
             },
             {
                 "text": "I know you like me!",
-                "audio": "colette/like_me.ogg"
+                "audio": "audio/colette/like_me.ogg"
             }
         ],
         "Images": {
-            "attack": "colette/atk.png",
-            "ultimate": "colette/ult.png",
+            "attack": "images/colette/atk.png",
+            "ultimate": "images/colette/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2255,13 +2130,7 @@
             "👀",
             "💖",
             "💝"
-        ],
-        "Model": {
-            "0": "colette/0.glb",
-            "1": "colette/1.glb",
-            "2": "colette/2.glb",
-            "3": "colette/3.glb" 
-         } 
+        ]
     },
     "Edgar": {
         "Aliases": ["Edgay"],
@@ -2278,11 +2147,11 @@
             "damage_type": "pierce",
             "mvt": 820,
             "gadget_cd": {
-                "1": 18,
+                "1": 21,
                 "2": 17
             },
             "ult_charge": 6,
-            "hc_multiplier": 33,
+            "hc_multiplier": 40,
             "class": "assassin",
             "rarity": "epic",
             "world": "town_square",
@@ -2306,28 +2175,28 @@
         "Voicelines": [
             {
                 "text": "So much tryharding.",
-                "audio": "edgar/tryhard.ogg"
+                "audio": "audio/edgar/tryhard.ogg"
             },
             {
                 "text": "Pssh, I could do this if I wanted to!",
-                "audio": "edgar/wanted.ogg"
+                "audio": "audio/edgar/wanted.ogg"
             },
             {
                 "text": "CEO of Brawl Stars.",
-                "audio": "edgar/ceo.ogg"
+                "audio": "audio/edgar/ceo.ogg"
             },
             {
                 "text": "I low-key wanna win this game.",
-                "audio": "edgar/win.ogg"
+                "audio": "audio/edgar/win.ogg"
             },
             {
                 "text": "Great. Now everyone hates me.",
-                "audio": "edgar/hates.ogg"
+                "audio": "audio/edgar/hates.ogg"
             }
         ],
         "Images": {
-            "attack": "edgar/atk.png",
-            "ultimate": "edgar/ult.png",
+            "attack": "images/edgar/atk.png",
+            "ultimate": "images/edgar/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2335,13 +2204,7 @@
             "🖤",
             "😒",
             "➕"
-        ],
-        "Model": {
-            "0": "edgar/0.glb",
-            "1": "edgar/1.glb",
-            "2": "edgar/2.glb",
-            "3": "edgar/3.glb" 
-         } 
+        ]
     },
     "Belle": {
         "Icon": "belle/pin.png",
@@ -2385,28 +2248,28 @@
         "Voicelines": [
             {
                 "text": "I'm the leader of the gang.",
-                "audio": "belle/leader.ogg"
+                "audio": "audio/belle/leader.ogg"
             },
             {
                 "text": "The Goldarm Gang never forgets.",
-                "audio": "belle/forget.ogg"
+                "audio": "audio/belle/forget.ogg"
             },
             {
                 "text": "You can run! But you can't hide...",
-                "audio": "belle/hide.ogg"
+                "audio": "audio/belle/hide.ogg"
             },
             {
                 "text": "First we shoot, and then we loot.",
-                "audio": "belle/loot.ogg"
+                "audio": "audio/belle/loot.ogg"
             },
             {
                 "text": "Crime does pay! Ha ha ha ha!",
-                "audio": "belle/pay.ogg"
+                "audio": "audio/belle/pay.ogg"
             }
         ],
         "Images": {
-            "attack": "belle/atk.png",
-            "ultimate": "belle/ult.png",
+            "attack": "images/belle/atk.png",
+            "ultimate": "images/belle/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2416,8 +2279,7 @@
             "👓",
             "〽️",
             "🪤"
-        ],
-        "Model": {} 
+        ]
     },
     "Griff": {
         "Aliases": ["BrawlReflex"],
@@ -2434,8 +2296,8 @@
             "damage_type": "spread",
             "mvt": 720,
             "gadget_cd": {
-                "1": 20,
-                "2": 15
+                "1": 16,
+                "2": 11
             },
             "ult_charge": 1.67,
             "hc_multiplier": 30,
@@ -2462,28 +2324,28 @@
         "Voicelines": [
             {
                 "text": "Should have read the terms and conditions!",
-                "audio": "griff/terms.ogg"
+                "audio": "audio/griff/terms.ogg"
             },
             {
                 "text": "You break it! You bought it...",
-                "audio": "griff/bought.ogg"
+                "audio": "audio/griff/bought.ogg"
             },
             {
                 "text": "No. Refunds!",
-                "audio": "griff/refunds.ogg"
+                "audio": "audio/griff/refunds.ogg"
             },
             {
                 "text": "Everyone gets a 2% discount!",
-                "audio": "griff/discount.ogg"
+                "audio": "audio/griff/discount.ogg"
             },
             {
                 "text": "Cash is king!",
-                "audio": "griff/king.ogg"
+                "audio": "audio/griff/king.ogg"
             }
         ],
         "Images": {
-            "attack": "griff/atk.png",
-            "ultimate": "griff/ult.png",
+            "attack": "images/griff/atk.png",
+            "ultimate": "images/griff/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2492,8 +2354,7 @@
             "🎰",
             "🐖",
             "🟨"
-        ],
-        "Model": {} 
+        ]
     },
     "Ash": {
         "Aliases": ["Poubelle"],
@@ -2514,7 +2375,7 @@
                 "2": 8
             },
             "ult_charge": 6,
-            "hc_multiplier": 35,
+            "hc_multiplier": 50,
             "class": "tank",
             "rarity": "epic",
             "world": "fairytale_castle",
@@ -2538,28 +2399,28 @@
         "Voicelines": [
             {
                 "text": "Time to take out the rubbish.",
-                "audio": "ash/rubbish.ogg"
+                "audio": "audio/ash/rubbish.ogg"
             },
             {
                 "text": "Get off me ya wee rascal.",
-                "audio": "ash/rascal.ogg"
+                "audio": "audio/ash/rascal.ogg"
             },
             {
                 "text": "Run free, ma wee beasties!",
-                "audio": "ash/beasties.ogg"
+                "audio": "audio/ash/beasties.ogg"
             },
             {
                 "text": "Bin-it to win-it!",
-                "audio": "ash/bin_it.ogg"
+                "audio": "audio/ash/bin_it.ogg"
             },
             {
                 "text": "Make daddy proud.",
-                "audio": "ash/proud.ogg"
+                "audio": "audio/ash/proud.ogg"
             }
         ],
         "Images": {
-            "attack": "ash/atk.png",
-            "ultimate": "ash/ult.png",
+            "attack": "images/ash/atk.png",
+            "ultimate": "images/ash/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2568,13 +2429,7 @@
             "🏰",
             "🐀",
             "💢"
-        ],
-        "Model": {
-            "0": "ash/0.glb",
-            "1": "ash/1.glb",
-            "2": "ash/2.glb",
-            "3": "ash/3.glb" 
-         } 
+        ]
     },
     "Lola": {
         "Icon": "lola/pin.png",
@@ -2618,28 +2473,28 @@
         "Voicelines": [
             {
                 "text": "Oh honey, don't you wish you were me?",
-                "audio": "lola/me.ogg"
+                "audio": "audio/lola/me.ogg"
             },
             {
                 "text": "Oops, sometimes a lady has to be the bad guy!",
-                "audio": "lola/bad_guy.ogg"
+                "audio": "audio/lola/bad_guy.ogg"
             },
             {
                 "text": "No one outshines the diva!",
-                "audio": "lola/diva.ogg"
+                "audio": "audio/lola/diva.ogg"
             },
             {
                 "text": "I'm an icon, a legend, and the moment.",
-                "audio": "lola/moment.ogg"
+                "audio": "audio/lola/moment.ogg"
             },
             {
                 "text": "Time to steal the show!",
-                "audio": "lola/show.ogg"
+                "audio": "audio/lola/show.ogg"
             }
         ],
         "Images": {
-            "attack": "lola/atk.png",
-            "ultimate": "lola/ult.png",
+            "attack": "images/lola/atk.png",
+            "ultimate": "images/lola/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2649,8 +2504,7 @@
             "🪞",
             "📷",
             "📨"
-        ],
-        "Model": {} 
+        ]
     },
     "Grom": {
         "Icon": "grom/pin.png",
@@ -2694,28 +2548,28 @@
         "Voicelines": [
             {
                 "text": "I am teaching but you are not learning.",
-                "audio": "grom/teaching.ogg"
+                "audio": "audio/grom/teaching.ogg"
             },
             {
                 "text": "Here comes the BIG BOOOM!",
-                "audio": "grom/big_boom.ogg"
+                "audio": "audio/grom/big_boom.ogg"
             },
             {
                 "text": "With one left hand!",
-                "audio": "grom/left_hand.ogg"
+                "audio": "audio/grom/left_hand.ogg"
             },
             {
                 "text": "I will show you where lobsters spend winter.",
-                "audio": "grom/winter.ogg"
+                "audio": "audio/grom/winter.ogg"
             },
             {
                 "text": "Don't forget the milk.",
-                "audio": "grom/milk.ogg"
+                "audio": "audio/grom/milk.ogg"
             }
         ],
         "Images": {
-            "attack": "grom/atk.png",
-            "ultimate": "grom/ult.png",
+            "attack": "images/grom/atk.png",
+            "ultimate": "images/grom/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2724,13 +2578,7 @@
             "🚸",
             "🟥",
             "🔗"
-        ],
-        "Model": {
-            "0": "grom/0.glb",
-            "1": "grom/1.glb",
-            "2": "grom/2.glb",
-            "3": "grom/3.glb" 
-         } 
+        ]
     },
     "Bonnie": {
         "Icon": "bonnie/small/pin.png",
@@ -2774,28 +2622,28 @@
         "Voicelines": [
             {
                 "text": "You're gonna knock out another tooth!",
-                "audio": "bonnie/small/tooth.ogg"
+                "audio": "audio/bonnie/small/tooth.ogg"
             },
             {
                 "text": "I'm telling uncle Stu!",
-                "audio": "bonnie/small/stu.ogg"
+                "audio": "audio/bonnie/small/stu.ogg"
             },
             {
                 "text": "Look at all those explosions.",
-                "audio": "bonnie/small/explosion.ogg"
+                "audio": "audio/bonnie/small/explosion.ogg"
             },
             {
                 "text": "We got this, Clyde!",
-                "audio": "bonnie/small/clyde.ogg"
+                "audio": "audio/bonnie/small/clyde.ogg"
             },
             {
                 "text": "My greatest stunt yet!",
-                "audio": "bonnie/small/stunt.ogg"
+                "audio": "audio/bonnie/small/stunt.ogg"
             }
         ],
         "Images": {
-            "attack": "bonnie/small/atk.png",
-            "ultimate": "bonnie/small/ult.png",
+            "attack": "images/bonnie/small/atk.png",
+            "ultimate": "images/bonnie/small/ult.png",
             "order": true
         },
         "Emojis": [
@@ -2804,8 +2652,7 @@
             "🎆",
             "🎡",
             "⭐"
-        ],
-        "Model": {} 
+        ]
     },
     "Bonnie (Clyde)": {
         "Aliases": ["Clyde"],
@@ -2836,8 +2683,8 @@
             "nb_skins": 6
         },
         "Images": {
-            "attack": "bonnie/clyde/atk.png",
-            "ultimate": "bonnie/clyde/ult.png",
+            "attack": "images/bonnie/clyde/atk.png",
+            "ultimate": "images/bonnie/clyde/ult.png",
             "order": false
         }
     },
@@ -2883,28 +2730,28 @@
         "Voicelines": [
             {
                 "text": "Time to hit them with the old one-two!",
-                "audio": "sam/one_two.ogg"
+                "audio": "audio/sam/one_two.ogg"
             },
             {
                 "text": "Let's go beat up some bots!",
-                "audio": "sam/bots.ogg"
+                "audio": "audio/sam/bots.ogg"
             },
             {
                 "text": "This one's for Belle.",
-                "audio": "sam/belle.ogg"
+                "audio": "audio/sam/belle.ogg"
             },
             {
                 "text": "Playtime's over, kids.",
-                "audio": "sam/kids.ogg"
+                "audio": "audio/sam/kids.ogg"
             },
             {
                 "text": "Gloves are off.",
-                "audio": "sam/gloves.ogg"
+                "audio": "audio/sam/gloves.ogg"
             }
         ],
         "Images": {
-            "attack": "sam/atk.png",
-            "ultimate": "sam/ult.png",
+            "attack": "images/sam/atk.png",
+            "ultimate": "images/sam/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2913,13 +2760,7 @@
             "👴🏻",
             "🧲",
             "🪙"
-        ],
-        "Model": {
-            "0": "sam/0.glb",
-            "1": "sam/1.glb",
-            "2": "sam/2.glb",
-            "3": "sam/3.glb"  
-        } 
+        ]
     },
     "Mandy": {
         "Icon": "mandy/pin.png",
@@ -2929,8 +2770,8 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 1,
-            "damage_per_projectile": 2800,
-            "full_damage": 2800,
+            "damage_per_projectile": 2600,
+            "full_damage": 2600,
             "ammo": 3,
             "damage_type": "single",
             "mvt": 720,
@@ -2963,28 +2804,28 @@
         "Voicelines": [
             {
                 "text": "Uhm, where is Chester when I need him?",
-                "audio": "mandy/chester.ogg"
+                "audio": "audio/mandy/chester.ogg"
             },
             {
                 "text": "Sweet and sour, taste my power!",
-                "audio": "mandy/sweet.ogg"
+                "audio": "audio/mandy/sweet.ogg"
             },
             {
                 "text": "I'm one tough cookie.",
-                "audio": "mandy/cookies.ogg"
+                "audio": "audio/mandy/cookies.ogg"
             },
             {
                 "text": "Ugh, bitter like burned syrup!",
-                "audio": "mandy/sirop.ogg"
+                "audio": "audio/mandy/sirop.ogg"
             },
             {
                 "text": "Come on people, get a move on!",
-                "audio": "mandy/move_on.ogg"
+                "audio": "audio/mandy/move_on.ogg"
             }
         ],
         "Images": {
-            "attack": "mandy/atk.png",
-            "ultimate": "mandy/ult.png",
+            "attack": "images/mandy/atk.png",
+            "ultimate": "images/mandy/ult.png",
             "order": false
         },
         "Emojis": [
@@ -2993,13 +2834,7 @@
             "🌈",
             "🍪",
             "🦷"
-        ],
-        "Model": {
-            "0": "mandy/0.glb",
-            "1": "mandy/1.glb",
-            "2": "mandy/2.glb",
-            "3": "mandy/3.glb"  
-        } 
+        ]
     },
     "Maisie": {
         "Icon": "maisie/pin.png",
@@ -3043,28 +2878,28 @@
         "Voicelines": [
             {
                 "text": "I might be armless, but I'm in no way harmless.",
-                "audio": "maisie/armless.ogg"
+                "audio": "audio/maisie/armless.ogg"
             },
             {
                 "text": "Where there's smoke, there's fire.",
-                "audio": "maisie/fire.ogg"
+                "audio": "audio/maisie/fire.ogg"
             },
             {
                 "text": "Ready to face the flames.",
-                "audio": "maisie/flames.ogg"
+                "audio": "audio/maisie/flames.ogg"
             },
             {
                 "text": "Shockwave!",
-                "audio": "maisie/shoc.ogg"
+                "audio": "audio/maisie/shoc.ogg"
             },
             {
                 "text": "Boom! That's how it's done!",
-                "audio": "maisie/done.ogg"
+                "audio": "audio/maisie/done.ogg"
             }
         ],
         "Images": {
-            "attack": "maisie/atk.png",
-            "ultimate": "maisie/ult.png",
+            "attack": "images/maisie/atk.png",
+            "ultimate": "images/maisie/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3073,8 +2908,7 @@
             "🔥",
             "🍿",
             "⚙️"
-        ],
-        "Model": {} 
+        ]
     },
     "Hank": {
         "Icon": "hank/pin.png",
@@ -3118,28 +2952,28 @@
         "Voicelines": [
             {
                 "text": "Heyeah! Check out my pincer maneuver!",
-                "audio": "hank/pincer.ogg"
+                "audio": "audio/hank/pincer.ogg"
             },
             {
                 "text": "You will not laugh, you will not cry, you will learn by the numbers, and I will teach you.",
-                "audio": "hank/cry.ogg"
+                "audio": "audio/hank/cry.ogg"
             },
             {
                 "text": "All ready for the seafood buffet.",
-                "audio": "hank/buffet.ogg"
+                "audio": "audio/hank/buffet.ogg"
             },
             {
                 "text": "♫One, two, three, four! I just swept you off the floor!",
-                "audio": "hank/swept.ogg"
+                "audio": "audio/hank/swept.ogg"
             },
             {
                 "text": "♫I don't want to play no more, time to go, I'll find the door!",
-                "audio": "hank/door.ogg"
+                "audio": "audio/hank/door.ogg"
             }
         ],
         "Images": {
-            "attack": "hank/atk.png",
-            "ultimate": "hank/ult.png",
+            "attack": "images/hank/atk.png",
+            "ultimate": "images/hank/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3147,8 +2981,7 @@
             "🦐",
             "🪖",
             "🛡️"
-        ],
-        "Model": {} 
+        ]
     },
     "Pearl": {
         "Aliases": ["Cookie"],
@@ -3193,28 +3026,28 @@
         "Voicelines": [
             {
                 "text": "Let's turn up the heat and serve some justice!",
-                "audio": "pearl/justice.ogg"
+                "audio": "audio/pearl/justice.ogg"
             },
             {
                 "text": "That was a piece of cake.",
-                "audio": "pearl/cake.ogg"
+                "audio": "audio/pearl/cake.ogg"
             },
             {
                 "text": "Too hot to handle.",
-                "audio": "pearl/hot.ogg"
+                "audio": "audio/pearl/hot.ogg"
             },
             {
                 "text": "Filled with pain, but gluten-free!",
-                "audio": "pearl/pain.ogg"
+                "audio": "audio/pearl/pain.ogg"
             },
             {
                 "text": "I've got the recipe for destruction!",
-                "audio": "pearl/destruction.ogg"
+                "audio": "audio/pearl/destruction.ogg"
             }
         ],
         "Images": {
-            "attack": "pearl/atk.png",
-            "ultimate": "pearl/ult.png",
+            "attack": "images/pearl/atk.png",
+            "ultimate": "images/pearl/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3223,8 +3056,7 @@
             "🤖",
             "🧤",
             "💥"
-        ],
-        "Model": {} 
+        ]
     },
     "Larry & Lawrie": {
         "Aliases": ["L&L"],
@@ -3269,28 +3101,28 @@
         "Voicelines": [
             {
                 "text": "Say hello to the bad cop!",
-                "audio": "larry/cop.ogg"
+                "audio": "audio/larry/cop.ogg"
             },
             {
                 "text": "Rules rule the world.",
-                "audio": "larry/rules.ogg"
+                "audio": "audio/larry/rules.ogg"
             },
             {
                 "text": "Got a ticket to win, and I'm checking in!",
-                "audio": "larry/ticket.ogg"
+                "audio": "audio/larry/ticket.ogg"
             },
             {
                 "text": "You have broken the law!",
-                "audio": "larry/law.ogg"
+                "audio": "audio/larry/law.ogg"
             },
             {
                 "text": "Optimism won again!",
-                "audio": "larry/optimism.ogg"
+                "audio": "audio/larry/optimism.ogg"
             }
         ],
         "Images": {
-            "attack": "larry/atk.png",
-            "ultimate": "larry/ult.png",
+            "attack": "images/larry/atk.png",
+            "ultimate": "images/larry/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3300,13 +3132,7 @@
             "🚨",
             "🔯",
             "🟧"
-        ],
-        "Model": {
-            "0": "larry/0.glb",
-            "1": "larry/1.glb",
-            "2": "larry/2.glb",
-            "3": "larry/3.glb"  
-        } 
+        ]
     },
     "Angelo": {
         "Aliases": ["Moustique"],
@@ -3351,28 +3177,28 @@
         "Voicelines": [
             {
                 "text": "Half human, half fly, hmhm, all fabulous!",
-                "audio": "angelo/fly.ogg"
+                "audio": "audio/angelo/fly.ogg"
             },
             {
                 "text": "Look at my fabulous wings!",
-                "audio": "angelo/wings.ogg"
+                "audio": "audio/angelo/wings.ogg"
             },
             {
                 "text": "Time to spill the tea!",
-                "audio": "angelo/tea.ogg"
+                "audio": "audio/angelo/tea.ogg"
             },
             {
                 "text": "Oh, boo hoo. Dry your tears, honey.",
-                "audio": "angelo/tears.ogg"
+                "audio": "audio/angelo/tears.ogg"
             },
             {
                 "text": "Some drama, please?",
-                "audio": "angelo/drama.ogg"
+                "audio": "audio/angelo/drama.ogg"
             }
         ],
         "Images": {
-            "attack": "angelo/atk.png",
-            "ultimate": "angelo/ult.png",
+            "attack": "images/angelo/atk.png",
+            "ultimate": "images/angelo/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3381,13 +3207,7 @@
             "♒",
             "💘",
             "🟩"
-        ],
-        "Model": {
-            "0": "angelo/0.glb",
-            "1": "angelo/1.glb",
-            "2": "angelo/2.glb",
-            "3": "angelo/3.glb" 
-         } 
+        ]
     },
     "Berry": {
         "Aliases": ["Poney"],
@@ -3432,28 +3252,28 @@
         "Voicelines": [
             {
                 "text": "Let's melt your hopes and freeze your dreams.",
-                "audio": "berry/dream.ogg"
+                "audio": "audio/berry/dream.ogg"
             },
             {
                 "text": "Rainbow sparkles, woo.",
-                "audio": "berry/sparkle.ogg"
+                "audio": "audio/berry/sparkle.ogg"
             },
             {
                 "text": "In chaos, we find our true colors.",
-                "audio": "berry/color.ogg"
+                "audio": "audio/berry/color.ogg"
             },
             {
                 "text": "War is my canvas, time to doodle!",
-                "audio": "berry/doodle.ogg"
+                "audio": "audio/berry/doodle.ogg"
             },
             {
                 "text": "Sweet and sour, candy is my power.",
-                "audio": "berry/candy.ogg"
+                "audio": "audio/berry/candy.ogg"
             }
         ],
         "Images": {
-            "attack": "berry/atk.png",
-            "ultimate": "berry/ult.png",
+            "attack": "images/berry/atk.png",
+            "ultimate": "images/berry/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3463,8 +3283,7 @@
             "➕",
             "🍬",
             "🟪"
-        ],
-        "Model": {} 
+        ]
     },
     "Shade": {
         "Icon": "shade/pin.png",
@@ -3484,7 +3303,7 @@
                 "2": 9
             },
             "ult_charge": 5,
-            "hc_multiplier": 34,
+            "hc_multiplier": 40,
             "class": "assassin",
             "rarity": "epic",
             "world": "haunted_haven",
@@ -3507,8 +3326,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "shade/atk.png",
-            "ultimate": "shade/ult.png",
+            "attack": "images/shade/atk.png",
+            "ultimate": "images/shade/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3518,13 +3337,7 @@
             "🧢",
             "👓",
             "🧱"
-        ],
-        "Model": {
-            "0": "shade/0.glb",
-            "1": "shade/1.glb",
-            "2": "shade/2.glb",
-            "3": "shade/3.glb" 
-         } 
+        ]
     },
     "Meeple": {
         "Icon": "meeple/pin.png",
@@ -3541,7 +3354,7 @@
             "mvt": 720,
             "gadget_cd": {
                 "1": 22,
-                "2": 20
+                "2": 18
             },
             "ult_charge": 5,
             "hc_multiplier": 40,
@@ -3568,28 +3381,28 @@
         "Voicelines": [
             {
                 "text": "RNG is ruining the game!",
-                "audio": "meeple/rng.ogg"
+                "audio": "audio/meeple/rng.ogg"
             },
             {
                 "text": "I rolled a NAT21.",
-                "audio": "meeple/rolled.ogg"
+                "audio": "audio/meeple/rolled.ogg"
             },
             {
                 "text": "Cheat mode enabled!",
-                "audio": "meeple/cheat.ogg"
+                "audio": "audio/meeple/cheat.ogg"
             },
             {
                 "text": "Winning by teaming, how original..",
-                "audio": "meeple/teaming.ogg"
+                "audio": "audio/meeple/teaming.ogg"
             },
             {
                 "text": "You clearly forgot to read subsection 37 of rule 749, loser.",
-                "audio": "meeple/.ogg"
+                "audio": "audio/meeple/.ogg"
             }
         ],
         "Images": {
-            "attack": "meeple/atk.png",
-            "ultimate": "meeple/ult.png",
+            "attack": "images/meeple/atk.png",
+            "ultimate": "images/meeple/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3598,13 +3411,7 @@
             "🎱",
             "🧾",
             "🧱"
-        ],
-        "Model": {
-            "0": "meeple/0.glb",
-            "1": "meeple/1.glb",
-            "2": "meeple/2.glb",
-            "3": "meeple/3.glb"  
-        } 
+        ]
     },
     "Trunk": {
         "Icon": "trunk/pin.png",
@@ -3648,28 +3455,28 @@
         "Voicelines": [
             {
                 "text": "Branches up, leaf no mercy!",
-                "audio": "trunk/leaf.ogg"
+                "audio": "audio/trunk/leaf.ogg"
             },
             {
                 "text": "We are many!",
-                "audio": "trunk/many.ogg"
+                "audio": "audio/trunk/many.ogg"
             },
             {
                 "text": "Don't worry, I almost know exactly what I'm doing.",
-                "audio": "trunk/doing.ogg"
+                "audio": "audio/trunk/doing.ogg"
             },
             {
                 "text": "For the queen!",
-                "audio": "trunk/queen.ogg"
+                "audio": "audio/trunk/queen.ogg"
             },
             {
                 "text": "Stick together, everyone!",
-                "audio": "trunk/stick.ogg"
+                "audio": "audio/trunk/stick.ogg"
             }
         ],
         "Images": {
-            "attack": "trunk/atk.png",
-            "ultimate": "trunk/ult.png",
+            "attack": "images/trunk/atk.png",
+            "ultimate": "images/trunk/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3678,93 +3485,7 @@
             "🥊",
             "🟤",
             "🍃"
-        ],
-        "Model": {
-            "0": "trunk/0.glb",
-            "1": "trunk/1.glb",
-            "2": "trunk/2.glb",
-            "3": "trunk/3.glb" 
-         } 
-    },
-    "Bolt": {
-        "Icon": "bolt/pin.png",
-        "Stats": {
-            "gender": "male",
-            "hp": 10000,
-            "hitbox": 145,
-            "passive_ability": true,
-            "projectiles": 1,
-            "damage_per_projectile": 2960,
-            "full_damage": 2960,
-            "ammo": 2,
-            "damage_type": "splash",
-            "mvt": 540,
-            "gadget_cd": {
-                "1": 15,
-                "2": 20
-            },
-            "ult_charge": 4,
-            "hc_multiplier": 30,
-            "class": "tank",
-            "rarity": "epic",
-            "world": "toyland",
-            "range": 0,
-            "reload_speed": 2.2,
-            "release": 2026,
-            "nb_skins": 0
-        },
-        "Gears" : {
-        "1": "bolt/gd1.png",
-        "2": "bolt/gd2.png",
-        "3": "bolt/sp1.png",
-        "4": "bolt/sp2.png",
-        "5": "bolt/hc.png"
-        },
-        "Fact": [
-            "*Brawler*'s has the highest base speed in the game.",
-            "*Brawler* is the best brawler to pair with Kit.",
-            "*Brawler* is the only brawler after Moe to be able to break walls with the gadget."
-        ],
-        "Voicelines": [
-            {
-                "text": "Buckle up, it's gonna be a bumpy ride.",
-                "audio": "bolt/bumpy.ogg"
-            },
-            {
-                "text": "Honk if you like pain. Beep beep!",
-                "audio": "bolt/honk.ogg"
-            },
-            {
-                "text": "Let's put the pedal to the metal.",
-                "audio": "bolt/pedal.ogg"
-            },
-            {
-                "text": "You ran out of gas.",
-                "audio": "bolt/gas.ogg"
-            },
-            {
-                "text": "P1 as usual.",
-                "audio": "bolt/p1.ogg"
-            }
-        ],
-        "Images": {
-            "attack": "bolt/atk.png",
-            "ultimate": "bolt/ult.png",
-            "order": true
-        },
-        "Emojis": [
-            "🎱",
-            "🚄",
-            "⏫",
-            "🔵",
-            "🌲"
-        ],
-        "Model": {
-            "0": "bolt/0.glb",
-            "1": "bolt/1.glb",
-            "2": "bolt/2.glb",
-            "3": "bolt/3.glb"  
-        } 
+        ]
     },
     "Mortis": {
         "Aliases": ["Morris"],
@@ -3781,7 +3502,7 @@
             "damage_type": "splash",
             "mvt": 820,
             "gadget_cd": {
-                "1": 18,
+                "1": 15,
                 "2": 24
             },
             "ult_charge": 5,
@@ -3809,28 +3530,28 @@
         "Voicelines": [
             {
                 "text": "Creatures of the night!",
-                "audio": "mortis/.ogg"
+                "audio": "audio/mortis/.ogg"
             },
             {
                 "text": "Your soul is mine!",
-                "audio": "mortis/soul.ogg"
+                "audio": "audio/mortis/soul.ogg"
             },
             {
                 "text": "I bring you the gift of darkness!",
-                "audio": "mortis/gift.ogg"
+                "audio": "audio/mortis/gift.ogg"
             },
             {
                 "text": "Dash and destroy!",
-                "audio": "mortis/dash.ogg"
+                "audio": "audio/mortis/dash.ogg"
             },
             {
                 "text": "Witness my power!",
-                "audio": "mortis/power.ogg"
+                "audio": "audio/mortis/power.ogg"
             }
         ],
         "Images": {
-            "attack": "mortis/atk.png",
-            "ultimate": "mortis/ult.png",
+            "attack": "images/mortis/atk.png",
+            "ultimate": "images/mortis/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3839,12 +3560,7 @@
             "🎩",
             "🧛🏻‍♂️",
             "🟪"
-        ],
-        "Model": {
-        "0": "mortis/0.glb",
-        "1": "mortis/1.glb",
-        "2": "mortis/2.glb",
-        "3": "mortis/3.glb"  } 
+        ]
     },
     "Tara": {
         "Icon": "tara/pin.png",
@@ -3869,7 +3585,7 @@
             "rarity": "mythic",
             "world": "mystic_mountain",
             "range": 8,
-            "reload_speed": 1.8,
+            "reload_speed": 2,
             "release": 2017,
             "nb_skins": 7
         },
@@ -3887,8 +3603,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "tara/atk.png",
-            "ultimate": "tara/ult.png",
+            "attack": "images/tara/atk.png",
+            "ultimate": "images/tara/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3897,8 +3613,7 @@
             "👤",
             "👁️",
             "🔮"
-        ],
-        "Model": {} 
+        ]
     },
     "Gene": {
         "Icon": "gene/pin.png",
@@ -3941,8 +3656,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "gene/atk.png",
-            "ultimate": "gene/ult.png",
+            "attack": "images/gene/atk.png",
+            "ultimate": "images/gene/ult.png",
             "order": false
         },
         "Emojis": [
@@ -3952,8 +3667,7 @@
             "🏜️",
             "🔵",
             "😜"
-        ],
-        "Model": {} 
+        ]
     },
     "Max": {
         "Icon": "max/pin.png",
@@ -3970,7 +3684,7 @@
             "mvt": 820,
             "gadget_cd": {
                 "1": 15,
-                "2": 15
+                "2": 8
             },
             "ult_charge": 3.5,
             "hc_multiplier": 45,
@@ -3997,28 +3711,28 @@
         "Voicelines": [
             {
                 "text": "Why is everyone so slow?",
-                "audio": "max/slow.ogg"
+                "audio": "audio/max/slow.ogg"
             },
             {
                 "text": "Did someone hit me?",
-                "audio": "max/hit.ogg"
+                "audio": "audio/max/hit.ogg"
             },
             {
                 "text": "Need more energy drink.",
-                "audio": "max/drink.ogg"
+                "audio": "audio/max/drink.ogg"
             },
             {
                 "text": "This is just the warm-up, right?",
-                "audio": "max/warm_up.ogg"
+                "audio": "audio/max/warm_up.ogg"
             },
             {
                 "text": "In the lead, winning, number one, best of the best, whoo!",
-                "audio": "max/lead.ogg"
+                "audio": "audio/max/lead.ogg"
             }
         ],
         "Images": {
-            "attack": "max/atk.png",
-            "ultimate": "max/ult.png",
+            "attack": "images/max/atk.png",
+            "ultimate": "images/max/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4028,8 +3742,7 @@
             "🟨",
             "🟥",
             "⏩"
-        ],
-        "Model": {} 
+        ]
     },
     "Mr. P": {
         "Aliases": ["5v5 Knockout"],
@@ -4073,8 +3786,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "mr/atk.png",
-            "ultimate": "mr/ult.png",
+            "attack": "images/mr/atk.png",
+            "ultimate": "images/mr/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4083,8 +3796,7 @@
             "🛎️",
             "❄️",
             "🏨"
-        ],
-        "Model": {} 
+        ]
     },
     "Sprout": {
         "Icon": "sprout/pin.png",
@@ -4094,8 +3806,8 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 1,
-            "damage_per_projectile": 2200,
-            "full_damage": 2200,
+            "damage_per_projectile": 2080,
+            "full_damage": 2080,
             "ammo": 3,
             "damage_type": "splash",
             "mvt": 720,
@@ -4109,7 +3821,7 @@
             "rarity": "mythic",
             "world": "adventure_land",
             "range": 5,
-            "reload_speed": 1.5,
+            "reload_speed": 1.7,
             "release": 2020,
             "nb_skins": 7
         },
@@ -4128,28 +3840,28 @@
         "Voicelines": [
             {
                 "text": "Job done. Have a nice day.",
-                "audio": "sprout/job.ogg"
+                "audio": "audio/sprout/job.ogg"
             },
             {
                 "text": "Commencing assignment.",
-                "audio": "sprout/assignment.ogg"
+                "audio": "audio/sprout/assignment.ogg"
             },
             {
                 "text": "Path. Cleared.",
-                "audio": "sprout/path.ogg"
+                "audio": "audio/sprout/path.ogg"
             },
             {
                 "text": "Obstruction.",
-                "audio": "sprout/obs.ogg"
+                "audio": "audio/sprout/obs.ogg"
             },
             {
                 "text": "Nature.",
-                "audio": "sprout/nature.ogg"
+                "audio": "audio/sprout/nature.ogg"
             }
         ],
         "Images": {
-            "attack": "sprout/atk.png",
-            "ultimate": "sprout/ult.png",
+            "attack": "images/sprout/atk.png",
+            "ultimate": "images/sprout/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4158,8 +3870,7 @@
             "✂️",
             "🪵",
             "📝"
-        ],
-        "Model": {} 
+        ]
     },
     "Lou": {
         "Icon": "lou/pin.png",
@@ -4203,28 +3914,28 @@
         "Voicelines": [
             {
                 "text": "Un-cone-trollable.",
-                "audio": "lou/cone.ogg"
+                "audio": "audio/lou/cone.ogg"
             },
             {
                 "text": "Slip n' slide!",
-                "audio": "lou/slide.ogg"
+                "audio": "audio/lou/slide.ogg"
             },
             {
                 "text": "100% certified flavor sauce!",
-                "audio": "lou/sauce.ogg"
+                "audio": "audio/lou/sauce.ogg"
             },
             {
                 "text": "B-B-B-B-Brain freeze!",
-                "audio": "lou/brain.ogg"
+                "audio": "audio/lou/brain.ogg"
             },
             {
                 "text": "You're on thin ice, my friend!",
-                "audio": "lou/ice.ogg"
+                "audio": "audio/lou/ice.ogg"
             }
         ],
         "Images": {
-            "attack": "lou/atk.png",
-            "ultimate": "lou/ult.png",
+            "attack": "images/lou/atk.png",
+            "ultimate": "images/lou/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4234,8 +3945,7 @@
             "🤖",
             "⛸️",
             "🏨"
-        ],
-        "Model": {} 
+        ]
     },
     "Byron": {
         "Icon": "byron/pin.png",
@@ -4279,28 +3989,28 @@
         "Voicelines": [
             {
                 "text": "Sign here, with your life.",
-                "audio": "byron/sign.ogg"
+                "audio": "audio/byron/sign.ogg"
             },
             {
                 "text": "Time to seal the deal.",
-                "audio": "byron/deal.ogg"
+                "audio": "audio/byron/deal.ogg"
             },
             {
                 "text": "Next time, try my excellent aiming elixir.",
-                "audio": "byron/elexir.ogg"
+                "audio": "audio/byron/elexir.ogg"
             },
             {
                 "text": "Have a free taste... of doom.",
-                "audio": "byron/doom.ogg"
+                "audio": "audio/byron/doom.ogg"
             },
             {
                 "text": "Buy a thousand, get one free.",
-                "audio": "byron/free.ogg"
+                "audio": "audio/byron/free.ogg"
             }
         ],
         "Images": {
-            "attack": "byron/atk.png",
-            "ultimate": "byron/ult.png",
+            "attack": "images/byron/atk.png",
+            "ultimate": "images/byron/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4309,13 +4019,7 @@
             "➕",
             "🐍",
             "🫙"
-        ],
-        "Model": {
-            "0": "byron/0.glb",
-            "1": "byron/1.glb",
-            "2": "byron/2.glb",
-            "3": "byron/3.glb" 
-         } 
+        ]
     },
     "Ruffs": {
         "Icon": "ruffs/pin.png",
@@ -4335,7 +4039,7 @@
                 "2": 15
             },
             "ult_charge": 3.5,
-            "hc_multiplier": 35,
+            "hc_multiplier": 40,
             "class": "support",
             "rarity": "mythic",
             "world": "tomorroworld",
@@ -4359,28 +4063,28 @@
         "Voicelines": [
             {
                 "text": "Preparing for counter attack.",
-                "audio": "ruffs/atk.ogg"
+                "audio": "audio/ruffs/atk.ogg"
             },
             {
                 "text": "Clear the drop zone!",
-                "audio": "ruffs/drop.ogg"
+                "audio": "audio/ruffs/drop.ogg"
             },
             {
                 "text": "My bite is way worse than my bark!",
-                "audio": "ruffs/bark.ogg"
+                "audio": "audio/ruffs/bark.ogg"
             },
             {
                 "text": "Sit down! Roll over! Now play dead.",
-                "audio": "ruffs/dead.ogg"
+                "audio": "audio/ruffs/dead.ogg"
             },
             {
                 "text": "Argh! I got my eye on you!",
-                "audio": "ruffs/eye.ogg"
+                "audio": "audio/ruffs/eye.ogg"
             }
         ],
         "Images": {
-            "attack": "ruffs/atk.png",
-            "ultimate": "ruffs/ult.png",
+            "attack": "images/ruffs/atk.png",
+            "ultimate": "images/ruffs/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4389,13 +4093,7 @@
             "🔭",
             "🔫",
             "〽️"
-        ],
-        "Model": {
-            "0": "ruffs/0.glb",
-            "1": "ruffs/1.glb",
-            "2": "ruffs/2.glb",
-            "3": "ruffs/3.glb" 
-         } 
+        ]
     },
     "Squeak": {
         "Icon": "squeak/pin.png",
@@ -4438,8 +4136,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "squeak/atk.png",
-            "ultimate": "squeak/ult.png",
+            "attack": "images/squeak/atk.png",
+            "ultimate": "images/squeak/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4448,8 +4146,7 @@
             "⚾",
             "🤤",
             "🦴"
-        ],
-        "Model": {} 
+        ]
     },
     "Buzz": {
         "Icon": "buzz/pin.png",
@@ -4469,7 +4166,7 @@
                 "2": 20
             },
             "ult_charge": 2,
-            "hc_multiplier": 30,
+            "hc_multiplier": 25,
             "class": "assassin",
             "rarity": "mythic",
             "world": "water_land",
@@ -4493,28 +4190,28 @@
         "Voicelines": [
             {
                 "text": "Don't mess with the whistle!",
-                "audio": "buzz/whistle.ogg"
+                "audio": "audio/buzz/whistle.ogg"
             },
             {
                 "text": "Only a fool messes with my pool!",
-                "audio": "buzz/pool.ogg"
+                "audio": "audio/buzz/pool.ogg"
             },
             {
                 "text": "Don't be salty! Take a shower.",
-                "audio": "buzz/salty.ogg"
+                "audio": "audio/buzz/salty.ogg"
             },
             {
                 "text": "Another day, another life saved.",
-                "audio": "buzz/saved.ogg"
+                "audio": "audio/buzz/saved.ogg"
             },
             {
                 "text": "Stand back! Trained professional here.",
-                "audio": "buzz/trained.ogg"
+                "audio": "audio/buzz/trained.ogg"
             }
         ],
         "Images": {
-            "attack": "buzz/atk.png",
-            "ultimate": "buzz/ult.png",
+            "attack": "images/buzz/atk.png",
+            "ultimate": "images/buzz/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4523,8 +4220,7 @@
             "🕶️",
             "😮‍💨",
             "🟩"
-        ],
-        "Model": {} 
+        ]
     },
     "Fang": {
         "Icon": "fang/pin.png",
@@ -4568,28 +4264,28 @@
         "Voicelines": [
             {
                 "text": "Hahaha, It's time for some action!",
-                "audio": "fang/action.ogg"
+                "audio": "audio/fang/action.ogg"
             },
             {
                 "text": "It's popcorn time!",
-                "audio": "fang/pop.ogg"
+                "audio": "audio/fang/pop.ogg"
             },
             {
                 "text": "My foot, your face, it's on!",
-                "audio": "fang/foot.ogg"
+                "audio": "audio/fang/foot.ogg"
             },
             {
                 "text": "Buttery smooth moves!",
-                "audio": "fang/moves.ogg"
+                "audio": "audio/fang/moves.ogg"
             },
             {
                 "text": "Ay, enough about you! Let's focus on me!",
-                "audio": "fang/me.ogg"
+                "audio": "audio/fang/me.ogg"
             }
         ],
         "Images": {
-            "attack": "fang/atk.png",
-            "ultimate": "fang/ult.png",
+            "attack": "images/fang/atk.png",
+            "ultimate": "images/fang/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4598,13 +4294,7 @@
             "🍿",
             "🩴",
             "🐉"
-        ],
-        "Model": {
-            "0": "fang/0.glb",
-            "1": "fang/1.glb",
-            "2": "fang/2.glb",
-            "3": "fang/3.glb"  
-        } 
+        ]
     },
     "Eve": {
         "Icon": "eve/pin.png",
@@ -4648,28 +4338,28 @@
         "Voicelines": [
             {
                 "text": "Look at this primitive life form! Huh, pathetic.",
-                "audio": "eve/form.ogg"
+                "audio": "audio/eve/form.ogg"
             },
             {
                 "text": "This isn't a place for my babies!",
-                "audio": "eve/babies.ogg"
+                "audio": "audio/eve/babies.ogg"
             },
             {
                 "text": "Agh, what a waste of resources!",
-                "audio": "eve/waste.ogg"
+                "audio": "audio/eve/waste.ogg"
             },
             {
                 "text": "I gave you life, but really, you gave me mine.",
-                "audio": "eve/life.ogg"
+                "audio": "audio/eve/life.ogg"
             },
             {
                 "text": "How do you like your eggs?",
-                "audio": "eve/eggs.ogg"
+                "audio": "audio/eve/eggs.ogg"
             }
         ],
         "Images": {
-            "attack": "eve/atk.png",
-            "ultimate": "eve/ult.png",
+            "attack": "images/eve/atk.png",
+            "ultimate": "images/eve/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4679,8 +4369,7 @@
             "👩🏻‍🍼",
             "♒",
             "🟪"
-        ],
-        "Model": {} 
+        ]
     },
     "Janet": {
         "Icon": "janet/pin.png",
@@ -4724,28 +4413,28 @@
         "Voicelines": [
             {
                 "text": "Remember peeps, no points for second place.",
-                "audio": "janet/second.ogg"
+                "audio": "audio/janet/second.ogg"
             },
             {
                 "text": "Seems unfair, since I'm rocket-powered!",
-                "audio": "janet/rocket.ogg"
+                "audio": "audio/janet/rocket.ogg"
             },
             {
                 "text": "Sorry can't see you from up here.",
-                "audio": "janet/up.ogg"
+                "audio": "audio/janet/up.ogg"
             },
             {
                 "text": "I'm high, you're low.",
-                "audio": "janet/high.ogg"
+                "audio": "audio/janet/high.ogg"
             },
             {
                 "text": "♫I'm about to crash and burn.",
-                "audio": "janet/crash.ogg"
+                "audio": "audio/janet/crash.ogg"
             }
         ],
         "Images": {
-            "attack": "janet/atk.png",
-            "ultimate": "janet/ult.png",
+            "attack": "images/janet/atk.png",
+            "ultimate": "images/janet/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4755,13 +4444,7 @@
             "🎆",
             "🥇",
             "✈️"
-        ],
-        "Model": {
-            "0": "janet/0.glb",
-            "1": "janet/1.glb",
-            "2": "janet/2.glb",
-            "3": "janet/3.glb"  
-        } 
+        ]
     },
     "Otis": {
         "Aliases": ["blablabla bliblibli bloubloublou", "Autiste"],
@@ -4805,8 +4488,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "otis/atk.png",
-            "ultimate": "otis/ult.png",
+            "attack": "images/otis/atk.png",
+            "ultimate": "images/otis/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4816,8 +4499,7 @@
             "🫧",
             "🚫",
             "👝"
-        ],
-        "Model": {} 
+        ]
     },
     "Buster": {
         "Icon": "buster/pin.png",
@@ -4861,28 +4543,28 @@
         "Voicelines": [
             {
                 "text": "I will protect you!",
-                "audio": "buster/protect.ogg"
+                "audio": "audio/buster/protect.ogg"
             },
             {
                 "text": "No talkin' during the movie!",
-                "audio": "buster/talkin.ogg"
+                "audio": "audio/buster/talkin.ogg"
             },
             {
                 "text": "By the power of cinema!",
-                "audio": "buster/cinema.ogg"
+                "audio": "audio/buster/cinema.ogg"
             },
             {
                 "text": "Come with me if you wanna live.",
-                "audio": "buster/live.ogg"
+                "audio": "audio/buster/live.ogg"
             },
             {
                 "text": "Come by my side, no need to hide.",
-                "audio": "buster/hide.ogg"
+                "audio": "audio/buster/hide.ogg"
             }
         ],
         "Images": {
-            "attack": "buster/atk.png",
-            "ultimate": "buster/ult.png",
+            "attack": "images/buster/atk.png",
+            "ultimate": "images/buster/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4892,8 +4574,7 @@
             "🍿",
             "🔆",
             "🔙"
-        ],
-        "Model": {} 
+        ]
     },
     "Gray": {
         "Icon": "gray/pin.png",
@@ -4903,8 +4584,8 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 1,
-            "damage_per_projectile": 2560,
-            "full_damage": 2560,
+            "damage_per_projectile": 2320,
+            "full_damage": 2320,
             "ammo": 3,
             "damage_type": "single",
             "mvt": 720,
@@ -4936,8 +4617,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "gray/atk.png",
-            "ultimate": "gray/ult.png",
+            "attack": "images/gray/atk.png",
+            "ultimate": "images/gray/ult.png",
             "order": false
         },
         "Emojis": [
@@ -4946,13 +4627,7 @@
             "🕳️",
             "🦯",
             "🎞️"
-        ],
-        "Model": {
-            "0": "gray/0.glb",
-            "1": "gray/1.glb",
-            "2": "gray/2.glb",
-            "3": "gray/3.glb"  
-        } 
+        ]
     },
     "R-T": {
         "Aliases": ["Rt"],
@@ -4997,28 +4672,28 @@
         "Voicelines": [
             {
                 "text": "I am watching you!",
-                "audio": "rt/base/watch.ogg"
+                "audio": "audio/rt/base/watch.ogg"
             },
             {
                 "text": "Cute robot mode, engaged.",
-                "audio": "rt/base/cute.ogg"
+                "audio": "audio/rt/base/cute.ogg"
             },
             {
                 "text": "Please, ask me anything!",
-                "audio": "rt/base/ask.ogg"
+                "audio": "audio/rt/base/ask.ogg"
             },
             {
                 "text": "Having minor technical issues.",
-                "audio": "rt/base/issues.ogg"
+                "audio": "audio/rt/base/issues.ogg"
             },
             {
                 "text": "Everything is OK.",
-                "audio": "rt/base/ok.ogg"
+                "audio": "audio/rt/base/ok.ogg"
             }
         ],
         "Images": {
-            "attack": "rt/base/atk.png",
-            "ultimate": "rt/base/ult.png",
+            "attack": "images/rt/base/atk.png",
+            "ultimate": "images/rt/base/ult.png",
             "order": true
         },
         "Emojis": [
@@ -5028,8 +4703,7 @@
             "📼",
             "💡",
             "🟧"
-        ],
-        "Model": {} 
+        ]
     },
     "R-T (split form)": {
         "Aliases": ["Rt (split form)"],
@@ -5060,8 +4734,8 @@
             "nb_skins": 4
         },
         "Images": {
-            "attack": "rt/split/atk.png",
-            "ultimate": "rt/split/ult.png",
+            "attack": "images/rt/split/atk.png",
+            "ultimate": "images/rt/split/ult.png",
             "order": true
         }
     },
@@ -5107,28 +4781,28 @@
         "Voicelines": [
             {
                 "text": "I smell suffering, and I like it.",
-                "audio": "willow/smell.ogg"
+                "audio": "audio/willow/smell.ogg"
             },
             {
                 "text": "Hearing people's fears is music to my ears.",
-                "audio": "willow/fears.ogg"
+                "audio": "audio/willow/fears.ogg"
             },
             {
                 "text": "Ah, I love winning and watching people cry.",
-                "audio": "willow/cry.ogg"
+                "audio": "audio/willow/cry.ogg"
             },
             {
                 "text": "Cool, cruel and ready to rule.",
-                "audio": "willow/rule.ogg"
+                "audio": "audio/willow/rule.ogg"
             },
             {
                 "text": "You are playing with poison!",
-                "audio": "willow/poison.ogg"
+                "audio": "audio/willow/poison.ogg"
             }
         ],
         "Images": {
-            "attack": "willow/atk.png",
-            "ultimate": "willow/ult.png",
+            "attack": "images/willow/atk.png",
+            "ultimate": "images/willow/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5137,8 +4811,7 @@
             "🌀",
             "🧪",
             "💚"
-        ],
-        "Model": {} 
+        ]
     },
     "Doug": {
         "Aliases": ["Saucisse"],
@@ -5183,28 +4856,28 @@
         "Voicelines": [
             {
                 "text": "Let's dive into this splashy showdown.",
-                "audio": "doug/splashy.ogg"
+                "audio": "audio/doug/splashy.ogg"
             },
             {
                 "text": "Yo! Be prepared for some mildly effective life guarding.",
-                "audio": "doug/life.ogg"
+                "audio": "audio/doug/life.ogg"
             },
             {
                 "text": "Like a burnt chicken nugget.",
-                "audio": "doug/nugget.ogg"
+                "audio": "audio/doug/nugget.ogg"
             },
             {
                 "text": "My milkshake brings all the kids to the pool!",
-                "audio": "doug/milkshake.ogg"
+                "audio": "audio/doug/milkshake.ogg"
             },
             {
                 "text": "Yo! Don't be a whiner, have a wiener!",
-                "audio": "doug/wiener.ogg"
+                "audio": "audio/doug/wiener.ogg"
             }
         ],
         "Images": {
-            "attack": "doug/atk.png",
-            "ultimate": "doug/ult.png",
+            "attack": "images/doug/atk.png",
+            "ultimate": "images/doug/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5214,13 +4887,7 @@
             "🥤",
             "💧",
             "➕"
-        ],
-        "Model": {
-            "0": "doug/0.glb",
-            "1": "doug/1.glb",
-            "2": "doug/2.glb",
-            "3": "doug/3.glb"  
-        } 
+        ]
     },
     "Chuck": {
         "Icon": "chuck/pin.png",
@@ -5264,28 +4931,28 @@
         "Voicelines": [
             {
                 "text": "Next stop, Creepyville!",
-                "audio": "chuck/creepyville.ogg"
+                "audio": "audio/chuck/creepyville.ogg"
             },
             {
                 "text": "Into the fray, full steam ahead!",
-                "audio": "chuck/fray.ogg"
+                "audio": "audio/chuck/fray.ogg"
             },
             {
                 "text": "Time for the applause!",
-                "audio": "chuck/applause.ogg"
+                "audio": "audio/chuck/applause.ogg"
             },
             {
                 "text": "All aboard the pain train!",
-                "audio": "chuck/train.ogg"
+                "audio": "audio/chuck/train.ogg"
             },
             {
                 "text": "Back on track!",
-                "audio": "chuck/track.ogg"
+                "audio": "audio/chuck/track.ogg"
             }
         ],
         "Images": {
-            "attack": "chuck/atk.png",
-            "ultimate": "chuck/ult.png",
+            "attack": "images/chuck/atk.png",
+            "ultimate": "images/chuck/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5295,8 +4962,7 @@
             "🧑🏻‍🦼",
             "🚉",
             "🎩"
-        ],
-        "Model": {} 
+        ]
     },
     "Charlie": {
         "Icon": "charlie/pin.png",
@@ -5340,28 +5006,28 @@
         "Voicelines": [
             {
                 "text": "Straight from the streets with zero defeats!",
-                "audio": "charlie/defeats.ogg"
+                "audio": "audio/charlie/defeats.ogg"
             },
             {
                 "text": "My yo-yo brings all the pain to your face.",
-                "audio": "charlie/yoyo.ogg"
+                "audio": "audio/charlie/yoyo.ogg"
             },
             {
                 "text": "Like a papillon.",
-                "audio": "charlie/papillon.ogg"
+                "audio": "audio/charlie/papillon.ogg"
             },
             {
                 "text": "Let the carnival of carnage begin!",
-                "audio": "charlie/carnival.ogg"
+                "audio": "audio/charlie/carnival.ogg"
             },
             {
                 "text": "I stole your heart, literally.",
-                "audio": "charlie/heart.ogg"
+                "audio": "audio/charlie/heart.ogg"
             }
         ],
         "Images": {
-            "attack": "charlie/atk.png",
-            "ultimate": "charlie/ult.png",
+            "attack": "images/charlie/atk.png",
+            "ultimate": "images/charlie/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5370,8 +5036,7 @@
             "🎪",
             "🕸️",
             "♾️"
-        ],
-        "Model": {} 
+        ]
     },
     "Mico": {
         "Icon": "mico/pin.png",
@@ -5415,28 +5080,28 @@
         "Voicelines": [
             {
                 "text": "What am I, a joke to you? I'm a chimp, I jump around on the monkey bars. Say, huh?",
-                "audio": "mico/chimp.ogg"
+                "audio": "audio/mico/chimp.ogg"
             },
             {
                 "text": "Ho ho ho! I'm gonna be a star for sure!",
-                "audio": "mico/star.ogg"
+                "audio": "audio/mico/star.ogg"
             },
             {
                 "text": "I'm number one, baby! Top of the world!",
-                "audio": "mico/top.ogg"
+                "audio": "audio/mico/top.ogg"
             },
             {
                 "text": "Bye bye! I'm going up to the big jungle gym in the sky.",
-                "audio": "mico/sky.ogg"
+                "audio": "audio/mico/sky.ogg"
             },
             {
                 "text": "Heh heh, we all knew the risks.",
-                "audio": "mico/risk.ogg"
+                "audio": "audio/mico/risk.ogg"
             }
         ],
         "Images": {
-            "attack": "mico/atk.png",
-            "ultimate": "mico/ult.png",
+            "attack": "images/mico/atk.png",
+            "ultimate": "images/mico/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5446,13 +5111,7 @@
             "🎞️",
             "📢",
             "💰"
-        ],
-        "Model": {
-            "0": "mico/0.glb",
-            "1": "mico/1.glb",
-            "2": "mico/2.glb",
-            "3": "mico/3.glb" 
-         } 
+        ]
     },
     "Melodie": {
         "Aliases": ["♥"],
@@ -5497,28 +5156,28 @@
         "Voicelines": [
             {
                 "text": "Shoutout to my Melodians!",
-                "audio": "melodie/melodians.ogg"
+                "audio": "audio/melodie/melodians.ogg"
             },
             {
                 "text": "Even a fallen star still shines.",
-                "audio": "melodie/shines.ogg"
+                "audio": "audio/melodie/shines.ogg"
             },
             {
                 "text": "K-pop don't stop 'til I reach the top.",
-                "audio": "melodie/top.ogg"
+                "audio": "audio/melodie/top.ogg"
             },
             {
                 "text": "I might be your idol, but you don't own me.",
-                "audio": "melodie/own.ogg"
+                "audio": "audio/melodie/own.ogg"
             },
             {
                 "text": "♫So many songs to sing, so much joy to bring!",
-                "audio": "melodie/bring.ogg"
+                "audio": "audio/melodie/bring.ogg"
             }
         ],
         "Images": {
-            "attack": "melodie/atk.png",
-            "ultimate": "melodie/ult.png",
+            "attack": "images/melodie/atk.png",
+            "ultimate": "images/melodie/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5528,8 +5187,7 @@
             "🫰🏻",
             "🎵",
             "♥️"
-        ],
-        "Model": {} 
+        ]
     },
     "Lily": {
         "Icon": "lily/pin.png",
@@ -5572,8 +5230,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "lily/atk.png",
-            "ultimate": "lily/ult.png",
+            "attack": "images/lily/atk.png",
+            "ultimate": "images/lily/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5583,13 +5241,7 @@
             "🟪",
             "🏮",
             "🌿"
-        ],
-        "Model": {
-            "0": "lily/0.glb",
-            "1": "lily/1.glb",
-            "2": "lily/2.glb",
-            "3": "lily/3.glb" 
-         } 
+        ]
     },
     "Clancy": {
         "Aliases": ["Crousty Crabe"],
@@ -5634,28 +5286,28 @@
         "Voicelines": [
             {
                 "text": "Living the lobster life!",
-                "audio": "clancy/lobster.ogg"
+                "audio": "audio/clancy/lobster.ogg"
             },
             {
                 "text": "I'll claw my way to victory, one pinch at a time!",
-                "audio": "clancy/claw.ogg"
+                "audio": "audio/clancy/claw.ogg"
             },
             {
                 "text": "This isn't just a battle, it's a crustacean crusade.",
-                "audio": "clancy/crusade.ogg"
+                "audio": "audio/clancy/crusade.ogg"
             },
             {
                 "text": "Armored and ready for carnage.",
-                "audio": "clancy/carnage.ogg"
+                "audio": "audio/clancy/carnage.ogg"
             },
             {
                 "text": "I am the red warrior!",
-                "audio": "clancy/red_warrior.ogg"
+                "audio": "audio/clancy/red_warrior.ogg"
             }
         ],
         "Images": {
-            "attack": "clancy/atk.png",
-            "ultimate": "clancy/ult.png",
+            "attack": "images/clancy/atk.png",
+            "ultimate": "images/clancy/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5665,8 +5317,7 @@
             "🪖",
             "🔫",
             "💧"
-        ],
-        "Model": {} 
+        ]
     },
     "Moe": {
         "Icon": "moe/base/pin.png",
@@ -5710,28 +5361,28 @@
         "Voicelines": [
             {
                 "text": "You gotta dig a tunnel or two!",
-                "audio": "moe/base/dig.ogg"
+                "audio": "audio/moe/base/dig.ogg"
             },
             {
                 "text": "Every day I'm shovelin'",
-                "audio": "moe/base/shovelin.ogg"
+                "audio": "audio/moe/base/shovelin.ogg"
             },
             {
                 "text": "Sanitation rocks the nation.",
-                "audio": "moe/base/nation.ogg"
+                "audio": "audio/moe/base/nation.ogg"
             },
             {
                 "text": "See you in the underworld, ha ha!",
-                "audio": "moe/base/underworld.ogg"
+                "audio": "audio/moe/base/underworld.ogg"
             },
             {
                 "text": "You didn't pass the inspection.",
-                "audio": "moe/base/inspection.ogg"
+                "audio": "audio/moe/base/inspection.ogg"
             }
         ],
         "Images": {
-            "attack": "moe/base/atk.png",
-            "ultimate": "moe/base/ult.png",
+            "attack": "images/moe/base/atk.png",
+            "ultimate": "images/moe/base/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5741,8 +5392,7 @@
             "🏁",
             "🏰",
             "🧑🏻‍🦯"
-        ],
-        "Model": {} 
+        ]
     },
     "Moe (driller form)": {
         "Icon": "moe/drill/pin.png",
@@ -5772,8 +5422,8 @@
             "nb_skins": 2
         },
         "Images": {
-            "attack": "moe/drill/atk.png",
-            "ultimate": "moe/drill/ult.png",
+            "attack": "images/moe/drill/atk.png",
+            "ultimate": "images/moe/drill/ult.png",
             "order": true
         }
     },
@@ -5820,28 +5470,28 @@
         "Voicelines": [
             {
                 "text": "I'm built different, y'all, ha. Stay mad.",
-                "audio": "juju/built.ogg"
+                "audio": "audio/juju/built.ogg"
             },
             {
                 "text": "My voodoo is gonna get you.",
-                "audio": "juju/voodoo.ogg"
+                "audio": "audio/juju/voodoo.ogg"
             },
             {
                 "text": "My needle is on point, hoo!",
-                "audio": "juju/needle.ogg"
+                "audio": "audio/juju/needle.ogg"
             },
             {
                 "text": "Dollmaker, soul taker.",
-                "audio": "juju/soul_taker.ogg"
+                "audio": "audio/juju/soul_taker.ogg"
             },
             {
                 "text": "I said, who put a curse on me?",
-                "audio": "juju/curse.ogg"
+                "audio": "audio/juju/curse.ogg"
             }
         ],
         "Images": {
-            "attack": "juju/atk.png",
-            "ultimate": "juju/ult.png",
+            "attack": "images/juju/atk.png",
+            "ultimate": "images/juju/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5851,8 +5501,7 @@
             "🪨",
             "💧",
             "🍃"
-        ],
-        "Model": {} 
+        ]
     },
     "Ollie": {
         "Icon": "ollie/pin.png",
@@ -5896,28 +5545,28 @@
         "Voicelines": [
             {
                 "text": "I'm about to flex on y'all!",
-                "audio": "ollie/flex.ogg"
+                "audio": "audio/ollie/flex.ogg"
             },
             {
                 "text": "Fresh, fly and touching the sky!",
-                "audio": "ollie/sky.ogg"
+                "audio": "audio/ollie/sky.ogg"
             },
             {
                 "text": "Haters hate, skaters skate.",
-                "audio": "ollie/skate.ogg"
+                "audio": "audio/ollie/skate.ogg"
             },
             {
                 "text": "Ho, you better be ready cause I'm coming for ya!",
-                "audio": "ollie/coming.ogg"
+                "audio": "audio/ollie/coming.ogg"
             },
             {
                 "text": "♫Ain't nobody dope as me, so fresh, so fly!",
-                "audio": "ollie/fly.ogg"
+                "audio": "audio/ollie/fly.ogg"
             }
         ],
         "Images": {
-            "attack": "ollie/atk.png",
-            "ultimate": "ollie/ult.png",
+            "attack": "images/ollie/atk.png",
+            "ultimate": "images/ollie/ult.png",
             "order": false
         },
         "Emojis": [
@@ -5926,8 +5575,7 @@
             "🌀",
             "🟩",
             "🔊"
-        ],
-        "Model": {} 
+        ]
     },
     "Finx": {
         "Icon": "finx/pin.png",
@@ -5971,28 +5619,28 @@
         "Voicelines": [
             {
                 "text": "Claws out, it's go time. Meow!",
-                "audio": "finx/go.ogg"
+                "audio": "audio/finx/go.ogg"
             },
             {
                 "text": "You cannot outrun the desert.",
-                "audio": "finx/desert.ogg"
+                "audio": "audio/finx/desert.ogg"
             },
             {
                 "text": "Ha ha! Purr-fect lag!",
-                "audio": "finx/purr.ogg"
+                "audio": "audio/finx/purr.ogg"
             },
             {
                 "text": "The best Brawlers make the best boxes!",
-                "audio": "finx/boxes.ogg"
+                "audio": "audio/finx/boxes.ogg"
             },
             {
                 "text": "Ha ha! You've been paw-sed.",
-                "audio": "finx/paw_sed.ogg"
+                "audio": "audio/finx/paw_sed.ogg"
             }
         ],
         "Images": {
-            "attack": "finx/atk.png",
-            "ultimate": "finx/ult.png",
+            "attack": "images/finx/atk.png",
+            "ultimate": "images/finx/ult.png",
             "order": false
         },
         "Emojis": [
@@ -6002,13 +5650,7 @@
             "🏜️",
             "👁️",
             "💎"
-        ],
-        "Model": {
-            "0": "finx/0.glb",
-            "1": "finx/1.glb",
-            "2": "finx/2.glb",
-            "3": "finx/3.glb" 
-         } 
+        ]
     },
     "Lumi": {
         "Icon": "lumi/pin.png",
@@ -6052,28 +5694,28 @@
         "Voicelines": [
             {
                 "text": "Drums of doom go boom boom boom!",
-                "audio": "lumi/boom.ogg"
+                "audio": "audio/lumi/boom.ogg"
             },
             {
                 "text": "Time for some Brawler breaking beats!",
-                "audio": "lumi/beats.ogg"
+                "audio": "audio/lumi/beats.ogg"
             },
             {
                 "text": "Breaking the sound barrier!",
-                "audio": "lumi/sound.ogg"
+                "audio": "audio/lumi/sound.ogg"
             },
             {
                 "text": "Even the smallest cow has horn.",
-                "audio": "lumi/horn.ogg"
+                "audio": "audio/lumi/horn.ogg"
             },
             {
                 "text": "Pain doesn't kill, but it makes you weak.",
-                "audio": "lumi/weak.ogg"
+                "audio": "audio/lumi/weak.ogg"
             }
         ],
         "Images": {
-            "attack": "lumi/atk.png",
-            "ultimate": "lumi/ult.png",
+            "attack": "images/lumi/atk.png",
+            "ultimate": "images/lumi/ult.png",
             "order": false
         },
         "Emojis": [
@@ -6083,13 +5725,7 @@
             "🧊",
             "⛓️",
             "2️⃣"
-        ],
-        "Model": {
-            "0": "lumi/0.glb",
-            "1": "lumi/1.glb",
-            "2": "lumi/2.glb",
-            "3": "lumi/3.glb" 
-         } 
+        ]
     },
     "Jae-Yong": {
         "Icon": "jae/pin.png",
@@ -6133,28 +5769,28 @@
         "Voicelines": [
             {
                 "text": "Melodic middle-aged mayhem.",
-                "audio": "jae/mayhem.ogg"
+                "audio": "audio/jae/mayhem.ogg"
             },
             {
                 "text": "Ride the rhythm of your heart!",
-                "audio": "jae/heart.ogg"
+                "audio": "audio/jae/heart.ogg"
             },
             {
                 "text": "More passion, more energy, more footwork!",
-                "audio": "jae/footwork.ogg"
+                "audio": "audio/jae/footwork.ogg"
             },
             {
                 "text": "Emotional damage.",
-                "audio": "jae/emotional.ogg"
+                "audio": "audio/jae/emotional.ogg"
             },
             {
                 "text": "Let's mic this an unforgettable moment.",
-                "audio": "jae/mic.ogg"
+                "audio": "audio/jae/mic.ogg"
             }
         ],
         "Images": {
-            "attack": "jae/atk.png",
-            "ultimate": "jae/ult.png",
+            "attack": "images/jae/atk.png",
+            "ultimate": "images/jae/ult.png",
             "order": false
         },
         "Emojis": [
@@ -6164,13 +5800,7 @@
             "🥄",
             "🧳",
             "➕"
-        ],
-        "Model": {
-            "0": "jae/0.glb",
-            "1": "jae/1.glb",
-            "2": "jae/2.glb",
-            "3": "jae/3.glb"  
-        } 
+        ]
     },
     "Alli": {
         "Aliases": ["Baddie-gator"],
@@ -6215,28 +5845,28 @@
         "Voicelines": [
             {
                 "text": "Let's get snapping! Ah ah!",
-                "audio": "alli/snapping.ogg"
+                "audio": "audio/alli/snapping.ogg"
             },
             {
                 "text": "In a while, crocodile!",
-                "audio": "alli/crocodile.ogg"
+                "audio": "audio/alli/crocodile.ogg"
             },
             {
                 "text": "Bite me? Oh, I'll bite back! Ah!",
-                "audio": "alli/bites.ogg"
+                "audio": "audio/alli/bites.ogg"
             },
             {
                 "text": "Swamp croc is ready to rock!",
-                "audio": "alli/rock.ogg"
+                "audio": "audio/alli/rock.ogg"
             },
             {
                 "text": "Oh, your scream is cute. Do it again.",
-                "audio": "alli/scream.ogg"
+                "audio": "audio/alli/scream.ogg"
             }
         ],
         "Images": {
-            "attack": "alli/atk.png",
-            "ultimate": "alli/ult.png",
+            "attack": "images/alli/atk.png",
+            "ultimate": "images/alli/ult.png",
             "order": true
         },
         "Emojis": [
@@ -6295,28 +5925,28 @@
         "Voicelines": [
             {
                 "text": "Mess up my rhythm, I'll mess up your life.",
-                "audio": "mina/rhythm.ogg"
+                "audio": "audio/mina/rhythm.ogg"
             },
             {
                 "text": "That all you got? Ha ha, thought you were serious.",
-                "audio": "mina/serious.ogg"
+                "audio": "audio/mina/serious.ogg"
             },
             {
                 "text": "My dance will break your soul!",
-                "audio": "mina/soul.ogg"
+                "audio": "audio/mina/soul.ogg"
             },
             {
                 "text": "Tornado!",
-                "audio": "mina/tornado.ogg"
+                "audio": "audio/mina/tornado.ogg"
             },
             {
                 "text": "MVP? Nah, I'm that girl.",
-                "audio": "mina/mvp.ogg"
+                "audio": "audio/mina/mvp.ogg"
             }
         ],
         "Images": {
-            "attack": "mina/atk.png",
-            "ultimate": "mina/ult.png",
+            "attack": "images/mina/atk.png",
+            "ultimate": "images/mina/ult.png",
             "order": false
         },
         "Emojis": [
@@ -6325,13 +5955,7 @@
             "🎵",
             "🩴",
             "👑"
-        ],
-        "Model": {
-            "0": "mina/0.glb",
-            "1": "mina/1.glb",
-            "2": "mina/2.glb",
-            "3": "mina/3.glb" 
-         } 
+        ]
     },
     "Ziggy": {
         "Icon": "ziggy/pin.png",
@@ -6375,28 +5999,28 @@
         "Voicelines": [
             {
                 "text": "Prepare for sparks and drama, darling!",
-                "audio": "ziggy/drama.ogg"
+                "audio": "audio/ziggy/drama.ogg"
             },
             {
                 "text": "Now you see me, now you see me even more.",
-                "audio": "ziggy/more.ogg"
+                "audio": "audio/ziggy/more.ogg"
             },
             {
                 "text": "Come with me to a world of pure awesomeness!",
-                "audio": "ziggy/awesomeness.ogg"
+                "audio": "audio/ziggy/awesomeness.ogg"
             },
             {
                 "text": "Shocking, isn't it?",
-                "audio": "ziggy/shocking.ogg"
+                "audio": "audio/ziggy/shocking.ogg"
             },
             {
                 "text": "Let the spectacle commence!",
-                "audio": "ziggy/commence.ogg"
+                "audio": "audio/ziggy/commence.ogg"
             }
         ],
         "Images": {
-            "attack": "ziggy/atk.png",
-            "ultimate": "ziggy/ult.png",
+            "attack": "images/ziggy/atk.png",
+            "ultimate": "images/ziggy/ult.png",
             "order": false
         },
         "Emojis": [
@@ -6405,13 +6029,7 @@
             "🪄",
             "🎭",
             "🟪"
-        ],
-        "Model": {
-            "0": "ziggy/0.glb",
-            "1": "ziggy/1.glb",
-            "2": "ziggy/2.glb",
-            "3": "ziggy/3.glb" 
-         } 
+        ]
     },
     "Gigi": {
         "Aliases": ["Panzani"],
@@ -6456,28 +6074,28 @@
         "Voicelines": [
             {
                 "text": "Can you please keep me forever?",
-                "audio": "gigi/keep.ogg"
+                "audio": "audio/gigi/keep.ogg"
             },
             {
                 "text": "Give me a hand! Oh, never mind.",
-                "audio": "gigi/hand.ogg"
+                "audio": "audio/gigi/hand.ogg"
             },
             {
                 "text": "Balance between beauty and bravery!",
-                "audio": "gigi/balance.ogg"
+                "audio": "audio/gigi/balance.ogg"
             },
             {
                 "text": "I'll try to make it painless, but no promises!",
-                "audio": "gigi/pain.ogg"
+                "audio": "audio/gigi/pain.ogg"
             },
             {
                 "text": "Sauté, plié, pirouette. Enchanté!",
-                "audio": "gigi/plie.ogg"
+                "audio": "audio/gigi/plie.ogg"
             }
         ],
         "Images": {
-            "attack": "gigi/atk.png",
-            "ultimate": "gigi/ult.png",
+            "attack": "images/gigi/atk.png",
+            "ultimate": "images/gigi/ult.png",
             "order": false
         },
         "Emojis": [
@@ -6486,13 +6104,7 @@
             "🎎",
             "🪡",
             "💣"
-        ],
-        "Model": {
-            "0": "gigi/0.glb",
-            "1": "gigi/1.glb",
-            "2": "gigi/2.glb",
-            "3": "gigi/3.glb" 
-         }
+        ]
     },
     "Glowy": {
         "Icon": "glowy/pin.png",
@@ -6536,28 +6148,28 @@
         "Voicelines": [
             {
                 "text": "Starfish can regrow limbs! Oh, give it a try!",
-                "audio": "glowy/try.ogg"
+                "audio": "audio/glowy/try.ogg"
             },
             {
                 "text": "Blue whale hearts weigh almost a tonne.",
-                "audio": "glowy/whale.ogg"
+                "audio": "audio/glowy/whale.ogg"
             },
             {
                 "text": "I'm 80% water, and 100% ready!",
-                "audio": "glowy/ready.ogg"
+                "audio": "audio/glowy/ready.ogg"
             },
             {
                 "text": "Guess I'm not a bottom feeder, huh?",
-                "audio": "glowy/bottom.ogg"
+                "audio": "audio/glowy/bottom.ogg"
             },
             {
                 "text": "Ding ding ding ding! One less anomaly!",
-                "audio": "glowy/anomaly.ogg"
+                "audio": "audio/glowy/anomaly.ogg"
             }
         ],
         "Images": {
-            "attack": "glowy/atk.png",
-            "ultimate": "glowy/ult.png",
+            "attack": "images/glowy/atk.png",
+            "ultimate": "images/glowy/ult.png",
             "order": false
         },
         "Emojis": [
@@ -6567,13 +6179,7 @@
             "💧",
             "🔋",
             "➕"
-        ],
-        "Model": {
-            "0": "glowy/0.glb",
-            "1": "glowy/1.glb",
-            "2": "glowy/2.glb",
-            "3": "glowy/3.glb" 
-         } 
+        ]
     },
     "Najia": {
         "Icon": "najia/pin.png",
@@ -6617,28 +6223,28 @@
         "Voicelines": [
             {
                 "text": "Cats are afraid of snakes. Right, Finx?",
-                "audio": "najia/afraid.ogg"
+                "audio": "audio/najia/afraid.ogg"
             },
             {
                 "text": "♫Ain't no puzzle hard enough!",
-                "audio": "najia/puzzle.ogg"
+                "audio": "audio/najia/puzzle.ogg"
             },
             {
                 "text": "Someone's getting mummified.",
-                "audio": "najia/mummified.ogg"
+                "audio": "audio/najia/mummified.ogg"
             },
             {
                 "text": "Yes, yes, very scary. Can we focus?",
-                "audio": "najia/focus.ogg"
+                "audio": "audio/najia/focus.ogg"
             },
             {
                 "text": "And yes, they bite.",
-                "audio": "najia/bite.ogg"
+                "audio": "audio/najia/bite.ogg"
             }
         ],
         "Images": {
-            "attack": "najia/atk.png",
-            "ultimate": "najia/ult.png",
+            "attack": "images/najia/atk.png",
+            "ultimate": "images/najia/ult.png",
             "order": false
         },
         "Emojis": [
@@ -6647,218 +6253,19 @@
             "🏺",
             "📦",
             "🟪"
-        ],
-        "Model": {
-            "0": "najia/0.glb",
-            "1": "najia/1.glb",
-            "2": "najia/2.glb",
-            "3": "najia/3.glb" 
-         } 
-    },
-    "Damian": {
-        "Icon": "damian/pin.png",
-        "Stats": {
-            "gender": "male",
-            "hp": 11200,
-            "hitbox": 145,
-            "passive_ability": true,
-            "projectiles": 1,
-            "damage_per_projectile": 1400,
-            "full_damage": 1400,
-            "ammo": 3,
-            "damage_type": "pierce",
-            "mvt": 770,
-            "gadget_cd": {
-                "1": 15,
-                "2": 20
-            },
-            "ult_charge": 10,
-            "hc_multiplier": 35,
-            "class": "tank",
-            "rarity": "mythic",
-            "world": "madevil_manor",
-            "range": 2.67,
-            "reload_speed": 1.2,
-            "release": 2026,
-            "nb_skins": 0
-        },
-        "Gears" : {
-        "1": "damian/gd1.png",
-        "2": "damian/gd2.png",
-        "3": "damian/sp1.png",
-        "4": "damian/sp2.png",
-        "5": "damian/hc.png"
-        },
-        "Fact": [
-            "*Brawler* can theorically do infinite damage with only one attack.",
-            "*Brawler* is the third brawler able to build walls.",
-            "If did it right, you can be stuck in *Brawler*'s super until it dissapears."
-        ],
-        "Voicelines": [
-            {
-                "text": "Berserker bro!",
-                "audio": "damian/bro.ogg"
-            },
-            {
-                "text": "Metal heart, ready to start!",
-                "audio": "damian/heart.ogg"
-            },
-            {
-                "text": "Flames of furyyyy!",
-                "audio": "damian/fury.ogg"
-            },
-            {
-                "text": "Another round, another roar. *roars*",
-                "audio": "damian/roar.ogg"
-            },
-            {
-                "text": "Haha, the crowd goes wild!",
-                "audio": "damian/wild.ogg"
-            }
-        ],
-        "Images": {
-            "attack": "damian/atk.png",
-            "ultimate": "damian/ult.png",
-            "order": false
-        },
-        "Emojis": [
-            "❤️‍🔥",
-            "🤘",
-            "🎸",
-            "🔊",
-            "🔥"
-        ],
-        "Model": {
-            "0": "damian/0.glb",
-            "1": "damian/1.glb",
-            "2": "damian/2.glb",
-            "3": "damian/3.glb"  
-        } 
-    },
-    "Starr Nova": {
-        "Icon": "starr/base/pin.png",
-        "Stats": {
-            "gender": "female",
-            "hp": 8000,
-            "hitbox": 120,
-            "passive_ability": false,
-            "projectiles": 2,
-            "damage_per_projectile": 1080,
-            "full_damage": 2160,
-            "ammo": 3,
-            "damage_type": "pierce",
-            "mvt": 820,
-            "gadget_cd": {
-                "1": 20,
-                "2": 20
-            },
-            "ult_charge": 5,
-            "hc_multiplier": 0,
-            "class": "assassin",
-            "rarity": "mythic",
-            "world": "brawlywood",
-            "range": 5.67,
-            "reload_speed": 1.4,
-            "release": 2026,
-            "nb_skins": 0
-        },
-        "Gears" : {
-        "1": "starr/base/gd1.png",
-        "2": "starr/base/gd2.png",
-        "3": "starr/base/sp1.png",
-        "4": "starr/base/sp2.png",
-        "5": "starr/base/hc.png"
-        },
-        "Fact": [
-            "Excepting melee range brawler, *Brawler* has the fastest projectile in the game, making Finx super useless",
-            "*Brawler* has the best gadget to troll allies in brawlball, hotzone or even gemgrab",
-            "*Brawler* have the heal trait under certain condition but shouldn't."
-        ],
-        "Voicelines": [
-            {
-                "text": "By the power of the star!",
-                "audio": "starr/base/star.ogg"
-            },
-            {
-                "text": "Let's go save the day! Just like episode 6 7!",
-                "audio": "starr/base/67.ogg"
-            },
-            {
-                "text": "Main character energy.",
-                "audio": "starr/base/energy.ogg"
-            },
-            {
-                "text": "Victory sparkles!",
-                "audio": "starr/base/sparkles.ogg"
-            },
-            {
-                "text": "Evil doesn't stand a chance.",
-                "audio": "starr/base/evil.ogg"
-            }
-        ],
-        "Images": {
-            "attack": "starr/base/atk.png",
-            "ultimate": "starr/base/ult.png",
-            "order": false
-        },
-        "Emojis": [
-            "✨",
-            "⚔️",
-            "💎",
-            "👩",
-            "✈️"
-        ],
-        "Model": {
-            "0": "starr/base/0.glb",
-            "1": "starr/base/1.glb",
-            "2": "starr/base/2.glb",
-            "3": "starr/base/3.glb"  
-        } 
-    },
-    "Starr Nova (transformed)": {
-        "Icon": "starr/trans/pin.png",
-        "Stats": {
-            "gender": "female",
-            "hp": 8000,
-            "hitbox": 120,
-            "passive_ability": false,
-            "projectiles": 1,
-            "damage_per_projectile": 2200,
-            "full_damage": 2200,
-            "ammo": 3,
-            "damage_type": "pierce",
-            "mvt": 1025,
-            "gadget_cd": {
-                "1": 20,
-                "2": 20
-            },
-            "ult_charge": 5,
-            "hc_multiplier": 0,
-            "class": "assassin",
-            "rarity": "mythic",
-            "world": "brawlywood",
-            "range": 3.67,
-            "reload_speed": 0.7,
-            "release": 2026,
-            "nb_skins": 0
-        },
-        "Images": {
-            "attack": "starr/trans/atk.png",
-            "ultimate": "starr/trans/ult.png",
-            "order": false
-        }
+        ]
     },
     "Crow": {
         "Aliases": ["Caw Caw"],
         "Icon": "crow/pin.png",
         "Stats": {
             "gender": "male",
-            "hp": 5600,
+            "hp": 6000,
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 3,
-            "damage_per_projectile": 840,
-            "full_damage": 3000,
+            "damage_per_projectile": 640,
+            "full_damage": 2560,
             "ammo": 3,
             "damage_type": "spread",
             "mvt": 820,
@@ -6872,7 +6279,7 @@
             "rarity": "legendary",
             "world": "retropolis",
             "range": 8.67,
-            "reload_speed": 1.6,
+            "reload_speed": 1.4,
             "release": 2017,
             "nb_skins": 12
         },
@@ -6891,28 +6298,28 @@
         "Voicelines": [
             {
                 "text": "I'm the boss of bosses!",
-                "audio": "crow/boss.ogg"
+                "audio": "audio/crow/boss.ogg"
             },
             {
                 "text": "Sleeping with the fishes.",
-                "audio": "crow/fishes.ogg"
+                "audio": "audio/crow/fishes.ogg"
             },
             {
                 "text": "Don't mess with my crew.",
-                "audio": "crow/crew.ogg"
+                "audio": "audio/crow/crew.ogg"
             },
             {
                 "text": "I always get my mark.",
-                "audio": "crow/mark.ogg"
+                "audio": "audio/crow/mark.ogg"
             },
             {
                 "text": "Get outta here.",
-                "audio": "crow/here.ogg"
+                "audio": "audio/crow/here.ogg"
             }
         ],
         "Images": {
-            "attack": "crow/atk.png",
-            "ultimate": "crow/ult.png",
+            "attack": "images/crow/atk.png",
+            "ultimate": "images/crow/ult.png",
             "order": false
         },
         "Emojis": [
@@ -6931,16 +6338,16 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 6,
-            "damage_per_projectile": 1080,
-            "full_damage": 3240,
+            "damage_per_projectile": 980,
+            "full_damage": 2940,
             "ammo": 3,
             "damage_type": "spread",
             "mvt": 720,
             "gadget_cd": {
-                "1": 17,
+                "1": 14,
                 "2": 20
             },
-            "ult_charge": 2.67,
+            "ult_charge": 2.33,
             "hc_multiplier": 30,
             "class": "damage_dealer",
             "rarity": "legendary",
@@ -6964,8 +6371,8 @@
         ],
         "Voicelines": [],
         "Images": {
-            "attack": "spike/atk.png",
-            "ultimate": "spike/ult.png",
+            "attack": "images/spike/atk.png",
+            "ultimate": "images/spike/ult.png",
             "order": false
         },
         "Emojis": [
@@ -6975,13 +6382,7 @@
             "🤷🏻‍♂️",
             "💥",
             "🪴"
-        ],
-        "Model": {
-            "0": "spike/0.glb",
-            "1": "spike/1.glb",
-            "2": "spike/2.glb",
-            "3": "spike/3.glb"  
-        } 
+        ]
     },
     "Leon": {
         "Icon": "leon/pin.png",
@@ -7025,28 +6426,28 @@
         "Voicelines": [
             {
                 "text": "Hey Nita, check me out!",
-                "audio": "leon/check.ogg"
+                "audio": "audio/leon/check.ogg"
             },
             {
                 "text": "Sneaky-time!",
-                "audio": "leon/sneaky.ogg"
+                "audio": "audio/leon/sneaky.ogg"
             },
             {
                 "text": "Invisibility!",
-                "audio": "leon/invisibility.ogg"
+                "audio": "audio/leon/invisibility.ogg"
             },
             {
                 "text": "Untouchable.",
-                "audio": "leon/untouchable.ogg"
+                "audio": "audio/leon/untouchable.ogg"
             },
             {
                 "text": "Don't make me get Nita!",
-                "audio": "leon/nita.ogg"
+                "audio": "audio/leon/nita.ogg"
             }
         ],
         "Images": {
-            "attack": "leon/atk.png",
-            "ultimate": "leon/ult.png",
+            "attack": "images/leon/atk.png",
+            "ultimate": "images/leon/ult.png",
             "order": true
         },
         "Emojis": [
@@ -7054,13 +6455,7 @@
             "🫥",
             "🍭",
             "🟩"
-        ],
-        "Model": {
-            "0": "leon/0.glb",
-            "1": "leon/1.glb",
-            "2": "leon/2.glb",
-            "3": "leon/3.glb"  
-        } 
+        ]
     },
     "Sandy": {
         "Icon": "sandy/pin.png",
@@ -7104,28 +6499,28 @@
         "Voicelines": [
             {
                 "text": "Huh, I guess I'll have to do stuff...",
-                "audio": "sandy/stuff.ogg"
+                "audio": "audio/sandy/stuff.ogg"
             },
             {
                 "text": "So tired of winning.",
-                "audio": "sandy/winning.ogg"
+                "audio": "audio/sandy/winning.ogg"
             },
             {
                 "text": "Calm down everyone.",
-                "audio": "sandy/calm.ogg"
+                "audio": "audio/sandy/calm.ogg"
             },
             {
                 "text": "To sleep, perchance to dream.",
-                "audio": "sandy/dream.ogg"
+                "audio": "audio/sandy/dream.ogg"
             },
             {
                 "text": "Sand shroud!",
-                "audio": "sandy/shroud.ogg"
+                "audio": "audio/sandy/shroud.ogg"
             }
         ],
         "Images": {
-            "attack": "sandy/atk.png",
-            "ultimate": "sandy/ult.png",
+            "attack": "images/sandy/atk.png",
+            "ultimate": "images/sandy/ult.png",
             "order": false
         },
         "Emojis": [
@@ -7135,8 +6530,7 @@
             "⭐",
             "🫥",
             "🟪"
-        ],
-        "Model": {} 
+        ]
     },
     "Surge": {
         "Aliases": ["SnakeThug"],
@@ -7151,10 +6545,10 @@
             "full_damage": 2360,
             "ammo": 3,
             "damage_type": "single",
-            "mvt": 680,
+            "mvt": 650,
             "gadget_cd": {
-                "1": 15,
-                "2": 18
+                "1": 13,
+                "2": 17
             },
             "ult_charge": 3,
             "hc_multiplier": 20,
@@ -7181,28 +6575,28 @@
         "Voicelines": [
             {
                 "text": "You got juiced.",
-                "audio": "surge/juiced.ogg"
+                "audio": "audio/surge/juiced.ogg"
             },
             {
                 "text": "De-hy-dra-tion.",
-                "audio": "surge/hydra.ogg"
+                "audio": "audio/surge/hydra.ogg"
             },
             {
                 "text": "Take it easy bro.",
-                "audio": "surge/bro.ogg"
+                "audio": "audio/surge/bro.ogg"
             },
             {
                 "text": "Go go go go!",
-                "audio": "surge/go.ogg"
+                "audio": "audio/surge/go.ogg"
             },
             {
                 "text": "Upgrading.",
-                "audio": "surge/up.ogg"
+                "audio": "audio/surge/up.ogg"
             }
         ],
         "Images": {
-            "attack": "surge/atk.png",
-            "ultimate": "surge/ult.png",
+            "attack": "images/surge/atk.png",
+            "ultimate": "images/surge/ult.png",
             "order": false
         },
         "Emojis": [
@@ -7212,13 +6606,7 @@
             "🕶️",
             "🟥",
             "⚡"
-        ],
-        "Model": {
-            "0": "surge/0.glb",
-            "1": "surge/1.glb",
-            "2": "surge/2.glb",
-            "3": "surge/3.glb"
-        } 
+        ]
     },
     "Amber": {
         "Icon": "amber/pin.png",
@@ -7262,28 +6650,28 @@
         "Voicelines": [
             {
                 "text": "Woah! Guess I'm flamous now!",
-                "audio": "amber/flamous.ogg"
+                "audio": "audio/amber/flamous.ogg"
             },
             {
                 "text": "Hah! Apply cold water to that burn! No seriously, get it checked.",
-                "audio": "amber/water.ogg"
+                "audio": "audio/amber/water.ogg"
             },
             {
                 "text": "Ha ha! You got roasted. Yikes!",
-                "audio": "amber/roasted.ogg"
+                "audio": "audio/amber/roasted.ogg"
             },
             {
                 "text": "I'm still on fire over here!",
-                "audio": "amber/fire.ogg"
+                "audio": "audio/amber/fire.ogg"
             },
             {
                 "text": "Feel the heat!",
-                "audio": "amber/heat.ogg"
+                "audio": "audio/amber/heat.ogg"
             }
         ],
         "Images": {
-            "attack": "amber/atk.png",
-            "ultimate": "amber/ult.png",
+            "attack": "images/amber/atk.png",
+            "ultimate": "images/amber/ult.png",
             "order": false
         },
         "Emojis": [
@@ -7292,8 +6680,7 @@
             "🟧",
             "✨",
             "🌊"
-        ],
-        "Model": {} 
+        ]
     },
     "Meg (mecha form)": {
         "Icon": "meg/mecha/pin.png",
@@ -7310,7 +6697,7 @@
             "mvt": 720,
             "gadget_cd": {
                 "1": 17,
-                "2": 22
+                "2": 19
             },
             "ult_charge": 0.94,
             "hc_multiplier": 35,
@@ -7335,8 +6722,8 @@
             "*Brawler* once got a Mutation that was later integrated into the base kit."
         ],
         "Images": {
-            "attack": "meg/mecha/atk.png",
-            "ultimate": "meg/mecha/ult.png",
+            "attack": "images/meg/mecha/atk.png",
+            "ultimate": "images/meg/mecha/ult.png",
             "order": false
         },
         "Emojis": [
@@ -7346,8 +6733,7 @@
             "🔫",
             "🟥",
             "🟨"
-        ],
-        "Model": {} 
+        ]
     },
     "Meg (small form)": {
         "Icon": "meg/small/pin.png",
@@ -7379,28 +6765,28 @@
         "Voicelines": [
             {
                 "text": "Hmm! There must be a glitch!",
-                "audio": "meg/small/glitch.ogg"
+                "audio": "audio/meg/small/glitch.ogg"
             },
             {
                 "text": "Time to reboot.",
-                "audio": "meg/small/reboot.ogg"
+                "audio": "audio/meg/small/reboot.ogg"
             },
             {
                 "text": "Robot rampage.",
-                "audio": "meg/small/robot.ogg"
+                "audio": "audio/meg/small/robot.ogg"
             },
             {
                 "text": "Tech support 2.0!",
-                "audio": "meg/small/tech.ogg"
+                "audio": "audio/meg/small/tech.ogg"
             },
             {
                 "text": "Numbers don't lie.",
-                "audio": "meg/small/lie.ogg"
+                "audio": "audio/meg/small/lie.ogg"
             }
         ],
         "Images": {
-            "attack": "meg/small/atk.png",
-            "ultimate": "meg/small/ult.png",
+            "attack": "images/meg/small/atk.png",
+            "ultimate": "images/meg/small/ult.png",
             "order": true
         }
     },
@@ -7441,28 +6827,28 @@
         "Fact": [
             "Like Brock, one of *Brawler*'s star powers became a passive ability.",
             "One of *Brawler*'s skin once was pay to win as it throw 2 super at once instead of only 1.",
-            "*Brawler*'s gadget once could triple the reload speed, one of the strongest effects in the game."
+            "*Brawler*'s gadget can triple the reload speed, one of the strongest effects in the game."
         ],
         "Voicelines": [
             {
                 "text": "Teamwork for the win! Yeah! You go first.",
-                "audio": "chester/team.ogg"
+                "audio": "audio/chester/team.ogg"
             },
             {
                 "text": "You got hurted. Aww, the poor baby.",
-                "audio": "chester/baby.ogg"
+                "audio": "audio/chester/baby.ogg"
             },
             {
                 "text": "You have a strategy! Aww, aren't you special?",
-                "audio": "chester/strat.ogg"
+                "audio": "audio/chester/strat.ogg"
             },
             {
                 "text": "You are worse than Mandy!",
-                "audio": "chester/mandy.ogg"
+                "audio": "audio/chester/mandy.ogg"
             },
             {
                 "text": "Hashtag oh my god, hashtag pain. Share, like, and subscribe.",
-                "audio": "chester/hashtag.ogg"
+                "audio": "audio/chester/hashtag.ogg"
             }
         ],
         "Emojis": [
@@ -7472,8 +6858,7 @@
             "🍬",
             "🟩",
             "🌈"
-        ],
-        "Model": {} 
+        ]
     },
     "Cordelius": {
         "Icon": "cordelius/pin.png",
@@ -7517,28 +6902,28 @@
         "Voicelines": [
             {
                 "text": "Time for the shroom and doom show!",
-                "audio": "cordelius/show.ogg"
+                "audio": "audio/cordelius/show.ogg"
             },
             {
                 "text": "Wow, look at all those colors!",
-                "audio": "cordelius/color.ogg"
+                "audio": "audio/cordelius/color.ogg"
             },
             {
                 "text": "Prepare to be fungified!",
-                "audio": "cordelius/fungi.ogg"
+                "audio": "audio/cordelius/fungi.ogg"
             },
             {
                 "text": "Too weird to live! Too wild to die!",
-                "audio": "cordelius/wild.ogg"
+                "audio": "audio/cordelius/wild.ogg"
             },
             {
                 "text": "Mushroom, mushroom, mushroom, mushroom, mushroom, mushroom!",
-                "audio": "cordelius/mush.ogg"
+                "audio": "audio/cordelius/mush.ogg"
             }
         ],
         "Images": {
-            "attack": "cordelius/atk.png",
-            "ultimate": "cordelius/ult.png",
+            "attack": "images/cordelius/atk.png",
+            "ultimate": "images/cordelius/ult.png",
             "order": false
         },
         "Emojis": [
@@ -7548,8 +6933,7 @@
             "🚫",
             "🌲",
             "🥽"
-        ],
-        "Model": {} 
+        ]
     },
     "Kit": {
         "Aliases": ["Chat de merde"],
@@ -7563,7 +6947,7 @@
             "damage_per_projectile": 2000,
             "full_damage": 2000,
             "ammo": 3,
-            "damage_type": "pierce",
+            "damage_type": "splash",
             "mvt": 820,
             "gadget_cd": {
                 "1": 23,
@@ -7594,28 +6978,28 @@
         "Voicelines": [
             {
                 "text": "Have waited all my nine lives for this moment.",
-                "audio": "kit/base/nine.ogg"
+                "audio": "audio/kit/base/nine.ogg"
             },
             {
                 "text": "Live, love, laugh, and lick.",
-                "audio": "kit/base/lick.ogg"
+                "audio": "audio/kit/base/lick.ogg"
             },
             {
                 "text": "Something smells fishy here, and I love it!",
-                "audio": "kit/base/fish.ogg"
+                "audio": "audio/kit/base/fish.ogg"
             },
             {
                 "text": "You are stuck with me-ow!",
-                "audio": "kit/base/meow.ogg"
+                "audio": "audio/kit/base/meow.ogg"
             },
             {
                 "text": "Of course, I'm paw-some!",
-                "audio": "kit/base/paw.ogg"
+                "audio": "audio/kit/base/paw.ogg"
             }
         ],
         "Images": {
-            "attack": "kit/base/atk.png",
-            "ultimate": "kit/base/ult.png",
+            "attack": "images/kit/base/atk.png",
+            "ultimate": "images/kit/base/ult.png",
             "order": false
         },
         "Emojis": [
@@ -7624,8 +7008,7 @@
             "🔔",
             "📦",
             "❇️"
-        ],
-        "Model": {} 
+        ]
     },
     "Kit (attached form)": {
         "Icon": "kit/att/pin.png",
@@ -7655,8 +7038,8 @@
             "nb_skins": 12
         },
         "Images": {
-            "attack": "kit/att/atk.png",
-            "ultimate": "kit/att/ult.png",
+            "attack": "images/kit/att/atk.png",
+            "ultimate": "images/kit/att/ult.png",
             "order": false
         }
     },
@@ -7702,28 +7085,28 @@
         "Voicelines": [
             {
                 "text": "Let's thrash, slash, bash and dash!",
-                "audio": "draco/base/slash.ogg"
+                "audio": "audio/draco/base/slash.ogg"
             },
             {
                 "text": "♫My dice, my dragon, my destiny-y-y!",
-                "audio": "draco/base/dice.ogg"
+                "audio": "audio/draco/base/dice.ogg"
             },
             {
                 "text": "Ah, you need a nerf.",
-                "audio": "draco/base/nerf.ogg"
+                "audio": "audio/draco/base/nerf.ogg"
             },
             {
                 "text": "♫I will, I will rock you!",
-                "audio": "draco/base/rock.ogg"
+                "audio": "audio/draco/base/rock.ogg"
             },
             {
                 "text": "Fired up and ready to roast!",
-                "audio": "draco/base/fire.ogg"
+                "audio": "audio/draco/base/fire.ogg"
             }
         ],
         "Images": {
-            "attack": "draco/base/atk.png",
-            "ultimate": "draco/base/ult.png",
+            "attack": "images/draco/base/atk.png",
+            "ultimate": "images/draco/base/ult.png",
             "order": true
         },
         "Emojis": [
@@ -7732,12 +7115,7 @@
             "🔥",
             "🤘",
             "🔊"
-        ],
-        "Model": {
-        "0": "draco/base/0.glb",
-        "1": "draco/base/1.glb",
-        "2": "draco/base/2.glb",
-        "3": "draco/base/3.glb"  } 
+        ]
     },
     "Draco (mounted form)": {
         "Icon": "draco/mount/pin.png",
@@ -7767,8 +7145,8 @@
             "nb_skins": 3
         },
         "Images": {
-            "attack": "draco/mount/atk.png",
-            "ultimate": "draco/mount/ult.png",
+            "attack": "images/draco/mount/atk.png",
+            "ultimate": "images/draco/mount/ult.png",
             "order": true
         }
     },
@@ -7783,7 +7161,7 @@
             "damage_per_projectile": 1500,
             "full_damage": 1500,
             "ammo": 3,
-            "damage_type": "pierce",
+            "damage_type": "splash",
             "mvt": 820,
             "gadget_cd": {
                 "1": 15,
@@ -7814,28 +7192,28 @@
         "Voicelines": [
             {
                 "text": "The weak are meat, the strong eat!",
-                "audio": "kenji/eat.ogg"
+                "audio": "audio/kenji/eat.ogg"
             },
             {
                 "text": "Ha ha ha, Brawler, sashimi style.",
-                "audio": "kenji/sashimi.ogg"
+                "audio": "audio/kenji/sashimi.ogg"
             },
             {
                 "text": "Life is like death, except different.",
-                "audio": "kenji/death.ogg"
+                "audio": "audio/kenji/death.ogg"
             },
             {
                 "text": "I do not seek revenge, I only seek justice!",
-                "audio": "kenji/justice.ogg"
+                "audio": "audio/kenji/justice.ogg"
             },
             {
                 "text": "Only my heart is stronger than my blade.",
-                "audio": "kenji/blade.ogg"
+                "audio": "audio/kenji/blade.ogg"
             }
         ],
         "Images": {
-            "attack": "kenji/atk.png",
-            "ultimate": "kenji/ult.png",
+            "attack": "images/kenji/atk.png",
+            "ultimate": "images/kenji/ult.png",
             "order": false
         },
         "Emojis": [
@@ -7844,13 +7222,7 @@
             "🐟",
             "🔪",
             "✖️"
-        ],
-        "Model": {
-            "0": "kenji/0.glb",
-            "1": "kenji/1.glb",
-            "2": "kenji/2.glb",
-            "3": "kenji/3.glb"  
-        } 
+        ]
     },
     "Pierce": {
         "Icon": "pierce/pin.png",
@@ -7866,8 +7238,8 @@
             "damage_type": "single",
             "mvt": 720,
             "gadget_cd": {
-                "1": 22,
-                "2": 18
+                "1": 18,
+                "2": 13
             },
             "ult_charge": 50,
             "hc_multiplier": 35,
@@ -7894,28 +7266,28 @@
         "Voicelines": [
             {
                 "text": "I smell sunscreen and bad choices.",
-                "audio": "pierce/choices.ogg"
+                "audio": "audio/pierce/choices.ogg"
             },
             {
                 "text": "Crime doesn't float on my watch.",
-                "audio": "pierce/watch.ogg"
+                "audio": "audio/pierce/watch.ogg"
             },
             {
                 "text": "Ha ha. Welcome to splash country, population zero.",
-                "audio": "pierce/country.ogg"
+                "audio": "audio/pierce/country.ogg"
             },
             {
                 "text": "Hooked, booked, and totally cooked!",
-                "audio": "pierce/cooked.ogg"
+                "audio": "audio/pierce/cooked.ogg"
             },
             {
                 "text": "Get out my way, punk.",
-                "audio": "pierce/punk.ogg"
+                "audio": "audio/pierce/punk.ogg"
             }
         ],
         "Images": {
-            "attack": "pierce/atk.png",
-            "ultimate": "pierce/ult.png",
+            "attack": "images/pierce/atk.png",
+            "ultimate": "images/pierce/ult.png",
             "order": false
         },
         "Emojis": [
@@ -7924,13 +7296,7 @@
             "🦖",
             "🐚",
             "🧢"
-        ],
-        "Model": {
-            "0": "pierce/0.glb",
-            "1": "pierce/1.glb",
-            "2": "pierce/2.glb",
-            "3": "pierce/3.glb" 
-         }
+        ]
     },
     "Kaze (geisha)": {
         "Aliases": ["Geisha"],
@@ -7970,33 +7336,33 @@
         "Fact": [
             "*Brawler*'s invisibility stop when hit by an ennemie.",
             "*Brawler*'s super once could deal 1 damage per second if you died before landing the super.",
-            "With Clancy and Larry & Lawrie, *Brawler* once could travel the entire map with a bug on the gadget."
+            "With Clancy and Larry & Lawrie, *Brawler* once could travel the entire map with a gadget."
         ],
         "Voicelines": [
             {
                 "text": "Forgive my intrusion, I mean no harm.",
-                "audio": "kaze/geisha/harm.ogg"
+                "audio": "audio/kaze/geisha/harm.ogg"
             },
             {
                 "text": "I will cherish this moment quietly.",
-                "audio": "kaze/geisha/quiet.ogg"
+                "audio": "audio/kaze/geisha/quiet.ogg"
             },
             {
                 "text": "My mistake, I should dodge better!",
-                "audio": "kaze/geisha/dodge.ogg"
+                "audio": "audio/kaze/geisha/dodge.ogg"
             },
             {
                 "text": "So much chaos, so little calm.",
-                "audio": "kaze/geisha/calm.ogg"
+                "audio": "audio/kaze/geisha/calm.ogg"
             },
             {
                 "text": "A gentle fan, a mighty wind.",
-                "audio": "kaze/geisha/wind.ogg"
+                "audio": "audio/kaze/geisha/wind.ogg"
             }
         ],
         "Images": {
-            "attack": "kaze/geisha/atk.png",
-            "ultimate": "kaze/geisha/ult.png",
+            "attack": "images/kaze/geisha/atk.png",
+            "ultimate": "images/kaze/geisha/ult.png",
             "order": false
         },
         "Emojis": [
@@ -8006,13 +7372,7 @@
             "2️⃣",
             "💢",
             "🎴"
-        ],
-        "Model": {
-            "0": "kaze/geisha/0.glb",
-            "1": "kaze/geisha/1.glb",
-            "2": "kaze/geisha/2.glb",
-            "3": "kaze/geisha/3.glb" 
-         } 
+        ]
     },
     "Kaze (ninja)": {
         "Aliases": ["Ninja"],
@@ -8045,28 +7405,28 @@
         "Voicelines": [
             {
                 "text": "I kill time harder than this.",
-                "audio": "kaze/ninja/kill.ogg"
+                "audio": "audio/kaze/ninja/kill.ogg"
             },
             {
                 "text": "Aha, is this really your best?",
-                "audio": "kaze/ninja/best.ogg"
+                "audio": "audio/kaze/ninja/best.ogg"
             },
             {
                 "text": "Fate cuts deeper than steel.",
-                "audio": "kaze/ninja/fate.ogg"
+                "audio": "audio/kaze/ninja/fate.ogg"
             },
             {
                 "text": "Should I pretend that was difficult?",
-                "audio": "kaze/ninja/diff.ogg"
+                "audio": "audio/kaze/ninja/diff.ogg"
             },
             {
                 "text": "I expected warriors, not clowns.",
-                "audio": "kaze/ninja/clown.ogg"
+                "audio": "audio/kaze/ninja/clown.ogg"
             }
         ],
         "Images": {
-            "attack": "kaze/ninja/atk.png",
-            "ultimate": "kaze/ninja/ult.png",
+            "attack": "images/kaze/ninja/atk.png",
+            "ultimate": "images/kaze/ninja/ult.png",
             "order": false
         },
         "Emojis": [
@@ -8076,8 +7436,7 @@
             "🗡️",
             "🫥",
             "2️⃣"
-        ],
-        "Model": {} 
+        ]
     },
     "Sirius": {
         "Icon": "sirius/pin.png",
@@ -8121,28 +7480,28 @@
         "Voicelines": [
             {
                 "text": "The difference between us is night and day.",
-                "audio": "sirius/diff.ogg"
+                "audio": "audio/sirius/diff.ogg"
             },
             {
                 "text": "Now, starring: your worst nightmare!",
-                "audio": "sirius/nightmare.ogg"
+                "audio": "audio/sirius/nightmare.ogg"
             },
             {
                 "text": "Such audacity from a mere clown!",
-                "audio": "sirius/clown.ogg"
+                "audio": "audio/sirius/clown.ogg"
             },
             {
                 "text": "Time to steal the spotlight, ha, and some souls.",
-                "audio": "sirius/souls.ogg"
+                "audio": "audio/sirius/souls.ogg"
             },
             {
                 "text": "Clones, chaos, carnage, and... confetti.",
-                "audio": "sirius/confetti.ogg"
+                "audio": "audio/sirius/confetti.ogg"
             }
         ],
         "Images": {
-            "attack": "sirius/atk.png",
-            "ultimate": "sirius/ult.png",
+            "attack": "images/sirius/atk.png",
+            "ultimate": "images/sirius/ult.png",
             "order": false
         },
         "Emojis": [
@@ -8152,12 +7511,6 @@
             "🎭",
             "✨",
             "💯"
-        ],
-        "Model": {
-            "0": "sirius/0.glb",
-            "1": "sirius/1.glb",
-            "2": "sirius/2.glb",
-            "3": "sirius/3.glb"  
-        } 
+        ]
     }
 }
