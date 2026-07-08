@@ -903,7 +903,7 @@
                 "2": 15
             },
             "ult_charge": 2,
-            "hc_multiplier": 35,
+            "hc_multiplier": 30,
             "class": "damage_dealer",
             "rarity": "super_rare",
             "world": "tomorroworld",
@@ -1263,7 +1263,7 @@
         "Icon": "jacky/pin.png",
         "Stats": {
             "gender": "female",
-            "hp": 10000,
+            "hp": 10400,
             "hitbox": 145,
             "passive_ability": true,
             "projectiles": 1,
@@ -2816,7 +2816,7 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 1,
-            "damage_per_projectile": 2240,
+            "damage_per_projectile": 2440,
             "full_damage": 2240,
             "ammo": 1,
             "damage_type": "single",
@@ -6743,8 +6743,8 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 2,
-            "damage_per_projectile": 1080,
-            "full_damage": 2160,
+            "damage_per_projectile": 960,
+            "full_damage": 1920,
             "ammo": 3,
             "damage_type": "pierce",
             "mvt": 820,
@@ -6752,7 +6752,7 @@
                 "1": 20,
                 "2": 20
             },
-            "ult_charge": 5,
+            "ult_charge": 6,
             "hc_multiplier": 0,
             "class": "assassin",
             "rarity": "mythic",
@@ -6857,8 +6857,8 @@
             "hitbox": 120,
             "passive_ability": false,
             "projectiles": 3,
-            "damage_per_projectile": 840,
-            "full_damage": 3000,
+            "damage_per_projectile": 760,
+            "full_damage": 2760,
             "ammo": 3,
             "damage_type": "spread",
             "mvt": 820,
@@ -7154,7 +7154,7 @@
             "mvt": 680,
             "gadget_cd": {
                 "1": 15,
-                "2": 18
+                "2": 22
             },
             "ult_charge": 3,
             "hc_multiplier": 20,
