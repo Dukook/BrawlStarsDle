@@ -6752,7 +6752,7 @@
                 "1": 20,
                 "2": 20
             },
-            "ult_charge": 6,
+            "ult_charge": 5,
             "hc_multiplier": 0,
             "class": "assassin",
             "rarity": "mythic",
@@ -6771,7 +6771,7 @@
         },
         "Fact": [
             "Excepting melee range brawler, *Brawler* has the fastest projectile in the game, making Finx super useless",
-            "*Brawler* has the best gadget to troll allies in brawlball, hotzone or even gemgrab",
+            "*Brawler*'s real name is actually Stella.",
             "*Brawler* have the heal trait under certain condition but shouldn't."
         ],
         "Voicelines": [
