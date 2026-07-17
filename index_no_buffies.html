@@ -603,7 +603,7 @@ const COL_GROUPS = [
   ['damage_per_projectile','full_damage','projectiles'],
   ['range','damage_type'],
   ['reload_speed','ammo'],
-  ['ult_charge','hc_multiplier','hitbox', 'passive_ability', 'buffies'],
+  ['ult_charge','hc_multiplier','hitbox', 'passive_ability'],
   ['release','nb_skins','gadget_cd'],
 ];
 const COL_LABELS = {
@@ -614,7 +614,7 @@ const COL_LABELS = {
   reload_speed:'Reload',ammo:'Ammo',
   ult_charge:'Ult',hc_multiplier:'HC %',hitbox:'Hitbox',passive_ability:'Passive',
   release:'Release',nb_skins:'Skins',
-  gadget_cd_min:'Gadget CD↓',gadget_cd_max:'Gadget CD↑',buffies:'Buffies',
+  gadget_cd_min:'Gadget CD↓',gadget_cd_max:'Gadget CD↑',
 };
 const COL_INFO = {
   gender:'Gender of the brawler',
@@ -638,7 +638,6 @@ const COL_INFO = {
   nb_skins:'Total number of skins',
   gadget_cd_min:'Shortest cooldown between both gadgets (seconds)',
   gadget_cd_max:'Longest cooldown between both gadgets (seconds)',
-  buffies:'Whether the brawler has buffies',
 };
 
 function lcg(seed){
@@ -784,13 +783,12 @@ function fmt(stat,val){
     case'gadget_cd_min':case'gadget_cd_max':return val+'s';
     case'nb_skins':return val+' skins';
     case'passive_ability':return val?'Yes':'No';
-    case'buffies':return val?'Yes':'No';
     default:return String(val);
   }
 }
 function cmpStat(stat,gv,tv){
   if(gv===null||gv===undefined||tv===null||tv===undefined)return{cls:'wrong',arrow:''};
-  const cats=['gender','rarity','class','damage_type','passive_ability','world','hitbox','buffies'];
+  const cats=['gender','rarity','class','damage_type','passive_ability','world','hitbox'];
   if(cats.includes(stat))return{cls:gv===tv?'correct':'wrong',arrow:''};
   if(stat==='mvt'){
     if(gv===tv)return{cls:'correct',arrow:''};
@@ -1713,7 +1711,7 @@ function render(){
     <button class="brawler-panel-btn" onclick="openBrawlerPanel()">${S.activeMode==='map'?'🗺️':'🏅'}<span class="btn-label"> ${S.activeMode==='map'?'Maps':'Brawlers'}</span></button>
     <button class="stats-btn" onclick="openStats(S.activeMode)">📊<span class="btn-label"> Stats</span></button>
     <div class="header">
-      <div class="header-logo" onclick="if(allNormalWon())toggleInfinite()" style="cursor:pointer;user-select:none"><img class="header-logo-img" src="minions.png" alt="Brawldle" style="height:clamp(2.4rem,7vw,3.8rem);width:auto;vertical-align:middle;filter:drop-shadow(0 0 12px rgba(255,208,0,.5));"><img class="header-logo-wasabi" src="wasabi.png" alt=""> BSdle</div>
+      <div class="header-logo" onclick="if(allNormalWon())toggleInfinite()" style="cursor:pointer;user-select:none" title="Toggle infinite mode"><img class="header-logo-img" src="minions.png" alt="Brawldle" style="height:clamp(2.4rem,7vw,3.8rem);width:auto;vertical-align:middle;filter:drop-shadow(0 0 12px rgba(255,208,0,.5));"><img class="header-logo-wasabi" src="wasabi.png" alt=""> BSdle</div>
       <div class="header-sub">${esc(dateStr)}</div>
     </div>
     <div class="tabs">${tabs}</div>
